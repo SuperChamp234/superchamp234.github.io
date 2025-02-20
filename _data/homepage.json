@@ -1,13 +1,13 @@
 {
-    "title": "11ty-no-style-please",
-    "subtitle": "demo of a page made with 11ty-no-style-please",
+    "title": "Zain's blog",
+    "subtitle": "notes and thoughts as I break things",
     "menu": [
         {
-            "title": "read more here",
+            "title": "Find me here",
             "entries": [
                 {
                     "title": "github",
-                    "url": "http://github.com/stopnoanime/11ty-no-style-please"
+                    "url": "http://github.com/superchamp234"
                 }
             ]
         },
