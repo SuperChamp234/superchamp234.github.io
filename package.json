@@ -4,12 +4,16 @@
   "scripts": {
     "build": "npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve",
-    "start": "npx @11ty/eleventy --serve"
+    "start": "npx @11ty/eleventy --serve",
+    "deploy": "npm run build && gh-pages -d _site"
   },
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
     "luxon": "^3.0.1",
     "markdown-it": "^13.0.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
