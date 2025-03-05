@@ -56,3 +56,27 @@ table, th, td {
 .table-wrapper {
     overflow-x: auto;
 }
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    p, ul, ol {
+        color: #e0e0e0;
+    }
+
+    blockquote {
+        border: thin solid #e0e0e0;
+    }
+
+    pre, code {
+        background: #333;
+    }
+
+    table, th, td {
+        border: thin solid #e0e0e0;
+    }
+}

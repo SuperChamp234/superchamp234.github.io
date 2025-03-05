@@ -1,19 +1,35 @@
 {
-    "title": "11ty-no-style-please",
-    "subtitle": "demo of a page made with 11ty-no-style-please",
+    "title": "Zain's blog",
+    "subtitle": "notes and thoughts as I break things",
     "menu": [
         {
-            "title": "read more here",
+            "title": "about me",
             "entries": [
                 {
-                    "title": "github",
-                    "url": "http://github.com/stopnoanime/11ty-no-style-please"
+                    "title": "who am I?",
+                    "url": "/about"
+                },
+                {
+                    "title": "my github",
+                    "url": "http://github.com/superchamp234"
+                },
+                {
+                    "title": "my email",
+                    "url": "mailto:beingzainsv@gmail.com"
+                },
+                {
+                    "title": "short term blabbing site",
+                    "url": "https://bsky.app/profile/zainsv.bsky.social"
                 }
             ]
         },
         {
-            "title": "all posts with the 'post' tag",
-            "post_list": "post"
+            "title": "Project posts",
+            "post_list": "projects"
+        },
+        {
+            "title": "Thoughts and stuff",
+            "post_list": "blog"
         }
     ]
 }
