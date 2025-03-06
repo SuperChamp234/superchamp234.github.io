@@ -1,0 +1,27 @@
+<h1>Photo & Video Gallery</h1>
+<link rel="stylesheet" href="/css/gallery.css"> <!-- Ensure gallery styles are included -->
+<script defer src="/js/gallery.js"></script> <!-- Ensure this is correct -->
+
+{% for monthData in gallery %}
+  <h2>{{ monthData.month }}</h2>
+  <div class="gallery-grid">
+    {% for image in monthData.images %}
+      <a href="{{ image }}" class="gallery-item">
+      <img src="{{ image | replace('.jpg', '-thumbnail.jpg') }}" 
+          data-src="{{ image }}" 
+          class="lazy" 
+          alt="Photo from {{ monthData.month }}">
+      </a>
+
+    {% endfor %}
+
+    {% for video in monthData.videos %}
+      <div class="gallery-item video-item">
+        <video controls>
+          <source src="{{ video }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    {% endfor %}
+  </div>
+{% endfor %}

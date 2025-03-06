@@ -30,6 +30,10 @@
         {
             "title": "Thoughts and stuff",
             "post_list": "blog"
+        },
+        {
+            "title": "Some of my clicks",
+            "url": "/gallery"
         }
     ]
 }
