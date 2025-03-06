@@ -13,6 +13,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  function shuffleGallery() {
+    const galleryGrid = document.querySelector('.gallery-grid');
+    const items = Array.from(galleryGrid.children);
+
+    // Shuffle array
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
+
+    // Append shuffled items back into the grid
+    items.forEach(item => galleryGrid.appendChild(item));
+  }
+
+  shuffleGallery();
+
   lazyImages.forEach(img => lazyObserver.observe(img));
 
   function createLightbox(content) {

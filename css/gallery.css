@@ -34,6 +34,7 @@
     object-fit: cover;
     border-radius: 6px;
     cursor: pointer; /* Ensures videos look interactive */
+    aspect-ratio: 4 / 3; /* Ensures all videos have a consistent aspect ratio */
 }
 
 /* ========================= */
@@ -93,6 +94,10 @@
 
 .video-item {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevents weird cropping */
 }
 
 /* ▶ Minimal Play Icon Overlay */
