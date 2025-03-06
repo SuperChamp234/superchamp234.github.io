@@ -5,15 +5,27 @@ html {
     line-height: 1.75;
     font-size: 1.4em;
     font-family: monospace;
+    background-color: #f5e1ff; /* Light lilac */
+    color: #3a1c4a; /* Dark purple */
 }
 
 h1,h2,h3,h4,h5,h6 {
     margin: 2em 0 1em;
 }
-  
-p,ul,ol {
+
+p, ul, ol {
     margin-bottom: 1em;
-    color: #1d1d1d;
+    color: #3a1c4a; /* Dark purple */
+}
+
+a {
+    color: #7a4a91; /* Deep lilac */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #9b6bbf; /* Brighter lilac */
 }
 
 .post-meta {
@@ -28,8 +40,9 @@ img {
 
 blockquote {
     font-style: italic;
-    border: thin solid black;
+    border: thin solid #7a4a91; /* Muted purple */
     padding: 1rem;
+    background: #e9d4ff; /* Softer lilac */
 }
 
 blockquote p {
@@ -42,13 +55,14 @@ pre {
 }
 
 pre, code {
-    background: #e0e0e0;
+    background: #dfbfff; /* Lilac */
+    color: #3a1c4a;
 }
 
 table { width: 100%; }
 
 table, th, td {
-  border: thin solid black;
+  border: thin solid #7a4a91; /* Muted purple */
   border-collapse: collapse;
   padding: 0.4rem;
 }
@@ -60,23 +74,33 @@ table, th, td {
 /* Dark mode styles */
 @media (prefers-color-scheme: dark) {
     html {
-        background-color: #121212;
-        color: #e0e0e0;
+        background-color: #2a1b3d; /* Dark lilac */
+        color: #e0caff; /* Soft lavender */
     }
 
     p, ul, ol {
-        color: #e0e0e0;
+        color: #e0caff;
+    }
+
+    a {
+        color: #caa8ff; /* Soft lavender */
+    }
+
+    a:hover {
+        color: #e0caff; /* Bright lavender */
     }
 
     blockquote {
-        border: thin solid #e0e0e0;
+        border: thin solid #e0caff;
+        background: #3b274d; /* Darker muted lilac */
     }
 
     pre, code {
-        background: #333;
+        background: #4a2b63; /* Darker lilac */
+        color: #e0caff;
     }
 
     table, th, td {
-        border: thin solid #e0e0e0;
+        border: thin solid #e0caff;
     }
 }

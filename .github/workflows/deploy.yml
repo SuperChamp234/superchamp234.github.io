@@ -1,0 +1,38 @@
+name: Deploy 11ty Blog
+
+on:
+  push:
+    branches:
+      - master  # Change this if you use a different default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build 11ty site
+        run: npm run build
+
+      - name: Ensure CNAME file exists
+        run: echo 'zainsv.me' > _site/CNAME
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _site
+          cname: zainsv.me
