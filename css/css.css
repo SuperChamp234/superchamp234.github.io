@@ -1,3 +1,4 @@
+/* Dark Mode - Inspired by Lilac VSCode Theme */
 html {
     max-width: 80ch;
     padding: 3em 1em;
@@ -5,102 +6,127 @@ html {
     line-height: 1.75;
     font-size: 1.4em;
     font-family: monospace;
-    background-color: #f5e1ff; /* Light lilac */
-    color: #3a1c4a; /* Dark purple */
+    background-color: #2a1b3d; /* Lilac theme background */
+    color: #e0ceed; /* Main foreground text */
 }
 
-h1,h2,h3,h4,h5,h6 {
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
     margin: 2em 0 1em;
+    color: #a875e8; /* Softer purple */
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(182, 87, 255, 0.5);
 }
 
+/* Paragraphs and Lists */
 p, ul, ol {
     margin-bottom: 1em;
-    color: #3a1c4a; /* Dark purple */
+    color: #e0ceed;
 }
 
+/* Links */
 a {
-    color: #7a4a91; /* Deep lilac */
+    color: #caa8ff; /* Soft pastel blue-lilac */
     text-decoration: none;
     transition: color 0.2s ease-in-out;
 }
 
 a:hover {
-    color: #9b6bbf; /* Brighter lilac */
+    color: #f5b0ef; /* Light pinkish lilac */
 }
 
+/* Post Meta Information */
 .post-meta {
     text-align: right;
+    color: #a29dfa;
 }
 
+/* Images */
 img {
     max-width: 100%;
     margin: 0 auto;
     display: block;
 }
 
+/* Blockquotes */
 blockquote {
     font-style: italic;
-    border: thin solid #7a4a91; /* Muted purple */
+    border-left: 4px solid #b657ff;
     padding: 1rem;
-    background: #e9d4ff; /* Softer lilac */
+    background: #100e12; /* Soft dark purple */
 }
 
 blockquote p {
     margin: 0;
 }
 
+/* Code Blocks */
 pre {
     overflow-x: auto;
     padding: 1rem;
+    background: #3b3442; /* Darker muted lilac */
+    color: #e0ceed;
 }
 
-pre, code {
-    background: #dfbfff; /* Lilac */
-    color: #3a1c4a;
+code {
+    background: #4a2b63;
+    color: #f5b0ef;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
 }
 
-table { width: 100%; }
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
 table, th, td {
-  border: thin solid #7a4a91; /* Muted purple */
-  border-collapse: collapse;
-  padding: 0.4rem;
+    border: 1px solid #a29dfa;
+    padding: 0.5rem;
 }
 
-.table-wrapper {
-    overflow-x: auto;
-}
-
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
+/* Light Mode - Less Pink, More Readable */
+@media (prefers-color-scheme: light) {
     html {
-        background-color: #2a1b3d; /* Dark lilac */
-        color: #e0caff; /* Soft lavender */
+        background-color: #f5e1ff; /* Softer, neutral pastel lilac */
+        color: #2a1238; /* Darker purple for better contrast */
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #6a3185; /* Deep rich lilac */
+        font-weight: bold;
+        text-shadow: 1px 1px 3px rgba(106, 49, 133, 0.3);
     }
 
     p, ul, ol {
-        color: #e0caff;
+        color: #2a1238;
     }
 
     a {
-        color: #caa8ff; /* Soft lavender */
+        color: #5a2c8c;
     }
 
     a:hover {
-        color: #e0caff; /* Bright lavender */
+        color: #8c51c9;
     }
 
     blockquote {
-        border: thin solid #e0caff;
-        background: #3b274d; /* Darker muted lilac */
+        border-left: 4px solid #5a2c8c;
+        background: #ded3eb; /* Softer purple */
     }
 
-    pre, code {
-        background: #4a2b63; /* Darker lilac */
-        color: #e0caff;
+    pre {
+        background: #cbb6df; /* Muted lilac-gray */
+        color: #2a1238;
+    }
+
+    code {
+        background: #cbb6df;
+        color: #2a1238;
     }
 
     table, th, td {
-        border: thin solid #e0caff;
+        border: 1px solid #5a2c8c;
     }
 }
