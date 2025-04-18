@@ -1,0 +1,251 @@
+/* Resume-specific styling matching site's lilac theme */
+.resume {
+    font-family: monospace;
+    line-height: 1.6;
+    max-width: 1000px; /* Increased from 800px for a wider layout */
+    margin: 0 auto;
+    /* color: #e0ceed; */
+    padding: 20px;
+}
+
+.back-button {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.back-button a {
+    color: #a875e8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.back-button a:hover {
+    color: #e0ceed;
+    text-decoration: underline;
+}
+
+.resume h1, .resume h2, .resume h3 {
+    color: #a875e8;
+    margin-top: 1.5em;
+    /* Reduced shadow for subtler effect */
+    text-shadow: 0px 0px 3px rgba(182, 87, 255, 0.3);
+}
+
+.resume h1 {
+    font-size: 1.8em;
+    text-align: left;
+    margin-bottom: 0.5em;
+    /* Keep headings consistent with your site */
+    font-weight: bold;
+}
+
+.resume h2 {
+    font-size: 1.4em;
+    border-bottom: 1px solid #614b7a;
+    padding-bottom: 0.3em;
+}
+
+.resume h3 {
+    font-size: 1.2em;
+}
+
+.resume ul {
+    padding-left: 1.5em;
+    list-style-type: none; /* Remove default bullets */
+}
+
+.resume li {
+    margin-bottom: 0.5em;
+}
+
+/* Only show bullets for actual content items, not for the main entries */
+.resume ul ul li {
+    list-style-type: circle;
+    margin-left: 1em;
+}
+
+.resume .center {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+/* Make your name stand out */
+.resume .center p strong {
+    font-size: 2.5em;
+    display: block;
+    margin-bottom: 0.5em;
+    letter-spacing: 2px;
+    color: #a875e8;
+    text-shadow: 0px 0px 5px rgba(182, 87, 255, 0.4);
+}
+
+/* Improve contact info styling */
+.resume .center p a {
+    color: #a29dfa;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.resume .center p a:hover {
+    color: #e0ceed;
+    text-decoration: underline;
+}
+
+/* Fix for the vertical bars in the subtitle */
+.resume .center p .math.inline {
+    font-family: monospace;
+    color: #a29dfa;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Remove LaTeX formatting from math expressions */
+.resume span.math.inline {
+    font-family: monospace;
+}
+
+/* Fix tables styling - hide borders and create better spacing */
+.resume table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    border: none;
+    background: transparent;
+}
+
+.resume table td, .resume table th {
+    border: none;
+    padding: 5px 0;
+    vertical-align: top;
+}
+
+/* Make titles (institution names, job titles) more prominent */
+.resume table strong {
+    font-size: 1.2em;
+    letter-spacing: 0.5px;
+    color: #c99fff; /* Slightly brighter shade */
+}
+
+/* Make descriptions slightly smaller for better contrast */
+.resume table em {
+    font-size: 0.95em;
+    opacity: 0.9;
+}
+
+/* Remove table borders */
+.resume table tbody tr {
+    background: transparent;
+    border: none;
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.resume-contact {
+    text-align: center;
+    margin-bottom: 2em;
+    color: #a29dfa;
+}
+
+.resume-section {
+    margin-bottom: 2em;
+}
+
+/* For items with right-aligned dates */
+.resume-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.resume-item-title {
+    font-weight: bold;
+}
+
+.resume-item-date {
+    color: #666;
+    font-style: italic;
+}
+
+.resume-item-details {
+    margin-top: 0.3em;
+    margin-bottom: 1em;
+}
+
+/* For skills section */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skill-item {
+    background-color: #3c2957; /* Darker purple background matching site theme */
+    padding: 0.3em 0.7em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* Table styling to make them blend with the content */
+.resume table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
+    border: none;
+}
+
+.resume td {
+    padding: 0.3em;
+    border: none;
+    vertical-align: top;
+}
+
+/* Hide table borders and make them look like normal content */
+.resume table, .resume th, .resume td {
+    background: transparent;
+}
+
+/* For math rendering from pandoc */
+.math {
+    font-size: 1em;
+    font-family: monospace;
+}
+
+/* Fix for pipe symbols */
+.math.inline {
+    display: inline;
+    font-family: monospace;
+}
+
+/* Adding style for the header contact section */
+.center {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.center a {
+    color: #caa8ff;
+    text-decoration: none;
+}
+
+.center a:hover {
+    color: #f5b0ef;
+}
+
+@media print {
+    .resume-container {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .resume-options, .resume-instructions {
+        display: none;
+    }
+}
