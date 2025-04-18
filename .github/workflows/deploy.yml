@@ -26,11 +26,12 @@ jobs:
       
       - name: Run compile.sh script in resume directory after installing dependencies
         run: |
-          apt-get update
-          apt-get install -y pandoc
+          sudo apt-get update
+          sudo apt-get install -y pandoc
           chmod +x resume/compile.sh
           cd resume
           ./compile.sh
+          cd ..
 
       - name: Build 11ty site
         run: npm run build
