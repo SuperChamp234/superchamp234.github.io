@@ -1,8 +1,20 @@
 /* Resume-specific styling matching site's lilac theme */
+/* Override the global max-width restriction for the resume page only */
+html, body {
+    max-width: none !important; /* Use !important to override global styles */
+    width: 100% !important;
+}
+
+/* Container that holds resume content */
+.resume-container {
+    max-width: none !important;
+    width: 100% !important;
+}
+
 .resume {
     font-family: monospace;
     line-height: 1.6;
-    max-width: 1000px; /* Increased from 800px for a wider layout */
+    /* max-width: 1000px; Increased from 800px for a wider layout */
     margin: 0 auto;
     /* color: #e0ceed; */
     padding: 20px;
