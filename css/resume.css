@@ -2,7 +2,7 @@
 /* Override the global max-width restriction for the resume page only */
 html, body {
     max-width: none !important; /* Use !important to override global styles */
-    width: 100% !important;
+    width: 90% !important;
 }
 
 /* Container that holds resume content */
@@ -18,6 +18,8 @@ html, body {
     margin: 0 auto;
     /* color: #e0ceed; */
     padding: 20px;
+    max-width: none !important;
+    width: 100% !important;
 }
 
 .back-button {
