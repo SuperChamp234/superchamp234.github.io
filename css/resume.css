@@ -22,12 +22,23 @@ html, body {
     width: 100% !important;
 }
 
-.back-button {
-    position: relative;
+.navigation-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
+    width: 100%;
 }
 
-.back-button a {
+.back-button {
+    position: relative;
+}
+
+.download-button {
+    position: relative;
+}
+
+.back-button a, .download-button a {
     color: #a875e8;
     text-decoration: none;
     font-weight: bold;

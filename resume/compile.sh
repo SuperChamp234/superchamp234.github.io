@@ -40,14 +40,19 @@ fi
 echo "Converting resume.tex to HTML using $CONVERTER..."
 
 if [ "$CONVERTER" = "pandoc" ]; then
-    # Use pandoc for conversion
+    # Use pandoc for conversion with additional options to handle LaTeX peculiarities
     pandoc resume.tex -o resume_content.html \
       --standalone \
       --mathjax \
       --css=/css/resume.css \
       --template=custom-template.html \
-      --from=latex \
-      --to=html5
+      --from=latex+raw_tex \
+      --to=html5 \
+      --pdf-engine=xelatex \
+      --variable=mainfont:monospace \
+      --variable=sansfont:monospace \
+      --variable=monofont:monospace \
+      --variable=mathfont:monospace
     
     CONVERSION_SUCCESS=$?
     HTML_FILE="resume_content.html"
@@ -124,7 +129,7 @@ if [ "$PDF_AVAILABLE" = true ]; then
     
     if [ $? -eq 0 ]; then
         echo "PDF conversion successful!"
-        cp resume.pdf ../_site/resume/
+        cp resume.pdf "../_site/resume/Zain Siddavatam Resume.pdf"
     else
         echo "Error: PDF conversion failed."
     fi

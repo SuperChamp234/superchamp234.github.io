@@ -27,7 +27,7 @@ jobs:
       - name: Run compile.sh script in resume directory after installing dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc
+          sudo apt-get install -y pandoc texlive-full texlive-latex-extra
           chmod +x resume/compile.sh
           cd resume
           ./compile.sh
