@@ -3,10 +3,10 @@
     "subtitle": "notes and thoughts as I break things",
     "intro": "I'm Zain, currently a student @ VJTI Mumbai. I've been exploring computers and their low level architectures for sometime now, and I'm always looking for new things to learn! Don't hesitate to reach out to me if you want to collaborate on something, or just want to chat. I'm always up for a good conversation!",
     "current_activities": [
-        "Working on in-house CPU @ SRA-VJTI/Synapse32",
-        "Reading papers on computer architecture and accelerators",
+        "Learning about computer architecture by building a RISC-V CPU",
+        "Reading papers on ML accelerators and their architectures",
         "Playing hide and seek with my cat",
-        "Roaming around for the best food in Mumbai"
+        "Looking for collaborations on impactful research in computer architecture and ML (please reach out if you're interested!)"
     ],
     "email": "hi@zainsv.me",
     "social_links": [
