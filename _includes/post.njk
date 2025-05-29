@@ -2,6 +2,7 @@
 layout: base.njk
 ---
 <link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="/css/prism.css">
 
 <div class="post-container">
   <div class="post-navigation">
@@ -20,8 +21,4 @@ layout: base.njk
       {{ content | safe }}
     </div>
   </article>
-
-  <footer>
-    <p>&copy; {{ site.copyright or "2025" }} {{ site.author or site.title }}</p>
-  </footer>
 </div>
