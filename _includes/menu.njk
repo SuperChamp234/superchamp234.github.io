@@ -4,13 +4,13 @@
             {% if entry.url %}
                 <a href="{{ entry.url }}">{{ entry.title }}</a>
             {% else %}
-                {{ entry.title }}
+                <strong>{{ entry.title }}</strong>
             {% endif %}
 
             {% if entry.post_list %}
                 {% set posts = collections[entry.post_list] %}
                 {% if posts %}
-                    <ul>
+                    <ul class="post-list">
                         {% for post in posts | reverse %}
                             <li>
                                 <time datetime="{{ post.date }}">{{ post.date | formatDate }}</time>

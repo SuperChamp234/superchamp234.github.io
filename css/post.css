@@ -1,0 +1,237 @@
+/* Single post page styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Add navbar styles for post pages */
+/* .navbar {
+  background-color: #333;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+/* .site-title {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-nav a {
+  color: white;
+  text-decoration: none;
+} */
+
+/* Post content styles */
+.post-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.post-navigation {
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  color: blue;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Remove unwanted dividers */
+header, .article-header {
+  border-bottom: none;
+}
+
+article {
+  margin-top: 2rem;
+}
+
+.article-header {
+  margin-bottom: 2rem;
+}
+
+.article-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.post-meta {
+  color: #777;
+  margin: 0;
+}
+
+.article-content {
+  line-height: 1.8;
+  margin-top: 2rem;
+}
+
+.article-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Article headings - enhancing visual hierarchy */
+.article-content h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  color: #222;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.article-content h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin: 1.8rem 0 0.9rem;
+  color: #333;
+}
+
+.article-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.6rem 0 0.8rem;
+  color: #444;
+}
+
+.article-content h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1.4rem 0 0.7rem;
+  color: #555;
+}
+
+.article-content h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1.2rem 0 0.6rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.article-content h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Add subtle indicators for different heading levels */
+.article-content h2::before {
+  content: "";
+  display: block;
+  height: 0.15rem;
+  width: 3rem;
+  background: #ddd;
+  margin-bottom: 0.5rem;
+}
+
+.article-content h3::before {
+  content: "";
+  display: inline-block;
+  height: 0.6rem;
+  width: 0.6rem;
+  background: #ddd;
+  margin-right: 0.5rem;
+  margin-bottom: 0.1rem;
+}
+
+.article-content p {
+  margin: 1.2rem 0;
+  line-height: 1.8;
+}
+
+/* Code blocks */
+.article-content pre {
+  background-color: #f6f8fa;
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.article-content code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9rem;
+  background-color: #f6f8fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+.article-content pre code {
+  padding: 0;
+  background-color: transparent;
+}
+
+/* Blockquotes */
+.article-content blockquote {
+  border-left: 4px solid #ddd;
+  padding-left: 1rem;
+  margin-left: 0;
+  color: #555;
+  font-style: italic;
+}
+
+/* Lists */
+.article-content ul, 
+.article-content ol {
+  padding-left: 1.5rem;
+  margin: 1.2rem 0;
+}
+
+.article-content li {
+  margin: 0.5rem 0;
+}
+
+/* Tables */
+.article-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.article-content th,
+.article-content td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.article-content th {
+  background-color: #f6f8fa;
+  font-weight: 600;
+}
+
+/* Images */
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+  color: #777;
+  text-align: center;
+}

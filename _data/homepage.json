@@ -1,43 +1,34 @@
 {
     "title": "Zain's blog",
     "subtitle": "notes and thoughts as I break things",
-    "menu": [
+    "intro": "I'm Zain, currently a student @ VJTI Mumbai. I've been exploring computers and their low level architectures for sometime now, and I'm always looking for new things to learn! Don't hesitate to reach out to me if you want to collaborate on something, or just want to chat. I'm always up for a good conversation!",
+    "current_activities": [
+        "Working on inhouse CPU @ SRA-VJTI/Synapse32",
+        "Reading papers on computer architecture and accelerators",
+        "Playing hide and seek with my cat",
+        "Roaming around for the best food in Mumbai"
+    ],
+    "email": "hi@zainsv.me",
+    "social_links": [
         {
-            "title": "about me",
-            "entries": [
-                {
-                    "title": "who am I?",
-                    "url": "/about"
-                },
-                {
-                    "title": "my github",
-                    "url": "http://github.com/superchamp234"
-                },
-                {
-                    "title": "my email",
-                    "url": "mailto:hi@zainsv.me"
-                },
-                {
-                    "title": "short term blabbing site",
-                    "url": "https://bsky.app/profile/zainsv.me"
-                },
-                {
-                    "title": "my resume",
-                    "url": "/resume"
-                }
-            ]
+            "title": "GitHub",
+            "url": "http://github.com/superchamp234",
+            "icon": "fa-github"
         },
         {
-            "title": "Project posts",
-            "post_list": "projects"
+            "title": "Twitter/X",
+            "url": "https://x.com/ZSiddavatam",
+            "icon": "fa-twitter"
         },
         {
-            "title": "Thoughts and stuff",
-            "post_list": "blog"
+            "title": "LinkedIn",
+            "url": "https://www.linkedin.com/in/zain-siddavatam",
+            "icon": "fa-linkedin"
         },
         {
-            "title": "Some of my clicks",
-            "url": "/gallery"
+            "title": "Bluesky",
+            "url": "https://bsky.app/profile/zainsv.me",
+            "icon": "fa-comment"
         }
     ]
 }

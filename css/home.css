@@ -1,0 +1,188 @@
+/* Navigation bar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-logo a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Create underline effect on hover */
+.navbar-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.navbar-menu a:hover::after {
+    width: 100%;
+}
+
+/* Home page specific styles */
+.hero-full-container {
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center 33%;  /* Position to show the face better */
+    display: flex;
+    align-items: flex-end; /* Align items to the bottom */
+    margin: 0;
+    padding: 0;
+}
+
+/* Override base container for hero section */
+.hero-full-container .container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.white-text-container {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    width: 100%;
+}
+
+.hero-full-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.text-content {
+    position: relative;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0); /* More transparent background */
+    border-radius: 10px;
+    margin-left: 0;
+    max-width: 90%;
+}
+
+.text-content h1 {
+    font-size: 3.5rem !important; /* Large font size for the main heading */
+    color: #ffffff; /* Pure white color */
+    letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+    .text-content h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .text-content {
+        margin-left: 5%;
+        margin-right: auto;
+        max-width: 80%; /* Narrower content box */
+        float: left; /* Position on the left */
+    }
+}
+
+.template-example {
+    margin: 2rem 0;
+}
+
+.template-title-example {
+    margin-bottom: 1rem;
+}
+
+.list-icons {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.list-icons li {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.fa-icon a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.fa-icon a:hover {
+    color: #555;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-xs-12 {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .col-md-7 {
+        width: 58.33333%;
+    }
+    .col-md-5 {
+        width: 41.66667%;
+    }
+}
+
+/* Typed.js cursor */
+.typed-cursor {
+    opacity: 1;
+    animation: typedjsBlink 0.7s infinite;
+}
+
+@keyframes typedjsBlink {
+    50% {
+        opacity: 0.0;
+    }
+}
