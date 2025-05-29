@@ -14,145 +14,106 @@
     <script data-goatcounter="https://zainsv.goatcounter.com/count"
         async src="/js/count.js"></script>
 </head>
-<body>
-    <header>
-    <h1>Zain&#39;s blog</h1>
-
+<body class="home-page">
     
-    
-        <p>notes and thoughts as I break things</p>
-    
-</header>
-<main>
-    <hr>
-    
-    <ul>
-    
-        <li>
-            
-                about me
-            
+    <!-- Link to Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Link to our custom CSS -->
+<link rel="stylesheet" href="/css/home.css">
 
-            
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-menu">
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/resume">Resume</a>
+        </div>
+    </div>
+</nav>
 
-            
-                
-                <ul>
-    
-        <li>
-            
-                <a href="/about">who am I?</a>
-            
+<div class="hero-full-container background-image-container white-text-container"
+    style="background-image: url('/media/my_landscape_photo.jpg'); background-size: cover; background-position: center 33%; width: 100vw; margin-left: calc(-50vw + 50%);">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="hero-full-wrapper">
+                    <div class="text-content">
+                        <h1>Hello, I am <br>
+                            <span id="typed-strings">
+                            </span>
+                            <span id="typed"></span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-            
-
-            
-        </li>
-    
-        <li>
-            
-                <a href="http://github.com/superchamp234">my github</a>
-            
-
-            
-
-            
-        </li>
-    
-        <li>
-            
-                <a href="mailto:hi@zainsv.me">my email</a>
-            
-
-            
-
-            
-        </li>
-    
-        <li>
-            
-                <a href="https://bsky.app/profile/zainsv.me">short term blabbing site</a>
-            
-
-            
-
-            
-        </li>
-    
-        <li>
-            
-                <a href="/resume">my resume</a>
-            
-
-            
-
-            
-        </li>
-    
-</ul>
-            
-        </li>
-    
-        <li>
-            
-                Project posts
-            
-
-            
-                
-                
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-7">
+            <div class="template-example">
+                <h2 class="template-title-example">Hi there!</h2>
+                <p>
+                    I'm Zain, currently a student @ VJTI Mumbai. I've been exploring computers and their low level architectures for sometime now, and I'm always looking for new things to learn! Don't hesitate to reach out to me if you want to collaborate on something, or just want to chat. I'm always up for a good conversation!
+                </p>
+                <p>
+                    Currently, I am:
                     <ul>
-                        
-                            <li>
-                                <time datetime="Mon Jun 17 2024 10:56:40 GMT+0000 (Coordinated Universal Time)">2024-06-17</time>
-                                <a href="/posts/accelerating-amcl-fpga/">FPGA Acceleration of Likelihood Model based Adaptive Monte-Carlo Localization</a>
-                            </li>
-                        
-                            <li>
-                                <time datetime="Mon Aug 28 2023 12:37:53 GMT+0000 (Coordinated Universal Time)">2023-08-28</time>
-                                <a href="/posts/accelerating-sparse-matrix-mult-fpga/">Accelerating Sparse Matrix Multiplication on FPGAs</a>
-                            </li>
-                        
+                    
+                        <li>Working on in-house CPU @ SRA-VJTI/Synapse32</li>
+                    
+                        <li>Reading papers on computer architecture and accelerators</li>
+                    
+                        <li>Playing hide and seek with my cat</li>
+                    
+                        <li>Roaming around for the best food in Mumbai</li>
+                    
                     </ul>
-                
-            
+                </p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-5">
+            <div class="template-example">
+                <h2 class="template-title-example">Links</h2>
+                <ul class="list-icons">
+                    
+                    <li>
+                        <span class="fa-icon">
+                            <a href="https://github.com/superchamp234" target="_blank"><i class="fa fa-github"></i></a>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <span class="fa-icon">
+                            <a href="https://x.com/ZSiddavatam" target="_blank"><i class="fa fa-twitter"></i></a>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <span class="fa-icon">
+                            <a href="https://www.linkedin.com/in/zain-siddavatam" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <span class="fa-icon">
+                            <a href="https://bsky.app/profile/zainsv.me" target="_blank"><i class="fa fa-comment"></i></a>
+                        </span>
+                    </li>
+                    
+                </ul>
+                <span class="fa-icon"><i class="fa fa-envelope"></i></span><span>&nbsp; hi@zainsv.me</span>
+            </div>
+        </div>
+    </div>
+</div>
 
-            
-        </li>
-    
-        <li>
-            
-                Thoughts and stuff
-            
+<script src="/js/typed.min.js"></script>
+<script src="/js/home.js"></script>
 
-            
-                
-                
-                    <ul>
-                        
-                            <li>
-                                <time datetime="Thu Mar 06 2025 12:37:53 GMT+0000 (Coordinated Universal Time)">2025-03-06</time>
-                                <a href="/posts/celeste/">Why I like Celeste</a>
-                            </li>
-                        
-                    </ul>
-                
-            
-
-            
-        </li>
-    
-        <li>
-            
-                <a href="/gallery">Some of my clicks</a>
-            
-
-            
-
-            
-        </li>
-    
-</ul>
-</main>
 </body>
 </html>

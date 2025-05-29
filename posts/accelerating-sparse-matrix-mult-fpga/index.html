@@ -15,16 +15,37 @@
         async src="/js/count.js"></script>
 </head>
 <body>
-    <a href="/">back</a>
+    
+        <!-- Navigation Bar Component -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-menu">
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/resume">Resume</a>
+        </div>
+    </div>
+</nav>
 
-<article>
-  <p class="post-meta">
-    <time datetime="Mon Aug 28 2023 12:37:53 GMT+0000 (Coordinated Universal Time)">2023-08-28</time>
-  </p>
-  
-  <h1>Accelerating Sparse Matrix Multiplication on FPGAs</h1>
-  
-  <p>Sparse matrix multiplication (SpGEMM) is a fundamental operation in scientific computing, graph analytics, and machine learning. However, its irregular memory access patterns and high computational complexity make it challenging to accelerate efficiently. In this project, I explored FPGA-based acceleration for SpGEMM using High-Level Synthesis (HLS), focusing on different dataflows and sparse storage formats to optimize performance.</p>
+    
+    <link rel="stylesheet" href="/css/post.css">
+
+<div class="post-container">
+  <div class="post-navigation">
+    <a href="/blog" class="back-link">&larr; back</a>
+  </div>
+
+  <article>
+    <header class="article-header">
+      <h1>Accelerating Sparse Matrix Multiplication on FPGAs</h1>
+      <p class="post-meta">
+        <time datetime="Mon Aug 28 2023 12:37:53 GMT+0000 (Coordinated Universal Time)">2023-08-28</time>
+      </p>
+    </header>
+    
+    <div class="article-content">
+      <p>Sparse matrix multiplication (SpGEMM) is a fundamental operation in scientific computing, graph analytics, and machine learning. However, its irregular memory access patterns and high computational complexity make it challenging to accelerate efficiently. In this project, I explored FPGA-based acceleration for SpGEMM using High-Level Synthesis (HLS), focusing on different dataflows and sparse storage formats to optimize performance.</p>
 <p>Sparse matrix multiplications differ from dense operations due to the need to handle zero values efficiently. The major challenges include:</p>
 <ul>
 <li>
@@ -52,6 +73,12 @@
 <p>I implemented SpGEMM on an FPGA using Vivado HLS, targeting the Xilinx Arty A7 board. While the implementation showed promising potential, a few challenges arose. There was an issue with understanding how the AXI master interface works, leading to incorrect mem access. This was my first HLS project, but since the Arty A7 lacked an SoC, it was not possible to run a full application on the FPGA.</p>
 <p>For a deeper dive into the design, implementation, and challenges, check out the full paper <a href="https://drive.google.com/file/d/1_hl6ta7lshTdV9dNm-zLNECsfylJ96QZ/view?usp=drive_link">here</a>. If you have any insights or suggestions, feel free to reach out—I’d love to discuss optimizations for sparse computations on FPGAs!</p>
 
-</article>
+    </div>
+  </article>
+
+  <footer>
+    <p>&copy; 2025 Zain&#39;s blog</p>
+  </footer>
+</div>
 </body>
 </html>

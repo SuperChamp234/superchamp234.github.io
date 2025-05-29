@@ -15,16 +15,37 @@
         async src="/js/count.js"></script>
 </head>
 <body>
-    <a href="/">back</a>
+    
+        <!-- Navigation Bar Component -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-menu">
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/resume">Resume</a>
+        </div>
+    </div>
+</nav>
 
-<article>
-  <p class="post-meta">
-    <time datetime="Mon Jun 17 2024 10:56:40 GMT+0000 (Coordinated Universal Time)">2024-06-17</time>
-  </p>
-  
-  <h1>FPGA Acceleration of Likelihood Model based Adaptive Monte-Carlo Localization</h1>
-  
-  <p>Adaptive Monte Carlo Localization (AMCL) is a widely used algorithm in robotics for estimating a robot’s position within its environment. It relies on a probabilistic approach, utilizing a set of particles to represent different pose hypotheses. However, AMCL's computational demands make real-time execution challenging, especially on embedded systems.</p>
+    
+    <link rel="stylesheet" href="/css/post.css">
+
+<div class="post-container">
+  <div class="post-navigation">
+    <a href="/blog" class="back-link">&larr; back</a>
+  </div>
+
+  <article>
+    <header class="article-header">
+      <h1>FPGA Acceleration of Likelihood Model based Adaptive Monte-Carlo Localization</h1>
+      <p class="post-meta">
+        <time datetime="Mon Jun 17 2024 10:56:40 GMT+0000 (Coordinated Universal Time)">2024-06-17</time>
+      </p>
+    </header>
+    
+    <div class="article-content">
+      <p>Adaptive Monte Carlo Localization (AMCL) is a widely used algorithm in robotics for estimating a robot’s position within its environment. It relies on a probabilistic approach, utilizing a set of particles to represent different pose hypotheses. However, AMCL's computational demands make real-time execution challenging, especially on embedded systems.</p>
 <p>In this project, I explored FPGA acceleration to improve the efficiency of AMCL’s particle filtering algorithm, particularly the likelihood model-based weight computation. The goal was to achieve better performance while ensuring compatibility with the ROS 2 framework.</p>
 <h2>The Problem</h2>
 <p>AMCL's computational complexity arises from continuously updating particle weights based on sensor data. This process involves:</p>
@@ -79,6 +100,12 @@
 <h2>Read the whole thing</h2>
 <p>If you are interested in the details of the implementation, the design choices, and the results, you can read the full paper <a href="https://drive.google.com/file/d/1zK9jAKZ9oBVwV1-_GcFWSXyqZOX0cpnZ/view?usp=drive_link">here</a>. Feel free to reach out to me if you have any questions or suggestions regarding the project. I am always open to feedback and discussions. Thanks to the team at Acceleration Robotics for their support and guidance throughout this project.</p>
 
-</article>
+    </div>
+  </article>
+
+  <footer>
+    <p>&copy; 2025 Zain&#39;s blog</p>
+  </footer>
+</div>
 </body>
 </html>

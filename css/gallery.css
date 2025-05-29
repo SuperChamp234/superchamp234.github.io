@@ -1,3 +1,10 @@
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 /* ========================= */
 /* 🎨 GALLERY GRID LAYOUT    */
 /* ========================= */
@@ -14,7 +21,7 @@
 .gallery-item img {
     width: 100%;
     height: auto;
-    max-height: 200px; /* Controls image height */
+    max-height: 150px; /* Controls image height */
     object-fit: cover;
     border-radius: 6px;
     transition: transform 0.2s ease-in-out;
