@@ -8,7 +8,7 @@ function getGalleryData() {
     fs.statSync(path.join(galleryPath, folder)).isDirectory()
   );
 
-  return months.map((month) => {
+  return months.filter(month => month !== 'blog').map((month) => {
     const files = fs.readdirSync(path.join(galleryPath, month));
 
     const images = files.filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))

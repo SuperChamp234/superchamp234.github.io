@@ -1,5 +1,6 @@
 const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
+const markdownItPrism = require("markdown-it-prism");
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("css");
@@ -16,6 +17,9 @@ module.exports = function(eleventyConfig) {
         linkify: true
     };
     let markdownLib = new markdownIt(markdownOptions);
+
+    // Add Prism.js syntax highlighting
+    markdownLib.use(markdownItPrism);
 
     //Add div around tables
     markdownLib.renderer.rules.table_open = () => '<div class="table-wrapper">\n<table>\n',

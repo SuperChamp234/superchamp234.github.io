@@ -26,7 +26,7 @@ The CPU I built is a simple RISC-V CPU, with a 5-stage pipeline. The stages are:
 This type of design is quite common in RISC-V CPUs, and some courses like [CS61C](https://cs61c.org/) at UC Berkeley or [CIS 4710/5710](https://www.cis.upenn.edu/~cis5710/current/) 
 at UPenn use a similar design for their RISC-V CPU. If you wanna learn to design such a CPU, I highly recommend taking that course. It's a great introduction to computer architecture and RISC-V.
 
-![Pipeline Stages](/media/cpu/pipelined_cpu.png)
+![Pipeline Stages](/media/blog/cpu/pipelined_cpu.png)
 
 <center> Pipeline Stages of the CPU (from CS5710 @ UPenn) </center>
 
@@ -96,7 +96,7 @@ To make sure everything works as expected, I wrote a simple Fibonacci program in
 
 The stack setup was a gotcha for me, as I initially forgot to set the stack pointer to the top of the memory. This caused the CPU to access negative addresses, which lead to a lot of red signals in the simulation.
 
-```assembly
+```asm6502
 .section .nop_section, "ax"
 .global _start
 .type _start, @function
@@ -133,7 +133,7 @@ python_functions = runCocotbTests
 This allowed me to run all the tests with a single command, and it was quite satisfying to see all the tests pass. Later, I aim to integrate this with a 
 CI/CD pipeline, so that the tests run automatically whenever I push changes to the repository.
 
-![Pytest Output](/media/cpu/pytest_output.jpeg)
+![Pytest Output](/media/blog/cpu/pytest_output.jpeg)
 
 <center> Output of pytest showing all tests passing </center>
 
