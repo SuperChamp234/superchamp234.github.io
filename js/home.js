@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'Zain Siddavatam',
             'an engineer',
             'a passionate developer',
-            'a f1 fan, cat lover, mountain enjoyer',
+            'a f1 fan, cat lover, mountains enjoyer',
         ],
         typeSpeed: 60,
         backSpeed: 40,
