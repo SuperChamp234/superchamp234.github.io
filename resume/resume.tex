@@ -116,11 +116,11 @@
 
 \begin{center}
   \textbf{\Huge \scshape Zain Siddavatam} \\ \vspace{1pt}
-  \href{mailto:hi@zainsv.me}{\underline{hi@zainsv.me}} $|$
-  \href{https://www.linkedin.com/in/zain-siddavatam/}{\underline{linkedin/zain-siddavatam}} $|$
-  \href{https://github.com/SuperChamp234}{\underline{github.com/SuperChamp234}} $|$
-  \href{}{\underline{+91 7506465276 }} $|$
-  \href{https://zainsv.me}{zainsv.me}
+  \faEnvelope~\href{mailto:hi@zainsv.me}{hi@zainsv.me} $|$
+  \faLinkedin~\href{https://www.linkedin.com/in/zain-siddavatam/}{/zain-siddavatam} $|$
+  \faGithub~\href{https://github.com/SuperChamp234}{/SuperChamp234} $|$
+  \faPhone~\href{tel:+917506465276}{+91 7506465276} $|$
+  \faGlobe~\href{https://zainsv.me}{zainsv.me}
 \end{center}
 
 %-----------EDUCATION-----------
@@ -140,7 +140,7 @@
 \section{Experiences}
 \resumeSubHeadingListStart
 \resumeSubheading
-{Open source contributor at Beagleboard.org \href{https://openbeagle.org/superchamp234}{\faExternalLink}}{}{Verilog HDL, TCL, Polarfire SoCs, ARM AMBA, C/C++}{June 2024 - September 2024}
+{Embedded Software Engineer Intern at Beagleboard.org \href{https://openbeagle.org/superchamp234}{\faExternalLink}}{}{Verilog HDL, TCL, Polarfire SoCs, ARM AMBA, C/C++}{June 2024 - September 2024}
 \resumeItemListStart
 \resumeItem{Created CI workflow for generating custom Debian GNU/Linux images for the \textbf{BeagleY-AI} single-board computer.}
 \resumeItem{Contributed to the documentation and on-boarding examples for \textbf{BeagleV-Fire} single-board computer.}
@@ -148,7 +148,7 @@
 \resumeItem{Created examples demonstrating the usage of \textbf{AXI4} and \textbf{APB3 peripherals} on the BeagleV-Fire's \textbf{PolarFire MPFS025T SoC}. These examples enable users to control peripherals from Linux using C/C++.}
 \resumeItemListEnd
 \resumeSubheading
-{Robotics Software Intern at Acceleration Robotics \href{https://drive.google.com/file/d/1zK9jAKZ9oBVwV1-_GcFWSXyqZOX0cpnZ/view?usp=sharing}{\faExternalLink}}{}{C++/C, Vitis HLS, Vivado, KV260, Kria Robotics Stack}{January 2024 - June 2024}
+{Hardware Acceleration Intern at Acceleration Robotics \href{https://drive.google.com/file/d/1zK9jAKZ9oBVwV1-_GcFWSXyqZOX0cpnZ/view?usp=sharing}{\faExternalLink}}{}{C++/C, Vitis HLS, Vivado, KV260, Kria Robotics Stack}{January 2024 - June 2024}
 \resumeItemListStart
 \resumeItem{Accelerated \textbf{ROS2} workloads by optimizing \textbf{Adaptive Monte-Carlo Localization (AMCL)}.}
 \resumeItem{Designed and deployed a ROS2 node with a kernel for an accelerated particle filter algorithm on the \textbf{KV260} platform.}
@@ -169,12 +169,22 @@
 \section{Projects}
 \resumeSubHeadingListStart
 \resumeSubheading
-{32-bit RISC-V CPU \href{{https://github.com/sra-vjti/synapse32}}{\faExternalLink}}{}
-{Verilog HDL, Cyclone II, Quartus Prime}{August 2022 - September 2022}
+{Hackathon: RISC-V Softmax Microcode (RISC-V Intl. x Andes) \href{https://docs.google.com/presentation/d/15_osaoplCDb2VvI0H95oHUXygs7DukYd/edit?usp=sharing}{\faExternalLink}}{}
+{RISC-V Spike, C, Inline Assembly, Performance Optimization}{April 2025}
 \resumeItemListStart
-\resumeItem{Implemented a \textbf{4 - stage core} following \textbf{RISC-V ISA}, more specifically the \textbf{RV32I} ISA.}
-\resumeItem{The CPU core was programmed onto \textbf{Cyclone II FPGA} using \textbf{Quartus Prime} Design tools. The output was made to display on an array of \textbf{seven-segment displays}.}
-\resumeItem{Developed an assembler for \textbf{RV32I} instructions, and programmed fibonacci series onto the CPU core.}
+\resumeItem{Implemented a custom \textbf{softmax instruction} for RISC-V CPUs, using \textbf{inline assembly} and \textbf{C} for microcode generation.}
+\resumeItem{Increased signal-to-noise ratio and improved execution speed by \textbf{50\%} using a custom \textbf{exp function} via \textbf{Estrin’s scheme}.}
+\resumeItem{Awarded the \textbf{Favourite Implementation Prize} for performance improvements and approach.}
+\resumeItemListEnd
+
+\resumeSubheading
+{32-bit RISC-V CPU Design \& Verification \href{{https://github.com/sra-vjti/synapse32}}{\faExternalLink}}{}
+{Verilog HDL, Cyclone II, Quartus Prime}{August 2022, May 2025}
+\resumeItemListStart
+\resumeItem{Implemented a \textbf{5-stage RV32I-compliant} CPU core in Verilog and deployed it on a Cyclone II FPGA with seven-segment display output.}
+\resumeItem{Built a custom assembler for RV32I instructions and ran example programs like Fibonacci sequence.}
+\resumeItem{Verified the CPU using Cocotb with Python-based testbenches and instruction tests from the official RISC-V ISA test suite.}
+\resumeItem{Developed monitors, scoreboards, and self-checking test cases to catch bugs in ALU ops, branching, etc.}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -188,7 +198,7 @@
 \resumeItemListEnd
 \resumeSubheading
 {Habitica Sync
-  \href{https://github.com/SuperChamp234/Habitica-sync}{\faExternalLink}}{}
+\href{https://github.com/SuperChamp234/Habitica-sync}{\faExternalLink}}{}
 {Typescript, React, NodeJS}{2021}
 \resumeItemListStart
 \resumeItem{Developed a widget for the Obsidian note taking app, for allowing users to access their tasks and rewards from the widely used Habitica Todo-list application.}
@@ -196,37 +206,36 @@
 \resumeItem{The widget received 1000+ downloads from Obsidian's plugin store.}
 \resumeItemListEnd
 \begin{samepage}
-  \resumeSubheading
-  {Google Code-in \href{{https://codein.withgoogle.com/archive/}}{\faExternalLink}}{}
-  {Java, CSS, HTML, Javascript}{2017, 2018}
-  \resumeItemListStart
-  \resumeItem{Mentee in Google Code-In contest, mentored by open source companies. {\href{{https://codein.withgoogle.com/archive/search/?q=Zain\%20Siddavatam}}{\faExternalLink}}}
-  \resumeItem{Developed a \textbf{terrain generator}, to generate different kinds of blocks at different rarities and vary terrain features at different heights. \href{https://codein.withgoogle.com/archive/2018/organization/5715161717407744/task/4740560489283584/}{\faExternalLink}.}
-  \resumeItem{Composed \textbf{two web pages} for BRL-CAD, an about page and an onepager website. \href{https://codein.withgoogle.com/archive/2017/task/4648191848873984/}{\faExternalLink} \href{https://codein.withgoogle.com/archive/2017/organization/6254981527109632/task/5406096005005312/}{\faExternalLink}.}
-  \resumeItemListEnd
+\resumeSubheading
+{Google Code-in \href{{https://codein.withgoogle.com/archive/}}{\faExternalLink}}{}
+{Java, CSS, HTML, Javascript}{2017, 2018}
+\resumeItemListStart
+\resumeItem{Mentee in Google Code-In contest, mentored by open source companies. {\href{{https://codein.withgoogle.com/archive/search/?q=Zain\%20Siddavatam}}{\faExternalLink}}}
+\resumeItem{Developed a \textbf{terrain generator}, to generate different kinds of blocks at different rarities and vary terrain features at different heights. \href{https://codein.withgoogle.com/archive/2018/organization/5715161717407744/task/4740560489283584/}{\faExternalLink}.}
+\resumeItem{Composed \textbf{two web pages} for BRL-CAD, an about page and an onepager website. \href{https://codein.withgoogle.com/archive/2017/task/4648191848873984/}{\faExternalLink} \href{https://codein.withgoogle.com/archive/2017/organization/6254981527109632/task/5406096005005312/}{\faExternalLink}.}
+\resumeItemListEnd
 \end{samepage}
 \resumeSubHeadingListEnd
 
-%-----------COMPETITIONS-----------
+-----------COMPETITIONS-----------
 \section{Competitions}
 \resumeSubHeadingListStart
 \resumeSubheading
-{e-Yantra Robotics Competition \href{{https://portal.e-yantra.org/}}{\faExternalLink}}{}
-{Verilog HDL, Cyclone IV, Quartus Prime}{September 2022 - January 2023}
+{Competition: FPGA-based Maze Solving Robot \href{https://portal.e-yantra.org/}{\faExternalLink}}{}
+{Verilog, Quartus, SPI/UART}{Sept 2022 – Jan 2023}
 \resumeItemListStart
-\resumeItem{Created a \textbf{maze-solving robot} utilizing the \textbf{Intel Cyclone IV FPGA}, effectively navigating a maze composed of lines by employing a \textbf{PID control system}.}
-\resumeItem{Implemented \textbf{Dijkstra's algorithm} in \textbf{Verilog}, employing a \textbf{state machine methodology}, to determine the shortest path within the maze.}
-\resumeItem{Utilized \textbf{SPI}, \textbf{UART}, and the Cyclone V FPGA's \textbf{ADC} to interface with sensors and process line-sensing data from photodiodes.}
-\resumeItem{Successfully led my team to the \textbf{second stage} of the competition as a part of my team's accomplishments.}
+\resumeItem{Created a \textbf{maze-solving robot} on \textbf{Cyclone IV FPGA} using Verilog, implementing PID control and Dijkstra’s algorithm for pathfinding.}
+\resumeItem{Integrated sensor data via \textbf{onboard ADCs}, \textbf{SPI}, and \textbf{UART} for communicating with the host via ZigBee.}
+\resumeItem{Advanced to Stage 2 in the E-Yantra national-level robotics challenge.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 %-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills and Languages}
+\section{Technical Skills, Language Skills}
 \begin{tabular}{ll}
   \textbf{Programming Languages:} & Verilog HDL, TL-Verilog, C/C++, Python, Java, JavaScript, TypeScript \\
   \textbf{Hardware Frameworks:}   & Quartus Prime, Vivado, Vitis HLS, ESP-IDF Toolchain                  \\
-  \textbf{Software Frameworks:}   & Linux, OpenCV, NumPy, ReactJS, NodeJS, Git                           \\
+  \textbf{Software Frameworks:}   & Linux, OpenCV, Numpy, ReactJS, NodeJS, Git, CocoTB, UVM (familiar)   \\
   \textbf{Hardware Platforms:}    & Arty A7, Cyclone, iCE40, Zynq SoCs, Kria KV260                       \\
   \textbf{Languages:}             & English (Fluent)                                                   
 \end{tabular}
