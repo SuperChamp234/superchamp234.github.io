@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Eleventy v1.0.2">
+    
+    
+    <meta name="description" content="notes and thoughts as I break things">
+    
+    <title>Pipelining a RISC-V CPU with Cocotb</title>
+
+    <link rel="stylesheet" href="/css/css.css">
+    <script data-goatcounter="https://zainsv.goatcounter.com/count"
+        async src="/js/count.js"></script>
+</head>
+<body>
+    
+        <!-- Navigation Bar Component -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-menu">
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/resume">Resume</a>
+        </div>
+    </div>
+</nav>
+
+    
+    <link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="/css/prism.css">
+
+<div class="post-container">
+  <div class="post-navigation">
+    <a href="/blog" class="back-link">&larr; back</a>
+  </div>
+
+  <article>
+    <header class="article-header">
+      <h1>Pipelining a RISC-V CPU with Cocotb</h1>
+      <p class="post-meta">
+        <time datetime="Thu May 29 2025 11:04:20 GMT+0000 (Coordinated Universal Time)">2025-05-29</time>
+      </p>
+    </header>
+    
+    <div class="article-content">
+      <p>RISC-V is an open instruction set architecture — no licenses, no gatekeeping. You can literally build your own CPU, and I did.</p>
+<p>Why did I work on this? Actually, this project was first built by me as part of an initiative taken by <a href="https://sravjti.in">SRA-VJTI</a>, a student-run organization at VJTI Mumbai. I built a simple RISC-V CPU, with no verification or pipelining, just to understand how a CPU works. Since then, it's always been at the back of my mind that the CPU I implemented was not very efficient, and I wanted to build a better one.</p>
+<p>However, my main reason for building a RISC-V CPU was to learn about the architecture, how verification works, and how to implement pipelining in a CPU.</p>
+<p>In this post, I'll be sharing my experience of building a RISC-V CPU, pipelining it and writing testbenches for it using cocotb, which is a popular Python-based<br>
+verification framework for digital designs.</p>
+<h2>CPU Design</h2>
+<p>The CPU I built is a simple RISC-V CPU, with a 5-stage pipeline. The stages are:</p>
+<ul>
+<li>Fetch (IF): This stage fetches the instruction from memory.</li>
+<li>Decode (ID): This stage decodes the instruction and reads the operands from the register file.</li>
+<li>Execute (EX): This stage executes the instruction, performing arithmetic or logical operations.</li>
+<li>Memory (MEM): This stage accesses memory for load/store instructions.</li>
+<li>Writeback (WB): This stage writes the result back to the register file.</li>
+</ul>
+<p>This type of design is quite common in RISC-V CPUs, and some courses like <a href="https://cs61c.org/">CS61C</a> at UC Berkeley or <a href="https://www.cis.upenn.edu/~cis5710/current/">CIS 4710/5710</a><br>
+at UPenn use a similar design for their RISC-V CPU. If you wanna learn to design such a CPU, I highly recommend taking that course. It's a great introduction to computer architecture and RISC-V.</p>
+<p><img src="/media/blog/cpu/pipelined_cpu.png" alt="Pipeline Stages"></p>
+<center> Pipeline Stages of the CPU (from CS5710 @ UPenn) </center>
+<h3>Pipeline Hazards</h3>
+<p>Pipelining introduces some challenges, especially when it comes to hazards. The main types I focused on were read-after-write (RAW) hazards for register and memory dependencies, and control hazards for branch instructions.</p>
+<p>To minimize the performance penalty from these, I implemented forwarding logic. This involves detecting when a subsequent instruction needs a result that hasn’t reached<br>
+the writeback stage yet, and forwarding it directly from later pipeline stages like EX or MEM. By doing this, the CPU can use results earlier without waiting for them to<br>
+be fully written back. It’s a pretty neat trick that makes the pipeline flow smoother without stalling every few cycles.</p>
+<h2>Testing with Cocotb</h2>
+<p>This was by far the most fun part of the project, since watching your written HDL orchestrate the CPU is quite satisfying. <a href="https://www.cocotb.org/">Cocotb</a> is a very powerful framework for writing testbenches in Python. It allows you to instantiate testbenches in a high level language, and supports many simulators like icarus verilog and verilator.</p>
+<p>Cocotb requires a lot of makefile magic, and there's a community maintained package called <a href="https://github.com/themperek/cocotb-test">cocotb-test</a> that simplifies the process of writing testbenches. Instead of writing a makefile, you can write a simple Python script which sets up the simulator.</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">runCocotbTests</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""Run all tests"""</span>
+    <span class="token comment"># Define the test directory and files</span>
+    root_dir <span class="token operator">=</span> os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">while</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>root_dir<span class="token punctuation">,</span> <span class="token string">"rtl"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>root_dir<span class="token punctuation">)</span> <span class="token operator">==</span> root_dir<span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> FileNotFoundError<span class="token punctuation">(</span><span class="token string">"rtl directory not found in the current or parent directories."</span><span class="token punctuation">)</span>
+        root_dir <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>root_dir<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Using RTL directory: </span><span class="token interpolation"><span class="token punctuation">{</span>root_dir<span class="token punctuation">}</span></span><span class="token string">/rtl"</span></span><span class="token punctuation">)</span>
+    rtl_dir <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>root_dir<span class="token punctuation">,</span> <span class="token string">"rtl"</span><span class="token punctuation">)</span>
+    verilog_file <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>rtl_dir<span class="token punctuation">,</span> <span class="token string">"core_modules"</span><span class="token punctuation">,</span> <span class="token string">"alu.v"</span><span class="token punctuation">)</span>
+    
+    run<span class="token punctuation">(</span>
+        verilog_sources<span class="token operator">=</span><span class="token punctuation">[</span>verilog_file<span class="token punctuation">]</span><span class="token punctuation">,</span>
+        toplevel<span class="token operator">=</span><span class="token string">"alu"</span><span class="token punctuation">,</span>
+        module<span class="token operator">=</span><span class="token string">"test_alu"</span><span class="token punctuation">,</span>
+        simulator<span class="token operator">=</span><span class="token string">"verilator"</span><span class="token punctuation">,</span>
+        includes<span class="token operator">=</span><span class="token punctuation">[</span>rtl_dir<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+</code></pre>
+<p>As simple as that! The <code>run</code> function takes care of compiling the Verilog files and running the testbench.</p>
+<h3>Testing Strategy</h3>
+<p>Firstly, I decided to isolate the core components of the CPU and write testbenches for them. I'll write exhaustive and random tests for these components, and then integrate them into the CPU. The main ones I focused on were the execution unit (with the ALU) and the decoder.</p>
+<p>With python, it was quite easy to write tests with random inputs. I was able to write separate testbenches for each behavior of the module, and then run them with cocotb. For example, here is a simple test for validating the SUB operation of the ALU:</p>
+<pre class="language-python"><code class="language-python"><span class="token decorator annotation punctuation">@cocotb<span class="token punctuation">.</span>test</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">test_sub</span><span class="token punctuation">(</span>dut<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""Test SUB operation (rs1 - rs2)"""</span>
+    <span class="token comment"># Normal cases</span>
+    <span class="token keyword">await</span> verify_alu_operation<span class="token punctuation">(</span>dut<span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0x2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token string">"SUB"</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> verify_alu_operation<span class="token punctuation">(</span>dut<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0x2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0xFFFFFFFF</span><span class="token punctuation">,</span> <span class="token string">"SUB underflow"</span><span class="token punctuation">)</span>
+    
+    <span class="token comment"># Corner cases</span>
+    <span class="token keyword">await</span> verify_alu_operation<span class="token punctuation">(</span>dut<span class="token punctuation">,</span> <span class="token number">0x80000000</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0x2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0x7FFFFFFF</span><span class="token punctuation">,</span> <span class="token string">"SUB int_min-1"</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> verify_alu_operation<span class="token punctuation">(</span>dut<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0x2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">"SUB zero-zero"</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> verify_alu_operation<span class="token punctuation">(</span>dut<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0x2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">"SUB same values"</span><span class="token punctuation">)</span>
+</code></pre>
+<p>I wrote many helper functions like <code>verify_alu_operation</code> to simplify the process of writing tests. These functions would take care of setting the inputs, waiting for the output, and checking the output against the expected value.</p>
+<h4>Fibonacci Example</h4>
+<p>To make sure everything works as expected, I wrote a simple Fibonacci program in C that I compiled to RISC-V assembly using the gcc toolchain. I wrote my own linker script and startup assembly code to set up the stack, and then passed the entire thing to the toolchain to generate the binary.</p>
+<p>The stack setup was a gotcha for me, as I initially forgot to set the stack pointer to the top of the memory. This caused the CPU to access negative addresses, which lead to a lot of red signals in the simulation.</p>
+<pre class="language-asm6502"><code class="language-asm6502"><span class="token directive property">.section</span> .nop_section<span class="token punctuation">,</span> <span class="token string">"ax"</span>
+<span class="token directive property">.global</span> _start
+<span class="token directive property">.type</span> _start<span class="token punctuation">,</span> @function
+
+    <span class="token op-code keyword">nop</span> # To get the pipeline started
+    <span class="token op-code keyword">nop</span>
+    <span class="token op-code keyword">nop</span>
+
+_start<span class="token punctuation">:</span>
+    la sp<span class="token punctuation">,</span> _stack_top  # Load the stack pointer to the top of the stack
+    call main
+    j .
+</code></pre>
+<p>I hope this comes in handy when I want to extend my CPU to support more complex programs, and later ZephyrRTOS. I used cocotb to monitor the memory and registers during the execution of the program, and finally validated the entire state of the CPU after the program finished executing. This was a great way to ensure that the CPU was working as expected, and it was quite satisfying to see the Fibonacci sequence being generated correctly.</p>
+<h4>Pytest Integration</h4>
+<p>Finally, to tie up the entire thing with pytest, which allowed me to run tests with one command, I wrote a simple configuration file for it:</p>
+<pre class="language-ini"><code class="language-ini"><span class="token section"><span class="token punctuation">[</span><span class="token section-name selector">pytest</span><span class="token punctuation">]</span></span>
+<span class="token comment"># This is a string prefix that pytest uses to match function names of tests</span>
+<span class="token comment"># during automatic test discovery.</span>
+<span class="token comment">#</span>
+<span class="token comment"># We ensure that pytest only finds one test: the cocotb test runner</span>
+<span class="token comment"># function. The test cases for our hardware are cocotb tests, and need to remain</span>
+<span class="token comment"># invisible to pytest. If pytest tries to run them it will complain about</span>
+<span class="token comment"># `fixture "dut" not found`, as it tries to determine how to pass in the `dut`</span>
+<span class="token comment"># argument to the cocotb test.</span>
+<span class="token key attr-name">python_functions</span> <span class="token punctuation">=</span> <span class="token value attr-value">runCocotbTests</span>
+</code></pre>
+<p>This allowed me to run all the tests with a single command, and it was quite satisfying to see all the tests pass. Later, I aim to integrate this with a<br>
+CI/CD pipeline, so that the tests run automatically whenever I push changes to the repository.</p>
+<p><img src="/media/blog/cpu/pytest_output.jpeg" alt="Pytest Output"></p>
+<center> Output of pytest showing all tests passing </center>
+<h2>What's Next?</h2>
+<p>Getting something like ZephyrRTOS to run on this CPU.</p>
+<p>That means adding interrupt handling, exception logic, maybe even virtual memory. It’s ambitious, but that’s the point. I want to build something that actually proves that RISC-V enables someone to build their own CPU with modern RTOS support.<br>
+Hopefully, I can share more about that journey in the future.</p>
+<p>Until then, the code’s up on <a href="https://github.com/SRA-VJTI/synapse32">GitHub</a>. Dive in, mess around, contribute if you’re into it.</p>
+
+    </div>
+  </article>
+</div>
+</body>
+<footer>
+    <div class="footer-content">
+        <p> Made with a lot of coffee and <a href="https://www.11ty.dev/">Eleventy</a></p>
+    </div>
+</html>
