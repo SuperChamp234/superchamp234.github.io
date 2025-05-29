@@ -2,6 +2,7 @@
 title: about_me
 layout: about_page
 permalink: /about/
+draft: true
 ---
 
 # Who even are you?

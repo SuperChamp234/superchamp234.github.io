@@ -1,140 +1,134 @@
-/* Resume-specific styling matching site's lilac theme */
-/* Override the global max-width restriction for the resume page only */
-html, body {
-    max-width: none !important; /* Use !important to override global styles */
-    width: 90% !important;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
 
-/* Container that holds resume content */
+/* Resume styling - Minimalist version */
+
+/* Main resume container */
 .resume-container {
-    max-width: none !important;
-    width: 100% !important;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .resume {
-    font-family: monospace;
-    line-height: 1.6;
-    /* max-width: 1000px; Increased from 800px for a wider layout */
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.78;
     margin: 0 auto;
-    /* color: #e0ceed; */
+    color: #000;
     padding: 20px;
     max-width: none !important;
     width: 100% !important;
+    font-weight: 300;
+    letter-spacing: 0.8px;
 }
 
+/* Navigation controls */
 .navigation-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 100%;
 }
 
-.back-button {
-    position: relative;
-}
-
-.download-button {
+.back-button, .download-button {
     position: relative;
 }
 
 .back-button a, .download-button a {
-    color: #a875e8;
+    color: #001aff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-weight: 400;
+    transition: color 0.2s ease-in-out;
 }
 
-.back-button a:hover {
-    color: #e0ceed;
+.back-button a:hover, .download-button a:hover {
+    color: #0012b3;
     text-decoration: underline;
 }
 
+/* Typography */
 .resume h1, .resume h2, .resume h3 {
-    color: #a875e8;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #000;
     margin-top: 1.5em;
-    /* Reduced shadow for subtler effect */
-    text-shadow: 0px 0px 3px rgba(182, 87, 255, 0.3);
 }
 
 .resume h1 {
-    font-size: 1.8em;
+    font-size: 2rem;
     text-align: left;
     margin-bottom: 0.5em;
-    /* Keep headings consistent with your site */
-    font-weight: bold;
 }
 
 .resume h2 {
-    font-size: 1.4em;
-    border-bottom: 1px solid #614b7a;
-    padding-bottom: 0.3em;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 .resume h3 {
-    font-size: 1.2em;
+    font-size: 1.25rem;
+    margin-bottom: 0.5em;
 }
 
+/* Lists */
 .resume ul {
     padding-left: 1.5em;
-    list-style-type: none; /* Remove default bullets */
+    list-style-type: none;
+    margin-bottom: 1em;
 }
 
 .resume li {
     margin-bottom: 0.5em;
 }
 
-/* Only show bullets for actual content items, not for the main entries */
 .resume ul ul li {
     list-style-type: circle;
     margin-left: 1em;
 }
 
+/* Center section (typically name and contact) */
 .resume .center {
     text-align: center;
     margin-bottom: 2em;
 }
 
-/* Make your name stand out */
 .resume .center p strong {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     display: block;
     margin-bottom: 0.5em;
-    letter-spacing: 2px;
-    color: #a875e8;
-    text-shadow: 0px 0px 5px rgba(182, 87, 255, 0.4);
+    letter-spacing: 1px;
+    color: #000;
+    font-weight: bold;
 }
 
-/* Improve contact info styling */
+/* Contact links */
 .resume .center p a {
-    color: #a29dfa;
+    color: #001aff;
     text-decoration: none;
     margin: 0 5px;
-    transition: color 0.3s;
+    transition: color 0.2s ease-in-out;
 }
 
 .resume .center p a:hover {
-    color: #e0ceed;
+    color: #0012b3;
     text-decoration: underline;
 }
 
-/* Fix for the vertical bars in the subtitle */
-.resume .center p .math.inline {
-    font-family: monospace;
-    color: #a29dfa;
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Remove LaTeX formatting from math expressions */
+/* Math expressions (for vertical bars) */
+.resume .center p .math.inline,
 .resume span.math.inline {
-    font-family: monospace;
+    font-family: 'Roboto Mono', monospace;
+    color: #777;
 }
 
-/* Fix tables styling - hide borders and create better spacing */
+/* Tables */
 .resume table {
     width: 100%;
-    margin: 0;
+    margin: 0 0 1em 0;
     border-collapse: collapse;
     border: none;
     background: transparent;
@@ -146,25 +140,20 @@ html, body {
     vertical-align: top;
 }
 
-/* Make titles (institution names, job titles) more prominent */
+/* Titles in tables */
 .resume table strong {
-    font-size: 1.2em;
+    font-size: 1.1rem;
     letter-spacing: 0.5px;
-    color: #c99fff; /* Slightly brighter shade */
+    color: #000;
 }
 
-/* Make descriptions slightly smaller for better contrast */
+/* Descriptions */
 .resume table em {
     font-size: 0.95em;
-    opacity: 0.9;
+    color: #555;
 }
 
-/* Remove table borders */
-.resume table tbody tr {
-    background: transparent;
-    border: none;
-}
-
+/* Resume sections */
 .resume-header {
     text-align: center;
     margin-bottom: 2em;
@@ -173,19 +162,20 @@ html, body {
 .resume-contact {
     text-align: center;
     margin-bottom: 2em;
-    color: #a29dfa;
+    color: #777;
 }
 
 .resume-section {
     margin-bottom: 2em;
 }
 
-/* For items with right-aligned dates */
+/* Resume items with right-aligned dates */
 .resume-item {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     flex-wrap: wrap;
+    margin-bottom: 1em;
 }
 
 .resume-item-title {
@@ -193,84 +183,78 @@ html, body {
 }
 
 .resume-item-date {
-    color: #666;
+    color: #777;
     font-style: italic;
 }
 
 .resume-item-details {
     margin-top: 0.3em;
     margin-bottom: 1em;
+    width: 100%;
 }
 
-/* For skills section */
+/* Skills section */
 .skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5em;
+    gap: 0.75em;
     list-style-type: none;
     padding-left: 0;
 }
 
 .skill-item {
-    background-color: #3c2957; /* Darker purple background matching site theme */
-    padding: 0.3em 0.7em;
+    background-color: #f5f5f5;
+    padding: 0.4em 0.8em;
     border-radius: 3px;
     font-size: 0.9em;
+    border: 1px solid #eee;
 }
 
-/* Table styling to make them blend with the content */
-.resume table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 1em;
-    border: none;
-}
-
-.resume td {
-    padding: 0.3em;
-    border: none;
-    vertical-align: top;
-}
-
-/* Hide table borders and make them look like normal content */
-.resume table, .resume th, .resume td {
-    background: transparent;
-}
-
-/* For math rendering from pandoc */
-.math {
-    font-size: 1em;
-    font-family: monospace;
-}
-
-/* Fix for pipe symbols */
-.math.inline {
-    display: inline;
-    font-family: monospace;
-}
-
-/* Adding style for the header contact section */
-.center {
-    text-align: center;
-    margin-bottom: 2em;
-}
-
-.center a {
-    color: #caa8ff;
-    text-decoration: none;
-}
-
-.center a:hover {
-    color: #f5b0ef;
-}
-
+/* Print styles */
 @media print {
     .resume-container {
         max-width: 100%;
         padding: 0;
     }
     
-    .resume-options, .resume-instructions {
+    .resume-options, .resume-instructions, .navigation-controls {
         display: none;
+    }
+    
+    .resume, .resume-container, html, body {
+        background-color: white;
+        font-size: 12pt;
+    }
+    
+    .resume h1, .resume h2, .resume h3, .resume .center p strong {
+        color: black;
+    }
+    
+    .skill-item {
+        border: 1px solid #ddd;
+        background: #f8f8f8;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    html, body {
+        width: 100% !important;
+    }
+    
+    .resume {
+        padding: 10px;
+    }
+    
+    .resume-item {
+        flex-direction: column;
+    }
+    
+    .resume-item-date {
+        margin-bottom: 0.5em;
+    }
+    
+    .resume .center p strong {
+        font-size: 1.5rem;
     }
 }

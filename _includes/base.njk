@@ -14,7 +14,10 @@
     <script data-goatcounter="https://zainsv.goatcounter.com/count"
         async src="/js/count.js"></script>
 </head>
-<body>
+<body{% if page.url == "/" %} class="home-page"{% endif %}>
+    {% if page.url != "/" %}
+        {% include "navbar.njk" %}
+    {% endif %}
     {{ content | safe }}
 </body>
 </html>
