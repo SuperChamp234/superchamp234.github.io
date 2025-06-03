@@ -5,9 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="{{ eleventy.generator }}">
     
-    {% if site.description %}
+    {% if description %}
+    <meta name="description" content="{{ description }}">
+    {% elif site.description %}
     <meta name="description" content="{{ site.description }}">
     {% endif %}
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url | url }}">
+    <meta property="og:title" content="{{ title or site.title }}">
+    <meta property="og:description" content="{{ description or site.description }}">
+    {% if image %}
+    <meta property="og:image" content="{{ site.url }}{{ image | url }}">
+    {% endif %}
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ site.url }}{{ page.url | url }}">
+    <meta property="twitter:title" content="{{ title or site.title }}">
+    <meta property="twitter:description" content="{{ description or site.description }}">
+    {% if image %}
+    <meta property="twitter:image" content="{{ site.url }}{{ image | url }}">
+    {% endif %}
+
+    <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
+    
     <title>{{ title or site.title }}</title>
 
     <link rel="stylesheet" href="/css/css.css">

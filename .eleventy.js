@@ -6,10 +6,25 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("css");
     eleventyConfig.addPassthroughCopy("media");
     eleventyConfig.addPassthroughCopy("js");
+    eleventyConfig.addPassthroughCopy("robots.txt");
 
     eleventyConfig.addFilter("formatDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj).toISODate();
     });     
+
+    // Format date for sitemap
+    eleventyConfig.addFilter("sitemapDateString", (dateObj) => {
+        const dt = DateTime.fromJSDate(dateObj);
+        if (!dt.isValid) {
+            return '';
+        }
+        return dt.toISO();
+    });
+
+    // Get all content, for creating the sitemap
+    eleventyConfig.addCollection("sitemapContent", function(collectionApi) {
+        return collectionApi.getAll();
+    });
 
     let markdownOptions = {
         html: true,
