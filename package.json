@@ -5,7 +5,8 @@
     "build": "npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve",
     "start": "npx @11ty/eleventy --serve",
-    "deploy": "npm run build && gh-pages -d _site"
+    "deploy": "npm run build && gh-pages -d _site",
+    "new:post": "node new-post.js"
   },
   "license": "MIT",
   "dependencies": {
