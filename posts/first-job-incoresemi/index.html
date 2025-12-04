@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Eleventy v3.1.2">
+    
+    
+    <meta name="description" content="Article by Zain Siddavatam">
+    
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zainsv.me/posts/first-job-incoresemi/">
+    <meta property="og:title" content="I started working at InCore Semiconductors">
+    <meta property="og:description" content="Article by Zain Siddavatam">
+    
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zainsv.me/posts/first-job-incoresemi/">
+    <meta property="twitter:title" content="I started working at InCore Semiconductors">
+    <meta property="twitter:description" content="Article by Zain Siddavatam">
+    
+
+    <link rel="canonical" href="https://zainsv.me/posts/first-job-incoresemi/">
+    
+    <title>I started working at InCore Semiconductors</title>
+
+    <link rel="stylesheet" href="/css/css.css">
+    <script data-goatcounter="https://zainsv.goatcounter.com/count"
+        async src="/js/count.js"></script>
+</head>
+<body>
+    
+        <!-- Navigation Bar Component -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-menu">
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/resume">Resume</a>
+        </div>
+    </div>
+</nav>
+
+    
+    <link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="/css/prism.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "I started working at InCore Semiconductors",
+  "datePublished": "2025-12-04",
+  "dateModified": "2025-12-04",
+  "author": {
+    "@type": "Person",
+    "name": "Zain Siddavatam"
+  },
+  "description": "Article by Zain Siddavatam"
+  
+}
+</script>
+
+<div class="post-container">
+  <div class="post-navigation">
+    <a href="/blog" class="back-link">&larr; back</a>
+  </div>
+
+  <article>
+    <header class="article-header">
+      <h1>I started working at InCore Semiconductors</h1>
+      <p class="post-meta">
+        <time datetime="Thu Dec 04 2025 12:37:53 GMT+0000 (Coordinated Universal Time)">2025-12-04</time>
+      </p>
+    </header>
+    
+    <div class="article-content">
+      <p>After a long and exhausting job search, I finally joined InCore Semiconductors three months ago! So far, the experience here has been amazing, the folks here are challenging every aspect of classical semiconductor design, and I'm learning a lot. My position is of a verification engineer, working on the software for all their verification setup. Here, these folks have identified that the verification process is sluggish in big orgs, and have developed tools to combat this! I'll be talking about one of these tools here, eUVM!</p>
+<h2>eUVM</h2>
+<p><a href="https://github.com/coverify/euvm">eUVM</a> is a D port of IEEE standard 1800.2 2020-1.0 UVM (Universal Verification Methodology). It is powered by ESDL, a simulation engine made in D which harnesses the power of verilator, or any commercial sim like Questa, and allows for writing testbenches in eUVM and simulate them in a platform-agnostic way.</p>
+<p>This allows for stuff like validating testbenches and getting functional coverage fast on verilator (verilator cannot do functional coverage, but with ESDL it can!), and once ready for production / shipping to a client, getting some &quot;commercially accepted&quot; reports by running the same testbench on Questa.</p>
+<p>I remember looking at the missing SV features in verilator, and wanting to contribute when I was unemployed (alas verilator is very complex project), seeing ESDL and EUVM tackle all those missing features makes me very excited to delve into their inner workings.</p>
+<h2>RiVer Core</h2>
+<p>RiVer Core is a RISC-V verification platform, which ties a bunch test-generation utilities, runs them on a bunch of DUTs (can be commercial simulators, multiple DUTs..) and compares results by running same tests on reference designs. Currently a part of my work is improving the codebase, and adding new features (like a TUI powered by textual!).</p>
+<h2>Where does this go?</h2>
+<p>You might wonder that this is quite a pivot from actual comparch? And I agree, but this feels more like a preface to getting into more comparch. I chat with the design engineers here and I get to learn a lot about what their pain points are, and while fishing for bugs in the hardware, I get to see how exactly everything falls into place (also learn bluespec!).</p>
+<p>That's all for now, this was just a minor update. See you folks later!</p>
+
+    </div>
+  </article>
+
+  <!-- Giscus comments section -->
+  <script src="https://giscus.app/client.js"
+          data-repo="SuperChamp234/superchamp234.github.io"
+          data-repo-id="R_kgDON8UxeQ"
+          data-category="Announcements"
+          data-category-id="DIC_kwDON8Uxec4CrxIJ"
+          data-mapping="title"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="light"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+  <div class="giscus"></div>
+</div>
+</body>
+<footer>
+    <div class="footer-content">
+        <p> Made with a lot of coffee and <a href="https://www.11ty.dev/">Eleventy</a></p>
+    </div>
+</html>
