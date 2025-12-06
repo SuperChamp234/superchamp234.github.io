@@ -1,7 +1,7 @@
 ---
 title: Working on AOC and Advent of FPGA??!!! OCAML??? Part 1
 layout: post
-date: 2025-12-04T12:37:53.328Z
+date: 2025-12-04T13:37:53.328Z
 tags:
   - blog
   - aoc
@@ -60,6 +60,60 @@ let day1_part_1 lines dial =
 
 I will upload all solutions on a git somewhere, but this small example gave me quite an introspection in how things are going to be....
 
-Day 2 was much easier than day 1, very straight forward solution. However now it's time to think what creative thing can be done for Advent of FPGA.... recreating the same designs again in HDL isn't going to be that fun.... maybe a general computer which can solve all the problems using a custom programming language like a coprocessor like PRU, which have their own instruction set and can be programmed in a high-level language.
+Day 2 was much easier than day 1, very straight forward solution. I had a little trouble with the types, but the langauge features, especially how it infers the type dynamically is very sweet. Also, the inline hints I get from the LSP are super helpful, kinda like how rust-analyzer gives.
 
-Let me see... I think I should commit this post for now. See you in the next post!
+```ocaml
+let pattern_of pattern len =
+  let patstr = string_of_int pattern in
+  let pat_len = String.length patstr in
+  if pat_len < 1 then None
+  else if len mod pat_len <> 0 then None
+  else
+    let rec gen acc len_rem =
+      if len_rem > 0 then gen (acc ^ patstr) (len_rem - pat_len) else acc
+    in
+    Some (gen "" len)
+
+let validate_2 num =
+  let str = string_of_int num in
+  let len = String.length str in
+  let rec comp idx =
+    if idx > len / 2 then 0
+    else
+      let new_acc = String.sub str 0 idx in
+      let res = pattern_of (int_of_string new_acc) len in
+      match res with
+      | Some pattern -> if pattern = str then num else comp (idx + 1)
+      | _ -> comp (idx + 1)
+  in
+  comp 1
+
+let parse_range func a b =
+  let rec iter_range acc inum =
+    if inum > b then acc else iter_range (acc + func inum) (inum + 1)
+  in
+  iter_range 0 a
+
+let parse_input func arr =
+  let rec iter_input acc inp =
+    match inp with
+    | [] -> acc
+    | (a, b) :: res -> iter_input (acc + parse_range func a b) res
+  in
+  iter_input 0 arr
+
+let day2_part2 inp = parse_input validate_2 inp
+```
+
+Some salient language things I like:
+
+- The `in` thingy. I love how everything is supposed to converge to a context. I think this encourages a lot of thinking on the developer's part instead of just randomly defining stuff anywhere.
+- `match` one can never go wrong with pattern matching. Or they can go wrong but the compiler will tell you to cover all those cases. Again, making developer think before they write a very terrible if else if ladder.
+- Tail recursion is sweet. I had first checked it out in erlang, and therefore it was not an alien concept this time.
+- UTop is great! I write small helper functions and test them out on utop all the time!
+
+However now it's time to think what creative thing can be done for Advent of FPGA.... recreating the same designs again in HDL isn't going to be that fun.... maybe a general computer which can solve all the problems using a custom programming language like a coprocessor like PRU, which have their own instruction set and can be programmed in a high-level language.
+
+Let me see... I think I should commit this post for now. You can find all the solutions in my git repo [here](https://github.com/SuperChamp234/aoc-2025.git)!
+
+See you in the next post!
