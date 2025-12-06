@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Eleventy v3.1.2">
+    
+    
+    <meta name="description" content="Article by Zain Siddavatam">
+    
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zainsv.me/posts/aoc-code-fpga-ocaml-1/">
+    <meta property="og:title" content="Working on AOC and Advent of FPGA??!!! OCAML??? Part 1">
+    <meta property="og:description" content="Article by Zain Siddavatam">
+    
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zainsv.me/posts/aoc-code-fpga-ocaml-1/">
+    <meta property="twitter:title" content="Working on AOC and Advent of FPGA??!!! OCAML??? Part 1">
+    <meta property="twitter:description" content="Article by Zain Siddavatam">
+    
+
+    <link rel="canonical" href="https://zainsv.me/posts/aoc-code-fpga-ocaml-1/">
+    
+    <title>Working on AOC and Advent of FPGA??!!! OCAML??? Part 1</title>
+
+    <link rel="stylesheet" href="/css/css.css">
+    <script data-goatcounter="https://zainsv.goatcounter.com/count"
+        async src="/js/count.js"></script>
+</head>
+<body>
+    
+        <!-- Navigation Bar Component -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-menu">
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/resume">Resume</a>
+        </div>
+    </div>
+</nav>
+
+    
+    <link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="/css/prism.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Working on AOC and Advent of FPGA??!!! OCAML??? Part 1",
+  "datePublished": "2025-12-04",
+  "dateModified": "2025-12-04",
+  "author": {
+    "@type": "Person",
+    "name": "Zain Siddavatam"
+  },
+  "description": "Article by Zain Siddavatam"
+  
+}
+</script>
+
+<div class="post-container">
+  <div class="post-navigation">
+    <a href="/blog" class="back-link">&larr; back</a>
+  </div>
+
+  <article>
+    <header class="article-header">
+      <h1>Working on AOC and Advent of FPGA??!!! OCAML??? Part 1</h1>
+      <p class="post-meta">
+        <time datetime="Thu Dec 04 2025 12:37:53 GMT+0000 (Coordinated Universal Time)">2025-12-04</time>
+      </p>
+    </header>
+    
+    <div class="article-content">
+      <p>I stumbled across this <a href="https://blog.janestreet.com/advent-of-fpga-challenge-2025/">blog post by Jane Street</a>, which talks about an Advent of FPGA challenge hosted by Jane Street.</p>
+<blockquote>
+<p>This year, we’re inviting the community to join us in that spirit with the 2025 Advent of FPGA Challenge. When the final AoC 2025 puzzle drops, pick any puzzles you like (at least one and up to as many as you want) to build synthesizable RTL with realistic I/O, bonus points if you do it in Hardcaml. We’re excited to see the clever designs created across the academic and open‑source communities, and we’d also love to get more people trying Hardcaml!</p>
+</blockquote>
+<p>Well well well, that sounds like a challenge from the big minds at money making corp. I'm not sure I can keep up with that, but I'll give it a try. I've never used OCaml or Hardcaml before, so lets see how that goes lol. I'll use this blog to kinda give live devel updates.</p>
+<p>I already started and finished day 1 before finding this blog (in rust), so time to port the solution to OCaml.... First thing to do is to go through all the getting started for OCaml...</p>
+<h3>OCaml initial impression</h3>
+<blockquote>
+<p>Since let … = … in … is an expression, it can be used within another expression in order to have several values with their own names:</p>
+</blockquote>
+<pre class="language-ocaml"><code class="language-ocaml"><span class="token punctuation">#</span> <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">1</span> <span class="token keyword">in</span>
+  <span class="token keyword">let</span> b <span class="token operator">=</span> <span class="token number">2</span> <span class="token keyword">in</span>
+    a <span class="token operator">+</span> b<span class="token punctuation">;;</span>
+<span class="token operator">-</span> <span class="token punctuation">:</span> int <span class="token operator">=</span> <span class="token number">3</span>
+</code></pre>
+<p>Ooh I can already smell the functionallishhness of the language.</p>
+<h3>AOC Day 1 and 2</h3>
+<p>After fighting with the <code>utop</code> iteractive executor for a while, I feel exactly how I feel about other functional languages. They are either very well thought out, or maybe they are here to just make my life hard haha. Anyways, the learn section of the website also teaches how to read a file, and extract lines of of it. It didn't take me long to get the first day 1's part 1 working.</p>
+<pre class="language-ocaml"><code class="language-ocaml"><span class="token keyword">let</span> pos_mod a b <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>a <span class="token operator">mod</span> b<span class="token punctuation">)</span> <span class="token operator">+</span> b<span class="token punctuation">)</span> <span class="token operator">mod</span> b
+
+<span class="token keyword">let</span> operate_on_dial dial opt num <span class="token operator">=</span>
+  <span class="token keyword">match</span> opt <span class="token keyword">with</span>
+  <span class="token operator">|</span> <span class="token char">'L'</span> <span class="token operator">-></span> pos_mod <span class="token punctuation">(</span>dial <span class="token operator">-</span> num <span class="token operator">+</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token number">100</span>
+  <span class="token operator">|</span> <span class="token char">'R'</span> <span class="token operator">-></span> pos_mod <span class="token punctuation">(</span>dial <span class="token operator">+</span> num<span class="token punctuation">)</span> <span class="token number">100</span>
+  <span class="token operator">|</span> <span class="token punctuation">_</span> <span class="token operator">-></span> failwith <span class="token string">"unexpected operation on dial"</span>
+
+<span class="token keyword">let</span> day1_part_1 lines dial <span class="token operator">=</span>
+  <span class="token keyword">let</span> <span class="token keyword">rec</span> process_list acc dial lines <span class="token operator">=</span>
+    <span class="token keyword">match</span> lines <span class="token keyword">with</span>
+    <span class="token operator">|</span> <span class="token punctuation">[</span> <span class="token string">""</span> <span class="token punctuation">]</span> <span class="token operator">-></span> acc
+    <span class="token operator">|</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">-></span> acc
+    <span class="token operator">|</span> elem <span class="token punctuation">::</span> rem <span class="token operator">-></span>
+        <span class="token keyword">let</span> opt <span class="token operator">=</span> elem<span class="token punctuation">.</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">in</span>
+        <span class="token keyword">let</span> num <span class="token operator">=</span> int_of_string <span class="token punctuation">(</span>String<span class="token punctuation">.</span>sub elem <span class="token number">1</span> <span class="token punctuation">(</span>String<span class="token punctuation">.</span>length elem <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">in</span>
+        <span class="token keyword">let</span> new_dial <span class="token operator">=</span> operate_on_dial dial opt num <span class="token keyword">in</span>
+        <span class="token keyword">if</span> new_dial <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">then</span> process_list <span class="token punctuation">(</span>acc <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> new_dial rem
+        <span class="token keyword">else</span> process_list acc new_dial rem
+  <span class="token keyword">in</span>
+  process_list <span class="token number">0</span> dial lines
+</code></pre>
+<p>I will upload all solutions on a git somewhere, but this small example gave me quite an introspection in how things are going to be....</p>
+<p>Day 2 was much easier than day 1, very straight forward solution. However now it's time to think what creative thing can be done for Advent of FPGA.... recreating the same designs again in HDL isn't going to be that fun.... maybe a general computer which can solve all the problems using a custom programming language like a coprocessor like PRU, which have their own instruction set and can be programmed in a high-level language.</p>
+<p>Let me see... I think I should commit this post for now. See you in the next post!</p>
+
+    </div>
+  </article>
+
+  <!-- Giscus comments section -->
+  <script src="https://giscus.app/client.js"
+          data-repo="SuperChamp234/superchamp234.github.io"
+          data-repo-id="R_kgDON8UxeQ"
+          data-category="Announcements"
+          data-category-id="DIC_kwDON8Uxec4CrxIJ"
+          data-mapping="title"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="light"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+  <div class="giscus"></div>
+</div>
+</body>
+<footer>
+    <div class="footer-content">
+        <p> Made with a lot of coffee and <a href="https://www.11ty.dev/">Eleventy</a></p>
+    </div>
+</html>
