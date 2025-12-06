@@ -74,7 +74,7 @@
     <header class="article-header">
       <h1>Working on AOC and Advent of FPGA??!!! OCAML??? Part 1</h1>
       <p class="post-meta">
-        <time datetime="Thu Dec 04 2025 12:37:53 GMT+0000 (Coordinated Universal Time)">2025-12-04</time>
+        <time datetime="Thu Dec 04 2025 13:37:53 GMT+0000 (Coordinated Universal Time)">2025-12-04</time>
       </p>
     </header>
     
@@ -120,8 +120,58 @@
   process_list <span class="token number">0</span> dial lines
 </code></pre>
 <p>I will upload all solutions on a git somewhere, but this small example gave me quite an introspection in how things are going to be....</p>
-<p>Day 2 was much easier than day 1, very straight forward solution. However now it's time to think what creative thing can be done for Advent of FPGA.... recreating the same designs again in HDL isn't going to be that fun.... maybe a general computer which can solve all the problems using a custom programming language like a coprocessor like PRU, which have their own instruction set and can be programmed in a high-level language.</p>
-<p>Let me see... I think I should commit this post for now. See you in the next post!</p>
+<p>Day 2 was much easier than day 1, very straight forward solution. I had a little trouble with the types, but the langauge features, especially how it infers the type dynamically is very sweet. Also, the inline hints I get from the LSP are super helpful, kinda like how rust-analyzer gives.</p>
+<pre class="language-ocaml"><code class="language-ocaml"><span class="token keyword">let</span> pattern_of pattern len <span class="token operator">=</span>
+  <span class="token keyword">let</span> patstr <span class="token operator">=</span> string_of_int pattern <span class="token keyword">in</span>
+  <span class="token keyword">let</span> pat_len <span class="token operator">=</span> String<span class="token punctuation">.</span>length patstr <span class="token keyword">in</span>
+  <span class="token keyword">if</span> pat_len <span class="token operator">&lt;</span> <span class="token number">1</span> <span class="token keyword">then</span> None
+  <span class="token keyword">else</span> <span class="token keyword">if</span> len <span class="token operator">mod</span> pat_len <span class="token operator">&lt;></span> <span class="token number">0</span> <span class="token keyword">then</span> None
+  <span class="token keyword">else</span>
+    <span class="token keyword">let</span> <span class="token keyword">rec</span> gen acc len_rem <span class="token operator">=</span>
+      <span class="token keyword">if</span> len_rem <span class="token operator">></span> <span class="token number">0</span> <span class="token keyword">then</span> gen <span class="token punctuation">(</span>acc <span class="token operator">^</span> patstr<span class="token punctuation">)</span> <span class="token punctuation">(</span>len_rem <span class="token operator">-</span> pat_len<span class="token punctuation">)</span> <span class="token keyword">else</span> acc
+    <span class="token keyword">in</span>
+    Some <span class="token punctuation">(</span>gen <span class="token string">""</span> len<span class="token punctuation">)</span>
+
+<span class="token keyword">let</span> validate_2 num <span class="token operator">=</span>
+  <span class="token keyword">let</span> str <span class="token operator">=</span> string_of_int num <span class="token keyword">in</span>
+  <span class="token keyword">let</span> len <span class="token operator">=</span> String<span class="token punctuation">.</span>length str <span class="token keyword">in</span>
+  <span class="token keyword">let</span> <span class="token keyword">rec</span> comp idx <span class="token operator">=</span>
+    <span class="token keyword">if</span> idx <span class="token operator">></span> len <span class="token operator">/</span> <span class="token number">2</span> <span class="token keyword">then</span> <span class="token number">0</span>
+    <span class="token keyword">else</span>
+      <span class="token keyword">let</span> new_acc <span class="token operator">=</span> String<span class="token punctuation">.</span>sub str <span class="token number">0</span> idx <span class="token keyword">in</span>
+      <span class="token keyword">let</span> res <span class="token operator">=</span> pattern_of <span class="token punctuation">(</span>int_of_string new_acc<span class="token punctuation">)</span> len <span class="token keyword">in</span>
+      <span class="token keyword">match</span> res <span class="token keyword">with</span>
+      <span class="token operator">|</span> Some pattern <span class="token operator">-></span> <span class="token keyword">if</span> pattern <span class="token operator">=</span> str <span class="token keyword">then</span> num <span class="token keyword">else</span> comp <span class="token punctuation">(</span>idx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+      <span class="token operator">|</span> <span class="token punctuation">_</span> <span class="token operator">-></span> comp <span class="token punctuation">(</span>idx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token keyword">in</span>
+  comp <span class="token number">1</span>
+
+<span class="token keyword">let</span> parse_range func a b <span class="token operator">=</span>
+  <span class="token keyword">let</span> <span class="token keyword">rec</span> iter_range acc inum <span class="token operator">=</span>
+    <span class="token keyword">if</span> inum <span class="token operator">></span> b <span class="token keyword">then</span> acc <span class="token keyword">else</span> iter_range <span class="token punctuation">(</span>acc <span class="token operator">+</span> func inum<span class="token punctuation">)</span> <span class="token punctuation">(</span>inum <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token keyword">in</span>
+  iter_range <span class="token number">0</span> a
+
+<span class="token keyword">let</span> parse_input func arr <span class="token operator">=</span>
+  <span class="token keyword">let</span> <span class="token keyword">rec</span> iter_input acc inp <span class="token operator">=</span>
+    <span class="token keyword">match</span> inp <span class="token keyword">with</span>
+    <span class="token operator">|</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">-></span> acc
+    <span class="token operator">|</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">::</span> res <span class="token operator">-></span> iter_input <span class="token punctuation">(</span>acc <span class="token operator">+</span> parse_range func a b<span class="token punctuation">)</span> res
+  <span class="token keyword">in</span>
+  iter_input <span class="token number">0</span> arr
+
+<span class="token keyword">let</span> day2_part2 inp <span class="token operator">=</span> parse_input validate_2 inp
+</code></pre>
+<p>Some salient language things I like:</p>
+<ul>
+<li>The <code>in</code> thingy. I love how everything is supposed to converge to a context. I think this encourages a lot of thinking on the developer's part instead of just randomly defining stuff anywhere.</li>
+<li><code>match</code> one can never go wrong with pattern matching. Or they can go wrong but the compiler will tell you to cover all those cases. Again, making developer think before they write a very terrible if else if ladder.</li>
+<li>Tail recursion is sweet. I had first checked it out in erlang, and therefore it was not an alien concept this time.</li>
+<li>UTop is great! I write small helper functions and test them out on utop all the time!</li>
+</ul>
+<p>However now it's time to think what creative thing can be done for Advent of FPGA.... recreating the same designs again in HDL isn't going to be that fun.... maybe a general computer which can solve all the problems using a custom programming language like a coprocessor like PRU, which have their own instruction set and can be programmed in a high-level language.</p>
+<p>Let me see... I think I should commit this post for now. You can find all the solutions in my git repo <a href="https://github.com/SuperChamp234/aoc-2025.git">here</a>!</p>
+<p>See you in the next post!</p>
 
     </div>
   </article>
