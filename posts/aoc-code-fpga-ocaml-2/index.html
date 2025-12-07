@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Eleventy v3.1.2">
+    
+    
+    <meta name="description" content="Article by Zain Siddavatam">
+    
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zainsv.me/posts/aoc-code-fpga-ocaml-2/">
+    <meta property="og:title" content="AOC 2025 Part 2 - OCaml Boogaloo">
+    <meta property="og:description" content="Article by Zain Siddavatam">
+    
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zainsv.me/posts/aoc-code-fpga-ocaml-2/">
+    <meta property="twitter:title" content="AOC 2025 Part 2 - OCaml Boogaloo">
+    <meta property="twitter:description" content="Article by Zain Siddavatam">
+    
+
+    <link rel="canonical" href="https://zainsv.me/posts/aoc-code-fpga-ocaml-2/">
+    
+    <title>AOC 2025 Part 2 - OCaml Boogaloo</title>
+
+    <link rel="stylesheet" href="/css/css.css">
+    <script data-goatcounter="https://zainsv.goatcounter.com/count"
+        async src="/js/count.js"></script>
+</head>
+<body>
+    
+        <!-- Navigation Bar Component -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-menu">
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/resume">Resume</a>
+        </div>
+    </div>
+</nav>
+
+    
+    <link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="/css/prism.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AOC 2025 Part 2 - OCaml Boogaloo",
+  "datePublished": "2025-12-08",
+  "dateModified": "2025-12-08",
+  "author": {
+    "@type": "Person",
+    "name": "Zain Siddavatam"
+  },
+  "description": "Article by Zain Siddavatam"
+  
+}
+</script>
+
+<div class="post-container">
+  <div class="post-navigation">
+    <a href="/blog" class="back-link">&larr; back</a>
+  </div>
+
+  <article>
+    <header class="article-header">
+      <h1>AOC 2025 Part 2 - OCaml Boogaloo</h1>
+      <p class="post-meta">
+        <time datetime="Mon Dec 08 2025 13:37:53 GMT+0000 (Coordinated Universal Time)">2025-12-08</time>
+      </p>
+    </header>
+    
+    <div class="article-content">
+      <p>Continuing with the last post, I'll be discussing my experience with OCaml and solving rest of the AOC problems till day 4.</p>
+<h2>Day 3</h2>
+<p>Stack! I immediately recognized this leetcode problem haha, finding the largest number possible lexicographically from a stack of numbers. However, I was unable to imagine how a stack would be implemented in OCaml. I ended up using the Std Stack, but in retrospect, writing my own OCaml stack would have been a better learning approach.</p>
+<pre class="language-ocaml"><code class="language-ocaml"><span class="token keyword">let</span> find_n_batteries n arr <span class="token operator">=</span>
+  <span class="token keyword">let</span> len <span class="token operator">=</span> List<span class="token punctuation">.</span>length arr <span class="token keyword">in</span>
+  <span class="token keyword">if</span> len <span class="token operator">=</span> <span class="token number">0</span> <span class="token operator">||</span> n <span class="token operator">&lt;=</span> <span class="token number">0</span> <span class="token keyword">then</span> <span class="token number">0</span>
+  <span class="token keyword">else</span>
+    <span class="token keyword">let</span> n <span class="token operator">=</span> <span class="token keyword">if</span> n <span class="token operator">></span> len <span class="token keyword">then</span> len <span class="token keyword">else</span> n <span class="token keyword">in</span>
+    <span class="token keyword">let</span> drop <span class="token operator">=</span> len <span class="token operator">-</span> n <span class="token keyword">in</span>
+    <span class="token keyword">let</span> stack <span class="token operator">=</span> Stack<span class="token punctuation">.</span>create <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">in</span>
+
+    <span class="token comment">(* Keep stacking, and remove batteries which cannot contribute to a larger number *)</span>
+    <span class="token keyword">let</span> <span class="token keyword">rec</span> loop rem <span class="token operator">=</span> <span class="token keyword">function</span>
+      <span class="token operator">|</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">-></span> rem
+      <span class="token operator">|</span> x <span class="token punctuation">::</span> xs <span class="token operator">-></span>
+          <span class="token keyword">let</span> <span class="token keyword">rec</span> pop_while r <span class="token operator">=</span>
+            <span class="token keyword">if</span> r <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>not <span class="token punctuation">(</span>Stack<span class="token punctuation">.</span>is_empty stack<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> Stack<span class="token punctuation">.</span>top stack <span class="token operator">&lt;</span> x <span class="token keyword">then</span> <span class="token punctuation">(</span>
+              ignore <span class="token punctuation">(</span>Stack<span class="token punctuation">.</span>pop stack<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              pop_while <span class="token punctuation">(</span>r <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">else</span> r
+          <span class="token keyword">in</span>
+          <span class="token keyword">let</span> rem' <span class="token operator">=</span> pop_while rem <span class="token keyword">in</span>
+          Stack<span class="token punctuation">.</span>push x stack<span class="token punctuation">;</span>
+          loop rem' xs
+    <span class="token keyword">in</span>
+
+    <span class="token keyword">let</span> rem_after <span class="token operator">=</span> loop drop arr <span class="token keyword">in</span>
+
+<span class="token comment">(* Rest of the code to drop the extra batteries *)</span>
+<span class="token comment">(* ... *)</span>
+</code></pre>
+<p>As an electrical engineer, finding the exact joltage value to save christmas and making everything jolly was a great time. I was initially very lost trying to write a recursive function which would deal with the stack, and I kept making a lot of mistakes around the line <code>ignore (Stack.pop stack);</code> because I was not sure if I can just call a <code>Unit</code> returning method and discard the result! I think I can even remove the ignore keyword now... since I did not use that in the following day.</p>
+<h2>Day 4</h2>
+<p>This day was much easier than I thought, and this was another day where I learnt a new OCaml thing and fought with it. 2D arrays! Apparently, there's different <code>Arrays</code> and <code>Lists</code> in OCaml, with the former having many helper methods which made writing this solution much easier.</p>
+<pre class="language-ocaml"><code class="language-ocaml"><span class="token keyword">for</span> i <span class="token operator">=</span> start_i <span class="token keyword">to</span> end_i <span class="token keyword">do</span>
+      <span class="token keyword">for</span> j <span class="token operator">=</span> start_j <span class="token keyword">to</span> end_j <span class="token keyword">do</span>
+        <span class="token keyword">if</span> inp<span class="token punctuation">.</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">1</span> <span class="token keyword">then</span>
+          <span class="token keyword">let</span> v <span class="token operator">=</span> score i j inp <span class="token keyword">in</span>
+          <span class="token keyword">if</span> v <span class="token operator">&lt;</span> <span class="token number">4</span> <span class="token keyword">then</span> <span class="token punctuation">(</span>
+            ans <span class="token operator">:=</span> <span class="token operator">!</span>ans <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            sel_elems <span class="token operator">:=</span> <span class="token operator">!</span>sel_elems <span class="token operator">@</span> <span class="token punctuation">[</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token punctuation">)</span>
+      <span class="token keyword">done</span>
+    <span class="token keyword">done</span><span class="token punctuation">;</span>
+</code></pre>
+<p>I spent an hour trying to write this for loop as a recursive function. After a while and many errors where it exepcted a <code> a` list list</code> somehow.</p>
+<p>My two ways of debugging an OCaml program, or coming up with the approach would be to first modularise my approach, try to write all helper methods in my editor, copy paste them into <code>utop</code> and then write the main function which solved the problem.</p>
+<p>The VS-Code extension for OCaml has these neat inline inference of types, which was one of my main methods of knowing if I was writing correct syntax haha.</p>
+<p>Day 4 part 2 could have been made a little more hard, but I guess they're keeping the best for next.</p>
+<h2>Day 5</h2>
+<p>Man I think I should build this freshness system for myself. I wonder how the elfs manage that freshness ID range list in the first place. This would make managing my own fridge a lot easier haha.</p>
+<p>Anyways, I first thought I should try this with Hashtables, however it struck me that we are dealing with simple ranges here and that would be really clunky. Simply merging the ranges and checking against them felt easier. And lo and behold, the second part of the problem depended on simply enumerating the merged ranges!</p>
+<pre class="language-ocaml"><code class="language-ocaml"><span class="token keyword">let</span> merge_ranges ranges <span class="token operator">=</span>
+  <span class="token keyword">let</span> sorted <span class="token operator">=</span> List<span class="token punctuation">.</span>sort <span class="token punctuation">(</span><span class="token keyword">fun</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token punctuation">_</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>b<span class="token punctuation">,</span> <span class="token punctuation">_</span><span class="token punctuation">)</span> <span class="token operator">-></span> compare a b<span class="token punctuation">)</span> ranges <span class="token keyword">in</span>
+  <span class="token keyword">let</span> <span class="token keyword">rec</span> aux acc <span class="token operator">=</span> <span class="token keyword">function</span>
+    <span class="token operator">|</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">-></span> List<span class="token punctuation">.</span>rev acc
+    <span class="token operator">|</span> <span class="token punctuation">(</span>s<span class="token punctuation">,</span> e<span class="token punctuation">)</span> <span class="token punctuation">::</span> rest <span class="token operator">-></span> <span class="token punctuation">(</span>
+        <span class="token keyword">match</span> acc <span class="token keyword">with</span>
+        <span class="token operator">|</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">-></span> aux <span class="token punctuation">[</span> <span class="token punctuation">(</span>s<span class="token punctuation">,</span> e<span class="token punctuation">)</span> <span class="token punctuation">]</span> rest
+        <span class="token operator">|</span> <span class="token punctuation">(</span>ps<span class="token punctuation">,</span> pe<span class="token punctuation">)</span> <span class="token punctuation">::</span> t <span class="token operator">-></span>
+            <span class="token keyword">if</span> s <span class="token operator">&lt;=</span> pe <span class="token operator">+</span> <span class="token number">1</span> <span class="token keyword">then</span> aux <span class="token punctuation">(</span><span class="token punctuation">(</span>ps<span class="token punctuation">,</span> max pe e<span class="token punctuation">)</span> <span class="token punctuation">::</span> t<span class="token punctuation">)</span> rest
+            <span class="token keyword">else</span> aux <span class="token punctuation">(</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> e<span class="token punctuation">)</span> <span class="token punctuation">::</span> acc<span class="token punctuation">)</span> rest<span class="token punctuation">)</span>
+  <span class="token keyword">in</span>
+  aux <span class="token punctuation">[</span><span class="token punctuation">]</span> sorted
+</code></pre>
+<h2>Moving setup to Dune!</h2>
+<p>Having a look at all OCaml resources online, I was motivated to move my setup to Dune. The testing functionality is pretty neat and now I don't have dirty asserts in my code. And I can maintain the utils in a separate file and import them in the test files!</p>
+<h1>Finally</h1>
+<p>As always, you can find my solutions on my <a href="https://github.com/SuperChamp234/aoc-2025.git">github</a>. I hope to catch up with the rest two remaining days tomorrow!</p>
+
+    </div>
+  </article>
+
+  <!-- Giscus comments section -->
+  <script src="https://giscus.app/client.js"
+          data-repo="SuperChamp234/superchamp234.github.io"
+          data-repo-id="R_kgDON8UxeQ"
+          data-category="Announcements"
+          data-category-id="DIC_kwDON8Uxec4CrxIJ"
+          data-mapping="title"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="light"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+  <div class="giscus"></div>
+</div>
+</body>
+<footer>
+    <div class="footer-content">
+        <p> Made with a lot of coffee and <a href="https://www.11ty.dev/">Eleventy</a></p>
+    </div>
+</html>
