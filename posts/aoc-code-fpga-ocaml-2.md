@@ -1,5 +1,5 @@
 ---
-title: AOC 2025 Part 2\: OCaml Boogaloo
+title: AOC 2025 Part 2 - OCaml Boogaloo
 layout: post
 date: 2025-12-08T13:37:53.328Z
 tags:
