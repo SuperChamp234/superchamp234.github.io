@@ -1,12 +1,12 @@
 {
     "title": "Zain's blog",
     "subtitle": "notes and thoughts as I break things",
-    "intro": "I'm Zain, currently a student @ VJTI Mumbai. I've been exploring computers and their low level architectures for sometime now, and I'm always looking for new things to learn! Don't hesitate to reach out to me if you want to collaborate on something, or just want to chat. I'm always up for a good conversation!",
+    "intro": "I'm Zain, a comparch enthusiast and hardware enjoyer. I've been exploring computers and their low level architectures for sometime now, and I'm always looking for new things to learn! Don't hesitate to reach out to me if you want to collaborate on something, or just want to chat. I'm always up for a good conversation!",
     "current_activities": [
-        "Learning about computer architecture by building a RISC-V CPU",
+        "Working as Verif Engineer @ <a href=\"https://incoresemi.com/\" target=\"_blank\">InCore Semiconductors</a>",
         "Reading papers on ML accelerators and their architectures",
         "Playing hide and seek with my cat",
-        "Looking for collaborations on impactful research in computer architecture and ML (please reach out if you're interested!)"
+        "Looking for collaborations on impactful research in computer architecture and ML (please reach out if you're interested in working together on cool projects!)"
     ],
     "description": "Checkout my blog for my escapades in tech, and more. I also write about my experiences and thoughts on various topics.",
     "email": "hi@zainsv.me",

@@ -49,7 +49,7 @@ layout: base.njk
                     Currently, I am:
                     <ul>
                     {% for item in homepage.current_activities %}
-                        <li>{{ item }}</li>
+                        <li>{{ item | safe }}</li>
                     {% endfor %}
                     </ul>
                 </p>
