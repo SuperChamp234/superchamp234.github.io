@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Eleventy v3.1.2">
+    
+    
+    <meta name="description" content="Article by Zain Siddavatam">
+    
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zainsv.me/posts/dlang-is-awesome/">
+    <meta property="og:title" content="D Language is Awesome!">
+    <meta property="og:description" content="Article by Zain Siddavatam">
+    
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zainsv.me/posts/dlang-is-awesome/">
+    <meta property="twitter:title" content="D Language is Awesome!">
+    <meta property="twitter:description" content="Article by Zain Siddavatam">
+    
+
+    <link rel="canonical" href="https://zainsv.me/posts/dlang-is-awesome/">
+    
+    <title>D Language is Awesome!</title>
+
+    <link rel="stylesheet" href="/css/css.css">
+    <script data-goatcounter="https://zainsv.goatcounter.com/count"
+        async src="/js/count.js"></script>
+</head>
+<body>
+    
+        <!-- Navigation Bar Component -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-menu">
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/resume">Resume</a>
+        </div>
+    </div>
+</nav>
+
+    
+    <link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="/css/prism.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "D Language is Awesome!",
+  "datePublished": "2025-12-08",
+  "dateModified": "2025-12-08",
+  "author": {
+    "@type": "Person",
+    "name": "Zain Siddavatam"
+  },
+  "description": "Article by Zain Siddavatam"
+  
+}
+</script>
+
+<div class="post-container">
+  <div class="post-navigation">
+    <a href="/blog" class="back-link">&larr; back</a>
+  </div>
+
+  <article>
+    <header class="article-header">
+      <h1>D Language is Awesome!</h1>
+      <p class="post-meta">
+        <time datetime="Mon Dec 08 2025 14:37:53 GMT+0000 (Coordinated Universal Time)">2025-12-08</time>
+      </p>
+    </header>
+    
+    <div class="article-content">
+      <p>For the past few weeks, I've been getting used to this new language featured at my workplace: D! At first I was quite skeptical to see this company use such an obscure language for everyday software, but now that I've gotten some time to explore all the features this lang has to offer, I feel sort of ashamed lol.</p>
+<p>Hence, I decided to write a small post showcasing some of its features, in the hopes that others can have a look at this language and maybe get into it!</p>
+<h1>What wow-ed me?</h1>
+<p>D was supposed to be the successor to Cpp, however it never caught popularity. It boasts many features, including stuff like gradual memory safety (unlike Rust's all or nothing approach), but the one which caught my eye was compile time function execution, and mixins!</p>
+<h1>CTFE - Compile Time Function Execution</h1>
+<p>Compile Time Function Execution (CTFE) is a feature that had me very excited once I tried it! In most languages, there's a clear boundary between &quot;compile-time&quot; and &quot;run-time&quot;. However, in D, that boundary is intentionally blurred. Any normal D function can run at compile time as long as it doesn't do forbidden operations.</p>
+<p>This means you can generate lookup tables at compile time, validate them, parse configs files before your binary is built, or generate many many constants for use at compile time!</p>
+<pre class="language-d"><code class="language-d"><span class="token comment">// in D</span>
+<span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">generateSquares</span><span class="token punctuation">(</span><span class="token keyword">size_t</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">;</span>
+    <span class="token keyword">foreach</span> <span class="token punctuation">(</span>i<span class="token punctuation">;</span> <span class="token number">0</span> <span class="token operator">..</span> n<span class="token punctuation">)</span>
+        arr <span class="token operator">~=</span> i <span class="token operator">*</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">enum</span> squares <span class="token operator">=</span> <span class="token function">generateSquares</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Executes fully at compile time!</span>
+
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">writeln</span><span class="token punctuation">(</span>squares<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [0, 1, 4, 9, ...]</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// parsing JSON during compile time!</span>
+<span class="token keyword">import</span> std<span class="token punctuation">.</span>json<span class="token punctuation">;</span>
+
+<span class="token keyword">enum</span> config <span class="token operator">=</span> <span class="token function">parseJSON</span><span class="token punctuation">(</span><span class="token string token-string">q{
+{
+    "port": 8080,
+    "debug": true,
+    "app_name": "myapp"
+}
+}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">writeln</span><span class="token punctuation">(</span>config<span class="token punctuation">[</span><span class="token string">"app_name"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// myapp</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>In Cpp, we have <code>constexpr</code>, however it's nowhere close to what we can do in D. D's CTFE allows for much more complex computations and even file I/O at compile time, making it a powerful tool for metaprogramming and code generation.</p>
+<h1>Templates</h1>
+<p>Cpp boasts SFINAE (“Substitution Failure Is Not An Error”), where it tries to hack the language to make sure template constraints work. However, it's a very advanced concept simply because its really hard for developers to intuitively write readable code and debug that easily as the codebase evolves. Cpp 20 has solved some of these things, but D has already thought of this!</p>
+<p>For templates, D provides normal if-style constraints for types, allows for compile time analysis using <code>__traits</code>, and produces intuitive compile time errors to make it easy for debugging.</p>
+<pre class="language-d"><code class="language-d"><span class="token comment">//in D</span>
+T <span class="token function">square</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span><span class="token punctuation">(</span>T x<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isNumeric<span class="token operator">!</span>T<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> x <span class="token operator">*</span> x<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">square</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// ok</span>
+<span class="token function">square</span><span class="token punctuation">(</span><span class="token string">"hey"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// clean, understandable error</span>
+</code></pre>
+<h1>Mixins</h1>
+<p>Finally, my favourite feature: Mixins!!</p>
+<p>Programming often involves writing repetitive boilerplate like getters, setters, serializers, registration tables, reflection-based utilities, etc. In D, mixins let you generate this code at compile time, using actual compile-time knowledge of your types. The generated code is fully type-checked, scoped, and validated by the compiler. This makes it possible to write highly generic and reusable code while maintaining type safety and performance.</p>
+<h2>A simple mixin example!</h2>
+<pre class="language-d"><code class="language-d"><span class="token keyword">mixin</span><span class="token punctuation">(</span><span class="token string">"int y = x * 2;"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// wow we can "write code" at compile time</span>
+
+<span class="token keyword">mixin</span><span class="token punctuation">(</span><span class="token string">"int arr["</span> <span class="token operator">~</span> n<span class="token punctuation">.</span>stringof <span class="token operator">~</span> <span class="token string">"];"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// hehe imagine what else we can do</span>
+</code></pre>
+<p>Let's have a look at something more complex:</p>
+<h2>Auto‑generate a JSON serializer</h2>
+<pre class="language-d"><code class="language-d"><span class="token keyword">import</span> std<span class="token punctuation">.</span>traits<span class="token punctuation">;</span>
+<span class="token keyword">import</span> std<span class="token punctuation">.</span>json<span class="token punctuation">;</span>
+<span class="token keyword">import</span> std<span class="token punctuation">.</span>conv<span class="token punctuation">;</span>
+
+<span class="token keyword">mixin</span> <span class="token keyword">template</span> <span class="token function">AutoToJson</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">string</span> code <span class="token operator">=</span> <span class="token string">"JSONValue toJson() const {
+    JSONValue obj = JSONValue.init;
+    obj.object = JSONValue[string]();
+"</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">foreach</span> <span class="token punctuation">(</span>field<span class="token punctuation">;</span> FieldNameTuple<span class="token operator">!</span>T<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        code <span class="token operator">~=</span> <span class="token string">"    obj.object[\""</span> <span class="token operator">~</span> field <span class="token operator">~</span> <span class="token string">"\"] = to!string(this."</span> <span class="token operator">~</span> field <span class="token operator">~</span> <span class="token string">");
+"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    code <span class="token operator">~=</span> <span class="token string">"    return obj;
+}"</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">mixin</span><span class="token punctuation">(</span>code<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">struct</span> Person
+<span class="token punctuation">{</span>
+    <span class="token keyword">string</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">double</span> height<span class="token punctuation">;</span>
+
+    <span class="token keyword">mixin</span> AutoToJson<span class="token operator">!</span>Person<span class="token punctuation">;</span> <span class="token comment">// generates toJson() for us!</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">auto</span> p <span class="token operator">=</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token string">"Zain"</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">5.8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">writeln</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span><span class="token function">toJson</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>With that one <code>mixin AutoToJson!Person;</code>, D generates an entire JSON serializer automatically. You can clearly see how much code we didn't have to &quot;write&quot;!</p>
+<p>This pattern extends to stuff like auto-registering components, generating REST bindings, or generating boilerplate UVM-style verification components with just a simple YAML file (which is what I do at my workplace)</p>
+<p>In Cpp, you either write all of this manually, or use a program which writes a program file, yes which sounds like a hack. I read somewhere that Cpp 26 is looking to address some of this, but yet to see it in action somewhere.</p>
+<h1>My Work</h1>
+<p>I use D in the most wild setting possible, a domain specific language! The tools D provides for working with the code itself makes me wanna wake up every morning and replace each file's repetitive code with mixins! Nowadays I think I've stumbled onto a pavlov like response when I see repetitive code, mixins smell like blueberries.</p>
+<h1>How can you start with D?</h1>
+<p>Getting started with D is actually much simpler than most people expect. The tooling is modern, the compiler is fast, and the package manager (Dub) makes project setup basically frictionless.</p>
+<p>For a compiler, the most common choices are DMD, the reference compiler, and LDC2, which is an LLVM based D compiler</p>
+<p>You can install them from <a href="https://dlang.org/download.html">https://dlang.org/download.html</a>.</p>
+<p>Or, you can use Dub! Dub is like Cargo for Rust or npm for JS, but way simpler to use. It handles stuff like scaffolding, dependencies and build configs. There's also an online sandbox which you can try at <a href="https://run.dlang.io">https://run.dlang.io</a></p>
+<p>To learn D, the best starting point is <a href="https://tour.dlang.org">https://tour.dlang.org</a>. There's also a small community somewhere on reddit and discord!</p>
+
+    </div>
+  </article>
+
+  <!-- Giscus comments section -->
+  <script src="https://giscus.app/client.js"
+          data-repo="SuperChamp234/superchamp234.github.io"
+          data-repo-id="R_kgDON8UxeQ"
+          data-category="Announcements"
+          data-category-id="DIC_kwDON8Uxec4CrxIJ"
+          data-mapping="title"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="light"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+  <div class="giscus"></div>
+</div>
+</body>
+<footer>
+    <div class="footer-content">
+        <p> Made with a lot of coffee and <a href="https://www.11ty.dev/">Eleventy</a></p>
+    </div>
+</html>
