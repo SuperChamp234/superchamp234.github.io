@@ -17,7 +17,11 @@ jobs:
           lfs: true
 
       - name: Pull LFS objects
-        run: git lfs pull
+        run: |
+          git lfs install
+          git lfs pull
+          # Verify LFS files are downloaded
+          git lfs ls-files
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -39,6 +43,12 @@ jobs:
 
       - name: Build 11ty site
         run: npm run build
+
+      - name: Verify media files were copied
+        run: |
+          echo "Checking for IMG_8601.JPG..."
+          ls -la _site/media/2022-08/ || echo "Directory not found"
+          file _site/media/2022-08/IMG_8601.JPG || echo "File not found or not a valid image"
 
       - name: Ensure CNAME file exists
         run: echo 'zainsv.me' > _site/CNAME
