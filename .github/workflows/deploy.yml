@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master  # Change this if you use a different default branch
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -32,10 +33,23 @@ jobs:
       - name: Install dependencies
         run: npm install
       
-      - name: Run compile.sh script in resume directory after installing dependencies
+      - name: Cache LaTeX
+        uses: actions/cache@v4
+        id: latex-cache
+        with:
+          path: /usr/share/texlive
+          key: ${{ runner.os }}-texlive-${{ hashFiles('resume/**') }}
+          restore-keys: |
+            ${{ runner.os }}-texlive-
+      
+      - name: Install LaTeX dependencies
+        if: steps.latex-cache.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-full texlive-latex-extra
+          sudo apt-get install -y pandoc texlive-latex-extra
+          
+      - name: Run compile.sh script
+        run: |
           chmod +x resume/compile.sh
           cd resume
           ./compile.sh
