@@ -1,7 +1,9 @@
 {
-    "title": "Zain's blog",
-    "description": "notes and thoughts as I break things",
-    "language": "en",
-    "back_home_text": "back",
-    "url": "https://zainsv.me"
+  "title": "Zain Siddavatam",
+  "description": "Computer architecture, verification, and the occasional mountain. Notes and photographs by Zain Siddavatam.",
+  "language": "en",
+  "url": "https://zainsv.me",
+  "author": "Zain Siddavatam",
+  "email": "hi@zainsv.me",
+  "gallery_description": "A rolling photo book of mountains, cities, small machines, and the people around them. Scroll one frame at a time, or open the grid if you would rather see everything at once."
 }

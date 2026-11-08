@@ -1,126 +1,735 @@
-.gallery-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
+/* ==========================================================================
+   Gallery — photo book + justified grid
+   ========================================================================== */
+
+.gallery-page {
+    width: min(var(--max-width), 100% - 2 * var(--gutter));
+    margin-inline: auto;
 }
 
-/* ========================= */
-/* 🎨 GALLERY GRID LAYOUT    */
-/* ========================= */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-    padding: 20px;
+.gallery-header {
+    border-bottom: 1px solid var(--line);
 }
 
-/* ========================= */
-/* 🖼 IMAGE STYLING          */
-/* ========================= */
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    max-height: 150px; /* Controls image height */
-    object-fit: cover;
-    border-radius: 6px;
-    transition: transform 0.2s ease-in-out;
+.gallery-stats {
+    margin: 1.5rem 0 0;
+    font-family: var(--label);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
 }
 
-.gallery-item img:hover {
-    transform: scale(1.05);
-}
+/* --------------------------------------------------------------------------
+   Toolbar
+   -------------------------------------------------------------------------- */
 
-/* ========================= */
-/* 🎥 VIDEO STYLING          */
-/* ========================= */
-.video-item video {
-    width: 100%; /* Makes sure the video fits inside the grid */
-    height: auto; /* Keeps the correct aspect ratio */
-    max-height: 200px; /* Adjust as needed */
-    object-fit: cover;
-    border-radius: 6px;
-    cursor: pointer; /* Ensures videos look interactive */
-    aspect-ratio: 4 / 3; /* Ensures all videos have a consistent aspect ratio */
-}
-
-/* ========================= */
-/* 🔍 LIGHTBOX STYLING       */
-/* ========================= */
-.lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+.gallery-toolbar {
+    position: sticky;
+    top: var(--header-h);
+    z-index: 60;
     display: flex;
-    justify-content: center;
     align-items: center;
-    z-index: 9999;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: var(--toolbar-h);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
 }
 
-/* 🔥 Ensure images & videos inside the lightbox display correctly */
-.lightbox img,
-.lightbox video {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    object-fit: contain;
+@supports (backdrop-filter: blur(10px)) {
+    .gallery-toolbar {
+        background: color-mix(in srgb, var(--bg) 86%, transparent);
+        backdrop-filter: blur(14px) saturate(1.1);
+    }
 }
 
-/* 🚀 Lightbox: Ensure it appears properly */
-.lightbox.show {
-    opacity: 1;
-    visibility: visible;
+.view-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 2px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--bg-soft);
 }
 
-/* 💡 Click outside the media to close the lightbox */
-.lightbox::after {
-    content: "";
+.view-switch button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.7rem;
+    border: 0;
+    border-radius: calc(var(--radius) - 1px);
+    background: transparent;
+    font-family: var(--label);
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    cursor: pointer;
+    transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.view-switch button:hover {
+    color: var(--fg);
+}
+
+.view-switch button[aria-pressed="true"] {
+    background: var(--fg);
+    color: var(--bg);
+}
+
+.view-switch .icon {
+    width: 14px;
+    height: 14px;
+}
+
+.gallery-counter {
+    margin: 0;
+    font-family: var(--label);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.book-progress {
     position: absolute;
-    top: 0;
+    bottom: -1px;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    width: var(--progress, 0%);
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.2s var(--ease);
 }
 
-/* ========================= */
-/* 🎥 LIGHTBOX VIDEO STYLING */
-/* ========================= */
-.lightbox video {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
+/* --------------------------------------------------------------------------
+   Photo book
+   -------------------------------------------------------------------------- */
+
+.photobook {
+    display: none;
 }
 
-.video-item {
+html[data-gallery-view="book"] .photobook {
+    display: block;
+    height: calc(100svh - var(--header-h) - var(--toolbar-h));
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+}
+
+.photobook::-webkit-scrollbar {
+    display: none;
+}
+
+html[data-gallery-view="book"] .gallery-grid {
+    display: none;
+}
+
+html[data-gallery-view="book"] .gallery-header {
+    display: none;
+}
+
+html[data-gallery-view="book"] .site-footer {
+    display: none;
+}
+
+html[data-gallery-view="book"] body {
+    overflow: hidden;
+}
+
+html[data-gallery-view="book"] .gallery-toolbar {
+    position: relative;
+    top: 0;
+}
+
+.book-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100svh - var(--header-h) - var(--toolbar-h));
+    padding: clamp(0.5rem, 2vh, 1.5rem) 0;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.book-media {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+}
+
+.media-button {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Prevents weird cropping */
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    background: transparent;
+    cursor: zoom-in;
 }
 
-/* ▶ Minimal Play Icon Overlay */
-.video-overlay {
+.media-button picture {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.media-button img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s var(--ease);
+}
+
+html:not(.js) .media-button img,
+.media-button img.is-loaded {
+    opacity: 1;
+}
+
+.media-blur {
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    filter: blur(28px);
+    opacity: 0.55;
+    transform: scale(1.08);
+}
+
+.media-zoom {
+    position: absolute;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--bg-elevated);
+    color: var(--fg);
+    opacity: 0;
+    transition: opacity 0.2s var(--ease);
+}
+
+.media-button:hover .media-zoom,
+.media-button:focus-visible .media-zoom {
+    opacity: 1;
+}
+
+.book-caption {
+    display: grid;
+    flex: 0 0 auto;
+    grid-template-columns: 5rem minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: baseline;
+    margin-top: 0.75rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--line);
+}
+
+.book-count {
+    font-family: var(--label);
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+}
+
+.book-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+}
+
+.book-title {
+    font-family: var(--display);
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    line-height: 1.25;
+}
+
+.book-note {
+    max-width: 60ch;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.book-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.4rem 1rem;
+    font-family: var(--label);
+    font-size: 0.56rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+/* video */
+
+.media-button--video {
+    cursor: pointer;
+}
+
+.video-fallback {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--bg-soft), var(--accent-soft));
+}
+
+.play-badge {
+    position: absolute;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: var(--fg);
+    color: var(--bg);
+    box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.5);
+}
+
+.play-badge .icon {
+    margin-left: 2px;
+}
+
+.play-badge--small {
+    width: 2.75rem;
+    height: 2.75rem;
+}
+
+/* scroll hint */
+
+.book-hint {
+    display: none;
+}
+
+html[data-gallery-view="book"] .book-hint {
+    position: fixed;
+    bottom: 4.25rem;
+    left: 50%;
+    z-index: 70;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.35rem 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--bg);
+    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    backdrop-filter: blur(10px);
+    font-family: var(--label);
+    font-size: 0.56rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: opacity 0.4s var(--ease);
+}
+
+html[data-gallery-view="book"] .book-hint.is-hidden {
+    opacity: 0;
+}
+
+.book-hint-line {
+    position: relative;
+    width: 2.5rem;
+    height: 1px;
+    overflow: hidden;
+    background: var(--line-strong);
+}
+
+.book-hint-line::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    animation: lineSweep 2s var(--ease) infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Grid
+   -------------------------------------------------------------------------- */
+
+.gallery-grid {
+    display: block;
+    padding-top: clamp(2rem, 5vw, 3.5rem);
+}
+
+.album {
+    margin-bottom: clamp(3rem, 7vw, 5rem);
+}
+
+.album-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.album-head h2 {
+    font-size: clamp(1.4rem, 2.6vw, 2rem);
+}
+
+.album-meta {
+    margin: 0.35rem 0 0;
+    font-family: var(--label);
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.album-desc {
+    max-width: 40ch;
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.4rem, 1vw, 0.75rem);
+}
+
+.grid-item {
+    position: relative;
+    flex: var(--ar, 1) 1 calc(var(--ar, 1) * 170px);
+    height: clamp(150px, 17vw, 230px);
+    min-width: 120px;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--bg-soft);
+}
+
+.grid-item:only-child {
+    flex: 0 0 auto;
+    width: min(100%, calc(var(--ar, 1) * 300px));
+}
+
+.grid-media {
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+}
+
+.grid-media picture,
+.grid-media img {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-media img {
+    object-fit: cover;
+    opacity: 0;
+    transition: transform 0.7s var(--ease), opacity 0.5s var(--ease);
+}
+
+html:not(.js) .grid-media img,
+.grid-media img.is-loaded {
+    opacity: 1;
+}
+
+.grid-item:hover .grid-media img {
+    transform: scale(1.04);
+}
+
+.grid-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2.5rem 0.75rem 0.7rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.58), transparent);
+    color: #fff;
+    font-family: var(--label);
+    font-size: 0.56rem;
+    letter-spacing: 0.04em;
+    opacity: 0;
+    transition: opacity 0.25s var(--ease);
+}
+
+.grid-caption span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.grid-item:hover .grid-caption,
+.grid-item:focus-visible .grid-caption {
+    opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Lightbox
+   -------------------------------------------------------------------------- */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    width: 100vw;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: rgba(10, 10, 10, 0.94);
+    color: #fff;
+}
+
+.lightbox[open] {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.lightbox::backdrop {
+    background: rgba(10, 10, 10, 0.7);
+}
+
+.lightbox-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+}
+
+.lightbox-counter {
+    font-family: var(--label);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.lightbox-close {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.lightbox-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: 0;
+    padding: 0 clamp(3rem, 8vw, 5rem) 1.5rem;
+    margin: 0;
+}
+
+.lightbox-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+}
+
+.lightbox-media img,
+.lightbox-media video {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.lightbox figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    text-align: center;
+}
+
+.lightbox-caption {
+    font-family: var(--display);
+    font-size: 1rem;
+}
+
+.lightbox-meta {
+    font-family: var(--label);
+    font-size: 0.56rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.lightbox-nav {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 40px;
-    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-    pointer-events: none;
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transform: translateY(-50%);
 }
 
-/* Slight scale effect when hovering */
-.video-item:hover .video-overlay {
-    opacity: 0.8;
-    transform: translate(-50%, -50%) scale(1.1);
+.lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.lightbox-nav--prev {
+    left: 1rem;
+}
+
+.lightbox-nav--next {
+    right: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 760px) {
+    .gallery-toolbar {
+        gap: 0.5rem;
+    }
+
+    .view-switch button {
+        padding: 0.45rem 0.55rem;
+    }
+
+    .view-switch button span {
+        display: none;
+    }
+
+    .view-switch .icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .book-page {
+        padding: 0.35rem 0;
+    }
+
+    .book-caption {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+        margin-top: 0.5rem;
+        padding-top: 0.6rem;
+    }
+
+    .book-meta {
+        justify-content: flex-start;
+        font-size: 0.52rem;
+    }
+
+    .book-count {
+        display: none;
+    }
+
+    .media-zoom {
+        display: none;
+    }
+
+    .album-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .album-desc {
+        max-width: 60ch;
+    }
+
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.35rem;
+    }
+
+    .grid-item {
+        width: auto;
+        height: auto;
+        max-width: none;
+        min-width: 0;
+        aspect-ratio: 1;
+    }
+
+    .grid-caption {
+        padding: 1.5rem 0.4rem 0.4rem;
+        font-size: 0.5rem;
+        opacity: 1;
+    }
+
+    .grid-caption span:first-child {
+        display: none;
+    }
+
+    .lightbox-nav {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .lightbox-nav--prev {
+        left: 0.4rem;
+    }
+
+    .lightbox-nav--next {
+        right: 0.4rem;
+    }
+
+    .lightbox-figure {
+        padding: 0 0.75rem 1rem;
+    }
+
+    html[data-gallery-view="book"] .book-hint {
+        bottom: 3.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery-counter {
+        font-size: 0.52rem;
+    }
 }

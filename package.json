@@ -1,20 +1,26 @@
 {
-  "name": "11ty-no-style-please",
-  "description": "A template for a minimalistic blog",
+  "name": "zainsv-me",
+  "description": "Zain Siddavatam — notes, photographs, and the occasional mountain.",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve",
-    "start": "npx @11ty/eleventy --serve",
+    "images": "node scripts/build-images.js",
+    "images:force": "node scripts/build-images.js --force",
+    "build": "node scripts/build-images.js && npx @11ty/eleventy",
+    "serve": "node scripts/build-images.js && npx @11ty/eleventy --serve",
+    "start": "npm run serve",
     "deploy": "npm run build && gh-pages -d _site",
-    "new:post": "node new-post.js"
+    "new:post": "node scripts/new-post.js",
+    "new:photo": "node scripts/new-photo.js"
   },
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "exifr": "^7.1.3",
+    "gray-matter": "^4.0.3",
     "luxon": "^3.0.1",
     "markdown-it": "^13.0.1",
     "markdown-it-prism": "^3.0.0",
-    "prismjs": "^1.30.0"
+    "prismjs": "^1.30.0",
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"

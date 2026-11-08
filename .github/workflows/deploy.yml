@@ -3,7 +3,7 @@ name: Deploy 11ty Blog
 on:
   push:
     branches:
-      - master  # Change this if you use a different default branch
+      - master
   workflow_dispatch:
 
 jobs:
@@ -21,18 +21,25 @@ jobs:
         run: |
           git lfs install
           git lfs pull
-          # Verify LFS files are downloaded
           git lfs ls-files
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
-      
+        run: npm ci
+
+      - name: Cache generated images
+        uses: actions/cache@v4
+        with:
+          path: media/_generated
+          key: images-${{ hashFiles('media/**/*.jpg', 'media/**/*.jpeg', 'media/**/*.JPG', 'media/**/*.png', 'media/**/*.mp4', 'media/**/*.mov', 'media/**/*.webp') }}
+          restore-keys: |
+            images-
+
       - name: Cache LaTeX
         uses: actions/cache@v4
         id: latex-cache
@@ -41,14 +48,14 @@ jobs:
           key: ${{ runner.os }}-texlive-${{ hashFiles('resume/**') }}
           restore-keys: |
             ${{ runner.os }}-texlive-
-      
+
       - name: Install LaTeX dependencies
         if: steps.latex-cache.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-latex-extra
-          
-      - name: Run compile.sh script
+
+      - name: Compile resume
         run: |
           chmod +x resume/compile.sh
           cd resume
@@ -58,11 +65,12 @@ jobs:
       - name: Build 11ty site
         run: npm run build
 
-      - name: Verify media files were copied
+      - name: Verify generated media
         run: |
-          echo "Checking for IMG_8601.JPG..."
-          ls -la _site/media/2022-08/ || echo "Directory not found"
-          file _site/media/2022-08/IMG_8601.JPG || echo "File not found or not a valid image"
+          test -f _site/media/_generated/manifest.json
+          test -f _site/media/blog/cpu/pipelined_cpu.png
+          find _site/media/_generated -name '*.avif' | head -5
+          echo "Generated media copied successfully."
 
       - name: Ensure CNAME file exists
         run: echo 'zainsv.me' > _site/CNAME

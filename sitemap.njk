@@ -4,11 +4,11 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{%- for page in collections.all %}
-  {% if not page.data.draft %}
+{%- for entry in collections.sitemapContent %}
+  {% if not entry.data.draft and entry.url %}
   <url>
-    <loc>{{ site.url }}{{ page.url }}</loc>
-    <lastmod>{% if page.date %}{{ page.date | formatDate }}{% else %}{{ "now" | formatDate }}{% endif %}</lastmod>
+    <loc>{{ site.url }}{{ entry.url }}</loc>
+    <lastmod>{% if entry.date %}{{ entry.date | sitemapDateString }}{% endif %}</lastmod>
   </url>
   {% endif %}
 {%- endfor %}

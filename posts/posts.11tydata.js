@@ -1,7 +1,8 @@
 module.exports = {
+    layout: "post.njk",
+    pageStyles: ["/css/prism.css"],
     eleventyComputed: {
       title: data => data.title || data.page.filePathStem.split('/').pop(),
-      layout: "post.njk",
       description: data => data.description || data.page.excerpt || "Article by Zain Siddavatam",
       image: data => data.image || null,
       tags: data => {

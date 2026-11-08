@@ -1,80 +1,149 @@
 ---
 layout: base.njk
+pageScripts:
+  - /js/typed.min.js
+  - /js/home.js
 ---
-<!-- Link to Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Link to our custom CSS -->
-<link rel="stylesheet" href="/css/home.css">
+{% import "icons.njk" as icons %}
 
-<!-- Navigation Bar -->
-<nav class="navbar">
-    <div class="navbar-container">
-        <div class="navbar-menu">
-            <a href="/">Home</a>
-            <a href="/blog">Blog</a>
-            <a href="/gallery">Gallery</a>
-            <a href="/resume">Resume</a>
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-copy">
+            <p class="eyebrow">{{ homepage.eyebrow }}</p>
+            <h1 class="hero-title">Zain<br> Siddavatam</h1>
+            <p class="hero-line">
+                <span>I am </span><span id="typed" class="typed" aria-hidden="true" data-strings='{{ homepage.typed_strings | dump }}'></span><span class="sr-only">{{ homepage.tagline }}</span>
+            </p>
+            <p class="hero-intro">{{ homepage.intro | safe }}</p>
+            <div class="hero-actions">
+                <a class="button button-primary" href="/blog/">Read the blog {{ icons.icon("arrow-right", 16) }}</a>
+                <a class="button button-ghost" href="/gallery/">See the photos</a>
+            </div>
+        </div>
+
+        <figure class="hero-figure">
+            <div class="hero-photo">
+                {% if hero %}
+                <picture>
+                    <source type="image/avif" srcset="{{ hero.srcset.avif }}" sizes="(max-width: 820px) 100vw, 46vw">
+                    <source type="image/webp" srcset="{{ hero.srcset.webp }}" sizes="(max-width: 820px) 100vw, 46vw">
+                    <img src="{{ hero.fallback }}" srcset="{{ hero.srcset.jpg }}" sizes="(max-width: 820px) 100vw, 46vw" width="{{ hero.width }}" height="{{ hero.height }}" alt="{{ homepage.hero_alt }}" fetchpriority="high" decoding="async">
+                </picture>
+                {% endif %}
+            </div>
+            <figcaption>
+                <span>{{ homepage.hero_caption }}</span>
+                <span aria-hidden="true">01</span>
+            </figcaption>
+        </figure>
+    </div>
+
+    <a class="scroll-cue" href="#now">
+        <span>Scroll</span>
+        <span class="scroll-line" aria-hidden="true"></span>
+    </a>
+</section>
+
+<section class="section now" id="now">
+    <div class="section-inner">
+        <div class="section-head">
+            <div>
+                <p class="eyebrow">01 — Now</p>
+                <h2>What I'm up to</h2>
+            </div>
+        </div>
+        <ol class="now-list">
+            {% for item in homepage.current_activities %}
+            <li>
+                <span class="now-index">{{ "0" ~ loop.index }}</span>
+                <span>{{ item | safe }}</span>
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+</section>
+
+<section class="section writing">
+    <div class="section-inner">
+        <div class="section-head">
+            <div>
+                <p class="eyebrow">02 — Writing</p>
+                <h2>Recent notes</h2>
+            </div>
+            <a class="section-link" href="/blog/">All posts {{ icons.icon("arrow-right", 14) }}</a>
+        </div>
+
+        <div class="home-post-list">
+            {% for post in collections.posts | limit(3) %}
+            <a class="post-row" href="{{ post.url }}">
+                <time datetime="{{ post.date | htmlDateString }}">{{ post.date | blogDate }}</time>
+                <span class="post-row-title">{{ post.data.title }}</span>
+                <span class="post-row-meta">{{ post.templateContent | readingTime }} min</span>
+                <span class="post-row-arrow">{{ icons.icon("arrow-up-right", 16) }}</span>
+            </a>
+            {% endfor %}
         </div>
     </div>
-</nav>
+</section>
 
-<div class="hero-full-container background-image-container white-text-container"
-    style="background-image: url('/media/my_landscape_photo.jpg'); background-size: cover; background-position: center 33%; width: 100vw; margin-left: calc(-50vw + 50%);">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="hero-full-wrapper">
-                    <div class="text-content">
-                        <h1>Hello, I am <br>
-                            <span id="typed-strings">
-                            </span>
-                            <span id="typed"></span>
-                        </h1>
-                    </div>
+{% if gallery.recentPhotos.length %}
+<section class="section photos">
+    <div class="section-inner">
+        <div class="section-head">
+            <div>
+                <p class="eyebrow">03 — Photographs</p>
+                <h2>Recently photographed</h2>
+            </div>
+            <a class="section-link" href="/gallery/">Open the photo book {{ icons.icon("arrow-right", 14) }}</a>
+        </div>
+
+        <div class="recent-grid">
+            {% for photo in gallery.recentPhotos | limit(4) %}
+            <a class="recent-item" href="/gallery/?view=book#{{ photo.id }}">
+                <div class="recent-media" style="background-image:url('{{ photo.lqip }}')">
+                    <picture>
+                        <source type="image/avif" srcset="{{ photo.srcset.avif }}" sizes="(max-width: 640px) 45vw, 22vw">
+                        <source type="image/webp" srcset="{{ photo.srcset.webp }}" sizes="(max-width: 640px) 45vw, 22vw">
+                        <img src="{{ photo.fallback }}" srcset="{{ photo.srcset.jpg }}" sizes="(max-width: 640px) 45vw, 22vw" width="{{ photo.width }}" height="{{ photo.height }}" alt="{{ photo.alt }}" loading="lazy" decoding="async">
+                    </picture>
                 </div>
-            </div>
+                <span class="recent-caption">{{ photo.caption or photo.shortDate or photo.albumTitle }}</span>
+            </a>
+            {% endfor %}
         </div>
     </div>
-</div>
+</section>
+{% endif %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-md-7">
-            <div class="template-example">
-                <h2 class="template-title-example">Hi there!</h2>
-                <p>
-                    {{ homepage.intro | safe }}
-                </p>
-                <p>
-                    Currently, I am:
-                    <ul>
-                    {% for item in homepage.current_activities %}
-                        <li>{{ item | safe }}</li>
-                    {% endfor %}
-                    </ul>
-                </p>
-                <p>
-                    {{ homepage.description | safe }}
-                </p>
+<section class="section elsewhere" id="elsewhere">
+    <div class="section-inner">
+        <div class="section-head">
+            <div>
+                <p class="eyebrow">04 — Elsewhere</p>
+                <h2>Say hello</h2>
             </div>
+            <a class="section-link" href="mailto:{{ homepage.email }}">{{ homepage.email }}</a>
         </div>
-        <div class="col-xs-12 col-md-5">
-            <div class="template-example">
-                <h2 class="template-title-example">Links</h2>
-                <ul class="list-icons">
-                    {% for link in homepage.social_links %}
-                    <li>
-                        <span class="fa-icon">
-                            <a href="{{ link.url }}" target="_blank"><i class="fa {{ link.icon }}"></i></a>
-                        </span>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <span class="fa-icon"><i class="fa fa-envelope"></i></span><span>&nbsp; {{ homepage.email }}</span>
-            </div>
+
+        <div class="social-grid">
+            {% for link in homepage.social_links %}
+            <a class="social-link" href="{{ link.url }}" target="_blank" rel="noopener">
+                <span class="social-icon">{{ icons.icon(link.icon, 20) }}</span>
+                <span class="social-text">
+                    <span class="social-name">{{ link.title }}</span>
+                    <span class="social-handle">{{ link.handle }}</span>
+                </span>
+                <span class="social-arrow">{{ icons.icon("arrow-up-right", 16) }}</span>
+            </a>
+            {% endfor %}
+            <a class="social-link" href="mailto:{{ homepage.email }}">
+                <span class="social-icon">{{ icons.icon("mail", 20) }}</span>
+                <span class="social-text">
+                    <span class="social-name">Email</span>
+                    <span class="social-handle">{{ homepage.email }}</span>
+                </span>
+                <span class="social-arrow">{{ icons.icon("arrow-up-right", 16) }}</span>
+            </a>
         </div>
     </div>
-</div>
-
-<script src="/js/typed.min.js"></script>
-<script src="/js/home.js"></script>
+</section>

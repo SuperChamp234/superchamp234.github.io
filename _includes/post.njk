@@ -1,61 +1,88 @@
 ---
 layout: base.njk
 ---
-<link rel="stylesheet" href="/css/post.css">
-<link rel="stylesheet" href="/css/prism.css">
+{% import "icons.njk" as icons %}
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "{{ title }}",
-  "datePublished": "{{ page.date | formatDate }}",
-  "dateModified": "{{ page.date | formatDate }}",
+  "headline": {{ title | dump | safe }},
+  "datePublished": "{{ page.date | htmlDateString }}",
+  "dateModified": "{{ page.date | htmlDateString }}",
   "author": {
     "@type": "Person",
     "name": "Zain Siddavatam"
   },
-  "description": "{{ description }}"
+  "description": {{ (description or site.description) | dump | safe }}
   {% if image %}
   ,"image": "{{ image | url | absoluteUrl(site.url) }}"
   {% endif %}
 }
 </script>
 
-<div class="post-container">
-  <div class="post-navigation">
-    <a href="/blog" class="back-link">&larr; back</a>
-  </div>
-
-  <article>
-    <header class="article-header">
-      <h1>{{ title }}</h1>
-      <p class="post-meta">
-        <time datetime="{{ page.date }}">{{ page.date | formatDate }}</time>
-      </p>
+<article class="post">
+    <header class="post-header">
+        <a class="back-link" href="/blog/">{{ icons.icon("arrow-left", 14) }} All posts</a>
+        <p class="eyebrow">{{ page.date | readableDate }} · {{ content | readingTime }} min read</p>
+        <h1>{{ title }}</h1>
+        {% if description %}
+        <p class="lede">{{ description }}</p>
+        {% endif %}
+        {% if tags %}
+        <ul class="tag-list" aria-label="Tags">
+            {% for tag in tags %}
+            {% if tag != "post" %}
+            <li>{{ tag }}</li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        {% endif %}
     </header>
-    
-    <div class="article-content">
-      {{ content | safe }}
-    </div>
-  </article>
 
-  <!-- Giscus comments section -->
-  <script src="https://giscus.app/client.js"
-          data-repo="SuperChamp234/superchamp234.github.io"
-          data-repo-id="R_kgDON8UxeQ"
-          data-category="Announcements"
-          data-category-id="DIC_kwDON8Uxec4CrxIJ"
-          data-mapping="title"
-          data-strict="0"
-          data-reactions-enabled="1"
-          data-emit-metadata="0"
-          data-input-position="top"
-          data-theme="light"
-          data-lang="en"
-          data-loading="lazy"
-          crossorigin="anonymous"
-          async>
-  </script>
-  <div class="giscus"></div>
-</div>
+    <div class="prose">
+        {{ content | safe }}
+    </div>
+
+    {% set neighbors = collections.posts | postNeighbors(page.url) %}
+    {% if neighbors.previous or neighbors.next %}
+    <nav class="post-neighbors{% if not (neighbors.previous and neighbors.next) %} post-neighbors--single{% endif %}" aria-label="More posts">
+        {% if neighbors.previous %}
+        <a class="post-neighbor" href="{{ neighbors.previous.url }}">
+            <span class="post-neighbor-label">{{ icons.icon("arrow-left", 14) }} Newer post</span>
+            <span class="post-neighbor-title">{{ neighbors.previous.data.title }}</span>
+        </a>
+        {% endif %}
+        {% if neighbors.next %}
+        <a class="post-neighbor post-neighbor--next" href="{{ neighbors.next.url }}">
+            <span class="post-neighbor-label">Older post {{ icons.icon("arrow-right", 14) }}</span>
+            <span class="post-neighbor-title">{{ neighbors.next.data.title }}</span>
+        </a>
+        {% endif %}
+    </nav>
+    {% endif %}
+
+    <section class="comments" aria-labelledby="comments-heading">
+        <div class="comments-head">
+            <h2 id="comments-heading">Comments</h2>
+            <p>Thoughts, corrections, or a paper I should read?</p>
+        </div>
+        <div class="giscus"
+             data-giscus
+             data-repo="SuperChamp234/superchamp234.github.io"
+             data-repo-id="R_kgDON8UxeQ"
+             data-category="Announcements"
+             data-category-id="DIC_kwDON8Uxec4CrxIJ"
+             data-mapping="title"
+             data-strict="0"
+             data-reactions-enabled="1"
+             data-emit-metadata="0"
+             data-input-position="top"
+             data-theme="light"
+             data-lang="en"
+             data-loading="lazy"></div>
+        <noscript>
+            <p>Comments need JavaScript. You can also email me at <a href="mailto:{{ homepage.email }}">{{ homepage.email }}</a>.</p>
+        </noscript>
+    </section>
+</article>

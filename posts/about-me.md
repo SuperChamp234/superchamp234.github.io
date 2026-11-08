@@ -1,7 +1,7 @@
 ---
 title: about_me
 layout: about_page
-permalink: /about/
+permalink: false
 draft: true
 ---
 

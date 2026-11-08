@@ -1,52 +1,87 @@
 /**
- * prism.css
- * Custom styling for code blocks with Prism.js syntax highlighting
+ * Light syntax highlighting that follows the active design direction.
  */
 
-/* Base code block styling */
+:root {
+    --code-bg: #f3eee6;
+    --code-border: #e3dacd;
+    --code-fg: #2b2620;
+    --code-comment: #8b8175;
+    --code-keyword: #a1472a;
+    --code-string: #3f6b4a;
+    --code-number: #2f5f8f;
+    --code-function: #6b4a8a;
+    --code-punct: #7c7368;
+    --code-deleted: #a1472a;
+    --code-inserted: #3f6b4a;
+}
+
+html[data-theme="swiss"] {
+    --code-bg: #f5f5f5;
+    --code-border: #e3e3e3;
+    --code-fg: #111111;
+    --code-comment: #888888;
+    --code-keyword: #1d4ed8;
+    --code-string: #0a7a3e;
+    --code-number: #b45309;
+    --code-function: #7c3aed;
+    --code-punct: #555555;
+}
+
+html[data-theme="mono"] {
+    --code-bg: #f4f4f1;
+    --code-border: #ecece8;
+    --code-fg: #151515;
+    --code-comment: #9a9a95;
+    --code-keyword: #151515;
+    --code-string: #5f5f5a;
+    --code-number: #5f5f5a;
+    --code-function: #151515;
+    --code-punct: #8b8b86;
+}
+
 pre[class*="language-"],
 code[class*="language-"] {
-  color: #d4d4d4;
-  font-size: 14px;
-  text-shadow: none;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  line-height: 1.5;
-  tab-size: 4;
-  hyphens: none;
+    color: var(--code-fg);
+    font-family: var(--font-mono);
+    font-size: 0.84rem;
+    line-height: 1.65;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    tab-size: 4;
+    hyphens: none;
+    text-shadow: none;
+    direction: ltr;
 }
 
-/* Code blocks */
 pre[class*="language-"] {
-  padding: 1em;
-  margin: .5em 0;
-  overflow: auto;
-  background: #1e1e1e;
-  border-radius: 3px;
+    margin: 1.8em 0;
+    padding: 1.1rem;
+    overflow: auto;
+    border: 1px solid var(--code-border);
+    border-radius: var(--radius);
+    background: var(--code-bg);
 }
 
-/* Inline code */
 :not(pre) > code[class*="language-"] {
-  padding: .1em .3em;
-  border-radius: .3em;
-  color: #db4c69;
-  background: #f9f2f4;
+    padding: 0.15em 0.35em;
+    border-radius: 2px;
+    background: var(--bg-soft);
+    color: var(--accent);
+    font-size: 0.86em;
 }
 
-/* Token colors */
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #608b4e;
+    color: var(--code-comment);
 }
 
 .token.punctuation {
-  color: #d4d4d4;
+    color: var(--code-punct);
 }
 
 .token.property,
@@ -56,7 +91,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #b5cea8;
+    color: var(--code-number);
 }
 
 .token.selector,
@@ -65,7 +100,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: #ce9178;
+    color: var(--code-string);
 }
 
 .token.operator,
@@ -73,79 +108,35 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: #d4d4d4;
-  background: transparent;
+    color: var(--code-punct);
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: #c586c0;
+    color: var(--code-keyword);
 }
 
-.token.function {
-  color: #dcdcaa;
+.token.function,
+.token.class-name {
+    color: var(--code-function);
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  color: #d16969;
+    color: var(--code-number);
 }
 
 .token.important,
 .token.bold {
-  font-weight: bold;
+    font-weight: 700;
 }
 
 .token.italic {
-  font-style: italic;
+    font-style: italic;
 }
 
-.token.constant {
-  color: #9cdcfe;
-}
-
-.token.class-name {
-  color: #4ec9b0;
-}
-
-.token.parameter {
-  color: #9cdcfe;
-}
-
-.token.interpolation {
-  color: #9cdcfe;
-}
-
-.token.punctuation.interpolation-punctuation {
-  color: #569cd6;
-}
-
-.token.namespace {
-  opacity: .7;
-}
-
-/* Line highlighting */
-pre[data-line] {
-  position: relative;
-}
-
-pre[class*="language-"] > code[class*="language-"] {
-  position: relative;
-  z-index: 1;
-}
-
-.line-highlight {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: inherit 0;
-  margin-top: 1em;
-  background: #f7ebc6;
-  box-shadow: inset 5px 0 0 #f7d87c;
-  z-index: 0;
-  pointer-events: none;
-  line-height: inherit;
-  white-space: pre;
+.token.entity {
+    cursor: help;
 }
