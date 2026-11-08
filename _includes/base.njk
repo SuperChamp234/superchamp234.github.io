@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.language }}" data-theme="scrapbook">
+<html lang="{{ site.language }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,6 @@
 
     <script>
         document.documentElement.classList.add("js");
-        (function () {
-            try {
-                var params = new URLSearchParams(location.search);
-                var theme = params.get("theme") || localStorage.getItem("theme");
-                if (theme === "scrapbook" || theme === "weblog" || theme === "web20") {
-                    document.documentElement.dataset.theme = theme;
-                }
-            } catch (error) {}
-        })();
     </script>
 
     {% if page.url == "/gallery/" %}
@@ -67,33 +58,39 @@
     <meta property="twitter:image" content="{{ site.url }}{{ ogImage | url }}">
     {% endif %}
 
-    <meta name="theme-color" content="#f6efe1">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23faf7f2'/%3E%3Cg fill='none' stroke='%231d1a17' stroke-width='4'%3E%3Cpath d='M14 22h8l4-6h12l4 6h8v26H14z'/%3E%3Ccircle cx='32' cy='34' r='9'/%3E%3C/g%3E%3C/svg%3E">
+    <meta name="theme-color" content="#dbe6f3">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ffffff'/%3E%3Cg fill='none' stroke='%231c2732' stroke-width='4'%3E%3Cpath d='M14 22h8l4-6h12l4 6h8v26H14z'/%3E%3Ccircle cx='32' cy='34' r='9'/%3E%3C/g%3E%3C/svg%3E">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
 
-    <link rel="preload" href="/css/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/css/main.css">
     {% for stylesheet in pageStyles %}
     <link rel="stylesheet" href="{{ stylesheet }}">
     {% endfor %}
 
     {% if page.url == "/" and hero and hero.sources and hero.sources.avif %}
-    <link rel="preload" as="image" type="image/avif" href="{{ hero.sources.avif[0].url }}" imagesrcset="{{ hero.srcset.avif }}" imagesizes="(max-width: 820px) 100vw, 46vw" fetchpriority="high">
+    <link rel="preload" as="image" type="image/avif" href="{{ hero.sources.avif[0].url }}" imagesrcset="{{ hero.srcset.avif }}" imagesizes="(max-width: 820px) 100vw, 40vw" fetchpriority="high">
     {% endif %}
 </head>
-<body class="{% if page.url == '/' %}page-home{% elif page.url == '/blog/' %}page-blog{% elif page.url == '/gallery/' %}page-gallery{% elif page.url == '/resume/' %}page-resume{% elif '/posts/' in page.url %}page-post{% else %}page-default{% endif %}">
+<body id="top" class="{% if page.url == '/' %}page-home{% elif page.url == '/blog/' %}page-blog{% elif page.url == '/gallery/' %}page-gallery{% elif page.url == '/resume/' %}page-resume{% elif '/posts/' in page.url %}page-post{% elif page.url == '/404.html' %}page-error{% else %}page-default{% endif %}">
     <a class="skip-link" href="#main">Skip to content</a>
 
     {% include "navbar.njk" %}
 
-    <main id="main" class="site-main">
-        {{ content | safe }}
-    </main>
+    {% set singleColumn = page.url == "/resume/" or page.url == "/404.html" %}
+
+    <div class="site-wrap{% if singleColumn %} site-wrap--single{% endif %}">
+        {% if not singleColumn %}
+        {% include "sidebar.njk" %}
+        {% endif %}
+
+        <main id="main" class="main-panel">
+            {{ content | safe }}
+        </main>
+    </div>
 
     {% if page.url != "/" %}
     {% include "footer.njk" %}
     {% endif %}
-    {% include "theme-switcher.njk" %}
 
     <script src="/js/site.js" defer></script>
     {% for script in pageScripts %}

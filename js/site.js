@@ -1,17 +1,8 @@
 (() => {
-    const doc = document.documentElement;
-
     /* ---------------------------------------------------------------- header */
     const header = document.querySelector("[data-site-header]");
     const navToggle = document.querySelector("[data-nav-toggle]");
     const primaryNav = document.querySelector("[data-primary-nav]");
-
-    const syncHeader = () => {
-        if (!header) return;
-        header.classList.toggle("is-scrolled", window.scrollY > 8);
-    };
-    syncHeader();
-    window.addEventListener("scroll", syncHeader, { passive: true });
 
     if (header && navToggle && primaryNav) {
         const setOpen = (open) => {
@@ -43,47 +34,6 @@
             if (event.matches) setOpen(false);
         });
     }
-
-    /* -------------------------------------------------------- theme preview */
-    const themeButtons = Array.from(document.querySelectorAll("[data-set-theme]"));
-    const themeSwitcher = document.querySelector("[data-theme-switcher]");
-    const themeMeta = document.querySelector('meta[name="theme-color"]');
-    const themes = ["scrapbook", "weblog", "web20"];
-    const themeColors = {
-        scrapbook: "#f6efe1",
-        weblog: "#dfe7f0",
-        web20: "#eef3f8",
-    };
-
-    const applyTheme = (theme, persist = true) => {
-        if (!themes.includes(theme)) theme = "scrapbook";
-        doc.dataset.theme = theme;
-        themeButtons.forEach((button) => {
-            button.setAttribute(
-                "aria-pressed",
-                String(button.dataset.setTheme === theme),
-            );
-        });
-        if (themeMeta) themeMeta.setAttribute("content", themeColors[theme]);
-        if (persist) {
-            try {
-                localStorage.setItem("theme", theme);
-            } catch (error) {}
-        }
-        const url = new URL(window.location.href);
-        if (url.searchParams.has("theme")) {
-            url.searchParams.set("theme", theme);
-            history.replaceState(null, "", url);
-        }
-    };
-
-    applyTheme(doc.dataset.theme || "scrapbook", false);
-    themeButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            applyTheme(button.dataset.setTheme);
-            if (themeSwitcher) themeSwitcher.open = false;
-        });
-    });
 
     /* ---------------------------------------------------------- giscus lazy */
     const giscus = document.querySelector("[data-giscus]");

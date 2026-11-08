@@ -1,6 +1,5 @@
-{% import "icons.njk" as icons %}
 <header class="site-header" data-site-header>
-    <div class="nav-wrap">
+    <div class="header-inner">
         <nav class="primary-nav" id="primary-nav" aria-label="Primary" data-primary-nav>
             <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a>
             <a href="/blog/" {% if page.url == "/blog/" or "/posts/" in page.url %}aria-current="page"{% endif %}>Blog</a>
@@ -8,12 +7,12 @@
             <a href="/resume/" {% if page.url == "/resume/" %}aria-current="page"{% endif %}>Resume</a>
         </nav>
 
-        <div class="nav-end">
-            <a class="nav-rss" href="/feed.xml" aria-label="RSS feed">{{ icons.icon("rss", 14) }}<span>RSS</span></a>
+        <div class="header-meta">
+            <span class="header-updated">updated {{ buildDate }}</span>
+            <a class="header-rss" href="/feed.xml">RSS</a>
 
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
-                <span class="nav-toggle-text">Menu</span>
-                <span class="nav-toggle-icon" aria-hidden="true">{{ icons.icon("menu", 18) }}</span>
+                <span>Menu</span>
             </button>
         </div>
     </div>

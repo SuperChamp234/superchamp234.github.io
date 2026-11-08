@@ -120,6 +120,9 @@ module.exports = function (eleventyConfig) {
 
   // ------------------------------------------------------------- global data
   eleventyConfig.addGlobalData("buildYear", () => new Date().getFullYear());
+  eleventyConfig.addGlobalData("buildDate", () =>
+    DateTime.now().toFormat("d LLLL yyyy"),
+  );
 
   eleventyConfig.addGlobalData("resumeAvailable", () => {
     const resume = path.join(__dirname, "_includes", "resume_content.njk");

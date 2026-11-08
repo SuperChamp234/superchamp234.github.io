@@ -1,76 +1,47 @@
 /**
- * Light syntax highlighting that follows the active design direction.
+ * Light syntax highlighting for the site's single 2000s palette.
  */
 
 :root {
-    --code-bg: #ece2ce;
-    --code-border: #d9cbb3;
-    --code-fg: #2b251c;
-    --code-comment: #8b8175;
-    --code-keyword: #9b3f1f;
-    --code-string: #3f6b4a;
-    --code-number: #2f5f8f;
-    --code-function: #6b4a8a;
-    --code-punct: #7d7161;
-    --code-deleted: #9b3f1f;
-    --code-inserted: #3f6b4a;
-}
-
-html[data-theme="weblog"] {
-    --code-bg: #ffffff;
-    --code-border: #b7c5d4;
+    --code-bg: #f7fbff;
+    --code-border: #b9cade;
     --code-fg: #1c2732;
-    --code-comment: #5d6d7d;
+    --code-comment: #5d7083;
     --code-keyword: #1a4f8a;
     --code-string: #0a6b3a;
     --code-number: #9a4b00;
     --code-function: #6b2fa0;
-    --code-punct: #5d6d7d;
-}
-
-html[data-theme="web20"] {
-    --code-bg: #f5f9fc;
-    --code-border: #c9d8e8;
-    --code-fg: #22303d;
-    --code-comment: #6b7c8c;
-    --code-keyword: #1a5fa8;
-    --code-string: #0a6b3a;
-    --code-number: #b45309;
-    --code-function: #6b2fa0;
-    --code-punct: #6b7c8c;
+    --code-punct: #5d7083;
+    --code-deleted: #a12626;
+    --code-inserted: #0a6b3a;
 }
 
 pre[class*="language-"],
 code[class*="language-"] {
     color: var(--code-fg);
     font-family: var(--font-mono);
-    font-size: 0.84rem;
-    line-height: 1.65;
+    font-size: 12px;
+    line-height: 1.55;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
     tab-size: 4;
     hyphens: none;
-    text-shadow: none;
-    direction: ltr;
 }
 
 pre[class*="language-"] {
-    margin: 1.8em 0;
-    padding: 1.1rem;
+    padding: 12px;
     overflow: auto;
-    border: 1px solid var(--code-border);
-    border-radius: var(--radius);
     background: var(--code-bg);
+    border: 1px solid var(--code-border);
 }
 
 :not(pre) > code[class*="language-"] {
-    padding: 0.15em 0.35em;
-    border-radius: 2px;
-    background: var(--bg-soft);
-    color: var(--accent);
-    font-size: 0.86em;
+    padding: 1px 4px;
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+    white-space: normal;
 }
 
 .token.comment,
@@ -139,4 +110,12 @@ pre[class*="language-"] {
 
 .token.entity {
     cursor: help;
+}
+
+.token.deleted {
+    color: var(--code-deleted);
+}
+
+.token.inserted {
+    color: var(--code-inserted);
 }

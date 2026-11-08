@@ -1,16 +1,12 @@
 ---
 layout: base.njk
 ---
-{% import "icons.njk" as icons %}
 
-<div class="page-shell blog-page">
+<div class="blog-page">
     <header class="page-header">
         <p class="eyebrow">Writing</p>
         <h1>Notes, mostly technical.</h1>
         <p class="lede">Long-form notes on computer architecture, verification, FPGA tooling, and the occasional detour. {{ collections.posts.length }} posts and counting.</p>
-        <div class="page-header-actions">
-            <a class="button button-ghost" href="/feed.xml">{{ icons.icon("rss", 15) }} RSS feed</a>
-        </div>
     </header>
 
     {% set years = collections.posts | groupByYear %}
@@ -19,14 +15,13 @@ layout: base.njk
         <h2 class="year-label" id="year-{{ group.year }}">{{ group.year }}</h2>
         <div class="post-list">
             {% for post in group.posts %}
-            <a class="post-row post-row--list" href="{{ post.url }}">
+            <a class="post-row" href="{{ post.url }}">
                 <time datetime="{{ post.date | htmlDateString }}">{{ post.date | blogDate }}</time>
                 <span class="post-row-main">
                     <span class="post-row-title">{{ post.data.title }}</span>
                     <span class="post-row-excerpt">{{ post.templateContent | excerpt(150) }}</span>
                 </span>
                 <span class="post-row-meta">{{ post.templateContent | readingTime }} min</span>
-                <span class="post-row-arrow">{{ icons.icon("arrow-up-right", 16) }}</span>
             </a>
             {% endfor %}
         </div>

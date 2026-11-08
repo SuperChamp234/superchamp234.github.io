@@ -5,17 +5,17 @@ pageStyles:
   - /css/resume.css
 templateEngineOverride: njk
 ---
-<div class="page-shell resume-page">
+<div class="resume-page">
     <header class="page-header">
         <p class="eyebrow">Curriculum vitae</p>
         <h1>Resume.</h1>
         <p class="lede">Hardware verification, computer architecture, and a soft spot for RISC-V. The short version is below; the PDF is the printable one.</p>
-        <div class="page-header-actions">
+        <p class="page-actions">
             {% if resumePdfAvailable %}
-            <a class="button button-primary" href="/resume/Zain Siddavatam Resume.pdf" download>Download PDF</a>
+            <a href="/resume/Zain Siddavatam Resume.pdf" download>Download PDF</a> ·
             {% endif %}
-            <a class="button button-ghost" href="mailto:{{ site.email }}">Email me</a>
-        </div>
+            <a href="mailto:{{ site.email }}">Email me</a>
+        </p>
     </header>
 
     {% if resumeAvailable %}

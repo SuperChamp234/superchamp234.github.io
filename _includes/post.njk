@@ -24,7 +24,7 @@ layout: base.njk
 <article class="post">
     <header class="post-header">
         <a class="back-link" href="/blog/">{{ icons.icon("arrow-left", 14) }} All posts</a>
-        <p class="eyebrow">{{ page.date | readableDate }} · {{ content | readingTime }} min read</p>
+        <p class="post-meta">{{ page.date | readableDate }} · {{ content | readingTime }} min read</p>
         <h1>{{ title }}</h1>
         {% if description %}
         <p class="lede">{{ description }}</p>

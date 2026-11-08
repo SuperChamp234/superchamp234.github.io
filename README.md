@@ -115,9 +115,11 @@ Deep links work:
 /gallery/?view=book#photo-2025-01-pxl-20250114-175101271-raw-01-cover
 ```
 
-## Design directions
+## Design
 
-The site currently ships with three previewable directions: `scrapbook` (cream paper, serif display, rust ink, a pasted-on photo), `weblog` (pale blue page, white modules, Verdana, classic underlined links), and `web20` (blue chrome, rounded white cards, glossy buttons). Open the **Preview** tab in the bottom-left corner, or add `?theme=weblog` to any URL. Remove `_includes/theme-switcher.njk` and the theme block in `js/site.js` once a direction is chosen.
+The site is a single direction: a small 2000s/2010s personal homepage. A pale blue tiled page holds a narrow left sidebar of boxed widgets and a white main panel. Trebuchet MS is used for headings and navigation, Verdana for body text, and Courier New for labels and dates. Links are classic blue and underlined.
+
+The shell lives in `_includes/base.njk`. The top bar (`_includes/navbar.njk`) holds navigation, the build date, RSS, and the mobile menu. The sidebar (`_includes/sidebar.njk`) holds Elsewhere, the post archive, gallery albums, and site details; it is hidden in gallery book mode and on the resume and 404 pages. The footer is intentionally minimal and is not rendered on the homepage.
 
 Design tokens live at the top of `css/main.css`. Page-specific styles are in `css/gallery.css`, `css/prism.css`, and `css/resume.css`.
 

@@ -4,72 +4,39 @@ pageScripts:
   - /js/typed.min.js
   - /js/home.js
 ---
-{% import "icons.njk" as icons %}
 
-<section class="hero">
-    <div class="hero-inner">
-        <div class="hero-copy">
-            <h1 class="hero-title">Zain<br> Siddavatam</h1>
-            <p class="hero-line">
+<div class="home">
+    <section class="home-hero">
+        <div class="home-copy">
+            <h1 class="home-title">Zain<br> Siddavatam</h1>
+            <p class="home-line">
                 <span>I am </span><span id="typed" class="typed" aria-hidden="true" data-strings='{{ homepage.typed_strings | dump }}'></span><span class="sr-only">{{ homepage.tagline }}</span>
             </p>
-            <p class="hero-intro">{{ homepage.intro | safe }}</p>
+            <p class="home-intro">{{ homepage.intro | safe }}</p>
         </div>
 
-        <figure class="hero-figure">
-            <div class="hero-photo">
+        <figure class="home-figure">
+            <div class="home-photo">
                 {% if hero %}
                 <picture>
-                    <source type="image/avif" srcset="{{ hero.srcset.avif }}" sizes="(max-width: 820px) 100vw, 46vw">
-                    <source type="image/webp" srcset="{{ hero.srcset.webp }}" sizes="(max-width: 820px) 100vw, 46vw">
-                    <img src="{{ hero.fallback }}" srcset="{{ hero.srcset.jpg }}" sizes="(max-width: 820px) 100vw, 46vw" width="{{ hero.width }}" height="{{ hero.height }}" alt="{{ homepage.hero_alt }}" fetchpriority="high" decoding="async">
+                    <source type="image/avif" srcset="{{ hero.srcset.avif }}" sizes="(max-width: 820px) 100vw, 40vw">
+                    <source type="image/webp" srcset="{{ hero.srcset.webp }}" sizes="(max-width: 820px) 100vw, 40vw">
+                    <img src="{{ hero.fallback }}" srcset="{{ hero.srcset.jpg }}" sizes="(max-width: 820px) 100vw, 40vw" width="{{ hero.width }}" height="{{ hero.height }}" alt="{{ homepage.hero_alt }}" fetchpriority="high" decoding="async">
                 </picture>
                 {% endif %}
             </div>
-            <figcaption>
-                <span>{{ homepage.hero_caption }}</span>
-            </figcaption>
+            <figcaption>{{ homepage.hero_caption }}</figcaption>
         </figure>
-    </div>
-</section>
+    </section>
 
-<section class="section home-info" id="now">
-    <div class="section-inner home-columns">
-        <div class="home-col">
-            <h2 class="home-heading">Now</h2>
+    <section class="box home-now" aria-labelledby="now-heading">
+        <h2 class="box-head" id="now-heading">Now</h2>
+        <div class="box-body">
             <ul class="now-list">
                 {% for item in homepage.current_activities %}
                 <li>{{ item | safe }}</li>
                 {% endfor %}
             </ul>
         </div>
-
-        <div class="home-col" id="elsewhere">
-            <h2 class="home-heading">Elsewhere</h2>
-            <ul class="social-list">
-                {% for link in homepage.social_links %}
-                <li>
-                    <a class="social-link" href="{{ link.url }}" target="_blank" rel="noopener">
-                        <span class="social-icon">{{ icons.icon(link.icon, 16) }}</span>
-                        <span class="social-text">
-                            <span class="social-name">{{ link.title }}</span>
-                            <span class="social-handle">{{ link.handle }}</span>
-                        </span>
-                        <span class="social-arrow" aria-hidden="true">{{ icons.icon("arrow-up-right", 14) }}</span>
-                    </a>
-                </li>
-                {% endfor %}
-                <li>
-                    <a class="social-link" href="mailto:{{ homepage.email }}">
-                        <span class="social-icon">{{ icons.icon("mail", 16) }}</span>
-                        <span class="social-text">
-                            <span class="social-name">Email</span>
-                            <span class="social-handle">{{ homepage.email }}</span>
-                        </span>
-                        <span class="social-arrow" aria-hidden="true">{{ icons.icon("arrow-up-right", 14) }}</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
+    </section>
+</div>

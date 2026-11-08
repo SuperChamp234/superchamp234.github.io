@@ -7,7 +7,6 @@
     const grid = root.querySelector("[data-gallery-grid]");
     const counter = root.querySelector("[data-gallery-counter]");
     const progress = root.querySelector("[data-book-progress]");
-    const hint = root.querySelector("[data-book-hint]");
     const viewButtons = Array.from(root.querySelectorAll("[data-view]"));
     const pages = Array.from(root.querySelectorAll("[data-book-item]"));
     const total = pages.length;
@@ -127,7 +126,6 @@
                     current = Math.max(0, Math.min(total - 1, next));
                     updateCounter();
                 }
-                if (hint && current > 0) hint.classList.add("is-hidden");
                 ticking = false;
             });
         },
@@ -160,7 +158,11 @@
     });
 
     /* ------------------------------------------------------------ image fade */
-    const markLoaded = (img) => img.classList.add("is-loaded");
+    const markLoaded = (img) => {
+        img.classList.add("is-loaded");
+        const holder = img.closest(".media-button");
+        if (holder) holder.classList.add("is-loaded");
+    };
 
     root.querySelectorAll("img").forEach((img) => {
         if (img.complete && img.naturalWidth) {
