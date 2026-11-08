@@ -9,16 +9,11 @@ pageScripts:
 <section class="hero">
     <div class="hero-inner">
         <div class="hero-copy">
-            <p class="eyebrow">{{ homepage.eyebrow }}</p>
             <h1 class="hero-title">Zain<br> Siddavatam</h1>
             <p class="hero-line">
                 <span>I am </span><span id="typed" class="typed" aria-hidden="true" data-strings='{{ homepage.typed_strings | dump }}'></span><span class="sr-only">{{ homepage.tagline }}</span>
             </p>
             <p class="hero-intro">{{ homepage.intro | safe }}</p>
-            <div class="hero-actions">
-                <a class="button button-primary" href="/blog/">Read the blog {{ icons.icon("arrow-right", 16) }}</a>
-                <a class="button button-ghost" href="/gallery/">See the photos</a>
-            </div>
         </div>
 
         <figure class="hero-figure">
@@ -33,117 +28,48 @@ pageScripts:
             </div>
             <figcaption>
                 <span>{{ homepage.hero_caption }}</span>
-                <span aria-hidden="true">01</span>
             </figcaption>
         </figure>
     </div>
-
-    <a class="scroll-cue" href="#now">
-        <span>Scroll</span>
-        <span class="scroll-line" aria-hidden="true"></span>
-    </a>
 </section>
 
-<section class="section now" id="now">
-    <div class="section-inner">
-        <div class="section-head">
-            <div>
-                <p class="eyebrow">01 — Now</p>
-                <h2>What I'm up to</h2>
-            </div>
-        </div>
-        <ol class="now-list">
-            {% for item in homepage.current_activities %}
-            <li>
-                <span class="now-index">{{ "0" ~ loop.index }}</span>
-                <span>{{ item | safe }}</span>
-            </li>
-            {% endfor %}
-        </ol>
-    </div>
-</section>
-
-<section class="section writing">
-    <div class="section-inner">
-        <div class="section-head">
-            <div>
-                <p class="eyebrow">02 — Writing</p>
-                <h2>Recent notes</h2>
-            </div>
-            <a class="section-link" href="/blog/">All posts {{ icons.icon("arrow-right", 14) }}</a>
+<section class="section home-info" id="now">
+    <div class="section-inner home-columns">
+        <div class="home-col">
+            <h2 class="home-heading">Now</h2>
+            <ul class="now-list">
+                {% for item in homepage.current_activities %}
+                <li>{{ item | safe }}</li>
+                {% endfor %}
+            </ul>
         </div>
 
-        <div class="home-post-list">
-            {% for post in collections.posts | limit(3) %}
-            <a class="post-row" href="{{ post.url }}">
-                <time datetime="{{ post.date | htmlDateString }}">{{ post.date | blogDate }}</time>
-                <span class="post-row-title">{{ post.data.title }}</span>
-                <span class="post-row-meta">{{ post.templateContent | readingTime }} min</span>
-                <span class="post-row-arrow">{{ icons.icon("arrow-up-right", 16) }}</span>
-            </a>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
-{% if gallery.recentPhotos.length %}
-<section class="section photos">
-    <div class="section-inner">
-        <div class="section-head">
-            <div>
-                <p class="eyebrow">03 — Photographs</p>
-                <h2>Recently photographed</h2>
-            </div>
-            <a class="section-link" href="/gallery/">Open the photo book {{ icons.icon("arrow-right", 14) }}</a>
-        </div>
-
-        <div class="recent-grid">
-            {% for photo in gallery.recentPhotos | limit(4) %}
-            <a class="recent-item" href="/gallery/?view=book#{{ photo.id }}">
-                <div class="recent-media" style="background-image:url('{{ photo.lqip }}')">
-                    <picture>
-                        <source type="image/avif" srcset="{{ photo.srcset.avif }}" sizes="(max-width: 640px) 45vw, 22vw">
-                        <source type="image/webp" srcset="{{ photo.srcset.webp }}" sizes="(max-width: 640px) 45vw, 22vw">
-                        <img src="{{ photo.fallback }}" srcset="{{ photo.srcset.jpg }}" sizes="(max-width: 640px) 45vw, 22vw" width="{{ photo.width }}" height="{{ photo.height }}" alt="{{ photo.alt }}" loading="lazy" decoding="async">
-                    </picture>
-                </div>
-                <span class="recent-caption">{{ photo.caption or photo.shortDate or photo.albumTitle }}</span>
-            </a>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-{% endif %}
-
-<section class="section elsewhere" id="elsewhere">
-    <div class="section-inner">
-        <div class="section-head">
-            <div>
-                <p class="eyebrow">04 — Elsewhere</p>
-                <h2>Say hello</h2>
-            </div>
-            <a class="section-link" href="mailto:{{ homepage.email }}">{{ homepage.email }}</a>
-        </div>
-
-        <div class="social-grid">
-            {% for link in homepage.social_links %}
-            <a class="social-link" href="{{ link.url }}" target="_blank" rel="noopener">
-                <span class="social-icon">{{ icons.icon(link.icon, 20) }}</span>
-                <span class="social-text">
-                    <span class="social-name">{{ link.title }}</span>
-                    <span class="social-handle">{{ link.handle }}</span>
-                </span>
-                <span class="social-arrow">{{ icons.icon("arrow-up-right", 16) }}</span>
-            </a>
-            {% endfor %}
-            <a class="social-link" href="mailto:{{ homepage.email }}">
-                <span class="social-icon">{{ icons.icon("mail", 20) }}</span>
-                <span class="social-text">
-                    <span class="social-name">Email</span>
-                    <span class="social-handle">{{ homepage.email }}</span>
-                </span>
-                <span class="social-arrow">{{ icons.icon("arrow-up-right", 16) }}</span>
-            </a>
+        <div class="home-col" id="elsewhere">
+            <h2 class="home-heading">Elsewhere</h2>
+            <ul class="social-list">
+                {% for link in homepage.social_links %}
+                <li>
+                    <a class="social-link" href="{{ link.url }}" target="_blank" rel="noopener">
+                        <span class="social-icon">{{ icons.icon(link.icon, 16) }}</span>
+                        <span class="social-text">
+                            <span class="social-name">{{ link.title }}</span>
+                            <span class="social-handle">{{ link.handle }}</span>
+                        </span>
+                        <span class="social-arrow" aria-hidden="true">{{ icons.icon("arrow-up-right", 14) }}</span>
+                    </a>
+                </li>
+                {% endfor %}
+                <li>
+                    <a class="social-link" href="mailto:{{ homepage.email }}">
+                        <span class="social-icon">{{ icons.icon("mail", 16) }}</span>
+                        <span class="social-text">
+                            <span class="social-name">Email</span>
+                            <span class="social-handle">{{ homepage.email }}</span>
+                        </span>
+                        <span class="social-arrow" aria-hidden="true">{{ icons.icon("arrow-up-right", 14) }}</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </section>

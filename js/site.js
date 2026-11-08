@@ -46,16 +46,17 @@
 
     /* -------------------------------------------------------- theme preview */
     const themeButtons = Array.from(document.querySelectorAll("[data-set-theme]"));
+    const themeSwitcher = document.querySelector("[data-theme-switcher]");
     const themeMeta = document.querySelector('meta[name="theme-color"]');
-    const themes = ["editorial", "swiss", "mono"];
+    const themes = ["scrapbook", "weblog", "web20"];
     const themeColors = {
-        editorial: "#faf7f2",
-        swiss: "#ffffff",
-        mono: "#fcfcfb",
+        scrapbook: "#f6efe1",
+        weblog: "#dfe7f0",
+        web20: "#eef3f8",
     };
 
     const applyTheme = (theme, persist = true) => {
-        if (!themes.includes(theme)) theme = "editorial";
+        if (!themes.includes(theme)) theme = "scrapbook";
         doc.dataset.theme = theme;
         themeButtons.forEach((button) => {
             button.setAttribute(
@@ -76,9 +77,12 @@
         }
     };
 
-    applyTheme(doc.dataset.theme || "editorial", false);
+    applyTheme(doc.dataset.theme || "scrapbook", false);
     themeButtons.forEach((button) => {
-        button.addEventListener("click", () => applyTheme(button.dataset.setTheme));
+        button.addEventListener("click", () => {
+            applyTheme(button.dataset.setTheme);
+            if (themeSwitcher) themeSwitcher.open = false;
+        });
     });
 
     /* ---------------------------------------------------------- giscus lazy */

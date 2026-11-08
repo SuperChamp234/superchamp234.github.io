@@ -117,7 +117,7 @@ Deep links work:
 
 ## Design directions
 
-The site currently ships with three previewable directions: `editorial` (Fraunces serif, warm paper), `swiss` (uppercase sans, blue accent), and `mono` (quiet monochrome sans). Switch with the floating preview pill, or add `?theme=swiss` to any URL. Remove `_includes/theme-switcher.njk` and the theme block in `js/site.js` once a direction is chosen.
+The site currently ships with three previewable directions: `scrapbook` (cream paper, serif display, rust ink, a pasted-on photo), `weblog` (pale blue page, white modules, Verdana, classic underlined links), and `web20` (blue chrome, rounded white cards, glossy buttons). Open the **Preview** tab in the bottom-left corner, or add `?theme=weblog` to any URL. Remove `_includes/theme-switcher.njk` and the theme block in `js/site.js` once a direction is chosen.
 
 Design tokens live at the top of `css/main.css`. Page-specific styles are in `css/gallery.css`, `css/prism.css`, and `css/resume.css`.
 

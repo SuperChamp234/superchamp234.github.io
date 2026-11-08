@@ -92,7 +92,17 @@ function cleanCamera(make, model) {
 async function readExif(filePath) {
   try {
     const data = await exifr.parse(filePath, {
-      pick: ["DateTimeOriginal", "CreateDate", "Make", "Model", "LensModel"],
+      pick: [
+        "DateTimeOriginal",
+        "CreateDate",
+        "Make",
+        "Model",
+        "LensModel",
+        "FNumber",
+        "ExposureTime",
+        "ISO",
+        "FocalLength",
+      ],
       translateValues: false,
       reviveValues: false,
     });
@@ -103,10 +113,33 @@ async function readExif(filePath) {
       date,
       camera: cleanCamera(data.Make, data.Model),
       lens: data.LensModel ? String(data.LensModel).trim() : null,
+      settings: formatSettings(data),
     };
   } catch {
     return {};
   }
+}
+
+function formatSettings(data) {
+  const parts = [];
+  const aperture = Number(data.FNumber);
+  if (aperture && !Number.isNaN(aperture)) {
+    parts.push(`f/${Number(aperture.toFixed(2))}`);
+  }
+  const exposure = Number(data.ExposureTime);
+  if (exposure && !Number.isNaN(exposure)) {
+    parts.push(
+      exposure >= 1
+        ? `${Number(exposure.toFixed(1))}s`
+        : `1/${Math.round(1 / exposure)}s`,
+    );
+  }
+  if (data.ISO) parts.push(`ISO ${data.ISO}`);
+  const focal = Number(data.FocalLength);
+  if (focal && !Number.isNaN(focal)) {
+    parts.push(`${Number(focal.toFixed(1))}mm`);
+  }
+  return parts.length ? parts.join(" · ") : null;
 }
 
 function normalizeExifDate(rawDate) {

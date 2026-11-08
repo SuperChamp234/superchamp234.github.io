@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.language }}" data-theme="editorial">
+<html lang="{{ site.language }}" data-theme="scrapbook">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
             try {
                 var params = new URLSearchParams(location.search);
                 var theme = params.get("theme") || localStorage.getItem("theme");
-                if (theme === "editorial" || theme === "swiss" || theme === "mono") {
+                if (theme === "scrapbook" || theme === "weblog" || theme === "web20") {
                     document.documentElement.dataset.theme = theme;
                 }
             } catch (error) {}
@@ -36,9 +36,6 @@
     {% endif %}
 
     {% set pageTitle = title or site.title %}
-    {% if page.url == "/" %}
-        {% set pageTitle = site.title ~ " — computer architecture, verification & photography" %}
-    {% endif %}
 
     <title>{{ pageTitle }}</title>
     <meta name="description" content="{{ description or site.description }}">
@@ -70,8 +67,8 @@
     <meta property="twitter:image" content="{{ site.url }}{{ ogImage | url }}">
     {% endif %}
 
-    <meta name="theme-color" content="#faf7f2">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231d1a17'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' fill='%23faf7f2' text-anchor='middle'%3EZS%3C/text%3E%3C/svg%3E">
+    <meta name="theme-color" content="#f6efe1">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23faf7f2'/%3E%3Cg fill='none' stroke='%231d1a17' stroke-width='4'%3E%3Cpath d='M14 22h8l4-6h12l4 6h8v26H14z'/%3E%3Ccircle cx='32' cy='34' r='9'/%3E%3C/g%3E%3C/svg%3E">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
 
     <link rel="preload" href="/css/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -93,7 +90,9 @@
         {{ content | safe }}
     </main>
 
+    {% if page.url != "/" %}
     {% include "footer.njk" %}
+    {% endif %}
     {% include "theme-switcher.njk" %}
 
     <script src="/js/site.js" defer></script>

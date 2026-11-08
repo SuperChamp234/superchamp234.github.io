@@ -42,7 +42,7 @@
                    data-type="image"
                    data-full="{{ item.full }}"
                    data-caption="{{ item.caption }}"
-                   data-meta="{% if item.dateLabel %}{{ item.dateLabel }}{% endif %}{% if item.location %} · {{ item.location }}{% endif %}{% if item.camera %} · {{ item.camera }}{% endif %}"
+                   data-meta="{% if item.dateLabel %}{{ item.dateLabel }}{% endif %}{% if item.location %} · {{ item.location }}{% endif %}{% if item.camera %} · {{ item.camera }}{% endif %}{% if item.settings %} · {{ item.settings }}{% endif %}"
                    data-alt="{{ item.alt }}"
                    aria-label="Open {{ item.alt }} larger">
                     <span class="media-blur" style="background-image:url('{{ item.lqip }}')" aria-hidden="true"></span>
@@ -87,6 +87,7 @@
                     {% if item.dateLabel %}<span>{{ item.dateLabel }}</span>{% endif %}
                     {% if item.location %}<span>{{ item.location }}</span>{% endif %}
                     {% if item.camera %}<span>{{ item.camera }}</span>{% endif %}
+                    {% if item.settings %}<span>{{ item.settings }}</span>{% endif %}
                 </span>
             </figcaption>
         </figure>
@@ -117,7 +118,7 @@
                    data-video="{{ item.src if item.type == 'video' else '' }}"
                    data-poster="{{ item.poster.full if item.poster else '' }}"
                    data-caption="{{ item.caption }}"
-                   data-meta="{% if item.dateLabel %}{{ item.dateLabel }}{% endif %}{% if item.location %} · {{ item.location }}{% endif %}"
+                   data-meta="{% if item.dateLabel %}{{ item.dateLabel }}{% endif %}{% if item.location %} · {{ item.location }}{% endif %}{% if item.camera %} · {{ item.camera }}{% endif %}{% if item.settings %} · {{ item.settings }}{% endif %}"
                    data-alt="{{ item.alt }}"
                    style="--ar: {{ item.aspect or 1.7778 }}; --w: {{ item.width or 1600 }}; --h: {{ item.height or 900 }}">
                     <span class="grid-media" style="background-image:url('{{ item.lqip or (item.poster.lqip if item.poster else '') }}')">

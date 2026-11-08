@@ -3,41 +3,41 @@
  */
 
 :root {
-    --code-bg: #f3eee6;
-    --code-border: #e3dacd;
-    --code-fg: #2b2620;
+    --code-bg: #ece2ce;
+    --code-border: #d9cbb3;
+    --code-fg: #2b251c;
     --code-comment: #8b8175;
-    --code-keyword: #a1472a;
+    --code-keyword: #9b3f1f;
     --code-string: #3f6b4a;
     --code-number: #2f5f8f;
     --code-function: #6b4a8a;
-    --code-punct: #7c7368;
-    --code-deleted: #a1472a;
+    --code-punct: #7d7161;
+    --code-deleted: #9b3f1f;
     --code-inserted: #3f6b4a;
 }
 
-html[data-theme="swiss"] {
-    --code-bg: #f5f5f5;
-    --code-border: #e3e3e3;
-    --code-fg: #111111;
-    --code-comment: #888888;
-    --code-keyword: #1d4ed8;
-    --code-string: #0a7a3e;
-    --code-number: #b45309;
-    --code-function: #7c3aed;
-    --code-punct: #555555;
+html[data-theme="weblog"] {
+    --code-bg: #ffffff;
+    --code-border: #b7c5d4;
+    --code-fg: #1c2732;
+    --code-comment: #5d6d7d;
+    --code-keyword: #1a4f8a;
+    --code-string: #0a6b3a;
+    --code-number: #9a4b00;
+    --code-function: #6b2fa0;
+    --code-punct: #5d6d7d;
 }
 
-html[data-theme="mono"] {
-    --code-bg: #f4f4f1;
-    --code-border: #ecece8;
-    --code-fg: #151515;
-    --code-comment: #9a9a95;
-    --code-keyword: #151515;
-    --code-string: #5f5f5a;
-    --code-number: #5f5f5a;
-    --code-function: #151515;
-    --code-punct: #8b8b86;
+html[data-theme="web20"] {
+    --code-bg: #f5f9fc;
+    --code-border: #c9d8e8;
+    --code-fg: #22303d;
+    --code-comment: #6b7c8c;
+    --code-keyword: #1a5fa8;
+    --code-string: #0a6b3a;
+    --code-number: #b45309;
+    --code-function: #6b2fa0;
+    --code-punct: #6b7c8c;
 }
 
 pre[class*="language-"],
