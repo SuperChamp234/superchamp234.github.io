@@ -15,9 +15,11 @@
     --font-mono: "Courier New", Courier, monospace;
 
     --page-bg: #dbe6f3;
+    --grid-line: rgba(255, 255, 255, 0.5);
     --panel: #ffffff;
     --panel-soft: #f4f8fc;
     --panel-tint: #eaf2fb;
+    --heading: #14324f;
     --fg: #1c2732;
     --fg-soft: #38495a;
     --muted: #5d7083;
@@ -68,12 +70,12 @@ body {
     margin: 0;
     background-color: var(--page-bg);
     background-image: linear-gradient(
-            rgba(255, 255, 255, 0.5) 1px,
+            var(--grid-line) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(255, 255, 255, 0.5) 1px,
+            var(--grid-line) 1px,
             transparent 1px
         );
     background-size: 24px 24px;
@@ -89,7 +91,7 @@ body.nav-open {
 }
 
 ::selection {
-    background: #cfe0f2;
+    background: var(--panel-tint);
     color: var(--fg);
 }
 
@@ -130,7 +132,7 @@ h6 {
     font-family: var(--font-heading);
     font-weight: 700;
     line-height: 1.2;
-    color: #14324f;
+    color: var(--heading);
 }
 
 p {
@@ -241,7 +243,7 @@ ol {
 }
 
 .primary-nav a[aria-current="page"] {
-    color: #14324f;
+    color: var(--heading);
 }
 
 .header-meta {
@@ -335,7 +337,7 @@ ol {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.03em;
-    color: #14324f;
+    color: var(--heading);
 }
 
 .widget-body {
@@ -505,7 +507,7 @@ ol {
     border-bottom: 1px solid var(--line-strong);
     font-size: 12px;
     font-weight: 700;
-    color: #14324f;
+    color: var(--heading);
 }
 
 .box-body {
@@ -604,7 +606,7 @@ ol {
     border: 1px solid var(--line-strong);
     font-size: 11px;
     font-weight: 700;
-    color: #14324f;
+    color: var(--heading);
 }
 
 .post-list {
@@ -1051,7 +1053,7 @@ ol {
 }
 
 .footer-name {
-    color: #14324f !important;
+    color: var(--heading) !important;
     font-family: var(--font-heading);
     font-size: 11px;
     font-weight: 700;

@@ -70,7 +70,7 @@
 
 .view-switch button[aria-pressed="true"] {
     background: linear-gradient(var(--header-grad-a), var(--header-grad-b));
-    color: #14324f;
+    color: var(--heading);
     font-weight: 700;
 }
 

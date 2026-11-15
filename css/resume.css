@@ -25,7 +25,7 @@
 .resume .center p strong {
     display: block;
     margin-bottom: 6px;
-    color: #14324f;
+    color: var(--heading);
     font-family: var(--font-heading);
     font-size: clamp(1.8rem, 3.6vw, 2.4rem);
     font-weight: 700;
