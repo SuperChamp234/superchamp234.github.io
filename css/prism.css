@@ -3,15 +3,15 @@
  */
 
 :root {
-    --code-bg: #f7fbff;
-    --code-border: #b9cade;
-    --code-fg: #1c2732;
-    --code-comment: #5d7083;
+    --code-bg: #fdf6ee;
+    --code-border: #dcc3ab;
+    --code-fg: #2a211a;
+    --code-comment: #7c6654;
     --code-keyword: #1a4f8a;
     --code-string: #0a6b3a;
     --code-number: #9a4b00;
     --code-function: #6b2fa0;
-    --code-punct: #5d7083;
+    --code-punct: #7c6654;
     --code-deleted: #a12626;
     --code-inserted: #0a6b3a;
 }

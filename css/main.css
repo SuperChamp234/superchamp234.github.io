@@ -14,26 +14,28 @@
     --font-body: Verdana, Geneva, "DejaVu Sans", sans-serif;
     --font-mono: "Courier New", Courier, monospace;
 
-    --page-bg: #dbe6f3;
+    --page-bg: #f3e3d2;
     --grid-line: rgba(255, 255, 255, 0.5);
-    --panel: #ffffff;
-    --panel-soft: #f4f8fc;
-    --panel-tint: #eaf2fb;
-    --heading: #14324f;
-    --fg: #1c2732;
-    --fg-soft: #38495a;
-    --muted: #5d7083;
-    --line: #b9cade;
-    --line-strong: #7f9bb8;
+    --panel: #fffdf9;
+    --panel-soft: #fdf6ee;
+    --panel-tint: #f9eadb;
+    --heading: #4a2a14;
+    --fg: #2a211a;
+    --fg-soft: #4a3a2d;
+    --muted: #7c6654;
+    --line: #dcc3ab;
+    --line-strong: #bd9a78;
     --link: #0033cc;
     --link-visited: #663399;
     --link-hover: #cc0000;
-    --accent: #1a4f8a;
+    --accent: #a8541f;
 
-    --header-grad-a: #eef5fc;
-    --header-grad-b: #cfe0f2;
-    --shadow-hard: 2px 2px 0 rgba(60, 90, 120, 0.16);
-    --shadow-photo: 3px 3px 0 rgba(60, 90, 120, 0.2);
+    --header-grad-a: #fdf4e8;
+    --header-grad-b: #f2dcc4;
+    --shadow-hard: 2px 2px 0 rgba(120, 80, 40, 0.16);
+    --shadow-photo: 3px 3px 0 rgba(120, 80, 40, 0.2);
+    --shadow-soft: 1px 1px 0 rgba(120, 80, 40, 0.16);
+    --shadow-nav: 0 3px 0 rgba(120, 80, 40, 0.12);
 
     --max-width: 1000px;
     --sidebar-w: 196px;
@@ -198,7 +200,7 @@ ol {
 .site-header {
     position: relative;
     z-index: 100;
-    background: linear-gradient(#ffffff, #e9f1fa);
+    background: linear-gradient(var(--header-grad-a), var(--header-grad-b));
     border-bottom: 1px solid var(--line-strong);
 }
 
@@ -322,7 +324,7 @@ ol {
     margin-bottom: 16px;
     background: var(--panel);
     border: 1px solid var(--line-strong);
-    box-shadow: 1px 1px 0 rgba(60, 90, 120, 0.14);
+    box-shadow: var(--shadow-soft);
 }
 
 .widget:last-child {
@@ -842,7 +844,7 @@ ol {
     margin: 1.4em 0;
     padding: 12px;
     overflow-x: auto;
-    background: #f7fbff;
+    background: var(--code-bg, var(--panel-soft));
     border: 1px solid var(--line-strong);
     font-family: var(--font-mono);
     font-size: 12px;
@@ -1142,9 +1144,9 @@ body.page-error .footer-inner {
         flex-direction: column;
         align-items: stretch;
         padding: 4px var(--gutter) 10px;
-        background: #fff;
+        background: var(--panel);
         border-bottom: 1px solid var(--line-strong);
-        box-shadow: 0 3px 0 rgba(60, 90, 120, 0.12);
+        box-shadow: var(--shadow-nav);
     }
 
     .site-header[data-open="true"] .primary-nav {
