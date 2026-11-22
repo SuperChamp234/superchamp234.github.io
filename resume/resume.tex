@@ -142,7 +142,7 @@
         \resumeItemListStart
             \resumeItem{Added \textbf{Hexagon architecture support to picolibc} and migrated the Hexagon C/C++ runtime from Dinkumware to \textbf{picolibc + LLVM libc++} across \textbf{3 platforms} (compute DSP, internal RTOS, hypervisor), porting legacy platform code and handling each environment's OS- and hypervisor-specific integration.}
             \resumeItem{Extended \textbf{NetBSD's RTLD} into an \textbf{ELF dynamic loader} for picolibc (Linux and Hexagon hypervisor), redesigned around a \textbf{single libc embedded in the loader} so every loaded object shares one libc instance per process.}
-            \resumeItem{Benchmarked Hexagon's \textbf{compiler-rt} builtins to identify performance gaps, then reworked \textbf{5 builtins} to use the \textbf{HLX co-processor and UserDMA}, improving data throughput by \textbf{1.5--2x} and yielding about a \textbf{7\%} improvement in MLIR-generated code using these builtins.}
+            \resumeItem{Benchmarked Hexagon's \textbf{compiler-rt} builtins to identify performance gaps, then reworked \textbf{5 builtins} to use \textbf{Hexagon's co-processors and UserDMA}, improving data throughput by \textbf{1.5--2x} and yielding about a \textbf{7\%} improvement in MLIR-generated code using these builtins.}
         \resumeItemListEnd
     \resumeSubheading
         {Design Verification Engineer at Incore Semiconductors \href{https://incoresemi.com}{\faExternalLink}}{}{eUVM (D), Bluespec SystemVerilog, RISC-V, Spike, riscv-dv, Verilator, Questa, Python}{Aug 2025 – Mar 2026}
