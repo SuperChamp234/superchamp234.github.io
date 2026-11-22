@@ -7,3 +7,5 @@ media/_generated
 _includes/resume_content.njk
 resume/resume_content.html
 resume/resume.pdf
+resume/build/
+resume/latex2html_output/

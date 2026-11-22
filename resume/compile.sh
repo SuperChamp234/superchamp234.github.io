@@ -3,6 +3,9 @@
 # Script to convert LaTeX resume to both HTML and PDF
 # Usage: ./compile.sh [pandoc|latex2html]
 
+# Always run from the resume directory so relative paths work.
+cd "$(dirname "$0")" || exit 1
+
 # Default converter
 CONVERTER="pandoc"
 
@@ -26,14 +29,6 @@ fi
 if [ "$CONVERTER" = "latex2html" ] && ! command -v latex2html &> /dev/null; then
     echo "Error: latex2html is not installed. Please install it first."
     exit 1
-fi
-
-# Check if pdflatex is installed
-if ! command -v pdflatex &> /dev/null; then
-    echo "Warning: pdflatex is not installed. PDF will not be generated."
-    PDF_AVAILABLE=false
-else
-    PDF_AVAILABLE=true
 fi
 
 # Convert the LaTeX file to HTML
@@ -128,17 +123,14 @@ else
     exit 1
 fi
 
-# Generate PDF if pdflatex is available
-if [ "$PDF_AVAILABLE" = true ]; then
-    echo "Compiling resume.tex to PDF..."
-    pdflatex -interaction=nonstopmode resume.tex
-    
-    if [ $? -eq 0 ]; then
-        echo "PDF conversion successful!"
-        cp resume.pdf "../_site/resume/Zain Siddavatam Resume.pdf"
-    else
-        echo "Error: PDF conversion failed."
-    fi
+# Generate the PDF with the local toolchain or the Docker image.
+echo "Compiling resume.tex to PDF..."
+if ./build.sh; then
+    mkdir -p "../_site/resume"
+    cp resume.pdf "../_site/resume/Zain Siddavatam Resume.pdf"
+    echo "PDF conversion successful!"
+else
+    echo "Warning: PDF build failed; keeping the existing resume.pdf."
 fi
 
 # Clean up auxiliary files
