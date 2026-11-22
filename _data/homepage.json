@@ -1,16 +1,16 @@
 {
   "title": "Zain Siddavatam",
-  "tagline": "a verification engineer.",
+  "tagline": "a compiler engineer.",
   "typed_strings": [
-    "a verification engineer.",
+    "a compiler engineer.",
     "a computer architecture nerd.",
     "a cat person.",
     "a mountain enjoyer.",
     "probably reading a datasheet."
   ],
-  "intro": "I'm Zain, a computer architecture enthusiast and hardware enjoyer. I've been exploring computers and their low-level architectures for some time now, and I'm always looking for new things to learn. Don't hesitate to reach out if you want to collaborate, or just want to chat.",
+  "intro": "I'm Zain, a compiler engineer and computer architecture enthusiast. I've been exploring compilers, low-level computer architecture, and the space between them for some time now, and I'm always looking for new things to learn. Don't hesitate to reach out if you want to collaborate, or just want to chat.",
   "current_activities": [
-    "Working as a Verification Engineer at <a href=\"https://incoresemi.com/\" target=\"_blank\" rel=\"noopener\">InCore Semiconductors</a>",
+    "Working as a Compiler Engineer at <a href=\"https://www.qualcomm.com/\" target=\"_blank\" rel=\"noopener\">Qualcomm</a>",
     "Reading papers on ML accelerators and their architectures",
     "Playing hide and seek with my cat",
     "Looking for collaborations on impactful research in computer architecture and ML"

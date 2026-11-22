@@ -40,8 +40,13 @@ fi
 echo "Converting resume.tex to HTML using $CONVERTER..."
 
 if [ "$CONVERTER" = "pandoc" ]; then
+    # Pandoc doesn't understand the resume's custom \resumeBody font macro,
+    # and the contact line uses $|$ separators. Build an HTML-friendly copy.
+    PANDOC_SRC="resume.pandoc.tex"
+    perl -0pe 's/\\newcommand\{\\resumeBody\}\{\\fontsize\{9\.5\}\{12\.3\}\\selectfont\}/\\newcommand{\\resumeBody}{\\small}/; s/\$\|\$/|/g' resume.tex > "$PANDOC_SRC"
+
     # Use pandoc for conversion with additional options to handle LaTeX peculiarities
-    pandoc resume.tex -o resume_content.html \
+    pandoc "$PANDOC_SRC" -o resume_content.html \
       --standalone \
       --mathjax \
       --css=/css/resume.css \
@@ -56,6 +61,7 @@ if [ "$CONVERTER" = "pandoc" ]; then
     
     CONVERSION_SUCCESS=$?
     HTML_FILE="resume_content.html"
+    rm -f "$PANDOC_SRC"
     
 elif [ "$CONVERTER" = "latex2html" ]; then
     # Create a directory for latex2html output

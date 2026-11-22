@@ -1,6 +1,6 @@
 # Zain Siddavatam — zainsv.me
 
-Personal site for notes on computer architecture, hardware verification, and photography. Built with Eleventy, plain CSS, and a build-time image pipeline. Light mode only.
+Personal site for notes on compilers, computer architecture, verification, and photography. Built with Eleventy, plain CSS, and a build-time image pipeline. Light mode only.
 
 ## Quick start
 

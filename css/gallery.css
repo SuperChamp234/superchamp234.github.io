@@ -10,15 +10,6 @@
     border-bottom: 1px solid var(--line);
 }
 
-.gallery-stats {
-    margin: 12px 0 0;
-    color: var(--muted);
-    font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
 /* --------------------------------------------------------------------------
    Toolbar
    -------------------------------------------------------------------------- */
@@ -375,7 +366,6 @@ html:not(.js) .media-button img,
     font-family: var(--font-mono);
     font-size: 10px;
     letter-spacing: 0.04em;
-    text-transform: uppercase;
 }
 
 .album-desc {

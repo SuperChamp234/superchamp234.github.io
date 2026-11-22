@@ -4,9 +4,8 @@ layout: base.njk
 
 <div class="blog-page">
     <header class="page-header">
-        <p class="eyebrow">Writing</p>
         <h1>Notes, mostly technical.</h1>
-        <p class="lede">Long-form notes on computer architecture, verification, FPGA tooling, and the occasional detour. {{ collections.posts.length }} posts and counting.</p>
+        <p class="lede">Long-form notes on compilers, computer architecture, verification, FPGA tooling, and the occasional detour. {{ collections.posts.length }} posts and counting.</p>
     </header>
 
     {% set years = collections.posts | groupByYear %}
