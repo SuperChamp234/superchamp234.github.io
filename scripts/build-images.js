@@ -29,9 +29,12 @@ const IMAGE_RE = /\.(jpe?g|png|webp|avif|tiff?)$/i;
 const VIDEO_RE = /\.(mp4|webm|mov|m4v|ogg)$/i;
 const EXCLUDE_DIRS = new Set(["_generated", "blog", "fonts"]);
 
-const GALLERY_WIDTHS = [640, 1280, 1920];
-const HERO_WIDTHS = [640, 960, 1280, 1600, 2000];
-const POSTER_WIDTHS = [640, 1280];
+// Bump this when encoding settings change so cached derivatives are rebuilt.
+const PIPELINE_VERSION = 2;
+
+const GALLERY_WIDTHS = [640, 1280, 1920, 2560];
+const HERO_WIDTHS = [640, 960, 1280, 1600, 2000, 2560];
+const POSTER_WIDTHS = [640, 1280, 1920];
 
 const FORCE = process.argv.includes("--force");
 const HAS_FFMPEG = commandExists("ffmpeg") && commandExists("ffprobe");
@@ -76,7 +79,7 @@ async function loadManifest() {
 
 async function fileStamp(filePath) {
   const stat = await fsp.stat(filePath);
-  return `${stat.size}-${Math.round(stat.mtimeMs)}`;
+  return `${PIPELINE_VERSION}-${stat.size}-${Math.round(stat.mtimeMs)}`;
 }
 
 function cleanCamera(make, model) {
@@ -182,6 +185,7 @@ async function generateImage(source, rel, widths, options = {}) {
     avif = true,
     webp = true,
     jpg = true,
+    originalFull = true,
   } = options;
 
   const metadata = await sharp(source).metadata();
@@ -215,7 +219,7 @@ async function generateImage(source, rel, widths, options = {}) {
     if (avif) {
       tasks.push(
         pipeline()
-          .avif({ quality: 52, effort: 3 })
+          .avif({ quality: 64, effort: 3 })
           .toFile(`${stem}.avif`)
           .then(() =>
             formats.avif.push({ w, url: publicUrl(`${stem}.avif`) }),
@@ -225,7 +229,7 @@ async function generateImage(source, rel, widths, options = {}) {
     if (webp) {
       tasks.push(
         pipeline()
-          .webp({ quality: 74, effort: 4 })
+          .webp({ quality: 84, effort: 4 })
           .toFile(`${stem}.webp`)
           .then(() =>
             formats.webp.push({ w, url: publicUrl(`${stem}.webp`) }),
@@ -235,7 +239,7 @@ async function generateImage(source, rel, widths, options = {}) {
     if (jpg) {
       tasks.push(
         pipeline()
-          .jpeg({ quality: 80, mozjpeg: true })
+          .jpeg({ quality: 86, mozjpeg: true })
           .toFile(`${stem}.jpg`)
           .then(() =>
             formats.jpg.push({ w, url: publicUrl(`${stem}.jpg`) }),
@@ -262,6 +266,7 @@ async function generateImage(source, rel, widths, options = {}) {
       formats.avif[0])?.url || "";
 
   const largest = jpgSorted[jpgSorted.length - 1] || webpSorted[webpSorted.length - 1];
+  const browserSafe = /\.(jpe?g|png|webp|avif|gif)$/i.test(source);
 
   return {
     type: "image",
@@ -284,7 +289,11 @@ async function generateImage(source, rel, widths, options = {}) {
       jpg: srcset(formats.jpg),
     },
     fallback,
-    full: largest?.url || fallback,
+    // The lightbox should show the uncompressed source when the browser can
+    // display it directly; otherwise fall back to the largest derivative.
+    full: originalFull && browserSafe
+      ? publicUrl(source)
+      : largest?.url || fallback,
     ...(await readExif(source)),
   };
 }
@@ -358,9 +367,9 @@ async function makePoster(rel, source) {
         "-frames:v",
         "1",
         "-vf",
-        "scale='min(1280,iw)':-2",
+        "scale='min(1920,iw)':-2",
         "-q:v",
-        "3",
+        "2",
         posterPath,
       ],
       { stdio: "ignore" },
@@ -373,14 +382,21 @@ async function makePoster(rel, source) {
     posterPath,
     `${rel}#poster`,
     POSTER_WIDTHS,
-    { avif: false, webp: true, jpg: true },
+    { avif: false, webp: true, jpg: true, originalFull: false },
   );
   await fsp.unlink(posterPath).catch(() => {});
   return poster;
 }
 
-async function makeWebVideo(rel, source) {
+async function makeWebVideo(rel, source, duration) {
   if (!HAS_FFMPEG) return null;
+
+  // Short clips can afford near-source quality; long clips need a saner
+  // bitrate so they don't end up heavier than the original.
+  const isLong = Number(duration) > 15;
+  const maxEdge = isLong ? 1280 : 1440;
+  const crf = isLong ? 26 : 23;
+  const audioBitrate = isLong ? "128k" : "160k";
 
   const dir = path.join(OUT, hash(rel), "video");
   await fsp.mkdir(dir, { recursive: true });
@@ -400,19 +416,19 @@ async function makeWebVideo(rel, source) {
         "-map",
         "0:a?",
         "-vf",
-        "scale=w='min(960,iw)':h='min(960,ih)':force_original_aspect_ratio=decrease",
+        `scale=w='min(${maxEdge},iw)':h='min(${maxEdge},ih)':force_original_aspect_ratio=decrease:force_divisible_by=2`,
         "-c:v",
         "libx264",
         "-preset",
         "medium",
         "-crf",
-        "30",
+        String(crf),
         "-pix_fmt",
         "yuv420p",
         "-c:a",
         "aac",
         "-b:a",
-        "128k",
+        audioBitrate,
         "-movflags",
         "+faststart",
         output,
@@ -447,7 +463,7 @@ async function processVideo(rel) {
   const info = ffprobe(source);
   const [poster, webVideo] = await Promise.all([
     makePoster(rel, source),
-    makeWebVideo(rel, source),
+    makeWebVideo(rel, source, info.duration),
   ]);
 
   const entry = {

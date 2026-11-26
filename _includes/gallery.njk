@@ -28,10 +28,10 @@
         <figure class="book-page" id="{{ item.id }}" data-book-item>
             <div class="book-media">
                 {% if item.type == "image" %}
-                <a class="media-button" href="{{ item.full }}"
+                <a class="media-button" href="{{ item.src or item.full }}"
                    data-lightbox-open
                    data-type="image"
-                   data-full="{{ item.full }}"
+                   data-full="{{ item.src or item.full }}"
                    data-caption="{{ item.caption }}"
                    data-meta="{% if item.dateLabel %}{{ item.dateLabel }}{% endif %}{% if item.location %} · {{ item.location }}{% endif %}{% if item.camera %} · {{ item.camera }}{% endif %}{% if item.settings %} · {{ item.settings }}{% endif %}"
                    data-alt="{{ item.alt }}"
@@ -69,7 +69,6 @@
             </div>
 
             <figcaption class="book-caption">
-                <span class="book-count">{{ ("0" ~ loop.index) if loop.index < 10 else loop.index }} / {{ ("0" ~ gallery.book.length) if gallery.book.length < 10 else gallery.book.length }}</span>
                 <span class="book-text">
                     {% if item.caption %}<span class="book-title">{{ item.caption }}</span>{% endif %}
                     {% if item.note %}<span class="book-note">{{ item.note }}</span>{% endif %}
@@ -102,10 +101,10 @@
 
             <div class="photo-grid">
                 {% for item in album.items %}
-                <a class="grid-item" href="{{ item.full or item.src }}"
+                <a class="grid-item" href="{{ item.src or item.full }}"
                    data-lightbox-open
                    data-type="{{ item.type }}"
-                   data-full="{{ item.full or '' }}"
+                   data-full="{{ (item.src or item.full) if item.type == 'image' else '' }}"
                    data-video="{{ item.src if item.type == 'video' else '' }}"
                    data-poster="{{ item.poster.full if item.poster else '' }}"
                    data-caption="{{ item.caption }}"
@@ -132,8 +131,8 @@
                         {% endif %}
                     </span>
                     <span class="grid-caption">
-                        <span>{{ item.caption or item.albumTitle }}</span>
-                        {% if item.shortDate %}<span>{{ item.shortDate }}</span>{% endif %}
+                        {% if item.caption %}<span class="grid-title">{{ item.caption }}</span>{% endif %}
+                        {% if item.shortDate %}<span class="grid-date">{{ item.shortDate }}</span>{% endif %}
                     </span>
                 </a>
                 {% endfor %}

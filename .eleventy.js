@@ -9,13 +9,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("robots.txt");
 
-  // Serve optimized derivatives and the images used directly in posts. Gallery
-  // originals stay local; the generated 1920px JPEG is the full-size view.
-  eleventyConfig.addPassthroughCopy({
-    "media/_generated": "media/_generated",
-    "media/blog": "media/blog",
-    "media/celeste-finish.jpeg": "media/celeste-finish.jpeg",
-  });
+  // Serve all media including derivatives, originals for max-quality viewing, and post assets
+  eleventyConfig.addPassthroughCopy("media");
 
   // Files that are only used as local tooling / source templates.
   eleventyConfig.ignores.add("README.md");

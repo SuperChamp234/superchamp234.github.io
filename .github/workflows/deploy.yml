@@ -36,7 +36,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: media/_generated
-          key: images-${{ hashFiles('media/**/*.jpg', 'media/**/*.jpeg', 'media/**/*.JPG', 'media/**/*.png', 'media/**/*.mp4', 'media/**/*.mov', 'media/**/*.webp') }}
+          key: images-${{ hashFiles('scripts/build-images.js', 'media/**/*.jpg', 'media/**/*.jpeg', 'media/**/*.JPG', 'media/**/*.png', 'media/**/*.mp4', 'media/**/*.mov', 'media/**/*.webp') }}
           restore-keys: |
             images-
 
