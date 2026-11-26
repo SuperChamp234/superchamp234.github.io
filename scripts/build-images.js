@@ -31,6 +31,9 @@ const EXCLUDE_DIRS = new Set(["_generated", "blog", "fonts"]);
 
 // Bump this when encoding settings change so cached derivatives are rebuilt.
 const PIPELINE_VERSION = 2;
+// Separate version for video fallbacks so re-encoding videos doesn't rebuild
+// every still image.
+const VIDEO_VERSION = 2;
 
 const GALLERY_WIDTHS = [640, 1280, 1920, 2560];
 const HERO_WIDTHS = [640, 960, 1280, 1600, 2000, 2560];
@@ -327,7 +330,7 @@ function ffprobe(source) {
         "-select_streams",
         "v:0",
         "-show_entries",
-        "stream=width,height:format=duration",
+        "stream=width,height,codec_name:format=duration",
         "-of",
         "json",
         source,
@@ -339,10 +342,11 @@ function ffprobe(source) {
     return {
       width: stream.width || null,
       height: stream.height || null,
+      codec: stream.codec_name || null,
       duration: info.format?.duration ? Number(info.format.duration) : null,
     };
   } catch {
-    return { width: null, height: null, duration: null };
+    return { width: null, height: null, codec: null, duration: null };
   }
 }
 
@@ -388,15 +392,24 @@ async function makePoster(rel, source) {
   return poster;
 }
 
-async function makeWebVideo(rel, source, duration) {
+async function makeWebVideo(rel, source, duration, codec) {
   if (!HAS_FFMPEG) return null;
 
-  // Short clips can afford near-source quality; long clips need a saner
-  // bitrate so they don't end up heavier than the original.
+  // If the original is already in a browser-friendly container and codec, use
+  // it directly. Only transcode when the original may not play everywhere.
+  const ext = path.extname(source).toLowerCase();
+  const safeContainer = [".mp4", ".m4v", ".webm", ".ogv", ".ogg"].includes(ext);
+  const safeCodec = ["h264", "vp8", "vp9", "av1"].includes(
+    String(codec || "").toLowerCase(),
+  );
+  if (safeContainer && safeCodec) return null;
+
+  // Compatibility fallback for HEVC/MOV/etc. Long clips get a saner bitrate
+  // so the fallback doesn't end up heavier than the original.
   const isLong = Number(duration) > 15;
-  const maxEdge = isLong ? 1280 : 1440;
-  const crf = isLong ? 26 : 23;
-  const audioBitrate = isLong ? "128k" : "160k";
+  const maxEdge = isLong ? 1440 : 1920;
+  const crf = isLong ? 27 : 20;
+  const audioBitrate = isLong ? "128k" : "192k";
 
   const dir = path.join(OUT, hash(rel), "video");
   await fsp.mkdir(dir, { recursive: true });
@@ -451,10 +464,10 @@ async function processVideo(rel) {
     !FORCE &&
     cached &&
     cached.stamp === stamp &&
+    cached.videoVersion === VIDEO_VERSION &&
     (!cached.poster || allSourcesExist(cached.poster)) &&
-    cached.src &&
-    cached.src.includes("/_generated/") &&
-    fs.existsSync(path.join(ROOT, cached.src))
+    cached.playback &&
+    fs.existsSync(path.join(ROOT, cached.playback))
   ) {
     return cached;
   }
@@ -463,13 +476,18 @@ async function processVideo(rel) {
   const info = ffprobe(source);
   const [poster, webVideo] = await Promise.all([
     makePoster(rel, source),
-    makeWebVideo(rel, source, info.duration),
+    makeWebVideo(rel, source, info.duration, info.codec),
   ]);
+  const playback = webVideo || publicUrl(source);
 
   const entry = {
     type: "video",
-    src: webVideo || publicUrl(source),
+    src: playback,
     original: publicUrl(source),
+    // What the site should actually play: the original when the browser can
+    // handle it, otherwise the generated compatibility fallback.
+    playback,
+    videoVersion: VIDEO_VERSION,
     file: rel,
     width: info.width,
     height: info.height,

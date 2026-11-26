@@ -94,7 +94,7 @@ Captions are resolved in this order: sidecar `caption` → `captions.json` → E
 
 ### Image pipeline
 
-`scripts/build-images.js` scans `media/` and writes responsive AVIF, WebP, and JPEG derivatives plus tiny inline LQIP placeholders into `media/_generated/` (gitignored). Results are cached by source-file hash. Videos are transcoded to web-friendly H.264 MP4s (max 960px, faststart) and get poster images when `ffmpeg` is available.
+`scripts/build-images.js` scans `media/` and writes responsive AVIF, WebP, and JPEG derivatives plus tiny inline LQIP placeholders into `media/_generated/` (gitignored). Results are cached by source-file hash. Still images get `640 / 1280 / 1920 / 2560` widths at AVIF q64, WebP q84, and JPEG q86. The gallery grid and homepage hero use these derivatives; the photo book and lightbox use the original files. Videos are played from the original when it is a browser-friendly H.264 MP4/WebM; otherwise the script generates an H.264 fallback (1920px for short clips, 1440px for long clips). Poster images are generated when `ffmpeg` is available.
 
 ```bash
 npm run images        # incremental
@@ -103,11 +103,11 @@ npm run images:force  # rebuild everything
 
 The generated `manifest.json` powers the homepage hero, gallery, and Open Graph images. The hero source is `media/my_landscape_photo.jpg`; change `HERO_SRC` in the script if the hero moves.
 
-Gallery originals stay out of `_site`; the site serves the generated derivatives (the 1920px JPEG is the full-size view). Images used directly in posts live in `media/blog/` and are copied as-is.
+All of `media/` is copied into `_site`, so originals are published and can be used directly. The grid and homepage use generated derivatives for a light initial load; the book and lightbox request the original file. Book images load only when their page enters view. Images used directly in posts live in `media/blog/` and are copied as-is.
 
 ## Gallery views
 
-The gallery opens as a one-photo-at-a-time scroll-snap book on phones and as a justified grid on larger screens. Visitors can switch views with the Book/Grid control; the choice is remembered only after they explicitly switch. Book frames support arrow keys, Page Up/Down, Home, and End. Clicking a frame opens a lightbox with keyboard and swipe navigation.
+The gallery opens as a one-photo-at-a-time scroll-snap book on phones and as a justified grid on larger screens. Visitors can switch views with the Book/Grid control; the choice is remembered only after they explicitly switch. Book frames support arrow keys, Page Up/Down, Home, and End. Book frames use the original photo and load it only when the frame scrolls into view. Clicking a frame opens a lightbox with keyboard and swipe navigation.
 
 Deep links work:
 
@@ -117,7 +117,7 @@ Deep links work:
 
 ## Design
 
-The site is a single direction: a small 2000s/2010s personal homepage. A pale blue tiled page holds a narrow left sidebar of boxed widgets and a white main panel. Trebuchet MS is used for headings and navigation, Verdana for body text, and Courier New for labels and dates. Links are classic blue and underlined.
+The site is a single direction: a small 2000s/2010s personal homepage. A peach tiled page holds a narrow left sidebar of boxed widgets and a warm white main panel. Trebuchet MS is used for headings and navigation, Verdana for body text, and Courier New for labels and dates. Links are classic blue and underlined.
 
 The shell lives in `_includes/base.njk`. The top bar (`_includes/navbar.njk`) holds navigation, the build date, RSS, and the mobile menu. The sidebar (`_includes/sidebar.njk`) holds Elsewhere, the post archive, gallery albums, and site details; it is hidden in gallery book mode and on the resume and 404 pages. The footer is intentionally minimal and is not rendered on the homepage.
 

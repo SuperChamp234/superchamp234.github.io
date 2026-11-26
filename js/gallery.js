@@ -173,6 +173,31 @@
         }
     });
 
+    /* --------------------------------------------------- book full-res loads */
+    // Book pages use the original files, but only load a page's original when
+    // that page actually enters the book viewport. This keeps the grid light
+    // and avoids downloading several full-size photos when book mode opens.
+    const loadBookImage = (page) => {
+        const img = page.querySelector("img[data-src]");
+        if (!img || img.dataset.loading === "true" || img.src) return;
+        img.dataset.loading = "true";
+        img.src = img.dataset.src;
+    };
+
+    if ("IntersectionObserver" in window && book) {
+        const bookObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) loadBookImage(entry.target);
+                });
+            },
+            { root: book, rootMargin: "-15% 0px -15% 0px" },
+        );
+        pages.forEach((page) => bookObserver.observe(page));
+    } else {
+        pages.forEach(loadBookImage);
+    }
+
     /* -------------------------------------------------------------- lightbox */
     const collectItems = () => {
         const scope = mode === "book" ? book : grid;
