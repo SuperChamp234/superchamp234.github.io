@@ -465,7 +465,8 @@ async function processVideo(rel) {
     cached &&
     cached.stamp === stamp &&
     cached.videoVersion === VIDEO_VERSION &&
-    (!cached.poster || allSourcesExist(cached.poster)) &&
+    cached.poster &&
+    allSourcesExist(cached.poster) &&
     cached.playback &&
     fs.existsSync(path.join(ROOT, cached.playback))
   ) {

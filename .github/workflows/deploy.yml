@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
   workflow_dispatch:
 
 jobs:
@@ -40,20 +43,10 @@ jobs:
           restore-keys: |
             images-
 
-      - name: Cache LaTeX
-        uses: actions/cache@v4
-        id: latex-cache
-        with:
-          path: /usr/share/texlive
-          key: ${{ runner.os }}-texlive-${{ hashFiles('resume/**') }}
-          restore-keys: |
-            ${{ runner.os }}-texlive-
-
-      - name: Install LaTeX dependencies
-        if: steps.latex-cache.outputs.cache-hit != 'true'
+      - name: Install build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-latex-extra
+          sudo apt-get install -y ffmpeg pandoc latexmk texlive-latex-extra texlive-fonts-extra
 
       - name: Compile resume
         run: |
@@ -76,8 +69,12 @@ jobs:
         run: echo 'zainsv.me' > _site/CNAME
 
       - name: Deploy to GitHub Pages
+        if: github.event_name != 'pull_request'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _site
           cname: zainsv.me
+          # Keep the published branch to a single commit so large media files
+          # don't accumulate in gh-pages history.
+          force_orphan: true
