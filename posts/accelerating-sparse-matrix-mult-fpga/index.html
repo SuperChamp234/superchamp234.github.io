@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Eleventy v3.1.2">
+    <meta name="color-scheme" content="light">
+
+    <script>
+        document.documentElement.classList.add("js");
+    </script>
+
+    
+
+    
+
+    <title>Accelerating Sparse Matrix Multiplication on FPGAs</title>
+    <meta name="description" content="Article by Zain Siddavatam">
+
+    <link rel="canonical" href="https://zainsv.me/posts/accelerating-sparse-matrix-mult-fpga/">
+
+    
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://zainsv.me/posts/accelerating-sparse-matrix-mult-fpga/">
+    <meta property="og:title" content="Accelerating Sparse Matrix Multiplication on FPGAs">
+    <meta property="og:description" content="Article by Zain Siddavatam">
+    <meta property="og:site_name" content="Zain Siddavatam">
+    
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zainsv.me/posts/accelerating-sparse-matrix-mult-fpga/">
+    <meta property="twitter:title" content="Accelerating Sparse Matrix Multiplication on FPGAs">
+    <meta property="twitter:description" content="Article by Zain Siddavatam">
+    
+
+    <meta name="theme-color" content="#f3e3d2">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ffffff'/%3E%3Cg fill='none' stroke='%231c2732' stroke-width='4'%3E%3Cpath d='M14 22h8l4-6h12l4 6h8v26H14z'/%3E%3Ccircle cx='32' cy='34' r='9'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="alternate" type="application/rss+xml" title="Zain Siddavatam" href="/feed.xml">
+
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <link rel="stylesheet" href="/css/prism.css">
+    
+
+    
+</head>
+<body id="top" class="page-post">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-site-header>
+    <div class="header-inner">
+        <nav class="primary-nav" id="primary-nav" aria-label="Primary" data-primary-nav>
+            <a href="/" >Home</a>
+            <a href="/blog/" aria-current="page">Blog</a>
+            <a href="/gallery/" >Gallery</a>
+            <a href="/resume/" >Resume</a>
+        </nav>
+
+        <div class="header-meta">
+            <span class="header-updated">updated 27 November 2026</span>
+            <a class="header-rss" href="/feed.xml">RSS</a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+                <span>Menu</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+    
+
+    <div class="site-wrap">
+        
+        <aside class="sidebar" aria-label="Site sidebar">
+    <section class="widget">
+        <h2 class="widget-title">Elsewhere</h2>
+        <div class="widget-body">
+            <ul class="widget-list">
+                
+                <li>
+                    <a href="https://github.com/superchamp234" target="_blank" rel="noopener">GitHub</a>
+                    <span class="widget-handle">@SuperChamp234</span>
+                </li>
+                
+                <li>
+                    <a href="https://x.com/ZSiddavatam" target="_blank" rel="noopener">Twitter / X</a>
+                    <span class="widget-handle">@ZSiddavatam</span>
+                </li>
+                
+                <li>
+                    <a href="https://www.linkedin.com/in/zain-siddavatam" target="_blank" rel="noopener">LinkedIn</a>
+                    <span class="widget-handle">/zain-siddavatam</span>
+                </li>
+                
+                <li>
+                    <a href="https://bsky.app/profile/zainsv.me" target="_blank" rel="noopener">Bluesky</a>
+                    <span class="widget-handle">@zainsv.me</span>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+
+    
+    <section class="widget">
+        <h2 class="widget-title">Archive</h2>
+        <div class="widget-body">
+            <ul class="widget-list widget-list--plain">
+                
+                <li>
+                    <a href="/blog/#year-2025">2025</a>
+                    <span class="widget-count">(7)</span>
+                </li>
+                
+                <li>
+                    <a href="/blog/#year-2024">2024</a>
+                    <span class="widget-count">(1)</span>
+                </li>
+                
+                <li>
+                    <a href="/blog/#year-2023">2023</a>
+                    <span class="widget-count">(1)</span>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+    
+
+    
+
+    <section class="widget">
+        <h2 class="widget-title">Site</h2>
+        <div class="widget-body">
+            <ul class="widget-list widget-list--plain">
+                <li>Updated 27 November 2026</li>
+                <li><a href="/feed.xml">RSS feed</a></li>
+                <li><a href="mailto:hi@zainsv.me">hi@zainsv.me</a></li>
+            </ul>
+            <p class="widget-note">Best viewed at 1024×768.</p>
+        </div>
+    </section>
+</aside>
+
+        
+
+        <main id="main" class="main-panel">
+            
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Accelerating Sparse Matrix Multiplication on FPGAs",
+  "datePublished": "2023-08-28T12:37:53.328+00:00",
+  "dateModified": "2023-08-28T12:37:53.328+00:00",
+  "author": {
+    "@type": "Person",
+    "name": "Zain Siddavatam"
+  },
+  "description": "Article by Zain Siddavatam"
+  
+}
+</script>
+
+<article class="post">
+    <header class="post-header">
+        <a class="back-link" href="/blog/">
+<svg class="icon icon-arrow-left" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="11 5 4 12 11 19"/></svg>
+ All posts</a>
+        <p class="post-meta">28 August 2023 · 1 min read</p>
+        <h1>Accelerating Sparse Matrix Multiplication on FPGAs</h1>
+        
+        <p class="lede">Article by Zain Siddavatam</p>
+        
+        
+        <ul class="tag-list" aria-label="Tags">
+            
+            
+            <li>projects</li>
+            
+            
+            
+            
+        </ul>
+        
+    </header>
+
+    <div class="prose">
+        <p>Sparse matrix multiplication (SpGEMM) is a fundamental operation in scientific computing, graph analytics, and machine learning. However, its irregular memory access patterns and high computational complexity make it challenging to accelerate efficiently. In this project, I explored FPGA-based acceleration for SpGEMM using High-Level Synthesis (HLS), focusing on different dataflows and sparse storage formats to optimize performance.</p>
+<p>Sparse matrix multiplications differ from dense operations due to the need to handle zero values efficiently. The major challenges include:</p>
+<ul>
+<li>
+<p>Memory Bottlenecks: Storing and accessing sparse data without excessive overhead.</p>
+</li>
+<li>
+<p>Parallelization Issues: Exploiting FPGA parallelism despite the irregularity of sparse data.</p>
+</li>
+<li>
+<p>Storage Format Efficiency: Choosing between formats like Compressed Sparse Row (CSR) and Compressed Sparse Column (CSC) to optimize access patterns.</p>
+</li>
+</ul>
+<p>To address these challenges, I implemented and compared multiple SpGEMM dataflows on an FPGA:</p>
+<ul>
+<li>
+<p>Inner Product Dataflow: Computes the dot product of corresponding rows and columns but suffers from low parallelism.</p>
+</li>
+<li>
+<p>Outer Product Dataflow: Generates partial results for each outer product but requires significant on-chip memory.</p>
+</li>
+<li>
+<p>Row-based Dataflow: Optimizes memory access but can limit computation throughput.</p>
+</li>
+</ul>
+<p>I implemented SpGEMM on an FPGA using Vivado HLS, targeting the Xilinx Arty A7 board. While the implementation showed promising potential, a few challenges arose. There was an issue with understanding how the AXI master interface works, leading to incorrect mem access. This was my first HLS project, but since the Arty A7 lacked an SoC, it was not possible to run a full application on the FPGA.</p>
+<p>For a deeper dive into the design, implementation, and challenges, check out the full paper <a href="https://drive.google.com/file/d/1_hl6ta7lshTdV9dNm-zLNECsfylJ96QZ/view?usp=drive_link" target="_blank" rel="noopener noreferrer">here</a>. If you have any insights or suggestions, feel free to reach out—I’d love to discuss optimizations for sparse computations on FPGAs!</p>
+
+    </div>
+
+    
+    
+    <nav class="post-neighbors post-neighbors--single" aria-label="More posts">
+        
+        <a class="post-neighbor" href="/posts/accelerating-amcl-fpga/">
+            <span class="post-neighbor-label">
+<svg class="icon icon-arrow-left" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="11 5 4 12 11 19"/></svg>
+ Newer post</span>
+            <span class="post-neighbor-title">FPGA Acceleration of Likelihood Model based Adaptive Monte-Carlo Localization</span>
+        </a>
+        
+        
+    </nav>
+    
+
+    <section class="comments" aria-labelledby="comments-heading">
+        <div class="comments-head">
+            <h2 id="comments-heading">Comments</h2>
+            <p>Thoughts, corrections, or a paper I should read?</p>
+        </div>
+        <div class="giscus"
+             data-giscus
+             data-repo="SuperChamp234/superchamp234.github.io"
+             data-repo-id="R_kgDON8UxeQ"
+             data-category="Announcements"
+             data-category-id="DIC_kwDON8Uxec4CrxIJ"
+             data-mapping="title"
+             data-strict="0"
+             data-reactions-enabled="1"
+             data-emit-metadata="0"
+             data-input-position="top"
+             data-theme="light"
+             data-lang="en"
+             data-loading="lazy"></div>
+        <noscript>
+            <p>Comments need JavaScript. You can also email me at <a href="mailto:hi@zainsv.me">hi@zainsv.me</a>.</p>
+        </noscript>
+    </section>
+</article>
+
+        </main>
+    </div>
+
+    
+    <footer class="site-footer">
+    <div class="footer-inner">
+        <a class="footer-name" href="/">Zain Siddavatam</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="/feed.xml">RSS</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="mailto:hi@zainsv.me">Email</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="#top">Back to top</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <span class="footer-copy">© 2026</span>
+    </div>
+</footer>
+
+    
+
+    <script src="/js/site.js" defer></script>
+    
+</body>
+</html>

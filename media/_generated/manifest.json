@@ -1,0 +1,3161 @@
+{
+  "images": {
+    "2025-01/PXL_20250108_111001640.MP.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250108_111001640.MP.jpg",
+      "file": "2025-01/PXL_20250108_111001640.MP.jpg",
+      "width": 3072,
+      "height": 4080,
+      "aspect": 0.7529,
+      "orientation": "portrait",
+      "lqip": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAwBQCdASocACUAPxF2tFCsJ6WjsBVdUYAiCWQAsSXAvVALr8SHK7bCLxbPTZ5gXE0gIADWO76eWfwUeg78pC1pLhpsGffwOx0yIh5dqFxqV9Yf9vV/8oWPH8N03PAX0EPHxTe2EFo09AomWKBRv4TZFmYkn7eLYQAAAA==",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-640.avif 640w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1280.avif 1280w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1920.avif 1920w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-2560.avif 2560w",
+        "webp": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-640.webp 640w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1280.webp 1280w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1920.webp 1920w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-2560.webp 2560w",
+        "jpg": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-640.jpg 640w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1280.jpg 1280w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1920.jpg 1920w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1280.jpg",
+      "full": "/media/2025-01/PXL_20250108_111001640.MP.jpg",
+      "date": "2025-01-08T16:40:01.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/439s · ISO 23 · 6.9mm",
+      "stamp": "2-3358144-1795753084581"
+    },
+    "2025-01/PXL_20250109_014840411.MP.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250109_014840411.MP.jpg",
+      "file": "2025-01/PXL_20250109_014840411.MP.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQBQCdASocABUAPxl6tFKsp6UisBgIAZAjCWMAs4AQ7D5FYDAY1qktgwjoqzWU4ikAAP6LVsRfHK7vq31nDVtTIAP8r4NzFW5xfOG4vLdyWBpKSMj8umN2BpB2gAAA",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-640.avif 640w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1280.avif 1280w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1920.avif 1920w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-2560.avif 2560w",
+        "webp": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-640.webp 640w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1280.webp 1280w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1920.webp 1920w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-2560.webp 2560w",
+        "jpg": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-640.jpg 640w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1280.jpg 1280w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1920.jpg 1920w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1280.jpg",
+      "full": "/media/2025-01/PXL_20250109_014840411.MP.jpg",
+      "date": "2025-01-09T07:18:40.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/92s · ISO 22 · 6.9mm",
+      "stamp": "2-7353149-1795753084586"
+    },
+    "2022-08/IMG_8601.JPG": {
+      "type": "image",
+      "src": "/media/2022-08/IMG_8601.JPG",
+      "file": "2022-08/IMG_8601.JPG",
+      "width": 6000,
+      "height": 4000,
+      "aspect": 1.5,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQBACdASocABMAPxl8slKsriSisBgIAcAjCWUAnTOFNMAH5beKzy3BAAD+iuwJfAnKKXMjeNc6cu5U0c9SdnlDmgWvQ6t+qflHb8Bi0irhAAAA",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/d87970aee8e0/img-8601-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/d87970aee8e0/img-8601-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/d87970aee8e0/img-8601-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/d87970aee8e0/img-8601-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/d87970aee8e0/img-8601-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/d87970aee8e0/img-8601-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/d87970aee8e0/img-8601-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/d87970aee8e0/img-8601-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/d87970aee8e0/img-8601-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/d87970aee8e0/img-8601-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/d87970aee8e0/img-8601-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/d87970aee8e0/img-8601-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/d87970aee8e0/img-8601-640.avif 640w, /media/_generated/d87970aee8e0/img-8601-1280.avif 1280w, /media/_generated/d87970aee8e0/img-8601-1920.avif 1920w, /media/_generated/d87970aee8e0/img-8601-2560.avif 2560w",
+        "webp": "/media/_generated/d87970aee8e0/img-8601-640.webp 640w, /media/_generated/d87970aee8e0/img-8601-1280.webp 1280w, /media/_generated/d87970aee8e0/img-8601-1920.webp 1920w, /media/_generated/d87970aee8e0/img-8601-2560.webp 2560w",
+        "jpg": "/media/_generated/d87970aee8e0/img-8601-640.jpg 640w, /media/_generated/d87970aee8e0/img-8601-1280.jpg 1280w, /media/_generated/d87970aee8e0/img-8601-1920.jpg 1920w, /media/_generated/d87970aee8e0/img-8601-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/d87970aee8e0/img-8601-1280.jpg",
+      "full": "/media/2022-08/IMG_8601.JPG",
+      "date": "2022-09-03T06:12:44.000Z",
+      "camera": "EOS 200D II",
+      "lens": "EF-S18-55mm f/4-5.6 IS STM",
+      "settings": "f/13 · 1/160s · ISO 400 · 18mm",
+      "stamp": "2-10509852-1795753084578"
+    },
+    "2025-01/PXL_20250109_045514839.MP.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250109_045514839.MP.jpg",
+      "file": "2025-01/PXL_20250109_045514839.MP.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQBACdASocABUAPxl0sFCspqSisAgBkCMJYgCuHCHhf3RxEXbwVK0WTqQIDGy7wAD+UtkM9sPM8ICY5xlVzns+dikT8GcJLt18Ur+hij4C6+xjMLGsw5L+D0u5GATmM6T/NqU4AgA=",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-640.avif 640w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-1280.avif 1280w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-1920.avif 1920w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-2560.avif 2560w",
+        "webp": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-640.webp 640w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-1280.webp 1280w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-1920.webp 1920w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-2560.webp 2560w",
+        "jpg": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-640.jpg 640w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-1280.jpg 1280w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-1920.jpg 1920w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/725820b90423/pxl-20250109-045514839-mp-1280.jpg",
+      "full": "/media/2025-01/PXL_20250109_045514839.MP.jpg",
+      "date": "2025-01-09T10:25:14.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/3115s · ISO 23 · 6.9mm",
+      "stamp": "2-6984369-1795753084590"
+    },
+    "2025-01/PXL_20250109_110036531.MP.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250109_110036531.MP.jpg",
+      "file": "2025-01/PXL_20250109_110036531.MP.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQBACdASocABUAPxl0s1CspqSisBgMAZAjCUAWHYIiPaY4LSM8eQfyIJQFRpKXwAD93E8AmC7pvUnmbI+Bjq2lksUrBPTfbj5ABxTE4ZIyCzBYwAwoqA9CEKNf+VvezwrSZ5oVgAA=",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-640.avif 640w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1280.avif 1280w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1920.avif 1920w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-2560.avif 2560w",
+        "webp": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-640.webp 640w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1280.webp 1280w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1920.webp 1920w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-2560.webp 2560w",
+        "jpg": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-640.jpg 640w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1280.jpg 1280w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1920.jpg 1920w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1280.jpg",
+      "full": "/media/2025-01/PXL_20250109_110036531.MP.jpg",
+      "date": "2025-01-09T16:30:36.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/722s · ISO 20 · 6.9mm",
+      "stamp": "2-4664711-1795753084594"
+    },
+    "2025-01/PXL_20250109_135735902.NIGHT.RAW-01.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250109_135735902.NIGHT.RAW-01.COVER.jpg",
+      "file": "2025-01/PXL_20250109_135735902.NIGHT.RAW-01.COVER.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQBACdASocABUAPxl4tVIspyUiqA1RkCMJZQDNhA3j+6eAGA9X5S2PdD6b2BOWwAD+5aZcOnl+cb5xQYT2oxT3ms8QjVqsG2EBsmiFL1VF5vQ1gqvpAAAA",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-640.avif 640w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1280.avif 1280w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1920.avif 1920w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-2560.avif 2560w",
+        "webp": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-640.webp 640w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1280.webp 1280w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1920.webp 1920w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-640.jpg 640w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1280.jpg 1280w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1920.jpg 1920w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250109_135735902.NIGHT.RAW-01.COVER.jpg",
+      "date": "2025-01-09T19:27:35.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 16s · ISO 121 · 6.9mm",
+      "stamp": "2-1131549-1795753084599"
+    },
+    "2025-01/PXL_20250109_142143117.NIGHT.RAW-01.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250109_142143117.NIGHT.RAW-01.COVER.jpg",
+      "file": "2025-01/PXL_20250109_142143117.NIGHT.RAW-01.COVER.jpg",
+      "width": 3072,
+      "height": 4080,
+      "aspect": 0.7529,
+      "orientation": "portrait",
+      "lqip": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQBQCdASocACUAPwVsqlCrpiOitUgBcCCJZQDLpC03MnwWYrp8cLIX+5B7N/KJQbbL21fXNAoQAP7sPanpvAXYjTmh7khBAh78bjOhiLfb52V5Jy/H7grdf0rPDbwAu3A87mBSM0UwwLfQgCGgAA==",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-640.avif 640w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1280.avif 1280w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1920.avif 1920w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-2560.avif 2560w",
+        "webp": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-640.webp 640w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1280.webp 1280w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1920.webp 1920w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-640.jpg 640w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1280.jpg 1280w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1920.jpg 1920w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250109_142143117.NIGHT.RAW-01.COVER.jpg",
+      "date": "2025-01-09T19:51:43.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 16s · ISO 27 · 6.9mm",
+      "stamp": "2-975546-1795753084603"
+    },
+    "2025-01/PXL_20250109_172620883.NIGHT.RAW-01.COVER~2.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250109_172620883.NIGHT.RAW-01.COVER~2.jpg",
+      "file": "2025-01/PXL_20250109_172620883.NIGHT.RAW-01.COVER~2.jpg",
+      "width": 3072,
+      "height": 4080,
+      "aspect": 0.7529,
+      "orientation": "portrait",
+      "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABQBACdASocACUAPxV6sFCsqCSisBqqqZAiiWcAAKsvl+dlp+tW2Y9wO6QAAP7w+F7KfaatUTyf1JSgq40Oor9zptGZlQAA",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-640.avif 640w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1280.avif 1280w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1920.avif 1920w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-2560.avif 2560w",
+        "webp": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-640.webp 640w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1280.webp 1280w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1920.webp 1920w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-2560.webp 2560w",
+        "jpg": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-640.jpg 640w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1280.jpg 1280w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1920.jpg 1920w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1280.jpg",
+      "full": "/media/2025-01/PXL_20250109_172620883.NIGHT.RAW-01.COVER~2.jpg",
+      "date": "2025-01-09T22:56:20.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 16s · ISO 397 · 6.9mm",
+      "stamp": "2-800199-1795753084608"
+    },
+    "2025-01/PXL_20250110_095619568.RAW-01.MP.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250110_095619568.RAW-01.MP.COVER.jpg",
+      "file": "2025-01/PXL_20250110_095619568.RAW-01.MP.COVER.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBQCdASocABUAPxlus1GspaSisBgMAZAjCWQAAC2hX3rbbrVaqGNY0VnXIKhEtAuvAAD+y5NGmHss3KbPO7Se9lNX5SrXgWYYTEtl0K2/tVSd3G/ASTgzT+C18TkRhSsgoroY+fzVumsISGmGyAAA",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-640.avif 640w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1280.avif 1280w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1920.avif 1920w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-2560.avif 2560w",
+        "webp": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-640.webp 640w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1280.webp 1280w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1920.webp 1920w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-640.jpg 640w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250110_095619568.RAW-01.MP.COVER.jpg",
+      "date": "2025-01-10T15:26:19.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/125s · ISO 19 · 6.9mm",
+      "stamp": "2-4514153-1795753084614"
+    },
+    "2025-01/PXL_20250110_095911047.RAW-01.MP.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250110_095911047.RAW-01.MP.COVER.jpg",
+      "file": "2025-01/PXL_20250110_095911047.RAW-01.MP.COVER.jpg",
+      "width": 3072,
+      "height": 4080,
+      "aspect": 0.7529,
+      "orientation": "portrait",
+      "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQBQCdASocACUAPxF2rVCsJ6QitVgIAYAiCUAABvRoXR/CBCiw6/W48XxRT/24rDt0QAAA+t9nb/lalFA++5u91wOTMIPZClvl90mSd+PUoh4HRRF1OGBzqPslMsiDREE/esgH5Cin2VItXYtvpe/DgAA=",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-640.avif 640w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1280.avif 1280w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1920.avif 1920w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-2560.avif 2560w",
+        "webp": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-640.webp 640w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1280.webp 1280w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1920.webp 1920w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-640.jpg 640w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250110_095911047.RAW-01.MP.COVER.jpg",
+      "date": "2025-01-10T15:29:11.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/251s · ISO 20 · 6.9mm",
+      "stamp": "2-8462125-1795753084620"
+    },
+    "2025-01/PXL_20250110_100502362.RAW-01.MP.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250110_100502362.RAW-01.MP.COVER.jpg",
+      "file": "2025-01/PXL_20250110_100502362.RAW-01.MP.COVER.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABwBACdASocABUAPxl2tFOspqSisBgIAZAjCUAZQAaFJRVrtaksbAAkAddgwAD+6clsEZNKsn1rbz543WJb8rBS8bTK7170T4e15Fz+m64qJ2MiR8lMTcyAthlMJKw5Q6gAAA==",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-640.avif 640w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1280.avif 1280w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1920.avif 1920w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-2560.avif 2560w",
+        "webp": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-640.webp 640w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1280.webp 1280w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1920.webp 1920w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-640.jpg 640w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250110_100502362.RAW-01.MP.COVER.jpg",
+      "date": "2025-01-10T15:35:02.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/336s · ISO 18 · 6.9mm",
+      "stamp": "2-7245082-1795753084623"
+    },
+    "2025-01/PXL_20250110_100535413.RAW-01.MP.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250110_100535413.RAW-01.MP.COVER.jpg",
+      "file": "2025-01/PXL_20250110_100535413.RAW-01.MP.COVER.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQBACdASocABUAPwlwslCrpqUisAwBcCEJQBndhTEDO5Cx3gtbUmOs8AD+2JnxrrELGEhiMNAXtpSEk8JA2w3cXbihWTNcAaD+4j7cpIkOUHdeAgAAAA==",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-640.avif 640w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1280.avif 1280w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1920.avif 1920w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-2560.avif 2560w",
+        "webp": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-640.webp 640w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1280.webp 1280w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1920.webp 1920w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-640.jpg 640w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250110_100535413.RAW-01.MP.COVER.jpg",
+      "date": "2025-01-10T15:35:35.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/585s · ISO 189 · 6.9mm",
+      "stamp": "2-5806413-1795753084627"
+    },
+    "2025-01/PXL_20250110_104432904.RAW-01.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250110_104432904.RAW-01.COVER.jpg",
+      "file": "2025-01/PXL_20250110_104432904.RAW-01.COVER.jpg",
+      "width": 3072,
+      "height": 4080,
+      "aspect": 0.7529,
+      "orientation": "portrait",
+      "lqip": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABwBQCdASocACUAPxl6rlCsqCQisBVdUZAjCWMAAJTuptgDEgm8tWV6JFhBOzq+sKyeqhwAAP7twx9ITWlwafOwQHKZ9mvZKNKy2GMURAohuvIxNfv8yBuPkl1Hzol5JK6JvEtP4KVgIBi+LU7EdNtFUAAAAA==",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-640.avif 640w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1280.avif 1280w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1920.avif 1920w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-2560.avif 2560w",
+        "webp": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-640.webp 640w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1280.webp 1280w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1920.webp 1920w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-640.jpg 640w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1280.jpg 1280w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1920.jpg 1920w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250110_104432904.RAW-01.COVER.jpg",
+      "date": "2025-01-10T16:14:32.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/495s · ISO 28 · 6.9mm",
+      "stamp": "2-2997945-1795753084629"
+    },
+    "2025-01/PXL_20250111_034327532.RAW-01.MP.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250111_034327532.RAW-01.MP.COVER.jpg",
+      "file": "2025-01/PXL_20250111_034327532.RAW-01.MP.COVER.jpg",
+      "width": 3072,
+      "height": 4080,
+      "aspect": 0.7529,
+      "orientation": "portrait",
+      "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACQBQCdASocACUAPwVsrVCrpiSitVv8AXAgiUAZmgPBzduvkVa0ERXTQ+L9G4EFYG5wl9I2IAD+3uxF3vHqebStaJ2EOuNyiJdupa9FfsRUByccy9ZB56ns0fqZ2gZqIGGuXZaUl1FsrumkVjOEyt8g+8yWyOiIEc2jPOAA",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-640.avif 640w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1280.avif 1280w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1920.avif 1920w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-2560.avif 2560w",
+        "webp": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-640.webp 640w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1280.webp 1280w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1920.webp 1920w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-640.jpg 640w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250111_034327532.RAW-01.MP.COVER.jpg",
+      "date": "2025-01-11T09:13:27.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/368s · ISO 20 · 6.9mm",
+      "stamp": "2-7363984-1795753084632"
+    },
+    "2025-01/PXL_20250111_044044542.RAW-01.MP.COVER~2.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250111_044044542.RAW-01.MP.COVER~2.jpg",
+      "file": "2025-01/PXL_20250111_044044542.RAW-01.MP.COVER~2.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQBACdASocABUAPxl8tFGsqCUisAgBkCMJQBdgA9XQttDVhzO1p4cwwoPwmfHgAAD+kUUhuhEsQbhDzUpcLroe5J5dSmMH61GkBwswHRM3wjtvTZ1eWRugOSGbGohuiR5lL0fFLVY/uvliAAA=",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-640.avif 640w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1280.avif 1280w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1920.avif 1920w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-2560.avif 2560w",
+        "webp": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-640.webp 640w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1280.webp 1280w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1920.webp 1920w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-2560.webp 2560w",
+        "jpg": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-640.jpg 640w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1280.jpg 1280w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1920.jpg 1920w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1280.jpg",
+      "full": "/media/2025-01/PXL_20250111_044044542.RAW-01.MP.COVER~2.jpg",
+      "date": "2025-01-11T10:10:44.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/727s · ISO 21 · 6.9mm",
+      "stamp": "2-3142080-1795753084635"
+    },
+    "2025-01/PXL_20250111_092447880.RAW-01.MP.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250111_092447880.RAW-01.MP.COVER.jpg",
+      "file": "2025-01/PXL_20250111_092447880.RAW-01.MP.COVER.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwBQCdASocABUAPxlusVCspiSit/VYAZAjCUAVhmyANOltdEc9VWffE/nD42HL+YiMhGwAAP6Qbn24aaHoNzOpQsfe5YZYc+QlDyRSsrOwIm8FIhH2xyYLgvyljWDLaaU59HQA",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-640.avif 640w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1280.avif 1280w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1920.avif 1920w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-2560.avif 2560w",
+        "webp": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-640.webp 640w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1280.webp 1280w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1920.webp 1920w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-640.jpg 640w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250111_092447880.RAW-01.MP.COVER.jpg",
+      "date": "2025-01-11T14:54:47.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/1312s · ISO 23 · 6.9mm",
+      "stamp": "2-5198085-1795753084638"
+    },
+    "2025-01/PXL_20250111_093849726.RAW-01.MP.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250111_093849726.RAW-01.MP.COVER.jpg",
+      "file": "2025-01/PXL_20250111_093849726.RAW-01.MP.COVER.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwBQCdASocABUAPxmCtlSsqKSjKAqpkCMJQBdmbI+JgOFGJ0oLccz6S1ua7Oof77nFQAD+36Zk1WHf7Xd9HK7KlaW/gKlpr3CD9aUJZoNnG6OqMkm0I08G5cFrO8lCaWwAAA==",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-640.avif 640w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1280.avif 1280w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1920.avif 1920w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-2560.avif 2560w",
+        "webp": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-640.webp 640w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1280.webp 1280w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1920.webp 1920w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-640.jpg 640w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250111_093849726.RAW-01.MP.COVER.jpg",
+      "date": "2025-01-11T15:08:49.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/776s · ISO 22 · 6.9mm",
+      "stamp": "2-4118525-1795753084640"
+    },
+    "2025-01/PXL_20250111_100825345.RAW-01.MP.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250111_100825345.RAW-01.MP.COVER.jpg",
+      "file": "2025-01/PXL_20250111_100825345.RAW-01.MP.COVER.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABQBACdASocABUAPxmCtFUsqKSoqAqpkCMJZAC90A3qaOzHN/83bOQuyc8AAP6RpyAQ1sBJX+liiGDyHNdo7UfoZaZCroohfznSFqxqpKV8mVzeIEmJLtQDZv58AwgXpzUXbZSdvV3MDmWv/sYAAA==",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-640.avif 640w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1280.avif 1280w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1920.avif 1920w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-2560.avif 2560w",
+        "webp": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-640.webp 640w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1280.webp 1280w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1920.webp 1920w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-640.jpg 640w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250111_100825345.RAW-01.MP.COVER.jpg",
+      "date": "2025-01-11T15:38:25.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 1.95mm f/2.2",
+      "settings": "f/2.2 · 1/364s · ISO 46 · 1.9mm",
+      "stamp": "2-4577750-1795753084643"
+    },
+    "2025-01/PXL_20250111_114852264.RAW-01.MP.COVER~2.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250111_114852264.RAW-01.MP.COVER~2.jpg",
+      "file": "2025-01/PXL_20250111_114852264.RAW-01.MP.COVER~2.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQBQCdASocABUAPxlssVCspSSisBgMAZAjCWMAyrQQ78HuUPZFBl5BC9LrjqM3bTukFuAA/tNMeM+MDWeYgfb4i2+kyO1g1IobDSUFgcd7twETxToS77v31Bj0teQAAAA=",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-640.avif 640w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1280.avif 1280w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1920.avif 1920w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-2560.avif 2560w",
+        "webp": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-640.webp 640w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1280.webp 1280w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1920.webp 1920w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-2560.webp 2560w",
+        "jpg": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-640.jpg 640w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1280.jpg 1280w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1920.jpg 1920w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1280.jpg",
+      "full": "/media/2025-01/PXL_20250111_114852264.RAW-01.MP.COVER~2.jpg",
+      "date": "2025-01-11T17:18:52.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/165s · ISO 161 · 6.9mm",
+      "stamp": "2-2479513-1795753084645"
+    },
+    "2025-01/PXL_20250112_050501350.RAW-01.MP.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250112_050501350.RAW-01.MP.COVER.jpg",
+      "file": "2025-01/PXL_20250112_050501350.RAW-01.MP.COVER.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQBQCdASocABUAPxl4tlOspqUisBgIAZAjCWUAvdAQ70xq+0LBns+3kpd8Ylho8PItoAAA/tL/9wJRii8pq740efZwfLZFCsDqJHV4kr1dUDbVqSdT78emWg+EHYkAAAA=",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-640.avif 640w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1280.avif 1280w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1920.avif 1920w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-2560.avif 2560w",
+        "webp": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-640.webp 640w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1280.webp 1280w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1920.webp 1920w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-640.jpg 640w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250112_050501350.RAW-01.MP.COVER.jpg",
+      "date": "2025-01-12T10:35:01.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/863s · ISO 21 · 6.9mm",
+      "stamp": "2-5356027-1795753084647"
+    },
+    "2025-01/PXL_20250112_081654903.RAW-01.MP.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250112_081654903.RAW-01.MP.COVER.jpg",
+      "file": "2025-01/PXL_20250112_081654903.RAW-01.MP.COVER.jpg",
+      "width": 3072,
+      "height": 4080,
+      "aspect": 0.7529,
+      "orientation": "portrait",
+      "lqip": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwBACdASocACUAPxl6tFMsp6SiqqoBkCMJZ2d7WG0JusRzJPcwtzi4AqOIOP4wAP7Y5Uwb+3DV6CdwCpm9oglVLoPGyJLbNPEFWWvzeIGepwAO03D4hVGll/GazO+VHTWi3W9eGZmjk2GnWT4AAA==",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-640.avif 640w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1280.avif 1280w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1920.avif 1920w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-2560.avif 2560w",
+        "webp": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-640.webp 640w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1280.webp 1280w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1920.webp 1920w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-640.jpg 640w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250112_081654903.RAW-01.MP.COVER.jpg",
+      "date": "2025-01-12T13:46:54.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/749s · ISO 35 · 6.9mm",
+      "stamp": "2-4717582-1795753084735"
+    },
+    "2025-01/PXL_20250112_095455730.RAW-01.MP.COVER~2.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250112_095455730.RAW-01.MP.COVER~2.jpg",
+      "file": "2025-01/PXL_20250112_095455730.RAW-01.MP.COVER~2.jpg",
+      "width": 3072,
+      "height": 4080,
+      "aspect": 0.7529,
+      "orientation": "portrait",
+      "lqip": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABwBgCdASocACUAPxl2slQspqQjMBVaqZAjCWcAx2wuHd0zVEnMsxkRiD6xycrOFgil6vjMxy6VtdmktiAA/I7YKUiwqT4JMeDX/qcE907qWuPMtbBjAXuOphNZH9j6CJtc1S/bxAoglO0HL6UK7IcUeFHkJYN5Nd4qJC2YQwoU3aHPmhVNkujJvIgAAA==",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-640.avif 640w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1280.avif 1280w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1920.avif 1920w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-2560.avif 2560w",
+        "webp": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-640.webp 640w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1280.webp 1280w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1920.webp 1920w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-2560.webp 2560w",
+        "jpg": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-640.jpg 640w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1280.jpg 1280w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1920.jpg 1920w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1280.jpg",
+      "full": "/media/2025-01/PXL_20250112_095455730.RAW-01.MP.COVER~2.jpg",
+      "date": "2025-01-12T15:24:55.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/434s · ISO 96 · 6.9mm",
+      "stamp": "2-4015992-1795753084738"
+    },
+    "2025-01/PXL_20250112_113712103.RAW-01.MP.COVER~2.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250112_113712103.RAW-01.MP.COVER~2.jpg",
+      "file": "2025-01/PXL_20250112_113712103.RAW-01.MP.COVER~2.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwBQCdASocABUAPwlsr1CrpaSit/qoAXAhCWcAzfwexxIEcWkemj7yzCdaWeIcOrMlAAD+r3DJqlqHfH8AR2MZT7RRTUyZdEI4+XczQG2TUQluzfCwpVCCQQegWdD5pPSkxz/JPIAAAA==",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-640.avif 640w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1280.avif 1280w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1920.avif 1920w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-2560.avif 2560w",
+        "webp": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-640.webp 640w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1280.webp 1280w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1920.webp 1920w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-2560.webp 2560w",
+        "jpg": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-640.jpg 640w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1280.jpg 1280w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1920.jpg 1920w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1280.jpg",
+      "full": "/media/2025-01/PXL_20250112_113712103.RAW-01.MP.COVER~2.jpg",
+      "date": "2025-01-12T17:07:12.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/290s · ISO 127 · 6.9mm",
+      "stamp": "2-3966397-1795753084740"
+    },
+    "2025-01/PXL_20250113_085427814.RAW-01.MP.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250113_085427814.RAW-01.MP.COVER.jpg",
+      "file": "2025-01/PXL_20250113_085427814.RAW-01.MP.COVER.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAwCdASocABUAPxl2sVCspySisAgBkCMJQBTihDvvbB7lygvIqgAA/lCJbax43QqDJhBLjgKQMHcRHNWRzECVLKmdWnC/Zdk5sxGpDoZHdAgA",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-640.avif 640w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1280.avif 1280w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1920.avif 1920w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-2560.avif 2560w",
+        "webp": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-640.webp 640w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1280.webp 1280w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1920.webp 1920w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-640.jpg 640w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250113_085427814.RAW-01.MP.COVER.jpg",
+      "date": "2025-01-13T14:24:27.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/829s · ISO 21 · 6.9mm",
+      "stamp": "2-6368955-1795753084743"
+    },
+    "2025-01/PXL_20250113_093209046.RAW-01.MP.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250113_093209046.RAW-01.MP.COVER.jpg",
+      "file": "2025-01/PXL_20250113_093209046.RAW-01.MP.COVER.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQBACdASocABUAPxl2tVEspyUiqA1RkCMJYwANiMCUwDPwviFHp9oNkS7dfLEHdADqzcdHY39d/8GU3b3N1AKw9ml5X77De+OmD4vD2DMDjO6+7TP6f0wAAAA=",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-640.avif 640w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1280.avif 1280w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1920.avif 1920w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-2560.avif 2560w",
+        "webp": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-640.webp 640w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1280.webp 1280w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1920.webp 1920w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-640.jpg 640w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250113_093209046.RAW-01.MP.COVER.jpg",
+      "date": "2025-01-13T15:02:09.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/1727s · ISO 20 · 6.9mm",
+      "stamp": "2-4620638-1795753084747"
+    },
+    "2025-01/PXL_20250113_121833485.RAW-01.MP.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250113_121833485.RAW-01.MP.COVER.jpg",
+      "file": "2025-01/PXL_20250113_121833485.RAW-01.MP.COVER.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQBACdASocABUAPxV6sFCsqCSisBgMAZAiiWMArAAMTH86Qxe373bmYJVA6lFnQAD+4zmxOejMAspVsopR9T6TLUzXJbQ0dMoLc7RrixFgs/MoC+cakrBva5UPAzkPaLggAA==",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-640.avif 640w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1280.avif 1280w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1920.avif 1920w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-2560.avif 2560w",
+        "webp": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-640.webp 640w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1280.webp 1280w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1920.webp 1920w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-640.jpg 640w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250113_121833485.RAW-01.MP.COVER.jpg",
+      "date": "2025-01-13T17:48:33.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/100s · ISO 365 · 6.9mm",
+      "stamp": "2-4332687-1795753084749"
+    },
+    "2025-01/PXL_20250113_123235872.RAW-01.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250113_123235872.RAW-01.COVER.jpg",
+      "file": "2025-01/PXL_20250113_123235872.RAW-01.COVER.jpg",
+      "width": 3072,
+      "height": 4080,
+      "aspect": 0.7529,
+      "orientation": "portrait",
+      "lqip": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBQCdASocACUAPwFoqVCrJiOiurmYAWAgCWMAvOAh35tjm5etzT3HoG17MulkAcVwZRSwAP7K+dC1viIrAq9iZhPn2rYr3fKhKLMr49j5/sGh1OKkHXmprO5jPLpQDR6V+hqurG/rbjnqHJm7W6YSK3Zuy+LtcISJ4sjqoP99c4dkgj8HgAAA",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-640.avif 640w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1280.avif 1280w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1920.avif 1920w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-2560.avif 2560w",
+        "webp": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-640.webp 640w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1280.webp 1280w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1920.webp 1920w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-640.jpg 640w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1280.jpg 1280w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1920.jpg 1920w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250113_123235872.RAW-01.COVER.jpg",
+      "date": "2025-01-13T18:02:35.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/121s · ISO 19 · 6.9mm",
+      "stamp": "2-1799659-1795753084751"
+    },
+    "2025-01/PXL_20250114_075453425.RAW-01.MP.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250114_075453425.RAW-01.MP.COVER.jpg",
+      "file": "2025-01/PXL_20250114_075453425.RAW-01.MP.COVER.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQBACdASocABUAPxlys1GspqSisBgMAZAjCUAXZfqQOZY2peAXk7nBmbkAAP3gPyM0s54vNv9awexZ0ut5OsVJL/5ButUUOTOQfU0cntJ26a4tTMFr/ulYYAAAAA==",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-640.avif 640w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1280.avif 1280w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1920.avif 1920w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-2560.avif 2560w",
+        "webp": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-640.webp 640w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1280.webp 1280w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1920.webp 1920w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-640.jpg 640w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250114_075453425.RAW-01.MP.COVER.jpg",
+      "date": "2025-01-14T13:24:53.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/1311s · ISO 20 · 6.9mm",
+      "stamp": "2-2905794-1795753084752"
+    },
+    "2025-01/PXL_20250114_121403126.RAW-01.MP.COVER~2.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250114_121403126.RAW-01.MP.COVER~2.jpg",
+      "file": "2025-01/PXL_20250114_121403126.RAW-01.MP.COVER~2.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACQBACdASocABUAPw1ur1CsJqQisAwBgCGJYwDM0CHW7VCfGBQ2eN0F9xbZwAAA/lmIz/8z6FBtS+X2fHJqjaANil650vRzBO5Op9fI3AK5k28AAAA=",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-640.avif 640w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1280.avif 1280w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1920.avif 1920w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-2560.avif 2560w",
+        "webp": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-640.webp 640w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1280.webp 1280w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1920.webp 1920w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-2560.webp 2560w",
+        "jpg": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-640.jpg 640w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1280.jpg 1280w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1920.jpg 1920w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1280.jpg",
+      "full": "/media/2025-01/PXL_20250114_121403126.RAW-01.MP.COVER~2.jpg",
+      "date": "2025-01-14T17:44:03.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/152s · ISO 21 · 6.9mm",
+      "stamp": "2-1353598-1795753084754"
+    },
+    "2025-01/PXL_20250114_121412364.RAW-01.MP.COVER~2.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250114_121412364.RAW-01.MP.COVER~2.jpg",
+      "file": "2025-01/PXL_20250114_121412364.RAW-01.MP.COVER~2.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwBACdASocABUAPxl4tFMspqSisBgIAZAjCUAWIaQAK0+0PD+fID6ymtapqIwAAP6vcN/oCwbr6+0DLpiM+IKgDWoOjATLrOEO70iKKSQcBT5yzT2LHudJ9bEE3YcZeK62jBdkAAA=",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-640.avif 640w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1280.avif 1280w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1920.avif 1920w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-2560.avif 2560w",
+        "webp": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-640.webp 640w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1280.webp 1280w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1920.webp 1920w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-2560.webp 2560w",
+        "jpg": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-640.jpg 640w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1280.jpg 1280w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1920.jpg 1920w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1280.jpg",
+      "full": "/media/2025-01/PXL_20250114_121412364.RAW-01.MP.COVER~2.jpg",
+      "date": "2025-01-14T17:44:12.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/47s · ISO 24 · 6.9mm",
+      "stamp": "2-1294154-1795753084754"
+    },
+    "2025-01/PXL_20250114_175101271.RAW-01.COVER.jpg": {
+      "type": "image",
+      "src": "/media/2025-01/PXL_20250114_175101271.RAW-01.COVER.jpg",
+      "file": "2025-01/PXL_20250114_175101271.RAW-01.COVER.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABwBACdASocABUAPwV0slCrp6UisAwBcCCJZQCw7FfwtJK+WBzG3RpAdf7JAAD+9CpznaQHLx//wN+yKA4Ex+IIQDuK9HtRx9UVxmX5JG2RKabVyRSN1BgA",
+      "widths": [
+        640,
+        1280,
+        1920,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-640.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1280.avif"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1920.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-640.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1280.webp"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1920.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-640.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1280.jpg"
+          },
+          {
+            "w": 1920,
+            "url": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1920.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-640.avif 640w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1280.avif 1280w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1920.avif 1920w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-2560.avif 2560w",
+        "webp": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-640.webp 640w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1280.webp 1280w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1920.webp 1920w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-2560.webp 2560w",
+        "jpg": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-640.jpg 640w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1280.jpg 1280w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1920.jpg 1920w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1280.jpg",
+      "full": "/media/2025-01/PXL_20250114_175101271.RAW-01.COVER.jpg",
+      "date": "2025-01-14T23:21:01.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/3s · ISO 1626 · 6.9mm",
+      "stamp": "2-1614645-1795753084755"
+    },
+    "my_landscape_photo.jpg": {
+      "type": "image",
+      "src": "/media/my_landscape_photo.jpg",
+      "file": "my_landscape_photo.jpg",
+      "width": 4080,
+      "height": 3072,
+      "aspect": 1.3281,
+      "orientation": "landscape",
+      "lqip": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABQBACdASocABUAPxl+ulOsqCYiqAqpkCMJYgCo9BD8dWDNiHJog2Ic2xcAAP5ReMH4wzsL7hO4c4a2GYXKovZMMd1NIy8rKJfHRvJDI97yCNNjYvi9rnEZTfqQRtG5gNP46guaKfIsUVFsbCAAAA==",
+      "widths": [
+        640,
+        960,
+        1280,
+        1600,
+        2000,
+        2560
+      ],
+      "sources": {
+        "avif": [
+          {
+            "w": 640,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-640.avif"
+          },
+          {
+            "w": 960,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-960.avif"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-1280.avif"
+          },
+          {
+            "w": 1600,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-1600.avif"
+          },
+          {
+            "w": 2000,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-2000.avif"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-2560.avif"
+          }
+        ],
+        "webp": [
+          {
+            "w": 640,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-640.webp"
+          },
+          {
+            "w": 960,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-960.webp"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-1280.webp"
+          },
+          {
+            "w": 1600,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-1600.webp"
+          },
+          {
+            "w": 2000,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-2000.webp"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-2560.webp"
+          }
+        ],
+        "jpg": [
+          {
+            "w": 640,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-640.jpg"
+          },
+          {
+            "w": 960,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-960.jpg"
+          },
+          {
+            "w": 1280,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-1280.jpg"
+          },
+          {
+            "w": 1600,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-1600.jpg"
+          },
+          {
+            "w": 2000,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-2000.jpg"
+          },
+          {
+            "w": 2560,
+            "url": "/media/_generated/205ba243e029/my-landscape-photo-2560.jpg"
+          }
+        ]
+      },
+      "srcset": {
+        "avif": "/media/_generated/205ba243e029/my-landscape-photo-640.avif 640w, /media/_generated/205ba243e029/my-landscape-photo-960.avif 960w, /media/_generated/205ba243e029/my-landscape-photo-1280.avif 1280w, /media/_generated/205ba243e029/my-landscape-photo-1600.avif 1600w, /media/_generated/205ba243e029/my-landscape-photo-2000.avif 2000w, /media/_generated/205ba243e029/my-landscape-photo-2560.avif 2560w",
+        "webp": "/media/_generated/205ba243e029/my-landscape-photo-640.webp 640w, /media/_generated/205ba243e029/my-landscape-photo-960.webp 960w, /media/_generated/205ba243e029/my-landscape-photo-1280.webp 1280w, /media/_generated/205ba243e029/my-landscape-photo-1600.webp 1600w, /media/_generated/205ba243e029/my-landscape-photo-2000.webp 2000w, /media/_generated/205ba243e029/my-landscape-photo-2560.webp 2560w",
+        "jpg": "/media/_generated/205ba243e029/my-landscape-photo-640.jpg 640w, /media/_generated/205ba243e029/my-landscape-photo-960.jpg 960w, /media/_generated/205ba243e029/my-landscape-photo-1280.jpg 1280w, /media/_generated/205ba243e029/my-landscape-photo-1600.jpg 1600w, /media/_generated/205ba243e029/my-landscape-photo-2000.jpg 2000w, /media/_generated/205ba243e029/my-landscape-photo-2560.jpg 2560w"
+      },
+      "fallback": "/media/_generated/205ba243e029/my-landscape-photo-1280.jpg",
+      "full": "/media/my_landscape_photo.jpg",
+      "date": "2024-10-31T13:29:25.000Z",
+      "camera": "Pixel 8",
+      "lens": "Pixel 8 back camera 6.9mm f/1.68",
+      "settings": "f/1.68 · 1/742s · ISO 18 · 6.9mm",
+      "stamp": "2-10662602-1795753084763"
+    }
+  },
+  "videos": {
+    "2025-01/PXL_20250109_135123983.NIGHT.mp4": {
+      "type": "video",
+      "src": "/media/2025-01/PXL_20250109_135123983.NIGHT.mp4",
+      "original": "/media/2025-01/PXL_20250109_135123983.NIGHT.mp4",
+      "playback": "/media/2025-01/PXL_20250109_135123983.NIGHT.mp4",
+      "videoVersion": 2,
+      "file": "2025-01/PXL_20250109_135123983.NIGHT.mp4",
+      "width": 1920,
+      "height": 1440,
+      "aspect": 1.3333,
+      "duration": 1.5,
+      "poster": {
+        "type": "image",
+        "src": "/media/_generated/5c35ad53e3ed/poster/pxl-20250109-135123983-night.jpg",
+        "file": "2025-01/PXL_20250109_135123983.NIGHT.mp4#poster",
+        "width": 1920,
+        "height": 1440,
+        "aspect": 1.3333,
+        "orientation": "landscape",
+        "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQBQCdASocABUAPxl4sFCspySisAwBkCMJZwDGQFfwzFluX33Hi8rlpfxIsmjl9Bv/kgAA/vd8BlyGGJY10HWICwvTsJpfzzID2CQ55irahPVCXQ+oAA==",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "sources": {
+          "avif": [],
+          "webp": [
+            {
+              "w": 640,
+              "url": "/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-640.webp"
+            },
+            {
+              "w": 1280,
+              "url": "/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1280.webp"
+            },
+            {
+              "w": 1920,
+              "url": "/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1920.webp"
+            }
+          ],
+          "jpg": [
+            {
+              "w": 640,
+              "url": "/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-640.jpg"
+            },
+            {
+              "w": 1280,
+              "url": "/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1280.jpg"
+            },
+            {
+              "w": 1920,
+              "url": "/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1920.jpg"
+            }
+          ]
+        },
+        "srcset": {
+          "avif": "",
+          "webp": "/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-640.webp 640w, /media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1280.webp 1280w, /media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1920.webp 1920w",
+          "jpg": "/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-640.jpg 640w, /media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1280.jpg 1280w, /media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1920.jpg 1920w"
+        },
+        "fallback": "/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1280.jpg",
+        "full": "/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1920.jpg"
+      },
+      "stamp": "2-7337034-1795753084597"
+    },
+    "2025-01/PXL_20250109_135736218.NIGHT.mp4": {
+      "type": "video",
+      "src": "/media/2025-01/PXL_20250109_135736218.NIGHT.mp4",
+      "original": "/media/2025-01/PXL_20250109_135736218.NIGHT.mp4",
+      "playback": "/media/2025-01/PXL_20250109_135736218.NIGHT.mp4",
+      "videoVersion": 2,
+      "file": "2025-01/PXL_20250109_135736218.NIGHT.mp4",
+      "width": 1920,
+      "height": 1440,
+      "aspect": 1.3333,
+      "duration": 1.5,
+      "poster": {
+        "type": "image",
+        "src": "/media/_generated/f4e9cbc79003/poster/pxl-20250109-135736218-night.jpg",
+        "file": "2025-01/PXL_20250109_135736218.NIGHT.mp4#poster",
+        "width": 1920,
+        "height": 1440,
+        "aspect": 1.3333,
+        "orientation": "landscape",
+        "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAwCdASocABUAPxl4tFIspyUiqA1RkCMJZwAAHnX9SAN3ia5gAAD+6dNfPDir1DD0ew4EdCY7bE5ufqht+gPA26RzxDxZiRUm0vzAAAA=",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "sources": {
+          "avif": [],
+          "webp": [
+            {
+              "w": 640,
+              "url": "/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-640.webp"
+            },
+            {
+              "w": 1280,
+              "url": "/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1280.webp"
+            },
+            {
+              "w": 1920,
+              "url": "/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1920.webp"
+            }
+          ],
+          "jpg": [
+            {
+              "w": 640,
+              "url": "/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-640.jpg"
+            },
+            {
+              "w": 1280,
+              "url": "/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1280.jpg"
+            },
+            {
+              "w": 1920,
+              "url": "/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1920.jpg"
+            }
+          ]
+        },
+        "srcset": {
+          "avif": "",
+          "webp": "/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-640.webp 640w, /media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1280.webp 1280w, /media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1920.webp 1920w",
+          "jpg": "/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-640.jpg 640w, /media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1280.jpg 1280w, /media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1920.jpg 1920w"
+        },
+        "fallback": "/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1280.jpg",
+        "full": "/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1920.jpg"
+      },
+      "stamp": "2-5689982-1795753084602"
+    },
+    "2025-01/PXL_20250109_142144320.NIGHT.mp4": {
+      "type": "video",
+      "src": "/media/2025-01/PXL_20250109_142144320.NIGHT.mp4",
+      "original": "/media/2025-01/PXL_20250109_142144320.NIGHT.mp4",
+      "playback": "/media/2025-01/PXL_20250109_142144320.NIGHT.mp4",
+      "videoVersion": 2,
+      "file": "2025-01/PXL_20250109_142144320.NIGHT.mp4",
+      "width": 1440,
+      "height": 1920,
+      "aspect": 0.75,
+      "duration": 1.5,
+      "poster": {
+        "type": "image",
+        "src": "/media/_generated/f728d0accae0/poster/pxl-20250109-142144320-night.jpg",
+        "file": "2025-01/PXL_20250109_142144320.NIGHT.mp4#poster",
+        "width": 1440,
+        "height": 1920,
+        "aspect": 0.75,
+        "orientation": "portrait",
+        "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwBgCdASocACUAPv1qqlCrJiQiurmYAWAfiWcA0fgh4BwLDqZiGubmS6+3/LnZ+tcw8jNpsN9AvLU4AP7sr7vMk6mDVuTJ2SASWilOs+whSAo+hNlgWVq32TVfXb0HbowAAA==",
+        "widths": [
+          640,
+          1280,
+          1440
+        ],
+        "sources": {
+          "avif": [],
+          "webp": [
+            {
+              "w": 640,
+              "url": "/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-640.webp"
+            },
+            {
+              "w": 1280,
+              "url": "/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1280.webp"
+            },
+            {
+              "w": 1440,
+              "url": "/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1440.webp"
+            }
+          ],
+          "jpg": [
+            {
+              "w": 640,
+              "url": "/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-640.jpg"
+            },
+            {
+              "w": 1280,
+              "url": "/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1280.jpg"
+            },
+            {
+              "w": 1440,
+              "url": "/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1440.jpg"
+            }
+          ]
+        },
+        "srcset": {
+          "avif": "",
+          "webp": "/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-640.webp 640w, /media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1280.webp 1280w, /media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1440.webp 1440w",
+          "jpg": "/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-640.jpg 640w, /media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1280.jpg 1280w, /media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1440.jpg 1440w"
+        },
+        "fallback": "/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1280.jpg",
+        "full": "/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1440.jpg"
+      },
+      "stamp": "2-7406735-1795753084607"
+    },
+    "2025-01/PXL_20250109_172622142.NIGHT.mp4": {
+      "type": "video",
+      "src": "/media/2025-01/PXL_20250109_172622142.NIGHT.mp4",
+      "original": "/media/2025-01/PXL_20250109_172622142.NIGHT.mp4",
+      "playback": "/media/2025-01/PXL_20250109_172622142.NIGHT.mp4",
+      "videoVersion": 2,
+      "file": "2025-01/PXL_20250109_172622142.NIGHT.mp4",
+      "width": 1440,
+      "height": 1920,
+      "aspect": 0.75,
+      "duration": 1.5,
+      "poster": {
+        "type": "image",
+        "src": "/media/_generated/bb91b7207a89/poster/pxl-20250109-172622142-night.jpg",
+        "file": "2025-01/PXL_20250109_172622142.NIGHT.mp4#poster",
+        "width": 1440,
+        "height": 1920,
+        "aspect": 0.75,
+        "orientation": "portrait",
+        "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQBACdASocACUAPxV2sFC/p7QisAqr8CKJZwAAeN3DVHUfdJt4JoY54AD+7lbHPtlJ7fhrEDfWHhQhlTS0an7WatKtgR2z4duPhIbgI2ZLXIXvHAAAAA==",
+        "widths": [
+          640,
+          1280,
+          1440
+        ],
+        "sources": {
+          "avif": [],
+          "webp": [
+            {
+              "w": 640,
+              "url": "/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-640.webp"
+            },
+            {
+              "w": 1280,
+              "url": "/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1280.webp"
+            },
+            {
+              "w": 1440,
+              "url": "/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1440.webp"
+            }
+          ],
+          "jpg": [
+            {
+              "w": 640,
+              "url": "/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-640.jpg"
+            },
+            {
+              "w": 1280,
+              "url": "/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1280.jpg"
+            },
+            {
+              "w": 1440,
+              "url": "/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1440.jpg"
+            }
+          ]
+        },
+        "srcset": {
+          "avif": "",
+          "webp": "/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-640.webp 640w, /media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1280.webp 1280w, /media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1440.webp 1440w",
+          "jpg": "/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-640.jpg 640w, /media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1280.jpg 1280w, /media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1440.jpg 1440w"
+        },
+        "fallback": "/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1280.jpg",
+        "full": "/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1440.jpg"
+      },
+      "stamp": "2-5767709-1795753084611"
+    },
+    "2025-01/PXL_20250112_075339273.mp4": {
+      "type": "video",
+      "src": "/media/_generated/27bdb6657cb7/video/pxl-20250112-075339273.mp4",
+      "original": "/media/2025-01/PXL_20250112_075339273.mp4",
+      "playback": "/media/_generated/27bdb6657cb7/video/pxl-20250112-075339273.mp4",
+      "videoVersion": 2,
+      "file": "2025-01/PXL_20250112_075339273.mp4",
+      "width": 1920,
+      "height": 1080,
+      "aspect": 1.7778,
+      "duration": 78.733589,
+      "poster": {
+        "type": "image",
+        "src": "/media/_generated/27bdb6657cb7/poster/pxl-20250112-075339273.jpg",
+        "file": "2025-01/PXL_20250112_075339273.mp4#poster",
+        "width": 1920,
+        "height": 1080,
+        "aspect": 1.7778,
+        "orientation": "landscape",
+        "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAwCdASocABAAPxl4tlGspyUisAgBkCMJZQDImCGZcM4tdizNjNkAAP6dHU2K9tdwZEv4isVKIoqEWVNFJbPc9zg804MMYxPCRWWAAAA=",
+        "widths": [
+          640,
+          1280,
+          1920
+        ],
+        "sources": {
+          "avif": [],
+          "webp": [
+            {
+              "w": 640,
+              "url": "/media/_generated/0831c8be22c5/pxl-20250112-075339273-640.webp"
+            },
+            {
+              "w": 1280,
+              "url": "/media/_generated/0831c8be22c5/pxl-20250112-075339273-1280.webp"
+            },
+            {
+              "w": 1920,
+              "url": "/media/_generated/0831c8be22c5/pxl-20250112-075339273-1920.webp"
+            }
+          ],
+          "jpg": [
+            {
+              "w": 640,
+              "url": "/media/_generated/0831c8be22c5/pxl-20250112-075339273-640.jpg"
+            },
+            {
+              "w": 1280,
+              "url": "/media/_generated/0831c8be22c5/pxl-20250112-075339273-1280.jpg"
+            },
+            {
+              "w": 1920,
+              "url": "/media/_generated/0831c8be22c5/pxl-20250112-075339273-1920.jpg"
+            }
+          ]
+        },
+        "srcset": {
+          "avif": "",
+          "webp": "/media/_generated/0831c8be22c5/pxl-20250112-075339273-640.webp 640w, /media/_generated/0831c8be22c5/pxl-20250112-075339273-1280.webp 1280w, /media/_generated/0831c8be22c5/pxl-20250112-075339273-1920.webp 1920w",
+          "jpg": "/media/_generated/0831c8be22c5/pxl-20250112-075339273-640.jpg 640w, /media/_generated/0831c8be22c5/pxl-20250112-075339273-1280.jpg 1280w, /media/_generated/0831c8be22c5/pxl-20250112-075339273-1920.jpg 1920w"
+        },
+        "fallback": "/media/_generated/0831c8be22c5/pxl-20250112-075339273-1280.jpg",
+        "full": "/media/_generated/0831c8be22c5/pxl-20250112-075339273-1920.jpg"
+      },
+      "stamp": "2-95476049-1795753084726"
+    }
+  },
+  "hero": {
+    "type": "image",
+    "src": "/media/my_landscape_photo.jpg",
+    "file": "my_landscape_photo.jpg",
+    "width": 4080,
+    "height": 3072,
+    "aspect": 1.3281,
+    "orientation": "landscape",
+    "lqip": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABQBACdASocABUAPxl+ulOsqCYiqAqpkCMJYgCo9BD8dWDNiHJog2Ic2xcAAP5ReMH4wzsL7hO4c4a2GYXKovZMMd1NIy8rKJfHRvJDI97yCNNjYvi9rnEZTfqQRtG5gNP46guaKfIsUVFsbCAAAA==",
+    "widths": [
+      640,
+      960,
+      1280,
+      1600,
+      2000,
+      2560
+    ],
+    "sources": {
+      "avif": [
+        {
+          "w": 640,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-640.avif"
+        },
+        {
+          "w": 960,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-960.avif"
+        },
+        {
+          "w": 1280,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-1280.avif"
+        },
+        {
+          "w": 1600,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-1600.avif"
+        },
+        {
+          "w": 2000,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-2000.avif"
+        },
+        {
+          "w": 2560,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-2560.avif"
+        }
+      ],
+      "webp": [
+        {
+          "w": 640,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-640.webp"
+        },
+        {
+          "w": 960,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-960.webp"
+        },
+        {
+          "w": 1280,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-1280.webp"
+        },
+        {
+          "w": 1600,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-1600.webp"
+        },
+        {
+          "w": 2000,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-2000.webp"
+        },
+        {
+          "w": 2560,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-2560.webp"
+        }
+      ],
+      "jpg": [
+        {
+          "w": 640,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-640.jpg"
+        },
+        {
+          "w": 960,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-960.jpg"
+        },
+        {
+          "w": 1280,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-1280.jpg"
+        },
+        {
+          "w": 1600,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-1600.jpg"
+        },
+        {
+          "w": 2000,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-2000.jpg"
+        },
+        {
+          "w": 2560,
+          "url": "/media/_generated/205ba243e029/my-landscape-photo-2560.jpg"
+        }
+      ]
+    },
+    "srcset": {
+      "avif": "/media/_generated/205ba243e029/my-landscape-photo-640.avif 640w, /media/_generated/205ba243e029/my-landscape-photo-960.avif 960w, /media/_generated/205ba243e029/my-landscape-photo-1280.avif 1280w, /media/_generated/205ba243e029/my-landscape-photo-1600.avif 1600w, /media/_generated/205ba243e029/my-landscape-photo-2000.avif 2000w, /media/_generated/205ba243e029/my-landscape-photo-2560.avif 2560w",
+      "webp": "/media/_generated/205ba243e029/my-landscape-photo-640.webp 640w, /media/_generated/205ba243e029/my-landscape-photo-960.webp 960w, /media/_generated/205ba243e029/my-landscape-photo-1280.webp 1280w, /media/_generated/205ba243e029/my-landscape-photo-1600.webp 1600w, /media/_generated/205ba243e029/my-landscape-photo-2000.webp 2000w, /media/_generated/205ba243e029/my-landscape-photo-2560.webp 2560w",
+      "jpg": "/media/_generated/205ba243e029/my-landscape-photo-640.jpg 640w, /media/_generated/205ba243e029/my-landscape-photo-960.jpg 960w, /media/_generated/205ba243e029/my-landscape-photo-1280.jpg 1280w, /media/_generated/205ba243e029/my-landscape-photo-1600.jpg 1600w, /media/_generated/205ba243e029/my-landscape-photo-2000.jpg 2000w, /media/_generated/205ba243e029/my-landscape-photo-2560.jpg 2560w"
+    },
+    "fallback": "/media/_generated/205ba243e029/my-landscape-photo-1280.jpg",
+    "full": "/media/my_landscape_photo.jpg",
+    "date": "2024-10-31T13:29:25.000Z",
+    "camera": "Pixel 8",
+    "lens": "Pixel 8 back camera 6.9mm f/1.68",
+    "settings": "f/1.68 · 1/742s · ISO 18 · 6.9mm",
+    "stamp": "2-10662602-1795753084763"
+  },
+  "generatedAt": "2026-11-27T04:22:14.976Z"
+}

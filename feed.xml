@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Zain Siddavatam</title>
+    <subtitle>Compilers, computer architecture, and the occasional mountain. Notes and photographs by Zain Siddavatam.</subtitle>
+    <link href="https://zainsv.me/feed.xml" rel="self"/>
+    <link href="https://zainsv.me/"/>
+    <updated>2025-12-08T14:37:53.328+00:00</updated>
+    <id>https://zainsv.me/</id>
+    <author>
+        <name>Zain Siddavatam</name>
+        <email>hi@zainsv.me</email>
+    </author>
+    
+    <entry>
+        <title>D Language is Awesome!</title>
+        <link href="https://zainsv.me/posts/dlang-is-awesome/"/>
+        <updated>2025-12-08T14:37:53.328+00:00</updated>
+        <id>https://zainsv.me/posts/dlang-is-awesome/</id>
+        
+        <summary>Article by Zain Siddavatam</summary>
+    </entry>
+    
+    <entry>
+        <title>AOC 2025 Part 2 - OCaml Boogaloo</title>
+        <link href="https://zainsv.me/posts/aoc-code-fpga-ocaml-2/"/>
+        <updated>2025-12-08T13:37:53.328+00:00</updated>
+        <id>https://zainsv.me/posts/aoc-code-fpga-ocaml-2/</id>
+        
+        <summary>Article by Zain Siddavatam</summary>
+    </entry>
+    
+    <entry>
+        <title>Working on AOC and Advent of FPGA??!!! OCAML??? Part 1</title>
+        <link href="https://zainsv.me/posts/aoc-code-fpga-ocaml-1/"/>
+        <updated>2025-12-04T13:37:53.328+00:00</updated>
+        <id>https://zainsv.me/posts/aoc-code-fpga-ocaml-1/</id>
+        
+        <summary>Article by Zain Siddavatam</summary>
+    </entry>
+    
+    <entry>
+        <title>I started working at InCore Semiconductors</title>
+        <link href="https://zainsv.me/posts/first-job-incoresemi/"/>
+        <updated>2025-12-04T12:37:53.328+00:00</updated>
+        <id>https://zainsv.me/posts/first-job-incoresemi/</id>
+        
+        <summary>Article by Zain Siddavatam</summary>
+    </entry>
+    
+    <entry>
+        <title>Adding CSRs, Interrupts and Timers to my CPU</title>
+        <link href="https://zainsv.me/posts/adding-csrs-interrupts-and-timers/"/>
+        <updated>2025-06-20T12:32:42.171+00:00</updated>
+        <id>https://zainsv.me/posts/adding-csrs-interrupts-and-timers/</id>
+        
+        <summary>Article by Zain Siddavatam</summary>
+    </entry>
+    
+    <entry>
+        <title>Pipelining a RISC-V CPU with Cocotb</title>
+        <link href="https://zainsv.me/posts/experience-risc-v-cocotb/"/>
+        <updated>2025-05-29T11:04:20.000+00:00</updated>
+        <id>https://zainsv.me/posts/experience-risc-v-cocotb/</id>
+        
+        <summary>Article by Zain Siddavatam</summary>
+    </entry>
+    
+    <entry>
+        <title>Why I like Celeste</title>
+        <link href="https://zainsv.me/posts/celeste/"/>
+        <updated>2025-03-06T12:37:53.328+00:00</updated>
+        <id>https://zainsv.me/posts/celeste/</id>
+        
+        <summary>Article by Zain Siddavatam</summary>
+    </entry>
+    
+    <entry>
+        <title>FPGA Acceleration of Likelihood Model based Adaptive Monte-Carlo Localization</title>
+        <link href="https://zainsv.me/posts/accelerating-amcl-fpga/"/>
+        <updated>2024-06-17T10:56:40.093+00:00</updated>
+        <id>https://zainsv.me/posts/accelerating-amcl-fpga/</id>
+        
+        <summary>Article by Zain Siddavatam</summary>
+    </entry>
+    
+    <entry>
+        <title>Accelerating Sparse Matrix Multiplication on FPGAs</title>
+        <link href="https://zainsv.me/posts/accelerating-sparse-matrix-mult-fpga/"/>
+        <updated>2023-08-28T12:37:53.328+00:00</updated>
+        <id>https://zainsv.me/posts/accelerating-sparse-matrix-mult-fpga/</id>
+        
+        <summary>Article by Zain Siddavatam</summary>
+    </entry>
+    
+</feed>

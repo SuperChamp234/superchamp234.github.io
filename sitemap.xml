@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://zainsv.me/posts/accelerating-amcl-fpga/</loc>
+    <lastmod>2024-06-17T10:56:40.093+00:00</lastmod>
+  </url>
+  
+  
+  <url>
+    <loc>https://zainsv.me/posts/accelerating-sparse-matrix-mult-fpga/</loc>
+    <lastmod>2023-08-28T12:37:53.328+00:00</lastmod>
+  </url>
+  
+  
+  <url>
+    <loc>https://zainsv.me/posts/experience-risc-v-cocotb/</loc>
+    <lastmod>2025-05-29T11:04:20.000+00:00</lastmod>
+  </url>
+  
+  
+  <url>
+    <loc>https://zainsv.me/posts/adding-csrs-interrupts-and-timers/</loc>
+    <lastmod>2025-06-20T12:32:42.171+00:00</lastmod>
+  </url>
+  
+  
+  <url>
+    <loc>https://zainsv.me/posts/aoc-code-fpga-ocaml-1/</loc>
+    <lastmod>2025-12-04T13:37:53.328+00:00</lastmod>
+  </url>
+  
+  
+  <url>
+    <loc>https://zainsv.me/posts/aoc-code-fpga-ocaml-2/</loc>
+    <lastmod>2025-12-08T13:37:53.328+00:00</lastmod>
+  </url>
+  
+  
+  <url>
+    <loc>https://zainsv.me/posts/celeste/</loc>
+    <lastmod>2025-03-06T12:37:53.328+00:00</lastmod>
+  </url>
+  
+  
+  <url>
+    <loc>https://zainsv.me/posts/dlang-is-awesome/</loc>
+    <lastmod>2025-12-08T14:37:53.328+00:00</lastmod>
+  </url>
+  
+  
+  <url>
+    <loc>https://zainsv.me/posts/first-job-incoresemi/</loc>
+    <lastmod>2025-12-04T12:37:53.328+00:00</lastmod>
+  </url>
+  
+  
+  <url>
+    <loc>https://zainsv.me/resume/README/</loc>
+    <lastmod>2026-11-27T04:18:04.765+00:00</lastmod>
+  </url>
+  
+  
+  <url>
+    <loc>https://zainsv.me/gallery/</loc>
+    <lastmod>2026-11-27T04:18:04.551+00:00</lastmod>
+  </url>
+  
+  
+  <url>
+    <loc>https://zainsv.me/resume/</loc>
+    <lastmod>2026-11-27T04:18:04.765+00:00</lastmod>
+  </url>
+  
+  
+  
+  <url>
+    <loc>https://zainsv.me/blog/</loc>
+    <lastmod>2026-11-27T04:18:04.550+00:00</lastmod>
+  </url>
+  
+  
+  <url>
+    <loc>https://zainsv.me/</loc>
+    <lastmod>2026-11-27T04:18:04.551+00:00</lastmod>
+  </url>
+  
+</urlset>

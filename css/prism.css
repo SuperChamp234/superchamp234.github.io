@@ -1,0 +1,121 @@
+/**
+ * Light syntax highlighting for the site's single 2000s palette.
+ */
+
+:root {
+    --code-bg: #fdf6ee;
+    --code-border: #dcc3ab;
+    --code-fg: #2a211a;
+    --code-comment: #7c6654;
+    --code-keyword: #1a4f8a;
+    --code-string: #0a6b3a;
+    --code-number: #9a4b00;
+    --code-function: #6b2fa0;
+    --code-punct: #7c6654;
+    --code-deleted: #a12626;
+    --code-inserted: #0a6b3a;
+}
+
+pre[class*="language-"],
+code[class*="language-"] {
+    color: var(--code-fg);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.55;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    tab-size: 4;
+    hyphens: none;
+}
+
+pre[class*="language-"] {
+    padding: 12px;
+    overflow: auto;
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+}
+
+:not(pre) > code[class*="language-"] {
+    padding: 1px 4px;
+    background: var(--code-bg);
+    border: 1px solid var(--code-border);
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: var(--code-comment);
+}
+
+.token.punctuation {
+    color: var(--code-punct);
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: var(--code-number);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: var(--code-string);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: var(--code-punct);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: var(--code-keyword);
+}
+
+.token.function,
+.token.class-name {
+    color: var(--code-function);
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: var(--code-number);
+}
+
+.token.important,
+.token.bold {
+    font-weight: 700;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+.token.deleted {
+    color: var(--code-deleted);
+}
+
+.token.inserted {
+    color: var(--code-inserted);
+}

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Eleventy v3.1.2">
+    <meta name="color-scheme" content="light">
+
+    <script>
+        document.documentElement.classList.add("js");
+    </script>
+
+    
+
+    
+
+    <title>Resume</title>
+    <meta name="description" content="Compilers, computer architecture, and the occasional mountain. Notes and photographs by Zain Siddavatam.">
+
+    <link rel="canonical" href="https://zainsv.me/resume/">
+
+    
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zainsv.me/resume/">
+    <meta property="og:title" content="Resume">
+    <meta property="og:description" content="Compilers, computer architecture, and the occasional mountain. Notes and photographs by Zain Siddavatam.">
+    <meta property="og:site_name" content="Zain Siddavatam">
+    
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zainsv.me/resume/">
+    <meta property="twitter:title" content="Resume">
+    <meta property="twitter:description" content="Compilers, computer architecture, and the occasional mountain. Notes and photographs by Zain Siddavatam.">
+    
+
+    <meta name="theme-color" content="#f3e3d2">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ffffff'/%3E%3Cg fill='none' stroke='%231c2732' stroke-width='4'%3E%3Cpath d='M14 22h8l4-6h12l4 6h8v26H14z'/%3E%3Ccircle cx='32' cy='34' r='9'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="alternate" type="application/rss+xml" title="Zain Siddavatam" href="/feed.xml">
+
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <link rel="stylesheet" href="/css/resume.css">
+    
+
+    
+</head>
+<body id="top" class="page-resume">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-site-header>
+    <div class="header-inner">
+        <nav class="primary-nav" id="primary-nav" aria-label="Primary" data-primary-nav>
+            <a href="/" >Home</a>
+            <a href="/blog/" >Blog</a>
+            <a href="/gallery/" >Gallery</a>
+            <a href="/resume/" aria-current="page">Resume</a>
+        </nav>
+
+        <div class="header-meta">
+            <span class="header-updated">updated 27 November 2026</span>
+            <a class="header-rss" href="/feed.xml">RSS</a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+                <span>Menu</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+    
+
+    <div class="site-wrap site-wrap--single">
+        
+
+        <main id="main" class="main-panel">
+            <div class="resume-page">
+    <header class="page-header">
+        <h1>Resume.</h1>
+        <p class="lede">Compilers, computer architecture, and a soft spot for RISC-V. The short version is below; the PDF is the printable one.</p>
+        
+        <p class="page-actions">
+            <a href="/resume/Zain Siddavatam Resume.pdf" download>Download PDF</a>
+        </p>
+        
+    </header>
+
+    
+        <div class="resume">
+<div class="center">
+<p><strong><span class="smallcaps">Zain Siddavatam</span></strong><br />
+ <a href="mailto:hi@zainsv.me">hi@zainsv.me</a> |  <a
+href="https://www.linkedin.com/in/zain-siddavatam/">/zain-siddavatam</a>
+|  <a href="https://github.com/SuperChamp234">/SuperChamp234</a> |  <a
+href="tel:+917506465276">+91 7506465276</a> |  <a
+href="https://zainsv.me">zainsv.me</a></p>
+</div>
+<h1 id="experiences">Experiences</h1>
+<ul>
+<li><table>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Compiler Engineer at Qualcomm
+India Private Limited</strong></td>
+<td style="text-align: right;"><strong></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>C/C++, picolibc, LLVM libc++,
+compiler-rt, Hexagon assembly, Linker/Loader internals</em></td>
+<td style="text-align: right;"><em>April 2026 – Present</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><span> <span>Added <strong>Hexagon architecture support to
+picolibc</strong> and migrated the Hexagon C/C++ runtime from Dinkumware
+to <strong>picolibc + LLVM libc++</strong> across <strong>3
+platforms</strong> (compute DSP, internal RTOS, hypervisor), porting
+legacy platform code and handling each environment’s OS- and
+hypervisor-specific integration. </span> </span></p></li>
+<li><p><span> <span>Extended <strong>NetBSD’s RTLD</strong> into an
+<strong>ELF dynamic loader</strong> for picolibc (Linux and Hexagon
+hypervisor), redesigned around a <strong>single libc embedded in the
+loader</strong> so every loaded object shares one libc instance per
+process. </span> </span></p></li>
+<li><p><span> <span>Benchmarked Hexagon’s <strong>compiler-rt</strong>
+builtins to identify performance gaps, then reworked <strong>5
+builtins</strong> to use <strong>Hexagon’s co-processors and
+UserDMA</strong>, improving data throughput by <strong>1.5–2x</strong>
+and yielding about a <strong>7%</strong> improvement in MLIR-generated
+code using these builtins. </span> </span></p></li>
+</ul></li>
+<li><table>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Design Verification Engineer at
+Incore Semiconductors <a
+href="https://incoresemi.com"></a></strong></td>
+<td style="text-align: right;"><strong></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>eUVM (D), Bluespec SystemVerilog,
+RISC-V, Spike, riscv-dv, Verilator, Questa, Python</em></td>
+<td style="text-align: right;"><em>Aug 2025 – Mar 2026</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><span> <span>Built the <strong>full verification
+environment</strong> for <strong>Dolomite</strong>, a dual-issue
+superscalar RV64 core, from scratch in <strong>eUVM (UVM in D)</strong>:
+agents, sequences and scoreboards, checked against
+<strong>Spike</strong> and wired to bsc-generated Verilog. Verified
+hazard handling and pipeline control (stalls, flushes, issue-slot
+interactions). </span> </span></p></li>
+<li><p><span> <span>Co-designed the <strong>supervisor-mode verification
+environment</strong> for <strong>Calcite</strong>, an RV32IMAC core:
+privilege transitions, traps and interrupts, CSRs, PMP, page-table walks
+and the TLB. Developed constrained-random generation of
+<strong>self-terminating programs</strong> exercising privilege
+transitions, while also extending <strong>riscv-dv</strong>. </span>
+</span></p></li>
+<li><p><span> <span>Verified implementation-specific
+<strong>microarchitectural behavior</strong> the ISA leaves open, such
+as TLB handling of page-protection changes without a flush, plus CSR,
+PMP and interrupt corner cases. </span> </span></p></li>
+<li><p><span> <span>Built the <strong>Python tooling</strong> for
+<strong>Azurite</strong>, an RV32IM core: test generation, run
+orchestration, log and coverage analysis, and <strong>CI
+integration</strong> across riscv-tests and riscv-dv. </span>
+</span></p></li>
+</ul></li>
+<li><table>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Hardware Acceleration Intern at
+Acceleration Robotics <a
+href="https://drive.google.com/file/d/1zK9jAKZ9oBVwV1-_GcFWSXyqZOX0cpnZ/view?usp=sharing"></a></strong></td>
+<td style="text-align: right;"><strong></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>C++/C, Vitis HLS, Vivado, KV260, Kria
+Robotics Stack</em></td>
+<td style="text-align: right;"><em>January 2024 - June 2024</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><span> <span>Accelerated <strong>ROS2</strong> workloads by
+optimizing <strong>Adaptive Monte-Carlo Localization (AMCL)</strong>.
+</span> </span></p></li>
+<li><p><span> <span>Designed and deployed a ROS2 node with a kernel for
+an accelerated particle filter algorithm on the <strong>KV260</strong>
+platform. </span> </span></p></li>
+<li><p><span> <span>Developed a custom KV260 platform in Vivado for HLS
+kernel deployment, achieving a <strong>1.95x speedup</strong> over the
+onboard SoC’s CPU. </span> </span></p></li>
+</ul></li>
+</ul>
+<h1 id="projects">Projects</h1>
+<ul>
+<li><table>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Hackathon: RISC-V Softmax
+Microcode (RISC-V Intl. x Andes) <a
+href="https://docs.google.com/presentation/d/15_osaoplCDb2VvI0H95oHUXygs7DukYd/edit?usp=sharing"></a></strong></td>
+<td style="text-align: right;"><strong></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>RISC-V Spike, C, Inline Assembly,
+Performance Optimization</em></td>
+<td style="text-align: right;"><em>April 2025</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><span> <span>Studied and reimplemented <strong>glibc libm
+exp()</strong> using polynomial approximation with <strong>Estrin’s
+scheme</strong>, focusing on numerical stability and performance.
+</span> </span></p></li>
+<li><p><span> <span>Integrated the optimized exp into a custom RISC-V
+softmax microcode path, achieving <strong> 50% speedup</strong>. </span>
+</span></p></li>
+<li><p><span> <span>Awarded the <strong>Favourite Implementation
+Prize</strong> for performance improvements and approach. </span>
+</span></p></li>
+</ul></li>
+<li><table>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Custom 32-bit RISC-V CPU and
+Bare-Metal Runtime (Synapse-32) <a
+href="https://github.com/SRA-VJTI/Synapse32"></a></strong></td>
+<td style="text-align: right;"><strong></strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>Verilog HDL, Verilator, Cocotb, C,
+Linker Scripts, GitHub Actions</em></td>
+<td style="text-align: right;"><em>August 2022 – June 2025
+(v1–v2)</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><span> <span>Implemented a <strong>5-stage RV32IMA CPU
+core</strong> in Verilog on a Cyclone II FPGA with store–load
+<strong>hazard detection and forwarding</strong>,
+<strong>FENCE.I</strong>, and <strong>CSR/interrupt</strong> support.
+</span> </span></p></li>
+<li><p><span> <span>Implemented a <strong>UART peripheral</strong> with
+Cocotb testbenches and refactored the memory system (memory map,
+byte/halfword/word access). </span> </span></p></li>
+<li><p><span> <span>Built a minimal <strong>bare-metal runtime</strong>:
+linker script defining memory regions, custom startup assembly, and
+OS-less <strong>UART bringup in C</strong> for early debug without libc.
+</span> </span></p></li>
+<li><p><span> <span>Validated with a <strong>Cocotb/pytest regression
+suite</strong> (exhaustive decoder and ALU unit tests, hazard and memory
+tests) and set up <strong>CI</strong> with a Verilator + RISC-V
+toolchain devcontainer. </span> </span></p></li>
+</ul></li>
+</ul>
+<h1 id="education">Education</h1>
+<ul>
+<li><table>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Veermata Jijabai Technological
+Institute</strong></td>
+<td style="text-align: right;"><strong>December 2021 – May
+2025</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>B.Tech in Electrical
+Engineering</em></td>
+<td style="text-align: right;"><em>Mumbai</em></td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+</div>
+
+    
+</div>
+
+        </main>
+    </div>
+
+    
+    <footer class="site-footer">
+    <div class="footer-inner">
+        <a class="footer-name" href="/">Zain Siddavatam</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="/feed.xml">RSS</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="mailto:hi@zainsv.me">Email</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="#top">Back to top</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <span class="footer-copy">© 2026</span>
+    </div>
+</footer>
+
+    
+
+    <script src="/js/site.js" defer></script>
+    
+</body>
+</html>

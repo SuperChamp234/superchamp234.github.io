@@ -1,0 +1,33 @@
+<h1>Resume build</h1>
+<p>The site resume is generated from <code>resume.tex</code>.</p>
+<h2>Quick start</h2>
+<pre class="language-sh"><code class="language-sh">./compile.sh     <span class="token comment"># full build: HTML for the site + resume.pdf</span>
+./build.sh       <span class="token comment"># PDF only -> build/resume.pdf, copied to resume.pdf</span>
+./watch.sh       <span class="token comment"># live rebuild on every save -> build/resume.pdf</span>
+</code></pre>
+<p><code>compile.sh</code> is the one to run before <code>npm run build</code>: it regenerates<br>
+<code>_includes/resume_content.njk</code> with pandoc and rebuilds the PDF. The generated<br>
+HTML and PDF are gitignored, so they are never committed.</p>
+<p><code>build.sh</code> and <code>watch.sh</code> use a local <code>latexmk</code> if installed, otherwise they run<br>
+it inside the Docker image described by <code>Dockerfile</code> (Debian + TeX Live). The<br>
+image is built automatically on first use, so the first run downloads the TeX<br>
+packages.</p>
+<ul>
+<li>Build a different file: <code>./build.sh cover-letter</code></li>
+<li>Use another image: <code>IMAGE=my-tex ./build.sh</code></li>
+<li>Live preview: open <code>build/resume.pdf</code> in Preview.app, Skim, or the VS Code<br>
+PDF pane while <code>./watch.sh</code> is running.</li>
+</ul>
+<h2>Prefer a local (non-Docker) setup?</h2>
+<p>Install the missing TeX pieces once:</p>
+<pre class="language-sh"><code class="language-sh"><span class="token function">sudo</span> tlmgr update <span class="token parameter variable">--self</span>
+<span class="token function">sudo</span> tlmgr <span class="token function">install</span> latexmk titlesec enumitem fullpage marvosym fontawesome
+</code></pre>
+<p>After that <code>build.sh</code>, <code>watch.sh</code>, and <code>compile.sh</code> use the local toolchain and<br>
+skip Docker entirely.</p>
+<h2>Requirements</h2>
+<ul>
+<li><code>pandoc</code> for the HTML conversion in <code>compile.sh</code></li>
+<li>Docker (or a local TeX Live install with the packages above)</li>
+<li><code>perl</code> (used to preprocess the LaTeX before pandoc)</li>
+</ul>

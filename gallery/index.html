@@ -1,0 +1,2489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Eleventy v3.1.2">
+    <meta name="color-scheme" content="light">
+
+    <script>
+        document.documentElement.classList.add("js");
+    </script>
+
+    
+    <script>
+        (function () {
+            var params = new URLSearchParams(location.search);
+            var stored = null;
+            try {
+                stored = localStorage.getItem("galleryView");
+            } catch (error) {}
+            var mode = params.get("view") || stored ||
+                (matchMedia("(max-width: 760px)").matches ? "book" : "grid");
+            if (mode !== "book" && mode !== "grid") mode = "grid";
+            document.documentElement.dataset.galleryView = mode;
+        })();
+    </script>
+    
+
+    
+
+    <title>Photo Gallery</title>
+    <meta name="description" content="Compilers, computer architecture, and the occasional mountain. Notes and photographs by Zain Siddavatam.">
+
+    <link rel="canonical" href="https://zainsv.me/gallery/">
+
+    
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zainsv.me/gallery/">
+    <meta property="og:title" content="Photo Gallery">
+    <meta property="og:description" content="Compilers, computer architecture, and the occasional mountain. Notes and photographs by Zain Siddavatam.">
+    <meta property="og:site_name" content="Zain Siddavatam">
+    
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zainsv.me/gallery/">
+    <meta property="twitter:title" content="Photo Gallery">
+    <meta property="twitter:description" content="Compilers, computer architecture, and the occasional mountain. Notes and photographs by Zain Siddavatam.">
+    
+
+    <meta name="theme-color" content="#f3e3d2">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ffffff'/%3E%3Cg fill='none' stroke='%231c2732' stroke-width='4'%3E%3Cpath d='M14 22h8l4-6h12l4 6h8v26H14z'/%3E%3Ccircle cx='32' cy='34' r='9'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="alternate" type="application/rss+xml" title="Zain Siddavatam" href="/feed.xml">
+
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <link rel="stylesheet" href="/css/gallery.css">
+    
+
+    
+</head>
+<body id="top" class="page-gallery">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-site-header>
+    <div class="header-inner">
+        <nav class="primary-nav" id="primary-nav" aria-label="Primary" data-primary-nav>
+            <a href="/" >Home</a>
+            <a href="/blog/" >Blog</a>
+            <a href="/gallery/" aria-current="page">Gallery</a>
+            <a href="/resume/" >Resume</a>
+        </nav>
+
+        <div class="header-meta">
+            <span class="header-updated">updated 27 November 2026</span>
+            <a class="header-rss" href="/feed.xml">RSS</a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+                <span>Menu</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+    
+
+    <div class="site-wrap">
+        
+        <aside class="sidebar" aria-label="Site sidebar">
+    <section class="widget">
+        <h2 class="widget-title">Elsewhere</h2>
+        <div class="widget-body">
+            <ul class="widget-list">
+                
+                <li>
+                    <a href="https://github.com/superchamp234" target="_blank" rel="noopener">GitHub</a>
+                    <span class="widget-handle">@SuperChamp234</span>
+                </li>
+                
+                <li>
+                    <a href="https://x.com/ZSiddavatam" target="_blank" rel="noopener">Twitter / X</a>
+                    <span class="widget-handle">@ZSiddavatam</span>
+                </li>
+                
+                <li>
+                    <a href="https://www.linkedin.com/in/zain-siddavatam" target="_blank" rel="noopener">LinkedIn</a>
+                    <span class="widget-handle">/zain-siddavatam</span>
+                </li>
+                
+                <li>
+                    <a href="https://bsky.app/profile/zainsv.me" target="_blank" rel="noopener">Bluesky</a>
+                    <span class="widget-handle">@zainsv.me</span>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+
+    
+
+    
+    <section class="widget">
+        <h2 class="widget-title">Albums</h2>
+        <div class="widget-body">
+            <ul class="widget-list widget-list--plain">
+                
+                <li>
+                    <a href="/gallery/?view=grid#album-2025-01">January 2025</a>
+                    <span class="widget-count">(30)</span>
+                </li>
+                
+                <li>
+                    <a href="/gallery/?view=grid#album-2022-08">August 2022</a>
+                    <span class="widget-count">(1)</span>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+    
+
+    <section class="widget">
+        <h2 class="widget-title">Site</h2>
+        <div class="widget-body">
+            <ul class="widget-list widget-list--plain">
+                <li>Updated 27 November 2026</li>
+                <li><a href="/feed.xml">RSS feed</a></li>
+                <li><a href="mailto:hi@zainsv.me">hi@zainsv.me</a></li>
+            </ul>
+            <p class="widget-note">Best viewed at 1024×768.</p>
+        </div>
+    </section>
+</aside>
+
+        
+
+        <main id="main" class="main-panel">
+            
+
+
+<div class="gallery-page" data-gallery>
+    <header class="page-header gallery-header">
+        <h1>The photo book.</h1>
+        <p class="lede">A rolling photo book of mountains, cities, small machines, and the people around them. Scroll one frame at a time, or open the grid if you would rather see everything at once.</p>
+    </header>
+
+    <div class="gallery-toolbar" data-gallery-toolbar>
+        <div class="view-switch" role="group" aria-label="Gallery view">
+            <button type="button" data-view="book" aria-pressed="false">
+                
+<svg class="icon icon-book" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+<span>Book</span>
+            </button>
+            <button type="button" data-view="grid" aria-pressed="false">
+                
+<svg class="icon icon-grid" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+<span>Grid</span>
+            </button>
+        </div>
+        <p class="gallery-counter" data-gallery-counter></p>
+        <div class="book-progress" data-book-progress aria-hidden="true"></div>
+    </div>
+
+    
+    <div class="photobook" data-photobook tabindex="0" aria-label="Photo book. Use the arrow keys to move between photographs.">
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250108-111001640-mp" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250108_111001640.MP.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250108_111001640.MP.jpg"
+                   data-caption=""
+                   data-meta="8 January 2025 · Pixel 8 · f/1.68 · 1/439s · ISO 23 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAwBQCdASocACUAPxF2tFCsJ6WjsBVdUYAiCWQAsSXAvVALr8SHK7bCLxbPTZ5gXE0gIADWO76eWfwUeg78pC1pLhpsGffwOx0yIh5dqFxqV9Yf9vV/8oWPH8N03PAX0EPHxTe2EFo09AomWKBRv4TZFmYkn7eLYQAAAA==')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250108_111001640.MP.jpg" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>8 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/439s · ISO 23 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250109-014840411-mp" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250109_014840411.MP.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250109_014840411.MP.jpg"
+                   data-caption=""
+                   data-meta="9 January 2025 · Pixel 8 · f/1.68 · 1/92s · ISO 22 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQBQCdASocABUAPxl6tFKsp6UisBgIAZAjCWMAs4AQ7D5FYDAY1qktgwjoqzWU4ikAAP6LVsRfHK7vq31nDVtTIAP8r4NzFW5xfOG4vLdyWBpKSMj8umN2BpB2gAAA')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250109_014840411.MP.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>9 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/92s · ISO 22 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250109-045514839-mp" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250109_045514839.MP.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250109_045514839.MP.jpg"
+                   data-caption=""
+                   data-meta="9 January 2025 · Pixel 8 · f/1.68 · 1/3115s · ISO 23 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQBACdASocABUAPxl0sFCspqSisAgBkCMJYgCuHCHhf3RxEXbwVK0WTqQIDGy7wAD+UtkM9sPM8ICY5xlVzns+dikT8GcJLt18Ur+hij4C6+xjMLGsw5L+D0u5GATmM6T/NqU4AgA=')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250109_045514839.MP.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>9 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/3115s · ISO 23 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250109-135123983-night" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button media-button--video" href="/media/2025-01/PXL_20250109_135123983.NIGHT.mp4"
+                   data-lightbox-open
+                   data-type="video"
+                   data-video="/media/2025-01/PXL_20250109_135123983.NIGHT.mp4"
+                   data-poster="/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1920.jpg"
+                   data-caption=""
+                   data-meta="9 January 2025"
+                   data-alt="Video from January 2025"
+                   aria-label="Play Video from January 2025">
+                    
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQBQCdASocABUAPxl4sFCspySisAwBkCMJZwDGQFfwzFluX33Hi8rlpfxIsmjl9Bv/kgAA/vd8BlyGGJY10HWICwvTsJpfzzID2CQ55irahPVCXQ+oAA==')" aria-hidden="true"></span>
+                    <picture>
+                        <source type="image/webp" srcset="/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-640.webp 640w, /media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1280.webp 1280w, /media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1920.webp 1920w" sizes="(max-width: 760px) 100vw, (max-width: 1400px) 86vw, 1180px">
+                        <img src="/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1280.jpg" srcset="/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-640.jpg 640w, /media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1280.jpg 1280w, /media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1920.jpg 1920w" sizes="(max-width: 760px) 100vw, (max-width: 1400px) 86vw, 1180px" width="1920" height="1440" alt="Video from January 2025" loading="lazy" decoding="async">
+                    </picture>
+                    
+                    <span class="play-badge" aria-hidden="true">
+<svg class="icon icon-play" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M8 5.5v13l11-6.5z"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>9 January 2025</span>
+                    
+                    
+                    
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250109-135736218-night" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button media-button--video" href="/media/2025-01/PXL_20250109_135736218.NIGHT.mp4"
+                   data-lightbox-open
+                   data-type="video"
+                   data-video="/media/2025-01/PXL_20250109_135736218.NIGHT.mp4"
+                   data-poster="/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1920.jpg"
+                   data-caption=""
+                   data-meta="9 January 2025"
+                   data-alt="Video from January 2025"
+                   aria-label="Play Video from January 2025">
+                    
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAwCdASocABUAPxl4tFIspyUiqA1RkCMJZwAAHnX9SAN3ia5gAAD+6dNfPDir1DD0ew4EdCY7bE5ufqht+gPA26RzxDxZiRUm0vzAAAA=')" aria-hidden="true"></span>
+                    <picture>
+                        <source type="image/webp" srcset="/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-640.webp 640w, /media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1280.webp 1280w, /media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1920.webp 1920w" sizes="(max-width: 760px) 100vw, (max-width: 1400px) 86vw, 1180px">
+                        <img src="/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1280.jpg" srcset="/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-640.jpg 640w, /media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1280.jpg 1280w, /media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1920.jpg 1920w" sizes="(max-width: 760px) 100vw, (max-width: 1400px) 86vw, 1180px" width="1920" height="1440" alt="Video from January 2025" loading="lazy" decoding="async">
+                    </picture>
+                    
+                    <span class="play-badge" aria-hidden="true">
+<svg class="icon icon-play" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M8 5.5v13l11-6.5z"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>9 January 2025</span>
+                    
+                    
+                    
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250109-142144320-night" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button media-button--video" href="/media/2025-01/PXL_20250109_142144320.NIGHT.mp4"
+                   data-lightbox-open
+                   data-type="video"
+                   data-video="/media/2025-01/PXL_20250109_142144320.NIGHT.mp4"
+                   data-poster="/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1440.jpg"
+                   data-caption=""
+                   data-meta="9 January 2025"
+                   data-alt="Video from January 2025"
+                   aria-label="Play Video from January 2025">
+                    
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwBgCdASocACUAPv1qqlCrJiQiurmYAWAfiWcA0fgh4BwLDqZiGubmS6+3/LnZ+tcw8jNpsN9AvLU4AP7sr7vMk6mDVuTJ2SASWilOs+whSAo+hNlgWVq32TVfXb0HbowAAA==')" aria-hidden="true"></span>
+                    <picture>
+                        <source type="image/webp" srcset="/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-640.webp 640w, /media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1280.webp 1280w, /media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1440.webp 1440w" sizes="(max-width: 760px) 100vw, (max-width: 1400px) 86vw, 1180px">
+                        <img src="/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1280.jpg" srcset="/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-640.jpg 640w, /media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1280.jpg 1280w, /media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1440.jpg 1440w" sizes="(max-width: 760px) 100vw, (max-width: 1400px) 86vw, 1180px" width="1440" height="1920" alt="Video from January 2025" loading="lazy" decoding="async">
+                    </picture>
+                    
+                    <span class="play-badge" aria-hidden="true">
+<svg class="icon icon-play" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M8 5.5v13l11-6.5z"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>9 January 2025</span>
+                    
+                    
+                    
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250109-110036531-mp" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250109_110036531.MP.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250109_110036531.MP.jpg"
+                   data-caption=""
+                   data-meta="9 January 2025 · Pixel 8 · f/1.68 · 1/722s · ISO 20 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQBACdASocABUAPxl0s1CspqSisBgMAZAjCUAWHYIiPaY4LSM8eQfyIJQFRpKXwAD93E8AmC7pvUnmbI+Bjq2lksUrBPTfbj5ABxTE4ZIyCzBYwAwoqA9CEKNf+VvezwrSZ5oVgAA=')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250109_110036531.MP.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>9 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/722s · ISO 20 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250109-172622142-night" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button media-button--video" href="/media/2025-01/PXL_20250109_172622142.NIGHT.mp4"
+                   data-lightbox-open
+                   data-type="video"
+                   data-video="/media/2025-01/PXL_20250109_172622142.NIGHT.mp4"
+                   data-poster="/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1440.jpg"
+                   data-caption=""
+                   data-meta="9 January 2025"
+                   data-alt="Video from January 2025"
+                   aria-label="Play Video from January 2025">
+                    
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQBACdASocACUAPxV2sFC/p7QisAqr8CKJZwAAeN3DVHUfdJt4JoY54AD+7lbHPtlJ7fhrEDfWHhQhlTS0an7WatKtgR2z4duPhIbgI2ZLXIXvHAAAAA==')" aria-hidden="true"></span>
+                    <picture>
+                        <source type="image/webp" srcset="/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-640.webp 640w, /media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1280.webp 1280w, /media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1440.webp 1440w" sizes="(max-width: 760px) 100vw, (max-width: 1400px) 86vw, 1180px">
+                        <img src="/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1280.jpg" srcset="/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-640.jpg 640w, /media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1280.jpg 1280w, /media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1440.jpg 1440w" sizes="(max-width: 760px) 100vw, (max-width: 1400px) 86vw, 1180px" width="1440" height="1920" alt="Video from January 2025" loading="lazy" decoding="async">
+                    </picture>
+                    
+                    <span class="play-badge" aria-hidden="true">
+<svg class="icon icon-play" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M8 5.5v13l11-6.5z"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>9 January 2025</span>
+                    
+                    
+                    
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250109-135735902-night-raw-01-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250109_135735902.NIGHT.RAW-01.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250109_135735902.NIGHT.RAW-01.COVER.jpg"
+                   data-caption=""
+                   data-meta="9 January 2025 · Pixel 8 · f/1.68 · 16s · ISO 121 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQBACdASocABUAPxl4tVIspyUiqA1RkCMJZQDNhA3j+6eAGA9X5S2PdD6b2BOWwAD+5aZcOnl+cb5xQYT2oxT3ms8QjVqsG2EBsmiFL1VF5vQ1gqvpAAAA')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250109_135735902.NIGHT.RAW-01.COVER.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>9 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 16s · ISO 121 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250109-142143117-night-raw-01-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250109_142143117.NIGHT.RAW-01.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250109_142143117.NIGHT.RAW-01.COVER.jpg"
+                   data-caption=""
+                   data-meta="9 January 2025 · Pixel 8 · f/1.68 · 16s · ISO 27 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQBQCdASocACUAPwVsqlCrpiOitUgBcCCJZQDLpC03MnwWYrp8cLIX+5B7N/KJQbbL21fXNAoQAP7sPanpvAXYjTmh7khBAh78bjOhiLfb52V5Jy/H7grdf0rPDbwAu3A87mBSM0UwwLfQgCGgAA==')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250109_142143117.NIGHT.RAW-01.COVER.jpg" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>9 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 16s · ISO 27 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250109-172620883-night-raw-01-cover-2" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250109_172620883.NIGHT.RAW-01.COVER~2.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250109_172620883.NIGHT.RAW-01.COVER~2.jpg"
+                   data-caption=""
+                   data-meta="9 January 2025 · Pixel 8 · f/1.68 · 16s · ISO 397 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABQBACdASocACUAPxV6sFCsqCSisBqqqZAiiWcAAKsvl+dlp+tW2Y9wO6QAAP7w+F7KfaatUTyf1JSgq40Oor9zptGZlQAA')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250109_172620883.NIGHT.RAW-01.COVER~2.jpg" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>9 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 16s · ISO 397 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250110-095619568-raw-01-mp-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250110_095619568.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250110_095619568.RAW-01.MP.COVER.jpg"
+                   data-caption=""
+                   data-meta="10 January 2025 · Pixel 8 · f/1.68 · 1/125s · ISO 19 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBQCdASocABUAPxlus1GspaSisBgMAZAjCWQAAC2hX3rbbrVaqGNY0VnXIKhEtAuvAAD+y5NGmHss3KbPO7Se9lNX5SrXgWYYTEtl0K2/tVSd3G/ASTgzT+C18TkRhSsgoroY+fzVumsISGmGyAAA')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250110_095619568.RAW-01.MP.COVER.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>10 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/125s · ISO 19 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250110-095911047-raw-01-mp-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250110_095911047.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250110_095911047.RAW-01.MP.COVER.jpg"
+                   data-caption=""
+                   data-meta="10 January 2025 · Pixel 8 · f/1.68 · 1/251s · ISO 20 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQBQCdASocACUAPxF2rVCsJ6QitVgIAYAiCUAABvRoXR/CBCiw6/W48XxRT/24rDt0QAAA+t9nb/lalFA++5u91wOTMIPZClvl90mSd+PUoh4HRRF1OGBzqPslMsiDREE/esgH5Cin2VItXYtvpe/DgAA=')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250110_095911047.RAW-01.MP.COVER.jpg" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>10 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/251s · ISO 20 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250110-100502362-raw-01-mp-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250110_100502362.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250110_100502362.RAW-01.MP.COVER.jpg"
+                   data-caption=""
+                   data-meta="10 January 2025 · Pixel 8 · f/1.68 · 1/336s · ISO 18 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABwBACdASocABUAPxl2tFOspqSisBgIAZAjCUAZQAaFJRVrtaksbAAkAddgwAD+6clsEZNKsn1rbz543WJb8rBS8bTK7170T4e15Fz+m64qJ2MiR8lMTcyAthlMJKw5Q6gAAA==')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250110_100502362.RAW-01.MP.COVER.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>10 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/336s · ISO 18 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250110-100535413-raw-01-mp-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250110_100535413.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250110_100535413.RAW-01.MP.COVER.jpg"
+                   data-caption=""
+                   data-meta="10 January 2025 · Pixel 8 · f/1.68 · 1/585s · ISO 189 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQBACdASocABUAPwlwslCrpqUisAwBcCEJQBndhTEDO5Cx3gtbUmOs8AD+2JnxrrELGEhiMNAXtpSEk8JA2w3cXbihWTNcAaD+4j7cpIkOUHdeAgAAAA==')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250110_100535413.RAW-01.MP.COVER.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>10 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/585s · ISO 189 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250110-104432904-raw-01-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250110_104432904.RAW-01.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250110_104432904.RAW-01.COVER.jpg"
+                   data-caption=""
+                   data-meta="10 January 2025 · Pixel 8 · f/1.68 · 1/495s · ISO 28 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABwBQCdASocACUAPxl6rlCsqCQisBVdUZAjCWMAAJTuptgDEgm8tWV6JFhBOzq+sKyeqhwAAP7twx9ITWlwafOwQHKZ9mvZKNKy2GMURAohuvIxNfv8yBuPkl1Hzol5JK6JvEtP4KVgIBi+LU7EdNtFUAAAAA==')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250110_104432904.RAW-01.COVER.jpg" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>10 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/495s · ISO 28 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250111-034327532-raw-01-mp-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250111_034327532.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250111_034327532.RAW-01.MP.COVER.jpg"
+                   data-caption=""
+                   data-meta="11 January 2025 · Pixel 8 · f/1.68 · 1/368s · ISO 20 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACQBQCdASocACUAPwVsrVCrpiSitVv8AXAgiUAZmgPBzduvkVa0ERXTQ+L9G4EFYG5wl9I2IAD+3uxF3vHqebStaJ2EOuNyiJdupa9FfsRUByccy9ZB56ns0fqZ2gZqIGGuXZaUl1FsrumkVjOEyt8g+8yWyOiIEc2jPOAA')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250111_034327532.RAW-01.MP.COVER.jpg" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>11 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/368s · ISO 20 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250111-044044542-raw-01-mp-cover-2" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250111_044044542.RAW-01.MP.COVER~2.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250111_044044542.RAW-01.MP.COVER~2.jpg"
+                   data-caption=""
+                   data-meta="11 January 2025 · Pixel 8 · f/1.68 · 1/727s · ISO 21 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQBACdASocABUAPxl8tFGsqCUisAgBkCMJQBdgA9XQttDVhzO1p4cwwoPwmfHgAAD+kUUhuhEsQbhDzUpcLroe5J5dSmMH61GkBwswHRM3wjtvTZ1eWRugOSGbGohuiR5lL0fFLVY/uvliAAA=')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250111_044044542.RAW-01.MP.COVER~2.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>11 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/727s · ISO 21 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250111-092447880-raw-01-mp-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250111_092447880.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250111_092447880.RAW-01.MP.COVER.jpg"
+                   data-caption=""
+                   data-meta="11 January 2025 · Pixel 8 · f/1.68 · 1/1312s · ISO 23 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwBQCdASocABUAPxlusVCspiSit/VYAZAjCUAVhmyANOltdEc9VWffE/nD42HL+YiMhGwAAP6Qbn24aaHoNzOpQsfe5YZYc+QlDyRSsrOwIm8FIhH2xyYLgvyljWDLaaU59HQA')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250111_092447880.RAW-01.MP.COVER.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>11 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/1312s · ISO 23 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250111-093849726-raw-01-mp-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250111_093849726.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250111_093849726.RAW-01.MP.COVER.jpg"
+                   data-caption=""
+                   data-meta="11 January 2025 · Pixel 8 · f/1.68 · 1/776s · ISO 22 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwBQCdASocABUAPxmCtlSsqKSjKAqpkCMJQBdmbI+JgOFGJ0oLccz6S1ua7Oof77nFQAD+36Zk1WHf7Xd9HK7KlaW/gKlpr3CD9aUJZoNnG6OqMkm0I08G5cFrO8lCaWwAAA==')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250111_093849726.RAW-01.MP.COVER.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>11 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/776s · ISO 22 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250111-100825345-raw-01-mp-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250111_100825345.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250111_100825345.RAW-01.MP.COVER.jpg"
+                   data-caption=""
+                   data-meta="11 January 2025 · Pixel 8 · f/2.2 · 1/364s · ISO 46 · 1.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABQBACdASocABUAPxmCtFUsqKSoqAqpkCMJZAC90A3qaOzHN/83bOQuyc8AAP6RpyAQ1sBJX+liiGDyHNdo7UfoZaZCroohfznSFqxqpKV8mVzeIEmJLtQDZv58AwgXpzUXbZSdvV3MDmWv/sYAAA==')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250111_100825345.RAW-01.MP.COVER.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>11 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/2.2 · 1/364s · ISO 46 · 1.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250111-114852264-raw-01-mp-cover-2" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250111_114852264.RAW-01.MP.COVER~2.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250111_114852264.RAW-01.MP.COVER~2.jpg"
+                   data-caption=""
+                   data-meta="11 January 2025 · Pixel 8 · f/1.68 · 1/165s · ISO 161 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQBQCdASocABUAPxlssVCspSSisBgMAZAjCWMAyrQQ78HuUPZFBl5BC9LrjqM3bTukFuAA/tNMeM+MDWeYgfb4i2+kyO1g1IobDSUFgcd7twETxToS77v31Bj0teQAAAA=')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250111_114852264.RAW-01.MP.COVER~2.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>11 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/165s · ISO 161 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250112-075339273" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button media-button--video" href="/media/_generated/27bdb6657cb7/video/pxl-20250112-075339273.mp4"
+                   data-lightbox-open
+                   data-type="video"
+                   data-video="/media/_generated/27bdb6657cb7/video/pxl-20250112-075339273.mp4"
+                   data-poster="/media/_generated/0831c8be22c5/pxl-20250112-075339273-1920.jpg"
+                   data-caption=""
+                   data-meta="12 January 2025"
+                   data-alt="Video from January 2025"
+                   aria-label="Play Video from January 2025">
+                    
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAwCdASocABAAPxl4tlGspyUisAgBkCMJZQDImCGZcM4tdizNjNkAAP6dHU2K9tdwZEv4isVKIoqEWVNFJbPc9zg804MMYxPCRWWAAAA=')" aria-hidden="true"></span>
+                    <picture>
+                        <source type="image/webp" srcset="/media/_generated/0831c8be22c5/pxl-20250112-075339273-640.webp 640w, /media/_generated/0831c8be22c5/pxl-20250112-075339273-1280.webp 1280w, /media/_generated/0831c8be22c5/pxl-20250112-075339273-1920.webp 1920w" sizes="(max-width: 760px) 100vw, (max-width: 1400px) 86vw, 1180px">
+                        <img src="/media/_generated/0831c8be22c5/pxl-20250112-075339273-1280.jpg" srcset="/media/_generated/0831c8be22c5/pxl-20250112-075339273-640.jpg 640w, /media/_generated/0831c8be22c5/pxl-20250112-075339273-1280.jpg 1280w, /media/_generated/0831c8be22c5/pxl-20250112-075339273-1920.jpg 1920w" sizes="(max-width: 760px) 100vw, (max-width: 1400px) 86vw, 1180px" width="1920" height="1080" alt="Video from January 2025" loading="lazy" decoding="async">
+                    </picture>
+                    
+                    <span class="play-badge" aria-hidden="true">
+<svg class="icon icon-play" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M8 5.5v13l11-6.5z"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>12 January 2025</span>
+                    
+                    
+                    
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250112-050501350-raw-01-mp-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250112_050501350.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250112_050501350.RAW-01.MP.COVER.jpg"
+                   data-caption=""
+                   data-meta="12 January 2025 · Pixel 8 · f/1.68 · 1/863s · ISO 21 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQBQCdASocABUAPxl4tlOspqUisBgIAZAjCWUAvdAQ70xq+0LBns+3kpd8Ylho8PItoAAA/tL/9wJRii8pq740efZwfLZFCsDqJHV4kr1dUDbVqSdT78emWg+EHYkAAAA=')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250112_050501350.RAW-01.MP.COVER.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>12 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/863s · ISO 21 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250112-081654903-raw-01-mp-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250112_081654903.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250112_081654903.RAW-01.MP.COVER.jpg"
+                   data-caption=""
+                   data-meta="12 January 2025 · Pixel 8 · f/1.68 · 1/749s · ISO 35 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwBACdASocACUAPxl6tFMsp6SiqqoBkCMJZ2d7WG0JusRzJPcwtzi4AqOIOP4wAP7Y5Uwb+3DV6CdwCpm9oglVLoPGyJLbNPEFWWvzeIGepwAO03D4hVGll/GazO+VHTWi3W9eGZmjk2GnWT4AAA==')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250112_081654903.RAW-01.MP.COVER.jpg" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>12 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/749s · ISO 35 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250112-095455730-raw-01-mp-cover-2" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250112_095455730.RAW-01.MP.COVER~2.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250112_095455730.RAW-01.MP.COVER~2.jpg"
+                   data-caption=""
+                   data-meta="12 January 2025 · Pixel 8 · f/1.68 · 1/434s · ISO 96 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABwBgCdASocACUAPxl2slQspqQjMBVaqZAjCWcAx2wuHd0zVEnMsxkRiD6xycrOFgil6vjMxy6VtdmktiAA/I7YKUiwqT4JMeDX/qcE907qWuPMtbBjAXuOphNZH9j6CJtc1S/bxAoglO0HL6UK7IcUeFHkJYN5Nd4qJC2YQwoU3aHPmhVNkujJvIgAAA==')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250112_095455730.RAW-01.MP.COVER~2.jpg" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>12 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/434s · ISO 96 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250112-113712103-raw-01-mp-cover-2" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250112_113712103.RAW-01.MP.COVER~2.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250112_113712103.RAW-01.MP.COVER~2.jpg"
+                   data-caption=""
+                   data-meta="12 January 2025 · Pixel 8 · f/1.68 · 1/290s · ISO 127 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwBQCdASocABUAPwlsr1CrpaSit/qoAXAhCWcAzfwexxIEcWkemj7yzCdaWeIcOrMlAAD+r3DJqlqHfH8AR2MZT7RRTUyZdEI4+XczQG2TUQluzfCwpVCCQQegWdD5pPSkxz/JPIAAAA==')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250112_113712103.RAW-01.MP.COVER~2.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>12 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/290s · ISO 127 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250113-085427814-raw-01-mp-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250113_085427814.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250113_085427814.RAW-01.MP.COVER.jpg"
+                   data-caption=""
+                   data-meta="13 January 2025 · Pixel 8 · f/1.68 · 1/829s · ISO 21 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAwCdASocABUAPxl2sVCspySisAgBkCMJQBTihDvvbB7lygvIqgAA/lCJbax43QqDJhBLjgKQMHcRHNWRzECVLKmdWnC/Zdk5sxGpDoZHdAgA')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250113_085427814.RAW-01.MP.COVER.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>13 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/829s · ISO 21 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250113-093209046-raw-01-mp-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250113_093209046.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250113_093209046.RAW-01.MP.COVER.jpg"
+                   data-caption=""
+                   data-meta="13 January 2025 · Pixel 8 · f/1.68 · 1/1727s · ISO 20 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQBACdASocABUAPxl2tVEspyUiqA1RkCMJYwANiMCUwDPwviFHp9oNkS7dfLEHdADqzcdHY39d/8GU3b3N1AKw9ml5X77De+OmD4vD2DMDjO6+7TP6f0wAAAA=')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250113_093209046.RAW-01.MP.COVER.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>13 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/1727s · ISO 20 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250113-121833485-raw-01-mp-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250113_121833485.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250113_121833485.RAW-01.MP.COVER.jpg"
+                   data-caption=""
+                   data-meta="13 January 2025 · Pixel 8 · f/1.68 · 1/100s · ISO 365 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQBACdASocABUAPxV6sFCsqCSisBgMAZAiiWMArAAMTH86Qxe373bmYJVA6lFnQAD+4zmxOejMAspVsopR9T6TLUzXJbQ0dMoLc7RrixFgs/MoC+cakrBva5UPAzkPaLggAA==')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250113_121833485.RAW-01.MP.COVER.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>13 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/100s · ISO 365 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250113-123235872-raw-01-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250113_123235872.RAW-01.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250113_123235872.RAW-01.COVER.jpg"
+                   data-caption=""
+                   data-meta="13 January 2025 · Pixel 8 · f/1.68 · 1/121s · ISO 19 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBQCdASocACUAPwFoqVCrJiOiurmYAWAgCWMAvOAh35tjm5etzT3HoG17MulkAcVwZRSwAP7K+dC1viIrAq9iZhPn2rYr3fKhKLMr49j5/sGh1OKkHXmprO5jPLpQDR6V+hqurG/rbjnqHJm7W6YSK3Zuy+LtcISJ4sjqoP99c4dkgj8HgAAA')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250113_123235872.RAW-01.COVER.jpg" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>13 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/121s · ISO 19 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250114-075453425-raw-01-mp-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250114_075453425.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250114_075453425.RAW-01.MP.COVER.jpg"
+                   data-caption=""
+                   data-meta="14 January 2025 · Pixel 8 · f/1.68 · 1/1311s · ISO 20 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQBACdASocABUAPxlys1GspqSisBgMAZAjCUAXZfqQOZY2peAXk7nBmbkAAP3gPyM0s54vNv9awexZ0ut5OsVJL/5ButUUOTOQfU0cntJ26a4tTMFr/ulYYAAAAA==')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250114_075453425.RAW-01.MP.COVER.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>14 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/1311s · ISO 20 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250114-121403126-raw-01-mp-cover-2" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250114_121403126.RAW-01.MP.COVER~2.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250114_121403126.RAW-01.MP.COVER~2.jpg"
+                   data-caption=""
+                   data-meta="14 January 2025 · Pixel 8 · f/1.68 · 1/152s · ISO 21 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACQBACdASocABUAPw1ur1CsJqQisAwBgCGJYwDM0CHW7VCfGBQ2eN0F9xbZwAAA/lmIz/8z6FBtS+X2fHJqjaANil650vRzBO5Op9fI3AK5k28AAAA=')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250114_121403126.RAW-01.MP.COVER~2.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>14 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/152s · ISO 21 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250114-121412364-raw-01-mp-cover-2" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250114_121412364.RAW-01.MP.COVER~2.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250114_121412364.RAW-01.MP.COVER~2.jpg"
+                   data-caption=""
+                   data-meta="14 January 2025 · Pixel 8 · f/1.68 · 1/47s · ISO 24 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwBACdASocABUAPxl4tFMspqSisBgIAZAjCUAWIaQAK0+0PD+fID6ymtapqIwAAP6vcN/oCwbr6+0DLpiM+IKgDWoOjATLrOEO70iKKSQcBT5yzT2LHudJ9bEE3YcZeK62jBdkAAA=')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250114_121412364.RAW-01.MP.COVER~2.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>14 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/47s · ISO 24 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2025-01-pxl-20250114-175101271-raw-01-cover" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2025-01/PXL_20250114_175101271.RAW-01.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250114_175101271.RAW-01.COVER.jpg"
+                   data-caption=""
+                   data-meta="14 January 2025 · Pixel 8 · f/1.68 · 1/3s · ISO 1626 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   aria-label="Open Photo from January 2025 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABwBACdASocABUAPwV0slCrp6UisAwBcCCJZQCw7FfwtJK+WBzG3RpAdf7JAAD+9CpznaQHLx//wN+yKA4Ex+IIQDuK9HtRx9UVxmX5JG2RKabVyRSN1BgA')" aria-hidden="true"></span>
+                    <img data-src="/media/2025-01/PXL_20250114_175101271.RAW-01.COVER.jpg" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>14 January 2025</span>
+                    
+                    <span>Pixel 8</span>
+                    <span>f/1.68 · 1/3s · ISO 1626 · 6.9mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+        <figure class="book-page" id="photo-2022-08-img-8601" data-book-item>
+            <div class="book-media">
+                
+                <a class="media-button" href="/media/2022-08/IMG_8601.JPG"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2022-08/IMG_8601.JPG"
+                   data-caption=""
+                   data-meta="3 September 2022 · EOS 200D II · f/13 · 1/160s · ISO 400 · 18mm"
+                   data-alt="Photo from August 2022"
+                   aria-label="Open Photo from August 2022 larger">
+                    <span class="media-blur" style="background-image:url('data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQBACdASocABMAPxl8slKsriSisBgIAcAjCWUAnTOFNMAH5beKzy3BAAD+iuwJfAnKKXMjeNc6cu5U0c9SdnlDmgWvQ6t+qflHb8Bi0irhAAAA')" aria-hidden="true"></span>
+                    <img data-src="/media/2022-08/IMG_8601.JPG" width="6000" height="4000" alt="Photo from August 2022" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">
+<svg class="icon icon-arrow-up-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="18" x2="18" y2="6"/><polyline points="8 6 18 6 18 16"/></svg>
+</span>
+                </a>
+                
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    
+                    
+                </span>
+                <span class="book-meta">
+                    <span>3 September 2022</span>
+                    
+                    <span>EOS 200D II</span>
+                    <span>f/13 · 1/160s · ISO 400 · 18mm</span>
+                </span>
+            </figcaption>
+        </figure>
+        
+    </div>
+
+    <div class="gallery-grid" data-gallery-grid>
+        
+        <section class="album" aria-labelledby="album-2025-01">
+            <header class="album-head">
+                <div>
+                    <h2 id="album-2025-01">January 2025</h2>
+                    <p class="album-meta">
+                        30 photos · 5 videos
+                    </p>
+                </div>
+                
+            </header>
+
+            <div class="photo-grid">
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250108_111001640.MP.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250108_111001640.MP.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="8 January 2025 · Pixel 8 · f/1.68 · 1/439s · ISO 23 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 0.7529; --w: 3072; --h: 4080">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAwBQCdASocACUAPxF2tFCsJ6WjsBVdUYAiCWQAsSXAvVALr8SHK7bCLxbPTZ5gXE0gIADWO76eWfwUeg78pC1pLhpsGffwOx0yIh5dqFxqV9Yf9vV/8oWPH8N03PAX0EPHxTe2EFo09AomWKBRv4TZFmYkn7eLYQAAAA==')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-640.avif 640w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1280.avif 1280w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1920.avif 1920w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-640.webp 640w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1280.webp 1280w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1920.webp 1920w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1280.jpg" srcset="/media/_generated/4e83994a558a/pxl-20250108-111001640-mp-640.jpg 640w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1280.jpg 1280w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-1920.jpg 1920w, /media/_generated/4e83994a558a/pxl-20250108-111001640-mp-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">8 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250109_014840411.MP.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250109_014840411.MP.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="9 January 2025 · Pixel 8 · f/1.68 · 1/92s · ISO 22 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQBQCdASocABUAPxl6tFKsp6UisBgIAZAjCWMAs4AQ7D5FYDAY1qktgwjoqzWU4ikAAP6LVsRfHK7vq31nDVtTIAP8r4NzFW5xfOG4vLdyWBpKSMj8umN2BpB2gAAA')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-640.avif 640w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1280.avif 1280w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1920.avif 1920w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-640.webp 640w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1280.webp 1280w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1920.webp 1920w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1280.jpg" srcset="/media/_generated/608e740ba53d/pxl-20250109-014840411-mp-640.jpg 640w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1280.jpg 1280w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-1920.jpg 1920w, /media/_generated/608e740ba53d/pxl-20250109-014840411-mp-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">9 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250109_045514839.MP.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250109_045514839.MP.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="9 January 2025 · Pixel 8 · f/1.68 · 1/3115s · ISO 23 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQBACdASocABUAPxl0sFCspqSisAgBkCMJYgCuHCHhf3RxEXbwVK0WTqQIDGy7wAD+UtkM9sPM8ICY5xlVzns+dikT8GcJLt18Ur+hij4C6+xjMLGsw5L+D0u5GATmM6T/NqU4AgA=')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/725820b90423/pxl-20250109-045514839-mp-640.avif 640w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-1280.avif 1280w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-1920.avif 1920w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/725820b90423/pxl-20250109-045514839-mp-640.webp 640w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-1280.webp 1280w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-1920.webp 1920w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/725820b90423/pxl-20250109-045514839-mp-1280.jpg" srcset="/media/_generated/725820b90423/pxl-20250109-045514839-mp-640.jpg 640w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-1280.jpg 1280w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-1920.jpg 1920w, /media/_generated/725820b90423/pxl-20250109-045514839-mp-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">9 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250109_135123983.NIGHT.mp4"
+                   data-lightbox-open
+                   data-type="video"
+                   data-full=""
+                   data-video="/media/2025-01/PXL_20250109_135123983.NIGHT.mp4"
+                   data-poster="/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1920.jpg"
+                   data-caption=""
+                   data-meta="9 January 2025"
+                   data-alt="Video from January 2025"
+                   style="--ar: 1.3333; --w: 1920; --h: 1440">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQBQCdASocABUAPxl4sFCspySisAwBkCMJZwDGQFfwzFluX33Hi8rlpfxIsmjl9Bv/kgAA/vd8BlyGGJY10HWICwvTsJpfzzID2CQ55irahPVCXQ+oAA==')">
+                        
+                        <picture>
+                            <source type="image/webp" srcset="/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-640.webp 640w, /media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1280.webp 1280w, /media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1920.webp 1920w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1280.jpg" srcset="/media/_generated/9d742aa9d415/pxl-20250109-135123983-night-640.jpg 640w, /media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1280.jpg 1280w, /media/_generated/9d742aa9d415/pxl-20250109-135123983-night-1920.jpg 1920w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="1920" height="1440" alt="Video from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                        <span class="play-badge play-badge--small" aria-hidden="true">
+<svg class="icon icon-play" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M8 5.5v13l11-6.5z"/></svg>
+</span>
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">9 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250109_135736218.NIGHT.mp4"
+                   data-lightbox-open
+                   data-type="video"
+                   data-full=""
+                   data-video="/media/2025-01/PXL_20250109_135736218.NIGHT.mp4"
+                   data-poster="/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1920.jpg"
+                   data-caption=""
+                   data-meta="9 January 2025"
+                   data-alt="Video from January 2025"
+                   style="--ar: 1.3333; --w: 1920; --h: 1440">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAwCdASocABUAPxl4tFIspyUiqA1RkCMJZwAAHnX9SAN3ia5gAAD+6dNfPDir1DD0ew4EdCY7bE5ufqht+gPA26RzxDxZiRUm0vzAAAA=')">
+                        
+                        <picture>
+                            <source type="image/webp" srcset="/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-640.webp 640w, /media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1280.webp 1280w, /media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1920.webp 1920w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1280.jpg" srcset="/media/_generated/d90ddb252c21/pxl-20250109-135736218-night-640.jpg 640w, /media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1280.jpg 1280w, /media/_generated/d90ddb252c21/pxl-20250109-135736218-night-1920.jpg 1920w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="1920" height="1440" alt="Video from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                        <span class="play-badge play-badge--small" aria-hidden="true">
+<svg class="icon icon-play" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M8 5.5v13l11-6.5z"/></svg>
+</span>
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">9 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250109_142144320.NIGHT.mp4"
+                   data-lightbox-open
+                   data-type="video"
+                   data-full=""
+                   data-video="/media/2025-01/PXL_20250109_142144320.NIGHT.mp4"
+                   data-poster="/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1440.jpg"
+                   data-caption=""
+                   data-meta="9 January 2025"
+                   data-alt="Video from January 2025"
+                   style="--ar: 0.75; --w: 1440; --h: 1920">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwBgCdASocACUAPv1qqlCrJiQiurmYAWAfiWcA0fgh4BwLDqZiGubmS6+3/LnZ+tcw8jNpsN9AvLU4AP7sr7vMk6mDVuTJ2SASWilOs+whSAo+hNlgWVq32TVfXb0HbowAAA==')">
+                        
+                        <picture>
+                            <source type="image/webp" srcset="/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-640.webp 640w, /media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1280.webp 1280w, /media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1440.webp 1440w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1280.jpg" srcset="/media/_generated/5f7893d0e025/pxl-20250109-142144320-night-640.jpg 640w, /media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1280.jpg 1280w, /media/_generated/5f7893d0e025/pxl-20250109-142144320-night-1440.jpg 1440w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="1440" height="1920" alt="Video from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                        <span class="play-badge play-badge--small" aria-hidden="true">
+<svg class="icon icon-play" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M8 5.5v13l11-6.5z"/></svg>
+</span>
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">9 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250109_110036531.MP.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250109_110036531.MP.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="9 January 2025 · Pixel 8 · f/1.68 · 1/722s · ISO 20 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQBACdASocABUAPxl0s1CspqSisBgMAZAjCUAWHYIiPaY4LSM8eQfyIJQFRpKXwAD93E8AmC7pvUnmbI+Bjq2lksUrBPTfbj5ABxTE4ZIyCzBYwAwoqA9CEKNf+VvezwrSZ5oVgAA=')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-640.avif 640w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1280.avif 1280w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1920.avif 1920w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-640.webp 640w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1280.webp 1280w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1920.webp 1920w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1280.jpg" srcset="/media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-640.jpg 640w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1280.jpg 1280w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-1920.jpg 1920w, /media/_generated/190e9a69ac03/pxl-20250109-110036531-mp-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">9 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250109_172622142.NIGHT.mp4"
+                   data-lightbox-open
+                   data-type="video"
+                   data-full=""
+                   data-video="/media/2025-01/PXL_20250109_172622142.NIGHT.mp4"
+                   data-poster="/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1440.jpg"
+                   data-caption=""
+                   data-meta="9 January 2025"
+                   data-alt="Video from January 2025"
+                   style="--ar: 0.75; --w: 1440; --h: 1920">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQBACdASocACUAPxV2sFC/p7QisAqr8CKJZwAAeN3DVHUfdJt4JoY54AD+7lbHPtlJ7fhrEDfWHhQhlTS0an7WatKtgR2z4duPhIbgI2ZLXIXvHAAAAA==')">
+                        
+                        <picture>
+                            <source type="image/webp" srcset="/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-640.webp 640w, /media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1280.webp 1280w, /media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1440.webp 1440w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1280.jpg" srcset="/media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-640.jpg 640w, /media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1280.jpg 1280w, /media/_generated/7e43a1970d0e/pxl-20250109-172622142-night-1440.jpg 1440w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="1440" height="1920" alt="Video from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                        <span class="play-badge play-badge--small" aria-hidden="true">
+<svg class="icon icon-play" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M8 5.5v13l11-6.5z"/></svg>
+</span>
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">9 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250109_135735902.NIGHT.RAW-01.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250109_135735902.NIGHT.RAW-01.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="9 January 2025 · Pixel 8 · f/1.68 · 16s · ISO 121 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQBACdASocABUAPxl4tVIspyUiqA1RkCMJZQDNhA3j+6eAGA9X5S2PdD6b2BOWwAD+5aZcOnl+cb5xQYT2oxT3ms8QjVqsG2EBsmiFL1VF5vQ1gqvpAAAA')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-640.avif 640w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1280.avif 1280w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1920.avif 1920w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-640.webp 640w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1280.webp 1280w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1920.webp 1920w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1280.jpg" srcset="/media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-640.jpg 640w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1280.jpg 1280w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-1920.jpg 1920w, /media/_generated/a0477013d9d8/pxl-20250109-135735902-night-raw-01-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">9 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250109_142143117.NIGHT.RAW-01.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250109_142143117.NIGHT.RAW-01.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="9 January 2025 · Pixel 8 · f/1.68 · 16s · ISO 27 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 0.7529; --w: 3072; --h: 4080">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQBQCdASocACUAPwVsqlCrpiOitUgBcCCJZQDLpC03MnwWYrp8cLIX+5B7N/KJQbbL21fXNAoQAP7sPanpvAXYjTmh7khBAh78bjOhiLfb52V5Jy/H7grdf0rPDbwAu3A87mBSM0UwwLfQgCGgAA==')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-640.avif 640w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1280.avif 1280w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1920.avif 1920w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-640.webp 640w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1280.webp 1280w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1920.webp 1920w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1280.jpg" srcset="/media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-640.jpg 640w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1280.jpg 1280w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-1920.jpg 1920w, /media/_generated/aa5946160517/pxl-20250109-142143117-night-raw-01-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">9 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250109_172620883.NIGHT.RAW-01.COVER~2.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250109_172620883.NIGHT.RAW-01.COVER~2.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="9 January 2025 · Pixel 8 · f/1.68 · 16s · ISO 397 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 0.7529; --w: 3072; --h: 4080">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABQBACdASocACUAPxV6sFCsqCSisBqqqZAiiWcAAKsvl+dlp+tW2Y9wO6QAAP7w+F7KfaatUTyf1JSgq40Oor9zptGZlQAA')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-640.avif 640w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1280.avif 1280w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1920.avif 1920w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-640.webp 640w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1280.webp 1280w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1920.webp 1920w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1280.jpg" srcset="/media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-640.jpg 640w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1280.jpg 1280w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-1920.jpg 1920w, /media/_generated/5ba6df5b5857/pxl-20250109-172620883-night-raw-01-cover-2-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">9 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250110_095619568.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250110_095619568.RAW-01.MP.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="10 January 2025 · Pixel 8 · f/1.68 · 1/125s · ISO 19 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBQCdASocABUAPxlus1GspaSisBgMAZAjCWQAAC2hX3rbbrVaqGNY0VnXIKhEtAuvAAD+y5NGmHss3KbPO7Se9lNX5SrXgWYYTEtl0K2/tVSd3G/ASTgzT+C18TkRhSsgoroY+fzVumsISGmGyAAA')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-640.avif 640w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1280.avif 1280w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1920.avif 1920w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-640.webp 640w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1280.webp 1280w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1920.webp 1920w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1280.jpg" srcset="/media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-640.jpg 640w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/216587a1c368/pxl-20250110-095619568-raw-01-mp-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">10 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250110_095911047.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250110_095911047.RAW-01.MP.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="10 January 2025 · Pixel 8 · f/1.68 · 1/251s · ISO 20 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 0.7529; --w: 3072; --h: 4080">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQBQCdASocACUAPxF2rVCsJ6QitVgIAYAiCUAABvRoXR/CBCiw6/W48XxRT/24rDt0QAAA+t9nb/lalFA++5u91wOTMIPZClvl90mSd+PUoh4HRRF1OGBzqPslMsiDREE/esgH5Cin2VItXYtvpe/DgAA=')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-640.avif 640w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1280.avif 1280w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1920.avif 1920w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-640.webp 640w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1280.webp 1280w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1920.webp 1920w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1280.jpg" srcset="/media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-640.jpg 640w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/12238e8e3705/pxl-20250110-095911047-raw-01-mp-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">10 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250110_100502362.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250110_100502362.RAW-01.MP.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="10 January 2025 · Pixel 8 · f/1.68 · 1/336s · ISO 18 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABwBACdASocABUAPxl2tFOspqSisBgIAZAjCUAZQAaFJRVrtaksbAAkAddgwAD+6clsEZNKsn1rbz543WJb8rBS8bTK7170T4e15Fz+m64qJ2MiR8lMTcyAthlMJKw5Q6gAAA==')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-640.avif 640w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1280.avif 1280w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1920.avif 1920w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-640.webp 640w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1280.webp 1280w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1920.webp 1920w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1280.jpg" srcset="/media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-640.jpg 640w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/597e89b207d6/pxl-20250110-100502362-raw-01-mp-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">10 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250110_100535413.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250110_100535413.RAW-01.MP.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="10 January 2025 · Pixel 8 · f/1.68 · 1/585s · ISO 189 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQBACdASocABUAPwlwslCrpqUisAwBcCEJQBndhTEDO5Cx3gtbUmOs8AD+2JnxrrELGEhiMNAXtpSEk8JA2w3cXbihWTNcAaD+4j7cpIkOUHdeAgAAAA==')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-640.avif 640w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1280.avif 1280w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1920.avif 1920w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-640.webp 640w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1280.webp 1280w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1920.webp 1920w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1280.jpg" srcset="/media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-640.jpg 640w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/8a20c03cb5ab/pxl-20250110-100535413-raw-01-mp-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">10 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250110_104432904.RAW-01.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250110_104432904.RAW-01.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="10 January 2025 · Pixel 8 · f/1.68 · 1/495s · ISO 28 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 0.7529; --w: 3072; --h: 4080">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAABwBQCdASocACUAPxl6rlCsqCQisBVdUZAjCWMAAJTuptgDEgm8tWV6JFhBOzq+sKyeqhwAAP7twx9ITWlwafOwQHKZ9mvZKNKy2GMURAohuvIxNfv8yBuPkl1Hzol5JK6JvEtP4KVgIBi+LU7EdNtFUAAAAA==')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-640.avif 640w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1280.avif 1280w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1920.avif 1920w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-640.webp 640w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1280.webp 1280w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1920.webp 1920w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1280.jpg" srcset="/media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-640.jpg 640w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1280.jpg 1280w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-1920.jpg 1920w, /media/_generated/01d4358d12b8/pxl-20250110-104432904-raw-01-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">10 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250111_034327532.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250111_034327532.RAW-01.MP.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="11 January 2025 · Pixel 8 · f/1.68 · 1/368s · ISO 20 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 0.7529; --w: 3072; --h: 4080">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACQBQCdASocACUAPwVsrVCrpiSitVv8AXAgiUAZmgPBzduvkVa0ERXTQ+L9G4EFYG5wl9I2IAD+3uxF3vHqebStaJ2EOuNyiJdupa9FfsRUByccy9ZB56ns0fqZ2gZqIGGuXZaUl1FsrumkVjOEyt8g+8yWyOiIEc2jPOAA')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-640.avif 640w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1280.avif 1280w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1920.avif 1920w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-640.webp 640w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1280.webp 1280w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1920.webp 1920w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1280.jpg" srcset="/media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-640.jpg 640w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/e46c7a1a4005/pxl-20250111-034327532-raw-01-mp-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">11 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250111_044044542.RAW-01.MP.COVER~2.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250111_044044542.RAW-01.MP.COVER~2.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="11 January 2025 · Pixel 8 · f/1.68 · 1/727s · ISO 21 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQBACdASocABUAPxl8tFGsqCUisAgBkCMJQBdgA9XQttDVhzO1p4cwwoPwmfHgAAD+kUUhuhEsQbhDzUpcLroe5J5dSmMH61GkBwswHRM3wjtvTZ1eWRugOSGbGohuiR5lL0fFLVY/uvliAAA=')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-640.avif 640w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1280.avif 1280w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1920.avif 1920w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-640.webp 640w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1280.webp 1280w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1920.webp 1920w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1280.jpg" srcset="/media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-640.jpg 640w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1280.jpg 1280w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-1920.jpg 1920w, /media/_generated/0bc37f2727cd/pxl-20250111-044044542-raw-01-mp-cover-2-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">11 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250111_092447880.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250111_092447880.RAW-01.MP.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="11 January 2025 · Pixel 8 · f/1.68 · 1/1312s · ISO 23 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwBQCdASocABUAPxlusVCspiSit/VYAZAjCUAVhmyANOltdEc9VWffE/nD42HL+YiMhGwAAP6Qbn24aaHoNzOpQsfe5YZYc+QlDyRSsrOwIm8FIhH2xyYLgvyljWDLaaU59HQA')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-640.avif 640w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1280.avif 1280w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1920.avif 1920w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-640.webp 640w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1280.webp 1280w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1920.webp 1920w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1280.jpg" srcset="/media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-640.jpg 640w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/62a69530d523/pxl-20250111-092447880-raw-01-mp-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">11 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250111_093849726.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250111_093849726.RAW-01.MP.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="11 January 2025 · Pixel 8 · f/1.68 · 1/776s · ISO 22 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwBQCdASocABUAPxmCtlSsqKSjKAqpkCMJQBdmbI+JgOFGJ0oLccz6S1ua7Oof77nFQAD+36Zk1WHf7Xd9HK7KlaW/gKlpr3CD9aUJZoNnG6OqMkm0I08G5cFrO8lCaWwAAA==')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-640.avif 640w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1280.avif 1280w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1920.avif 1920w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-640.webp 640w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1280.webp 1280w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1920.webp 1920w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1280.jpg" srcset="/media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-640.jpg 640w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/a66202576ef4/pxl-20250111-093849726-raw-01-mp-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">11 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250111_100825345.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250111_100825345.RAW-01.MP.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="11 January 2025 · Pixel 8 · f/2.2 · 1/364s · ISO 46 · 1.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABQBACdASocABUAPxmCtFUsqKSoqAqpkCMJZAC90A3qaOzHN/83bOQuyc8AAP6RpyAQ1sBJX+liiGDyHNdo7UfoZaZCroohfznSFqxqpKV8mVzeIEmJLtQDZv58AwgXpzUXbZSdvV3MDmWv/sYAAA==')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-640.avif 640w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1280.avif 1280w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1920.avif 1920w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-640.webp 640w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1280.webp 1280w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1920.webp 1920w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1280.jpg" srcset="/media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-640.jpg 640w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/9f1c15689007/pxl-20250111-100825345-raw-01-mp-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">11 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250111_114852264.RAW-01.MP.COVER~2.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250111_114852264.RAW-01.MP.COVER~2.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="11 January 2025 · Pixel 8 · f/1.68 · 1/165s · ISO 161 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQBQCdASocABUAPxlssVCspSSisBgMAZAjCWMAyrQQ78HuUPZFBl5BC9LrjqM3bTukFuAA/tNMeM+MDWeYgfb4i2+kyO1g1IobDSUFgcd7twETxToS77v31Bj0teQAAAA=')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-640.avif 640w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1280.avif 1280w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1920.avif 1920w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-640.webp 640w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1280.webp 1280w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1920.webp 1920w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1280.jpg" srcset="/media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-640.jpg 640w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1280.jpg 1280w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-1920.jpg 1920w, /media/_generated/43551e33fcf6/pxl-20250111-114852264-raw-01-mp-cover-2-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">11 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/_generated/27bdb6657cb7/video/pxl-20250112-075339273.mp4"
+                   data-lightbox-open
+                   data-type="video"
+                   data-full=""
+                   data-video="/media/_generated/27bdb6657cb7/video/pxl-20250112-075339273.mp4"
+                   data-poster="/media/_generated/0831c8be22c5/pxl-20250112-075339273-1920.jpg"
+                   data-caption=""
+                   data-meta="12 January 2025"
+                   data-alt="Video from January 2025"
+                   style="--ar: 1.7778; --w: 1920; --h: 1080">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAwCdASocABAAPxl4tlGspyUisAgBkCMJZQDImCGZcM4tdizNjNkAAP6dHU2K9tdwZEv4isVKIoqEWVNFJbPc9zg804MMYxPCRWWAAAA=')">
+                        
+                        <picture>
+                            <source type="image/webp" srcset="/media/_generated/0831c8be22c5/pxl-20250112-075339273-640.webp 640w, /media/_generated/0831c8be22c5/pxl-20250112-075339273-1280.webp 1280w, /media/_generated/0831c8be22c5/pxl-20250112-075339273-1920.webp 1920w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/0831c8be22c5/pxl-20250112-075339273-1280.jpg" srcset="/media/_generated/0831c8be22c5/pxl-20250112-075339273-640.jpg 640w, /media/_generated/0831c8be22c5/pxl-20250112-075339273-1280.jpg 1280w, /media/_generated/0831c8be22c5/pxl-20250112-075339273-1920.jpg 1920w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="1920" height="1080" alt="Video from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                        <span class="play-badge play-badge--small" aria-hidden="true">
+<svg class="icon icon-play" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M8 5.5v13l11-6.5z"/></svg>
+</span>
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">12 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250112_050501350.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250112_050501350.RAW-01.MP.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="12 January 2025 · Pixel 8 · f/1.68 · 1/863s · ISO 21 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQBQCdASocABUAPxl4tlOspqUisBgIAZAjCWUAvdAQ70xq+0LBns+3kpd8Ylho8PItoAAA/tL/9wJRii8pq740efZwfLZFCsDqJHV4kr1dUDbVqSdT78emWg+EHYkAAAA=')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-640.avif 640w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1280.avif 1280w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1920.avif 1920w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-640.webp 640w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1280.webp 1280w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1920.webp 1920w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1280.jpg" srcset="/media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-640.jpg 640w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/9344ec1fc5d4/pxl-20250112-050501350-raw-01-mp-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">12 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250112_081654903.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250112_081654903.RAW-01.MP.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="12 January 2025 · Pixel 8 · f/1.68 · 1/749s · ISO 35 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 0.7529; --w: 3072; --h: 4080">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACwBACdASocACUAPxl6tFMsp6SiqqoBkCMJZ2d7WG0JusRzJPcwtzi4AqOIOP4wAP7Y5Uwb+3DV6CdwCpm9oglVLoPGyJLbNPEFWWvzeIGepwAO03D4hVGll/GazO+VHTWi3W9eGZmjk2GnWT4AAA==')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-640.avif 640w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1280.avif 1280w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1920.avif 1920w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-640.webp 640w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1280.webp 1280w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1920.webp 1920w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1280.jpg" srcset="/media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-640.jpg 640w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/18c9a0b0c702/pxl-20250112-081654903-raw-01-mp-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">12 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250112_095455730.RAW-01.MP.COVER~2.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250112_095455730.RAW-01.MP.COVER~2.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="12 January 2025 · Pixel 8 · f/1.68 · 1/434s · ISO 96 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 0.7529; --w: 3072; --h: 4080">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABwBgCdASocACUAPxl2slQspqQjMBVaqZAjCWcAx2wuHd0zVEnMsxkRiD6xycrOFgil6vjMxy6VtdmktiAA/I7YKUiwqT4JMeDX/qcE907qWuPMtbBjAXuOphNZH9j6CJtc1S/bxAoglO0HL6UK7IcUeFHkJYN5Nd4qJC2YQwoU3aHPmhVNkujJvIgAAA==')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-640.avif 640w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1280.avif 1280w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1920.avif 1920w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-640.webp 640w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1280.webp 1280w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1920.webp 1920w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1280.jpg" srcset="/media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-640.jpg 640w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1280.jpg 1280w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-1920.jpg 1920w, /media/_generated/1bd8219e751f/pxl-20250112-095455730-raw-01-mp-cover-2-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">12 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250112_113712103.RAW-01.MP.COVER~2.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250112_113712103.RAW-01.MP.COVER~2.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="12 January 2025 · Pixel 8 · f/1.68 · 1/290s · ISO 127 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwBQCdASocABUAPwlsr1CrpaSit/qoAXAhCWcAzfwexxIEcWkemj7yzCdaWeIcOrMlAAD+r3DJqlqHfH8AR2MZT7RRTUyZdEI4+XczQG2TUQluzfCwpVCCQQegWdD5pPSkxz/JPIAAAA==')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-640.avif 640w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1280.avif 1280w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1920.avif 1920w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-640.webp 640w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1280.webp 1280w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1920.webp 1920w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1280.jpg" srcset="/media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-640.jpg 640w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1280.jpg 1280w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-1920.jpg 1920w, /media/_generated/38c7955df038/pxl-20250112-113712103-raw-01-mp-cover-2-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">12 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250113_085427814.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250113_085427814.RAW-01.MP.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="13 January 2025 · Pixel 8 · f/1.68 · 1/829s · ISO 21 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAwCdASocABUAPxl2sVCspySisAgBkCMJQBTihDvvbB7lygvIqgAA/lCJbax43QqDJhBLjgKQMHcRHNWRzECVLKmdWnC/Zdk5sxGpDoZHdAgA')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-640.avif 640w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1280.avif 1280w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1920.avif 1920w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-640.webp 640w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1280.webp 1280w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1920.webp 1920w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1280.jpg" srcset="/media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-640.jpg 640w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/ee6d352eb425/pxl-20250113-085427814-raw-01-mp-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">13 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250113_093209046.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250113_093209046.RAW-01.MP.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="13 January 2025 · Pixel 8 · f/1.68 · 1/1727s · ISO 20 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQBACdASocABUAPxl2tVEspyUiqA1RkCMJYwANiMCUwDPwviFHp9oNkS7dfLEHdADqzcdHY39d/8GU3b3N1AKw9ml5X77De+OmD4vD2DMDjO6+7TP6f0wAAAA=')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-640.avif 640w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1280.avif 1280w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1920.avif 1920w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-640.webp 640w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1280.webp 1280w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1920.webp 1920w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1280.jpg" srcset="/media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-640.jpg 640w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/1c007365f38d/pxl-20250113-093209046-raw-01-mp-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">13 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250113_121833485.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250113_121833485.RAW-01.MP.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="13 January 2025 · Pixel 8 · f/1.68 · 1/100s · ISO 365 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQBACdASocABUAPxV6sFCsqCSisBgMAZAiiWMArAAMTH86Qxe373bmYJVA6lFnQAD+4zmxOejMAspVsopR9T6TLUzXJbQ0dMoLc7RrixFgs/MoC+cakrBva5UPAzkPaLggAA==')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-640.avif 640w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1280.avif 1280w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1920.avif 1920w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-640.webp 640w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1280.webp 1280w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1920.webp 1920w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1280.jpg" srcset="/media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-640.jpg 640w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/05f7ba4a896e/pxl-20250113-121833485-raw-01-mp-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">13 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250113_123235872.RAW-01.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250113_123235872.RAW-01.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="13 January 2025 · Pixel 8 · f/1.68 · 1/121s · ISO 19 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 0.7529; --w: 3072; --h: 4080">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBQCdASocACUAPwFoqVCrJiOiurmYAWAgCWMAvOAh35tjm5etzT3HoG17MulkAcVwZRSwAP7K+dC1viIrAq9iZhPn2rYr3fKhKLMr49j5/sGh1OKkHXmprO5jPLpQDR6V+hqurG/rbjnqHJm7W6YSK3Zuy+LtcISJ4sjqoP99c4dkgj8HgAAA')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-640.avif 640w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1280.avif 1280w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1920.avif 1920w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-640.webp 640w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1280.webp 1280w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1920.webp 1920w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1280.jpg" srcset="/media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-640.jpg 640w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1280.jpg 1280w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-1920.jpg 1920w, /media/_generated/90d4f9095c1a/pxl-20250113-123235872-raw-01-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="3072" height="4080" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">13 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250114_075453425.RAW-01.MP.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250114_075453425.RAW-01.MP.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="14 January 2025 · Pixel 8 · f/1.68 · 1/1311s · ISO 20 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQBACdASocABUAPxlys1GspqSisBgMAZAjCUAXZfqQOZY2peAXk7nBmbkAAP3gPyM0s54vNv9awexZ0ut5OsVJL/5ButUUOTOQfU0cntJ26a4tTMFr/ulYYAAAAA==')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-640.avif 640w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1280.avif 1280w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1920.avif 1920w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-640.webp 640w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1280.webp 1280w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1920.webp 1920w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1280.jpg" srcset="/media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-640.jpg 640w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1280.jpg 1280w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-1920.jpg 1920w, /media/_generated/e391dedef345/pxl-20250114-075453425-raw-01-mp-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">14 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250114_121403126.RAW-01.MP.COVER~2.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250114_121403126.RAW-01.MP.COVER~2.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="14 January 2025 · Pixel 8 · f/1.68 · 1/152s · ISO 21 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAACQBACdASocABUAPw1ur1CsJqQisAwBgCGJYwDM0CHW7VCfGBQ2eN0F9xbZwAAA/lmIz/8z6FBtS+X2fHJqjaANil650vRzBO5Op9fI3AK5k28AAAA=')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-640.avif 640w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1280.avif 1280w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1920.avif 1920w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-640.webp 640w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1280.webp 1280w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1920.webp 1920w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1280.jpg" srcset="/media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-640.jpg 640w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1280.jpg 1280w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-1920.jpg 1920w, /media/_generated/c95f3f4e9ccb/pxl-20250114-121403126-raw-01-mp-cover-2-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">14 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250114_121412364.RAW-01.MP.COVER~2.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250114_121412364.RAW-01.MP.COVER~2.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="14 January 2025 · Pixel 8 · f/1.68 · 1/47s · ISO 24 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwBACdASocABUAPxl4tFMspqSisBgIAZAjCUAWIaQAK0+0PD+fID6ymtapqIwAAP6vcN/oCwbr6+0DLpiM+IKgDWoOjATLrOEO70iKKSQcBT5yzT2LHudJ9bEE3YcZeK62jBdkAAA=')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-640.avif 640w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1280.avif 1280w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1920.avif 1920w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-640.webp 640w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1280.webp 1280w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1920.webp 1920w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1280.jpg" srcset="/media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-640.jpg 640w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1280.jpg 1280w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-1920.jpg 1920w, /media/_generated/bf939ef53f6d/pxl-20250114-121412364-raw-01-mp-cover-2-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">14 Jan 2025</span>
+                    </span>
+                </a>
+                
+                <a class="grid-item" href="/media/2025-01/PXL_20250114_175101271.RAW-01.COVER.jpg"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2025-01/PXL_20250114_175101271.RAW-01.COVER.jpg"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="14 January 2025 · Pixel 8 · f/1.68 · 1/3s · ISO 1626 · 6.9mm"
+                   data-alt="Photo from January 2025"
+                   style="--ar: 1.3281; --w: 4080; --h: 3072">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABwBACdASocABUAPwV0slCrp6UisAwBcCCJZQCw7FfwtJK+WBzG3RpAdf7JAAD+9CpznaQHLx//wN+yKA4Ex+IIQDuK9HtRx9UVxmX5JG2RKabVyRSN1BgA')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-640.avif 640w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1280.avif 1280w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1920.avif 1920w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-640.webp 640w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1280.webp 1280w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1920.webp 1920w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1280.jpg" srcset="/media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-640.jpg 640w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1280.jpg 1280w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-1920.jpg 1920w, /media/_generated/289d7ce24fea/pxl-20250114-175101271-raw-01-cover-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="4080" height="3072" alt="Photo from January 2025" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">14 Jan 2025</span>
+                    </span>
+                </a>
+                
+            </div>
+        </section>
+        
+        <section class="album" aria-labelledby="album-2022-08">
+            <header class="album-head">
+                <div>
+                    <h2 id="album-2022-08">August 2022</h2>
+                    <p class="album-meta">
+                        1 photos
+                    </p>
+                </div>
+                
+            </header>
+
+            <div class="photo-grid">
+                
+                <a class="grid-item" href="/media/2022-08/IMG_8601.JPG"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="/media/2022-08/IMG_8601.JPG"
+                   data-video=""
+                   data-poster=""
+                   data-caption=""
+                   data-meta="3 September 2022 · EOS 200D II · f/13 · 1/160s · ISO 400 · 18mm"
+                   data-alt="Photo from August 2022"
+                   style="--ar: 1.5; --w: 6000; --h: 4000">
+                    <span class="grid-media" style="background-image:url('data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQBACdASocABMAPxl8slKsriSisBgIAcAjCWUAnTOFNMAH5beKzy3BAAD+iuwJfAnKKXMjeNc6cu5U0c9SdnlDmgWvQ6t+qflHb8Bi0irhAAAA')">
+                        
+                        <picture>
+                            <source type="image/avif" srcset="/media/_generated/d87970aee8e0/img-8601-640.avif 640w, /media/_generated/d87970aee8e0/img-8601-1280.avif 1280w, /media/_generated/d87970aee8e0/img-8601-1920.avif 1920w, /media/_generated/d87970aee8e0/img-8601-2560.avif 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="/media/_generated/d87970aee8e0/img-8601-640.webp 640w, /media/_generated/d87970aee8e0/img-8601-1280.webp 1280w, /media/_generated/d87970aee8e0/img-8601-1920.webp 1920w, /media/_generated/d87970aee8e0/img-8601-2560.webp 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="/media/_generated/d87970aee8e0/img-8601-1280.jpg" srcset="/media/_generated/d87970aee8e0/img-8601-640.jpg 640w, /media/_generated/d87970aee8e0/img-8601-1280.jpg 1280w, /media/_generated/d87970aee8e0/img-8601-1920.jpg 1920w, /media/_generated/d87970aee8e0/img-8601-2560.jpg 2560w" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="6000" height="4000" alt="Photo from August 2022" loading="lazy" decoding="async">
+                        </picture>
+                        
+                        
+                    </span>
+                    <span class="grid-caption">
+                        
+                        <span class="grid-date">3 Sep 2022</span>
+                    </span>
+                </a>
+                
+            </div>
+        </section>
+        
+    </div>
+    
+
+    <dialog class="lightbox" data-lightbox aria-label="Photo viewer">
+        <div class="lightbox-bar">
+            <span class="lightbox-counter" data-lightbox-counter></span>
+            <button type="button" class="lightbox-close" data-lightbox-close aria-label="Close viewer">
+                
+<svg class="icon icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+
+            </button>
+        </div>
+        <button type="button" class="lightbox-nav lightbox-nav--prev" data-lightbox-prev aria-label="Previous">
+            
+<svg class="icon icon-chevron-left" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="15 18 9 12 15 6"/></svg>
+
+        </button>
+        <figure class="lightbox-figure">
+            <div class="lightbox-media" data-lightbox-media></div>
+            <figcaption>
+                <span class="lightbox-caption" data-lightbox-caption></span>
+                <span class="lightbox-meta" data-lightbox-meta></span>
+            </figcaption>
+        </figure>
+        <button type="button" class="lightbox-nav lightbox-nav--next" data-lightbox-next aria-label="Next">
+            
+<svg class="icon icon-chevron-right" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="9 18 15 12 9 6"/></svg>
+
+        </button>
+    </dialog>
+</div>
+
+
+        </main>
+    </div>
+
+    
+    <footer class="site-footer">
+    <div class="footer-inner">
+        <a class="footer-name" href="/">Zain Siddavatam</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="/feed.xml">RSS</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="mailto:hi@zainsv.me">Email</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="#top">Back to top</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <span class="footer-copy">© 2026</span>
+    </div>
+</footer>
+
+    
+
+    <script src="/js/site.js" defer></script>
+    
+    <script src="/js/gallery.js" defer></script>
+    
+</body>
+</html>

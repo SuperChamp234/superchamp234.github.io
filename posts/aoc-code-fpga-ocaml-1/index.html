@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Eleventy v3.1.2">
+    <meta name="color-scheme" content="light">
+
+    <script>
+        document.documentElement.classList.add("js");
+    </script>
+
+    
+
+    
+
+    <title>Working on AOC and Advent of FPGA??!!! OCAML??? Part 1</title>
+    <meta name="description" content="Article by Zain Siddavatam">
+
+    <link rel="canonical" href="https://zainsv.me/posts/aoc-code-fpga-ocaml-1/">
+
+    
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://zainsv.me/posts/aoc-code-fpga-ocaml-1/">
+    <meta property="og:title" content="Working on AOC and Advent of FPGA??!!! OCAML??? Part 1">
+    <meta property="og:description" content="Article by Zain Siddavatam">
+    <meta property="og:site_name" content="Zain Siddavatam">
+    
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zainsv.me/posts/aoc-code-fpga-ocaml-1/">
+    <meta property="twitter:title" content="Working on AOC and Advent of FPGA??!!! OCAML??? Part 1">
+    <meta property="twitter:description" content="Article by Zain Siddavatam">
+    
+
+    <meta name="theme-color" content="#f3e3d2">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ffffff'/%3E%3Cg fill='none' stroke='%231c2732' stroke-width='4'%3E%3Cpath d='M14 22h8l4-6h12l4 6h8v26H14z'/%3E%3Ccircle cx='32' cy='34' r='9'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="alternate" type="application/rss+xml" title="Zain Siddavatam" href="/feed.xml">
+
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <link rel="stylesheet" href="/css/prism.css">
+    
+
+    
+</head>
+<body id="top" class="page-post">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-site-header>
+    <div class="header-inner">
+        <nav class="primary-nav" id="primary-nav" aria-label="Primary" data-primary-nav>
+            <a href="/" >Home</a>
+            <a href="/blog/" aria-current="page">Blog</a>
+            <a href="/gallery/" >Gallery</a>
+            <a href="/resume/" >Resume</a>
+        </nav>
+
+        <div class="header-meta">
+            <span class="header-updated">updated 27 November 2026</span>
+            <a class="header-rss" href="/feed.xml">RSS</a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+                <span>Menu</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+    
+
+    <div class="site-wrap">
+        
+        <aside class="sidebar" aria-label="Site sidebar">
+    <section class="widget">
+        <h2 class="widget-title">Elsewhere</h2>
+        <div class="widget-body">
+            <ul class="widget-list">
+                
+                <li>
+                    <a href="https://github.com/superchamp234" target="_blank" rel="noopener">GitHub</a>
+                    <span class="widget-handle">@SuperChamp234</span>
+                </li>
+                
+                <li>
+                    <a href="https://x.com/ZSiddavatam" target="_blank" rel="noopener">Twitter / X</a>
+                    <span class="widget-handle">@ZSiddavatam</span>
+                </li>
+                
+                <li>
+                    <a href="https://www.linkedin.com/in/zain-siddavatam" target="_blank" rel="noopener">LinkedIn</a>
+                    <span class="widget-handle">/zain-siddavatam</span>
+                </li>
+                
+                <li>
+                    <a href="https://bsky.app/profile/zainsv.me" target="_blank" rel="noopener">Bluesky</a>
+                    <span class="widget-handle">@zainsv.me</span>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+
+    
+    <section class="widget">
+        <h2 class="widget-title">Archive</h2>
+        <div class="widget-body">
+            <ul class="widget-list widget-list--plain">
+                
+                <li>
+                    <a href="/blog/#year-2025">2025</a>
+                    <span class="widget-count">(7)</span>
+                </li>
+                
+                <li>
+                    <a href="/blog/#year-2024">2024</a>
+                    <span class="widget-count">(1)</span>
+                </li>
+                
+                <li>
+                    <a href="/blog/#year-2023">2023</a>
+                    <span class="widget-count">(1)</span>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+    
+
+    
+
+    <section class="widget">
+        <h2 class="widget-title">Site</h2>
+        <div class="widget-body">
+            <ul class="widget-list widget-list--plain">
+                <li>Updated 27 November 2026</li>
+                <li><a href="/feed.xml">RSS feed</a></li>
+                <li><a href="mailto:hi@zainsv.me">hi@zainsv.me</a></li>
+            </ul>
+            <p class="widget-note">Best viewed at 1024×768.</p>
+        </div>
+    </section>
+</aside>
+
+        
+
+        <main id="main" class="main-panel">
+            
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Working on AOC and Advent of FPGA??!!! OCAML??? Part 1",
+  "datePublished": "2025-12-04T13:37:53.328+00:00",
+  "dateModified": "2025-12-04T13:37:53.328+00:00",
+  "author": {
+    "@type": "Person",
+    "name": "Zain Siddavatam"
+  },
+  "description": "Article by Zain Siddavatam"
+  
+}
+</script>
+
+<article class="post">
+    <header class="post-header">
+        <a class="back-link" href="/blog/">
+<svg class="icon icon-arrow-left" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="11 5 4 12 11 19"/></svg>
+ All posts</a>
+        <p class="post-meta">4 December 2025 · 5 min read</p>
+        <h1>Working on AOC and Advent of FPGA??!!! OCAML??? Part 1</h1>
+        
+        <p class="lede">Article by Zain Siddavatam</p>
+        
+        
+        <ul class="tag-list" aria-label="Tags">
+            
+            
+            <li>blog</li>
+            
+            
+            
+            <li>aoc</li>
+            
+            
+            
+            <li>fpga</li>
+            
+            
+            
+            <li>ocaml</li>
+            
+            
+            
+            
+        </ul>
+        
+    </header>
+
+    <div class="prose">
+        <p>I stumbled across this <a href="https://blog.janestreet.com/advent-of-fpga-challenge-2025/" target="_blank" rel="noopener noreferrer">blog post by Jane Street</a>, which talks about an Advent of FPGA challenge hosted by Jane Street.</p>
+<blockquote>
+<p>This year, we’re inviting the community to join us in that spirit with the 2025 Advent of FPGA Challenge. When the final AoC 2025 puzzle drops, pick any puzzles you like (at least one and up to as many as you want) to build synthesizable RTL with realistic I/O, bonus points if you do it in Hardcaml. We’re excited to see the clever designs created across the academic and open‑source communities, and we’d also love to get more people trying Hardcaml!</p>
+</blockquote>
+<p>Well well well, that sounds like a challenge from the big minds at money making corp. I'm not sure I can keep up with that, but I'll give it a try. I've never used OCaml or Hardcaml before, so lets see how that goes lol. I'll use this blog to kinda give live devel updates.</p>
+<p>I already started and finished day 1 before finding this blog (in rust), so time to port the solution to OCaml.... First thing to do is to go through all the getting started for OCaml...</p>
+<h3>OCaml initial impression</h3>
+<blockquote>
+<p>Since let … = … in … is an expression, it can be used within another expression in order to have several values with their own names:</p>
+</blockquote>
+<pre class="language-ocaml"><code class="language-ocaml"><span class="token punctuation">#</span> <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">1</span> <span class="token keyword">in</span>
+  <span class="token keyword">let</span> b <span class="token operator">=</span> <span class="token number">2</span> <span class="token keyword">in</span>
+    a <span class="token operator">+</span> b<span class="token punctuation">;;</span>
+<span class="token operator">-</span> <span class="token punctuation">:</span> int <span class="token operator">=</span> <span class="token number">3</span>
+</code></pre>
+<p>Ooh I can already smell the functionallishhness of the language.</p>
+<h3>AOC Day 1 and 2</h3>
+<p>After fighting with the <code>utop</code> iteractive executor for a while, I feel exactly how I feel about other functional languages. They are either very well thought out, or maybe they are here to just make my life hard haha. Anyways, the learn section of the website also teaches how to read a file, and extract lines of of it. It didn't take me long to get the first day 1's part 1 working.</p>
+<pre class="language-ocaml"><code class="language-ocaml"><span class="token keyword">let</span> pos_mod a b <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>a <span class="token operator">mod</span> b<span class="token punctuation">)</span> <span class="token operator">+</span> b<span class="token punctuation">)</span> <span class="token operator">mod</span> b
+
+<span class="token keyword">let</span> operate_on_dial dial opt num <span class="token operator">=</span>
+  <span class="token keyword">match</span> opt <span class="token keyword">with</span>
+  <span class="token operator">|</span> <span class="token char">'L'</span> <span class="token operator">-></span> pos_mod <span class="token punctuation">(</span>dial <span class="token operator">-</span> num <span class="token operator">+</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token number">100</span>
+  <span class="token operator">|</span> <span class="token char">'R'</span> <span class="token operator">-></span> pos_mod <span class="token punctuation">(</span>dial <span class="token operator">+</span> num<span class="token punctuation">)</span> <span class="token number">100</span>
+  <span class="token operator">|</span> <span class="token punctuation">_</span> <span class="token operator">-></span> failwith <span class="token string">"unexpected operation on dial"</span>
+
+<span class="token keyword">let</span> day1_part_1 lines dial <span class="token operator">=</span>
+  <span class="token keyword">let</span> <span class="token keyword">rec</span> process_list acc dial lines <span class="token operator">=</span>
+    <span class="token keyword">match</span> lines <span class="token keyword">with</span>
+    <span class="token operator">|</span> <span class="token punctuation">[</span> <span class="token string">""</span> <span class="token punctuation">]</span> <span class="token operator">-></span> acc
+    <span class="token operator">|</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">-></span> acc
+    <span class="token operator">|</span> elem <span class="token punctuation">::</span> rem <span class="token operator">-></span>
+        <span class="token keyword">let</span> opt <span class="token operator">=</span> elem<span class="token punctuation">.</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">in</span>
+        <span class="token keyword">let</span> num <span class="token operator">=</span> int_of_string <span class="token punctuation">(</span>String<span class="token punctuation">.</span>sub elem <span class="token number">1</span> <span class="token punctuation">(</span>String<span class="token punctuation">.</span>length elem <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">in</span>
+        <span class="token keyword">let</span> new_dial <span class="token operator">=</span> operate_on_dial dial opt num <span class="token keyword">in</span>
+        <span class="token keyword">if</span> new_dial <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">then</span> process_list <span class="token punctuation">(</span>acc <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> new_dial rem
+        <span class="token keyword">else</span> process_list acc new_dial rem
+  <span class="token keyword">in</span>
+  process_list <span class="token number">0</span> dial lines
+</code></pre>
+<p>I will upload all solutions on a git somewhere, but this small example gave me quite an introspection in how things are going to be....</p>
+<p>Day 2 was much easier than day 1, very straight forward solution. I had a little trouble with the types, but the langauge features, especially how it infers the type dynamically is very sweet. Also, the inline hints I get from the LSP are super helpful, kinda like how rust-analyzer gives.</p>
+<pre class="language-ocaml"><code class="language-ocaml"><span class="token keyword">let</span> pattern_of pattern len <span class="token operator">=</span>
+  <span class="token keyword">let</span> patstr <span class="token operator">=</span> string_of_int pattern <span class="token keyword">in</span>
+  <span class="token keyword">let</span> pat_len <span class="token operator">=</span> String<span class="token punctuation">.</span>length patstr <span class="token keyword">in</span>
+  <span class="token keyword">if</span> pat_len <span class="token operator">&lt;</span> <span class="token number">1</span> <span class="token keyword">then</span> None
+  <span class="token keyword">else</span> <span class="token keyword">if</span> len <span class="token operator">mod</span> pat_len <span class="token operator">&lt;></span> <span class="token number">0</span> <span class="token keyword">then</span> None
+  <span class="token keyword">else</span>
+    <span class="token keyword">let</span> <span class="token keyword">rec</span> gen acc len_rem <span class="token operator">=</span>
+      <span class="token keyword">if</span> len_rem <span class="token operator">></span> <span class="token number">0</span> <span class="token keyword">then</span> gen <span class="token punctuation">(</span>acc <span class="token operator">^</span> patstr<span class="token punctuation">)</span> <span class="token punctuation">(</span>len_rem <span class="token operator">-</span> pat_len<span class="token punctuation">)</span> <span class="token keyword">else</span> acc
+    <span class="token keyword">in</span>
+    Some <span class="token punctuation">(</span>gen <span class="token string">""</span> len<span class="token punctuation">)</span>
+
+<span class="token keyword">let</span> validate_2 num <span class="token operator">=</span>
+  <span class="token keyword">let</span> str <span class="token operator">=</span> string_of_int num <span class="token keyword">in</span>
+  <span class="token keyword">let</span> len <span class="token operator">=</span> String<span class="token punctuation">.</span>length str <span class="token keyword">in</span>
+  <span class="token keyword">let</span> <span class="token keyword">rec</span> comp idx <span class="token operator">=</span>
+    <span class="token keyword">if</span> idx <span class="token operator">></span> len <span class="token operator">/</span> <span class="token number">2</span> <span class="token keyword">then</span> <span class="token number">0</span>
+    <span class="token keyword">else</span>
+      <span class="token keyword">let</span> new_acc <span class="token operator">=</span> String<span class="token punctuation">.</span>sub str <span class="token number">0</span> idx <span class="token keyword">in</span>
+      <span class="token keyword">let</span> res <span class="token operator">=</span> pattern_of <span class="token punctuation">(</span>int_of_string new_acc<span class="token punctuation">)</span> len <span class="token keyword">in</span>
+      <span class="token keyword">match</span> res <span class="token keyword">with</span>
+      <span class="token operator">|</span> Some pattern <span class="token operator">-></span> <span class="token keyword">if</span> pattern <span class="token operator">=</span> str <span class="token keyword">then</span> num <span class="token keyword">else</span> comp <span class="token punctuation">(</span>idx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+      <span class="token operator">|</span> <span class="token punctuation">_</span> <span class="token operator">-></span> comp <span class="token punctuation">(</span>idx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token keyword">in</span>
+  comp <span class="token number">1</span>
+
+<span class="token keyword">let</span> parse_range func a b <span class="token operator">=</span>
+  <span class="token keyword">let</span> <span class="token keyword">rec</span> iter_range acc inum <span class="token operator">=</span>
+    <span class="token keyword">if</span> inum <span class="token operator">></span> b <span class="token keyword">then</span> acc <span class="token keyword">else</span> iter_range <span class="token punctuation">(</span>acc <span class="token operator">+</span> func inum<span class="token punctuation">)</span> <span class="token punctuation">(</span>inum <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token keyword">in</span>
+  iter_range <span class="token number">0</span> a
+
+<span class="token keyword">let</span> parse_input func arr <span class="token operator">=</span>
+  <span class="token keyword">let</span> <span class="token keyword">rec</span> iter_input acc inp <span class="token operator">=</span>
+    <span class="token keyword">match</span> inp <span class="token keyword">with</span>
+    <span class="token operator">|</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">-></span> acc
+    <span class="token operator">|</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">::</span> res <span class="token operator">-></span> iter_input <span class="token punctuation">(</span>acc <span class="token operator">+</span> parse_range func a b<span class="token punctuation">)</span> res
+  <span class="token keyword">in</span>
+  iter_input <span class="token number">0</span> arr
+
+<span class="token keyword">let</span> day2_part2 inp <span class="token operator">=</span> parse_input validate_2 inp
+</code></pre>
+<p>Some salient language things I like:</p>
+<ul>
+<li>The <code>in</code> thingy. I love how everything is supposed to converge to a context. I think this encourages a lot of thinking on the developer's part instead of just randomly defining stuff anywhere.</li>
+<li><code>match</code> one can never go wrong with pattern matching. Or they can go wrong but the compiler will tell you to cover all those cases. Again, making developer think before they write a very terrible if else if ladder.</li>
+<li>Tail recursion is sweet. I had first checked it out in erlang, and therefore it was not an alien concept this time.</li>
+<li>UTop is great! I write small helper functions and test them out on utop all the time!</li>
+</ul>
+<p>However now it's time to think what creative thing can be done for Advent of FPGA.... recreating the same designs again in HDL isn't going to be that fun.... maybe a general computer which can solve all the problems using a custom programming language like a coprocessor like PRU, which have their own instruction set and can be programmed in a high-level language.</p>
+<p>Let me see... I think I should commit this post for now. You can find all the solutions in my git repo <a href="https://github.com/SuperChamp234/aoc-2025.git" target="_blank" rel="noopener noreferrer">here</a>!</p>
+<p>See you in the next post!</p>
+
+    </div>
+
+    
+    
+    <nav class="post-neighbors" aria-label="More posts">
+        
+        <a class="post-neighbor" href="/posts/aoc-code-fpga-ocaml-2/">
+            <span class="post-neighbor-label">
+<svg class="icon icon-arrow-left" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="20" y1="12" x2="4" y2="12"/><polyline points="11 5 4 12 11 19"/></svg>
+ Newer post</span>
+            <span class="post-neighbor-title">AOC 2025 Part 2 - OCaml Boogaloo</span>
+        </a>
+        
+        
+        <a class="post-neighbor post-neighbor--next" href="/posts/first-job-incoresemi/">
+            <span class="post-neighbor-label">Older post 
+<svg class="icon icon-arrow-right" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+</span>
+            <span class="post-neighbor-title">I started working at InCore Semiconductors</span>
+        </a>
+        
+    </nav>
+    
+
+    <section class="comments" aria-labelledby="comments-heading">
+        <div class="comments-head">
+            <h2 id="comments-heading">Comments</h2>
+            <p>Thoughts, corrections, or a paper I should read?</p>
+        </div>
+        <div class="giscus"
+             data-giscus
+             data-repo="SuperChamp234/superchamp234.github.io"
+             data-repo-id="R_kgDON8UxeQ"
+             data-category="Announcements"
+             data-category-id="DIC_kwDON8Uxec4CrxIJ"
+             data-mapping="title"
+             data-strict="0"
+             data-reactions-enabled="1"
+             data-emit-metadata="0"
+             data-input-position="top"
+             data-theme="light"
+             data-lang="en"
+             data-loading="lazy"></div>
+        <noscript>
+            <p>Comments need JavaScript. You can also email me at <a href="mailto:hi@zainsv.me">hi@zainsv.me</a>.</p>
+        </noscript>
+    </section>
+</article>
+
+        </main>
+    </div>
+
+    
+    <footer class="site-footer">
+    <div class="footer-inner">
+        <a class="footer-name" href="/">Zain Siddavatam</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="/feed.xml">RSS</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="mailto:hi@zainsv.me">Email</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="#top">Back to top</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <span class="footer-copy">© 2026</span>
+    </div>
+</footer>
+
+    
+
+    <script src="/js/site.js" defer></script>
+    
+</body>
+</html>
