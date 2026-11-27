@@ -1,0 +1,59 @@
+<aside class="sidebar" aria-label="Site sidebar">
+    <section class="widget">
+        <h2 class="widget-title">Elsewhere</h2>
+        <div class="widget-body">
+            <ul class="widget-list">
+                {% for link in homepage.social_links %}
+                <li>
+                    <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.title }}</a>
+                    <span class="widget-handle">{{ link.handle }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+    {% if page.url == "/blog/" or "/posts/" in page.url %}
+    <section class="widget">
+        <h2 class="widget-title">Archive</h2>
+        <div class="widget-body">
+            <ul class="widget-list widget-list--plain">
+                {% for group in collections.posts | groupByYear %}
+                <li>
+                    <a href="/blog/#year-{{ group.year }}">{{ group.year }}</a>
+                    <span class="widget-count">({{ group.posts.length }})</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if page.url == "/gallery/" %}
+    <section class="widget">
+        <h2 class="widget-title">Albums</h2>
+        <div class="widget-body">
+            <ul class="widget-list widget-list--plain">
+                {% for album in gallery.albums %}
+                <li>
+                    <a href="/gallery/?view=grid#album-{{ album.id }}">{{ album.title }}</a>
+                    <span class="widget-count">({{ album.photoCount }})</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    {% endif %}
+
+    <section class="widget">
+        <h2 class="widget-title">Site</h2>
+        <div class="widget-body">
+            <ul class="widget-list widget-list--plain">
+                <li>Updated {{ buildDate }}</li>
+                <li><a href="/feed.xml">RSS feed</a></li>
+                <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            </ul>
+            <p class="widget-note">Best viewed at 1024×768.</p>
+        </div>
+    </section>
+</aside>

@@ -1,11 +1,19 @@
-<!-- Navigation Bar Component -->
-<nav class="navbar">
-    <div class="navbar-container">
-        <div class="navbar-menu">
-            <a href="/">Home</a>
-            <a href="/blog">Blog</a>
-            <a href="/gallery">Gallery</a>
-            <a href="/resume">Resume</a>
+<header class="site-header" data-site-header>
+    <div class="header-inner">
+        <nav class="primary-nav" id="primary-nav" aria-label="Primary" data-primary-nav>
+            <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a>
+            <a href="/blog/" {% if page.url == "/blog/" or "/posts/" in page.url %}aria-current="page"{% endif %}>Blog</a>
+            <a href="/gallery/" {% if page.url == "/gallery/" %}aria-current="page"{% endif %}>Gallery</a>
+            <a href="/resume/" {% if page.url == "/resume/" %}aria-current="page"{% endif %}>Resume</a>
+        </nav>
+
+        <div class="header-meta">
+            <span class="header-updated">updated {{ buildDate }}</span>
+            <a class="header-rss" href="/feed.xml">RSS</a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+                <span>Menu</span>
+            </button>
         </div>
     </div>
-</nav>
+</header>

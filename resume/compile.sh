@@ -3,6 +3,9 @@
 # Script to convert LaTeX resume to both HTML and PDF
 # Usage: ./compile.sh [pandoc|latex2html]
 
+# Always run from the resume directory so relative paths work.
+cd "$(dirname "$0")" || exit 1
+
 # Default converter
 CONVERTER="pandoc"
 
@@ -28,20 +31,17 @@ if [ "$CONVERTER" = "latex2html" ] && ! command -v latex2html &> /dev/null; then
     exit 1
 fi
 
-# Check if pdflatex is installed
-if ! command -v pdflatex &> /dev/null; then
-    echo "Warning: pdflatex is not installed. PDF will not be generated."
-    PDF_AVAILABLE=false
-else
-    PDF_AVAILABLE=true
-fi
-
 # Convert the LaTeX file to HTML
 echo "Converting resume.tex to HTML using $CONVERTER..."
 
 if [ "$CONVERTER" = "pandoc" ]; then
+    # Pandoc doesn't understand the resume's custom \resumeBody font macro,
+    # and the contact line uses $|$ separators. Build an HTML-friendly copy.
+    PANDOC_SRC="resume.pandoc.tex"
+    perl -0pe 's/\\newcommand\{\\resumeBody\}\{\\fontsize\{9\.5\}\{12\.3\}\\selectfont\}/\\newcommand{\\resumeBody}{\\small}/; s/\$\|\$/|/g' resume.tex > "$PANDOC_SRC"
+
     # Use pandoc for conversion with additional options to handle LaTeX peculiarities
-    pandoc resume.tex -o resume_content.html \
+    pandoc "$PANDOC_SRC" -o resume_content.html \
       --standalone \
       --mathjax \
       --css=/css/resume.css \
@@ -56,6 +56,7 @@ if [ "$CONVERTER" = "pandoc" ]; then
     
     CONVERSION_SUCCESS=$?
     HTML_FILE="resume_content.html"
+    rm -f "$PANDOC_SRC"
     
 elif [ "$CONVERTER" = "latex2html" ]; then
     # Create a directory for latex2html output
@@ -122,17 +123,14 @@ else
     exit 1
 fi
 
-# Generate PDF if pdflatex is available
-if [ "$PDF_AVAILABLE" = true ]; then
-    echo "Compiling resume.tex to PDF..."
-    pdflatex -interaction=nonstopmode resume.tex
-    
-    if [ $? -eq 0 ]; then
-        echo "PDF conversion successful!"
-        cp resume.pdf "../_site/resume/Zain Siddavatam Resume.pdf"
-    else
-        echo "Error: PDF conversion failed."
-    fi
+# Generate the PDF with the local toolchain or the Docker image.
+echo "Compiling resume.tex to PDF..."
+if ./build.sh; then
+    mkdir -p "../_site/resume"
+    cp resume.pdf "../_site/resume/Zain Siddavatam Resume.pdf"
+    echo "PDF conversion successful!"
+else
+    echo "Warning: PDF build failed; keeping the existing resume.pdf."
 fi
 
 # Clean up auxiliary files

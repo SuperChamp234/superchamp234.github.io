@@ -1,29 +1,164 @@
-<div class="gallery-container">
-<h1>Photo & Video Gallery</h1>
-<link rel="stylesheet" href="/css/gallery.css"> <!-- Ensure gallery styles are included -->
-<script defer src="/js/gallery.js"></script> <!-- Ensure this is correct -->
+{% import "icons.njk" as icons %}
+{% if not gallery.book.length %}
+<script>document.documentElement.dataset.galleryView = "grid";</script>
+{% endif %}
 
-{% for monthData in gallery %}
-  <h2>{{ monthData.month }}</h2>
-  <div class="gallery-grid">
-    {% for image in monthData.images %}
-      <a href="{{ image }}" class="gallery-item">
-      <img src="{{ image | replace('.jpg', '-thumbnail.jpg') }}" 
-          data-src="{{ image }}" 
-          class="lazy" 
-          alt="Photo from {{ monthData.month }}">
-      </a>
+<div class="gallery-page" data-gallery>
+    <header class="page-header gallery-header">
+        <h1>The photo book.</h1>
+        <p class="lede">{{ site.gallery_description }}</p>
+    </header>
 
-    {% endfor %}
+    <div class="gallery-toolbar" data-gallery-toolbar>
+        <div class="view-switch" role="group" aria-label="Gallery view">
+            <button type="button" data-view="book" aria-pressed="false">
+                {{ icons.icon("book", 15) }}<span>Book</span>
+            </button>
+            <button type="button" data-view="grid" aria-pressed="false">
+                {{ icons.icon("grid", 15) }}<span>Grid</span>
+            </button>
+        </div>
+        <p class="gallery-counter" data-gallery-counter></p>
+        <div class="book-progress" data-book-progress aria-hidden="true"></div>
+    </div>
 
-    {% for video in monthData.videos %}
-      <div class="gallery-item video-item">
-        <video controls>
-          <source src="{{ video }}" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    {% endfor %}
-  </div>
-{% endfor %}
+    {% if gallery.book.length %}
+    <div class="photobook" data-photobook tabindex="0" aria-label="Photo book. Use the arrow keys to move between photographs.">
+        {% for item in gallery.book %}
+        <figure class="book-page" id="{{ item.id }}" data-book-item>
+            <div class="book-media">
+                {% if item.type == "image" %}
+                <a class="media-button" href="{{ item.src or item.full }}"
+                   data-lightbox-open
+                   data-type="image"
+                   data-full="{{ item.src or item.full }}"
+                   data-caption="{{ item.caption }}"
+                   data-meta="{% if item.dateLabel %}{{ item.dateLabel }}{% endif %}{% if item.location %} · {{ item.location }}{% endif %}{% if item.camera %} · {{ item.camera }}{% endif %}{% if item.settings %} · {{ item.settings }}{% endif %}"
+                   data-alt="{{ item.alt }}"
+                   aria-label="Open {{ item.alt }} larger">
+                    <span class="media-blur" style="background-image:url('{{ item.lqip }}')" aria-hidden="true"></span>
+                    <img data-src="{{ item.src }}" width="{{ item.width }}" height="{{ item.height }}" alt="{{ item.alt }}" loading="lazy" decoding="async">
+                    <span class="media-zoom" aria-hidden="true">{{ icons.icon("arrow-up-right", 16) }}</span>
+                </a>
+                {% else %}
+                <a class="media-button media-button--video" href="{{ item.playback or item.original or item.src }}"
+                   data-lightbox-open
+                   data-type="video"
+                   data-video="{{ item.playback or item.original or item.src }}"
+                   data-poster="{{ item.poster.full if item.poster else '' }}"
+                   data-caption="{{ item.caption }}"
+                   data-meta="{% if item.dateLabel %}{{ item.dateLabel }}{% endif %}{% if item.location %} · {{ item.location }}{% endif %}"
+                   data-alt="{{ item.alt }}"
+                   aria-label="Play {{ item.alt }}">
+                    {% if item.poster %}
+                    <span class="media-blur" style="background-image:url('{{ item.poster.lqip }}')" aria-hidden="true"></span>
+                    <picture>
+                        <source type="image/webp" srcset="{{ item.poster.srcset.webp }}" sizes="(max-width: 760px) 100vw, (max-width: 1400px) 86vw, 1180px">
+                        <img src="{{ item.poster.fallback }}" srcset="{{ item.poster.srcset.jpg }}" sizes="(max-width: 760px) 100vw, (max-width: 1400px) 86vw, 1180px" width="{{ item.poster.width }}" height="{{ item.poster.height }}" alt="{{ item.alt }}" loading="lazy" decoding="async">
+                    </picture>
+                    {% else %}
+                    <span class="video-fallback" aria-hidden="true"></span>
+                    {% endif %}
+                    <span class="play-badge" aria-hidden="true">{{ icons.icon("play", 26) }}</span>
+                </a>
+                {% endif %}
+            </div>
+
+            <figcaption class="book-caption">
+                <span class="book-text">
+                    {% if item.caption %}<span class="book-title">{{ item.caption }}</span>{% endif %}
+                    {% if item.note %}<span class="book-note">{{ item.note }}</span>{% endif %}
+                </span>
+                <span class="book-meta">
+                    {% if item.dateLabel %}<span>{{ item.dateLabel }}</span>{% endif %}
+                    {% if item.location %}<span>{{ item.location }}</span>{% endif %}
+                    {% if item.camera %}<span>{{ item.camera }}</span>{% endif %}
+                    {% if item.settings %}<span>{{ item.settings }}</span>{% endif %}
+                </span>
+            </figcaption>
+        </figure>
+        {% endfor %}
+    </div>
+
+    <div class="gallery-grid" data-gallery-grid>
+        {% for album in gallery.albums %}
+        <section class="album" aria-labelledby="album-{{ album.id }}">
+            <header class="album-head">
+                <div>
+                    <h2 id="album-{{ album.id }}">{{ album.title }}</h2>
+                    <p class="album-meta">
+                        {{ album.photoCount }} photos{% if album.videoCount %} · {{ album.videoCount }} videos{% endif %}{% if album.location %} · {{ album.location }}{% endif %}
+                    </p>
+                </div>
+                {% if album.description %}
+                <p class="album-desc">{{ album.description }}</p>
+                {% endif %}
+            </header>
+
+            <div class="photo-grid">
+                {% for item in album.items %}
+                <a class="grid-item" href="{{ item.src or item.full }}"
+                   data-lightbox-open
+                   data-type="{{ item.type }}"
+                   data-full="{{ (item.src or item.full) if item.type == 'image' else '' }}"
+                   data-video="{{ (item.playback or item.original or item.src) if item.type == 'video' else '' }}"
+                   data-poster="{{ item.poster.full if item.poster else '' }}"
+                   data-caption="{{ item.caption }}"
+                   data-meta="{% if item.dateLabel %}{{ item.dateLabel }}{% endif %}{% if item.location %} · {{ item.location }}{% endif %}{% if item.camera %} · {{ item.camera }}{% endif %}{% if item.settings %} · {{ item.settings }}{% endif %}"
+                   data-alt="{{ item.alt }}"
+                   style="--ar: {{ item.aspect or 1.7778 }}; --w: {{ item.width or 1600 }}; --h: {{ item.height or 900 }}">
+                    <span class="grid-media" style="background-image:url('{{ item.lqip or (item.poster.lqip if item.poster else '') }}')">
+                        {% if item.type == "image" %}
+                        <picture>
+                            <source type="image/avif" srcset="{{ item.srcset.avif }}" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <source type="image/webp" srcset="{{ item.srcset.webp }}" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="{{ item.fallback }}" srcset="{{ item.srcset.jpg }}" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="{{ item.width }}" height="{{ item.height }}" alt="{{ item.alt }}" loading="lazy" decoding="async">
+                        </picture>
+                        {% elif item.poster %}
+                        <picture>
+                            <source type="image/webp" srcset="{{ item.poster.srcset.webp }}" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw">
+                            <img src="{{ item.poster.fallback }}" srcset="{{ item.poster.srcset.jpg }}" sizes="(max-width: 640px) 50vw, (max-width: 1000px) 33vw, 25vw" width="{{ item.poster.width }}" height="{{ item.poster.height }}" alt="{{ item.alt }}" loading="lazy" decoding="async">
+                        </picture>
+                        {% else %}
+                        <span class="video-fallback" aria-hidden="true"></span>
+                        {% endif %}
+                        {% if item.type == "video" %}
+                        <span class="play-badge play-badge--small" aria-hidden="true">{{ icons.icon("play", 20) }}</span>
+                        {% endif %}
+                    </span>
+                    <span class="grid-caption">
+                        {% if item.caption %}<span class="grid-title">{{ item.caption }}</span>{% endif %}
+                        {% if item.shortDate %}<span class="grid-date">{{ item.shortDate }}</span>{% endif %}
+                    </span>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty-state">No photographs yet. Drop images into <code>media/&lt;album&gt;/</code> and run <code>npm run images</code>.</p>
+    {% endif %}
+
+    <dialog class="lightbox" data-lightbox aria-label="Photo viewer">
+        <div class="lightbox-bar">
+            <span class="lightbox-counter" data-lightbox-counter></span>
+            <button type="button" class="lightbox-close" data-lightbox-close aria-label="Close viewer">
+                {{ icons.icon("close", 20) }}
+            </button>
+        </div>
+        <button type="button" class="lightbox-nav lightbox-nav--prev" data-lightbox-prev aria-label="Previous">
+            {{ icons.icon("chevron-left", 24) }}
+        </button>
+        <figure class="lightbox-figure">
+            <div class="lightbox-media" data-lightbox-media></div>
+            <figcaption>
+                <span class="lightbox-caption" data-lightbox-caption></span>
+                <span class="lightbox-meta" data-lightbox-meta></span>
+            </figcaption>
+        </figure>
+        <button type="button" class="lightbox-nav lightbox-nav--next" data-lightbox-next aria-label="Next">
+            {{ icons.icon("chevron-right", 24) }}
+        </button>
+    </dialog>
 </div>

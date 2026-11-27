@@ -4,47 +4,97 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="{{ eleventy.generator }}">
-    
-    {% if description %}
-    <meta name="description" content="{{ description }}">
-    {% elif site.description %}
-    <meta name="description" content="{{ site.description }}">
+    <meta name="color-scheme" content="light">
+
+    <script>
+        document.documentElement.classList.add("js");
+    </script>
+
+    {% if page.url == "/gallery/" %}
+    <script>
+        (function () {
+            var params = new URLSearchParams(location.search);
+            var stored = null;
+            try {
+                stored = localStorage.getItem("galleryView");
+            } catch (error) {}
+            var mode = params.get("view") || stored ||
+                (matchMedia("(max-width: 760px)").matches ? "book" : "grid");
+            if (mode !== "book" && mode !== "grid") mode = "grid";
+            document.documentElement.dataset.galleryView = mode;
+        })();
+    </script>
     {% endif %}
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.url }}{{ page.url | url }}">
-    <meta property="og:title" content="{{ title or site.title }}">
-    <meta property="og:description" content="{{ description or site.description }}">
+
+    {% set pageTitle = title or site.title %}
+
+    <title>{{ pageTitle }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+
+    <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
+
     {% if image %}
-    <meta property="og:image" content="{{ site.url }}{{ image | url }}">
+        {% set ogImage = image %}
+    {% elif page.url == "/" and hero %}
+        {% set ogImage = hero.fallback %}
     {% endif %}
-    
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="{% if '/posts/' in page.url %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url | url }}">
+    <meta property="og:title" content="{{ pageTitle }}">
+    <meta property="og:description" content="{{ description or site.description }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    {% if ogImage %}
+    <meta property="og:image" content="{{ site.url }}{{ ogImage | url }}">
+    {% endif %}
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ site.url }}{{ page.url | url }}">
-    <meta property="twitter:title" content="{{ title or site.title }}">
+    <meta property="twitter:title" content="{{ pageTitle }}">
     <meta property="twitter:description" content="{{ description or site.description }}">
-    {% if image %}
-    <meta property="twitter:image" content="{{ site.url }}{{ image | url }}">
+    {% if ogImage %}
+    <meta property="twitter:image" content="{{ site.url }}{{ ogImage | url }}">
     {% endif %}
 
-    <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
-    
-    <title>{{ title or site.title }}</title>
+    <meta name="theme-color" content="#f3e3d2">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ffffff'/%3E%3Cg fill='none' stroke='%231c2732' stroke-width='4'%3E%3Cpath d='M14 22h8l4-6h12l4 6h8v26H14z'/%3E%3Ccircle cx='32' cy='34' r='9'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
 
-    <link rel="stylesheet" href="/css/css.css">
-    <script data-goatcounter="https://zainsv.goatcounter.com/count"
-        async src="/js/count.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    {% for stylesheet in pageStyles %}
+    <link rel="stylesheet" href="{{ stylesheet }}">
+    {% endfor %}
+
+    {% if page.url == "/" and hero and hero.sources and hero.sources.avif %}
+    <link rel="preload" as="image" type="image/avif" href="{{ hero.sources.avif[0].url }}" imagesrcset="{{ hero.srcset.avif }}" imagesizes="(max-width: 820px) 100vw, 40vw" fetchpriority="high">
+    {% endif %}
 </head>
-<body{% if page.url == "/" %} class="home-page"{% endif %}>
-    {% if page.url != "/" %}
-        {% include "navbar.njk" %}
-    {% endif %}
-    {{ content | safe }}
-</body>
-<footer>
-    <div class="footer-content">
-        <p> Made with a lot of coffee and <a href="https://www.11ty.dev/">Eleventy</a></p>
+<body id="top" class="{% if page.url == '/' %}page-home{% elif page.url == '/blog/' %}page-blog{% elif page.url == '/gallery/' %}page-gallery{% elif page.url == '/resume/' %}page-resume{% elif '/posts/' in page.url %}page-post{% elif page.url == '/404.html' %}page-error{% else %}page-default{% endif %}">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    {% include "navbar.njk" %}
+
+    {% set singleColumn = page.url == "/resume/" or page.url == "/404.html" %}
+
+    <div class="site-wrap{% if singleColumn %} site-wrap--single{% endif %}">
+        {% if not singleColumn %}
+        {% include "sidebar.njk" %}
+        {% endif %}
+
+        <main id="main" class="main-panel">
+            {{ content | safe }}
+        </main>
     </div>
+
+    {% if page.url != "/" %}
+    {% include "footer.njk" %}
+    {% endif %}
+
+    <script src="/js/site.js" defer></script>
+    {% for script in pageScripts %}
+    <script src="{{ script }}" defer></script>
+    {% endfor %}
+</body>
 </html>

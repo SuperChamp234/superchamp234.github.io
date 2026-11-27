@@ -1,35 +1,48 @@
 {
-    "title": "Zain's blog",
-    "subtitle": "notes and thoughts as I break things",
-    "intro": "I'm Zain, a comparch enthusiast and hardware enjoyer. I've been exploring computers and their low level architectures for sometime now, and I'm always looking for new things to learn! Don't hesitate to reach out to me if you want to collaborate on something, or just want to chat. I'm always up for a good conversation!",
-    "current_activities": [
-        "Working as Verif Engineer @ <a href=\"https://incoresemi.com/\" target=\"_blank\">InCore Semiconductors</a>",
-        "Reading papers on ML accelerators and their architectures",
-        "Playing hide and seek with my cat",
-        "Looking for collaborations on impactful research in computer architecture and ML (please reach out if you're interested in working together on cool projects!)"
-    ],
-    "description": "Checkout my blog for my escapades in tech, and more. I also write about my experiences and thoughts on various topics.",
-    "email": "hi@zainsv.me",
-    "social_links": [
-        {
-            "title": "GitHub",
-            "url": "https://github.com/superchamp234",
-            "icon": "fa-github"
-        },
-        {
-            "title": "Twitter/X",
-            "url": "https://x.com/ZSiddavatam",
-            "icon": "fa-twitter"
-        },
-        {
-            "title": "LinkedIn",
-            "url": "https://www.linkedin.com/in/zain-siddavatam",
-            "icon": "fa-linkedin"
-        },
-        {
-            "title": "Bluesky",
-            "url": "https://bsky.app/profile/zainsv.me",
-            "icon": "fa-comment"
-        }
-    ]
+  "title": "Zain Siddavatam",
+  "tagline": "a compiler engineer.",
+  "typed_strings": [
+    "a compiler engineer.",
+    "a computer architecture nerd.",
+    "a cat person.",
+    "a mountain enjoyer.",
+    "probably reading a datasheet."
+  ],
+  "intro": "I'm Zain, a compiler engineer and computer architecture enthusiast. I've been exploring compilers, low-level computer architecture, and the space between them for some time now, and I'm always looking for new things to learn. Don't hesitate to reach out if you want to collaborate, or just want to chat.",
+  "current_activities": [
+    "Working as a Compiler Engineer at <a href=\"https://www.qualcomm.com/\" target=\"_blank\" rel=\"noopener\">Qualcomm</a>",
+    "Reading papers on ML accelerators and their architectures",
+    "Playing hide and seek with my cat",
+    "Looking for collaborations on impactful research in computer architecture and ML"
+  ],
+  "description": "Check out my blog for my escapades in tech, and more. I also write about my experiences and thoughts on various topics.",
+  "email": "hi@zainsv.me",
+  "hero_caption": "Somewhere above the valley — Himachal Pradesh",
+  "hero_alt": "Zain sitting on a rock with a mountain valley behind him",
+  "social_links": [
+    {
+      "title": "GitHub",
+      "handle": "@SuperChamp234",
+      "url": "https://github.com/superchamp234",
+      "icon": "github"
+    },
+    {
+      "title": "Twitter / X",
+      "handle": "@ZSiddavatam",
+      "url": "https://x.com/ZSiddavatam",
+      "icon": "x"
+    },
+    {
+      "title": "LinkedIn",
+      "handle": "/zain-siddavatam",
+      "url": "https://www.linkedin.com/in/zain-siddavatam",
+      "icon": "linkedin"
+    },
+    {
+      "title": "Bluesky",
+      "handle": "@zainsv.me",
+      "url": "https://bsky.app/profile/zainsv.me",
+      "icon": "bluesky"
+    }
+  ]
 }

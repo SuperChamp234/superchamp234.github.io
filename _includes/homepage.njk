@@ -1,80 +1,42 @@
 ---
 layout: base.njk
+pageScripts:
+  - /js/typed.min.js
+  - /js/home.js
 ---
-<!-- Link to Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Link to our custom CSS -->
-<link rel="stylesheet" href="/css/home.css">
 
-<!-- Navigation Bar -->
-<nav class="navbar">
-    <div class="navbar-container">
-        <div class="navbar-menu">
-            <a href="/">Home</a>
-            <a href="/blog">Blog</a>
-            <a href="/gallery">Gallery</a>
-            <a href="/resume">Resume</a>
+<div class="home">
+    <section class="home-hero">
+        <div class="home-copy">
+            <h1 class="home-title">Zain<br> Siddavatam</h1>
+            <p class="home-line">
+                <span>I am </span><span id="typed" class="typed" aria-hidden="true" data-strings='{{ homepage.typed_strings | dump }}'></span><span class="sr-only">{{ homepage.tagline }}</span>
+            </p>
+            <p class="home-intro">{{ homepage.intro | safe }}</p>
         </div>
-    </div>
-</nav>
 
-<div class="hero-full-container background-image-container white-text-container"
-    style="background-image: url('/media/my_landscape_photo.jpg'); background-size: cover; background-position: center 33%; width: 100vw; margin-left: calc(-50vw + 50%);">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="hero-full-wrapper">
-                    <div class="text-content">
-                        <h1>Hello, I am <br>
-                            <span id="typed-strings">
-                            </span>
-                            <span id="typed"></span>
-                        </h1>
-                    </div>
-                </div>
+        <figure class="home-figure">
+            <div class="home-photo">
+                {% if hero %}
+                <picture>
+                    <source type="image/avif" srcset="{{ hero.srcset.avif }}" sizes="(max-width: 820px) 100vw, 40vw">
+                    <source type="image/webp" srcset="{{ hero.srcset.webp }}" sizes="(max-width: 820px) 100vw, 40vw">
+                    <img src="{{ hero.fallback }}" srcset="{{ hero.srcset.jpg }}" sizes="(max-width: 820px) 100vw, 40vw" width="{{ hero.width }}" height="{{ hero.height }}" alt="{{ homepage.hero_alt }}" fetchpriority="high" decoding="async">
+                </picture>
+                {% endif %}
             </div>
+            <figcaption>{{ homepage.hero_caption }}</figcaption>
+        </figure>
+    </section>
+
+    <section class="box home-now" aria-labelledby="now-heading">
+        <h2 class="box-head" id="now-heading">Now</h2>
+        <div class="box-body">
+            <ul class="now-list">
+                {% for item in homepage.current_activities %}
+                <li>{{ item | safe }}</li>
+                {% endfor %}
+            </ul>
         </div>
-    </div>
+    </section>
 </div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-md-7">
-            <div class="template-example">
-                <h2 class="template-title-example">Hi there!</h2>
-                <p>
-                    {{ homepage.intro | safe }}
-                </p>
-                <p>
-                    Currently, I am:
-                    <ul>
-                    {% for item in homepage.current_activities %}
-                        <li>{{ item | safe }}</li>
-                    {% endfor %}
-                    </ul>
-                </p>
-                <p>
-                    {{ homepage.description | safe }}
-                </p>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-5">
-            <div class="template-example">
-                <h2 class="template-title-example">Links</h2>
-                <ul class="list-icons">
-                    {% for link in homepage.social_links %}
-                    <li>
-                        <span class="fa-icon">
-                            <a href="{{ link.url }}" target="_blank"><i class="fa {{ link.icon }}"></i></a>
-                        </span>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <span class="fa-icon"><i class="fa fa-envelope"></i></span><span>&nbsp; {{ homepage.email }}</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="/js/typed.min.js"></script>
-<script src="/js/home.js"></script>
